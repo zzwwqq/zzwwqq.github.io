@@ -4,12 +4,22 @@
 
     <sitemap>
         <loc>http://zzwwqq.xyz/post-sitemap.xml</loc>
-        <lastmod>2019-03-16T05:16:01.785Z</lastmod>
+        <lastmod>2019-03-16T16:19:50.282Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://zzwwqq.xyz/page-sitemap.xml</loc>
-        <lastmod>2019-03-16T11:29:09.311Z</lastmod>
+        <lastmod>2019-03-16T15:57:08.645Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>http://zzwwqq.xyz/category-sitemap.xml</loc>
+        <lastmod>2019-03-16T16:19:50.282Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>http://zzwwqq.xyz/tag-sitemap.xml</loc>
+        <lastmod>2019-03-16T16:19:50.282Z</lastmod>
     </sitemap>
 
 </sitemapindex>
