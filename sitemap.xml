@@ -2,30 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zzwwqq.xyz/test.html</loc>
-    
-    <lastmod>2019-03-18T07:16:19.326Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zzwwqq.xyz/haha.html</loc>
-    
-    <lastmod>2019-03-18T06:21:22.693Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zzwwqq.xyz/%E6%88%91%E7%9A%84%E6%96%87%E7%AB%A0.html</loc>
-    
-    <lastmod>2019-03-18T05:08:00.481Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://zzwwqq.xyz/hello-world.html</loc>
     
-    <lastmod>2019-03-18T04:14:13.342Z</lastmod>
+    <lastmod>2019-03-18T10:15:55.171Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zzwwqq.xyz/about/index.html</loc>
+    
+    <lastmod>2019-03-18T08:25:39.220Z</lastmod>
     
   </url>
   
@@ -33,13 +19,6 @@
     <loc>https://zzwwqq.xyz/message/index.html</loc>
     
     <lastmod>2019-03-16T15:57:08.645Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zzwwqq.xyz/about/index.html</loc>
-    
-    <lastmod>2019-03-16T15:52:01.768Z</lastmod>
     
   </url>
   
@@ -68,20 +47,6 @@
     <loc>https://zzwwqq.xyz/categories/index.html</loc>
     
     <lastmod>2019-03-16T06:56:12.450Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zzwwqq.xyz/first/index.html</loc>
-    
-    <lastmod>2019-03-16T06:26:35.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zzwwqq.xyz/testpage/index.html</loc>
-    
-    <lastmod>2019-03-16T06:26:02.253Z</lastmod>
     
   </url>
   
