@@ -20,11 +20,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 
-
-
-
-<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <script>
     (function(){
         if(''){
@@ -35,24 +30,6 @@
         }
     })();
 </script>
-
-<style>
-    .pace .pace-progress {
-        background: #1E92FB; /*进度条颜色*/
-        height: 3px;
-    }
-    .pace .pace-progress-inner {
-         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
-    }
-    .pace .pace-activity {
-        border-top-color: #1E92FB;    /*上边框颜色*/
-        border-left-color: #1E92FB;    /*左边框颜色*/
-    }
-</style>
-
-
-
-
 
 
 <meta name="theme-color" content="#222">
@@ -155,7 +132,7 @@ daovoice('update');
 <meta name="keywords" content="zwq-blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://zzwwqq.xyz/archives/index.html">
+<meta property="og:url" content="https://zzwwqq.xyz/archives/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="不忘初心,方得始终!">
 <meta property="og:locale" content="zh-CN">
@@ -170,7 +147,7 @@ daovoice('update');
 
 
 
-  <link rel="canonical" href="http://zzwwqq.xyz/archives/">
+  <link rel="canonical" href="https://zzwwqq.xyz/archives/">
 
 
 
@@ -594,7 +571,7 @@ daovoice('update');
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/03/17/我推荐的编程书籍/" itemprop="url">
+          <a class="post-title-link" href="/我推荐的编程书籍.html" itemprop="url">
             
               <span itemprop="name">我推荐的编程书籍</span>
             
@@ -629,7 +606,7 @@ daovoice('update');
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/03/16/hello-world/" itemprop="url">
+          <a class="post-title-link" href="/hello-world.html" itemprop="url">
             
               <span itemprop="name">Hello World</span>
             
@@ -718,7 +695,9 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -737,7 +716,9 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -967,6 +948,35 @@ setInterval("createtime()",250);
     
 
     
+      <div>
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      </div>
+    
 
     
       <div>
@@ -998,6 +1008,12 @@ setInterval("createtime()",250);
 
 
 
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
@@ -1072,15 +1088,15 @@ setInterval("createtime()",250);
   });
   new Valine({
     el: '#comments',
-    verify: false,
+    verify: true,
     notify: false,
     appId: 'BMBxkYUDumKWDR3FTQCAY7R1-gzGzoHsz',
     appKey: 'yd7o7KS9MjFPCTGAGOpErnWy',
     placeholder: '来啊，快活啊!',
-    avatar: 'mm',
+    avatar: 'wavatar',
     meta: guest,
     pageSize: '10' || 10,
-    visitor: false,
+    visitor: true,
     lang: '' || 'zh-cn'
   });
 </script>
@@ -1415,84 +1431,33 @@ setInterval("createtime()",250);
 
 
   
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
   
   <script>
-    
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $('.leancloud_visitors');
-
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
-        .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'BMBxkYUDumKWDR3FTQCAY7R1-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'BMBxkYUDumKWDR3FTQCAY7R1-gzGzoHsz',
-                'X-LC-Key': 'yd7o7KS9MjFPCTGAGOpErnWy',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
-          
-        });
-    });
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
   </script>
 
-
-
-  
-
-  
-
-  
-
-  
-
-  
 
   
 

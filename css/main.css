@@ -2093,7 +2093,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3bffd0;
+  background: #205cff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2428,6 +2428,13 @@ img:hover {
 }
 .highlight-wrap {
   position: relative;
+}
+.has-jax {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+li {
+  list-style-position: inside !important;
 }
 .page-archive .archive-page-counter {
   position: relative;
