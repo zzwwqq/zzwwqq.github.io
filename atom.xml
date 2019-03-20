@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zzwwqq.xyz/"/>
-  <updated>2019-03-18T10:15:55.171Z</updated>
+  <updated>2019-03-20T06:50:10.280Z</updated>
   <id>https://zzwwqq.xyz/</id>
   
   <author>
@@ -17,17 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>从零开始搭建Hexo基本框架</title>
+    <link href="https://zzwwqq.xyz/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAhexo%E5%9F%BA%E6%9C%AC%E6%A1%86%E6%9E%B6.html"/>
+    <id>https://zzwwqq.xyz/从零开始搭建hexo基本框架.html</id>
+    <published>2019-03-19T04:50:59.000Z</published>
+    <updated>2019-03-20T06:50:10.280Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h2><p>　　之前自己敲代码纯手工打造了一个博客,并成功部署到了阿里云服务器上,虽然界面不忍直视吧,但还是有一丝小小的成就感.最近看到朋友用Hexo框架搭建的一个博客,界面看起来很美观,于是乎爱折腾的我心动了,决定放手干,好了废话不多说,进入正题,先说一下我的思路:个人认为无论学习什么技术,首先要做的就是要了解这个技术是什么?然后就是问一下自己为什么要用它?最后就是我该怎么用?．</p><h2 id="Hexo是什么"><a href="#Hexo是什么" class="headerlink" title="Hexo是什么?"></a>Hexo是什么?</h2><p>　　<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a> 是一款基于Node.js的静态博客生成程序，作者是中国台湾tommy351。通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 <a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="noopener">标签插件</a> 来快速的插入特定形式的内容．</p><h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤:"></a>安装步骤:</h2><p>​    以Windows机为例: </p><ol><li>首先要安装的就是Git和Node.js这两个工具：（如果之前安装过,那么跳过这一步）</li></ol><p>　　　　Git下载地址: <a href="https://gitforwindows.org/" target="_blank" rel="noopener">Git</a> </p><p>　　　　Node.js下载地址: <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></p><ol start="2"><li><p>安装hexo:</p><p>　　打开git软件,输入node.js的npm命令来安装hexo:  <code>$ npm install -g hexo-cli</code></p></li><li><p>检测上述工具是否安装成功,如果成功会显示版本号：</p><p>　　<code>node -v</code></p><p>　　<code>npm -v</code></p><p>　　<code>git -v</code></p><p>　　<code>hexo -v</code></p><p><img align="left" src="http://cdn.zzwwqq.xyz/static/images/hexo/hexo-1-2.png"></p></li><li><p>创建一个文件夹如Blog,作为你的Hexo博客内容以及核心文件的存放目录</p></li></ol><p>　　在git软件中通过cd 命令切换到Blog执行以下命令;</p><p>　　<code>$ hexo init</code></p><p>　　会生成以下目录结构:</p><p>　　新建完成后，指定文件夹目录下有：</p><ul><li><p>node_modules: 依赖包/插件包</p></li><li><p>public：存放生成的静态页面(hexo g命令后生成)</p></li><li><p>scaffolds：生成文章的一些模板</p></li><li><p>source：用来存放你的文章</p></li><li><p>themes：主题</p></li><li><p>_config.yml: 博客的核心配置文件(也称站点配置文件)</p><p>注意: 主题里面也有一个_config.yml:文件(称主题配置文件),将来自定义博客样式的时候别弄混淆了.　　</p></li></ul><ol start="5"><li><p>生成静态文件:</p><p><code>$ hexo g</code></p></li><li><p>启动服务器</p></li></ol><p>　　</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://cdn.zzwwqq.xyz/static/images/hexo/hexo-1-1.png&quot; alt=&quot;hexo-1-1&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://zzwwqq.xyz/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://zzwwqq.xyz/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="https://zzwwqq.xyz/hello-world.html"/>
     <id>https://zzwwqq.xyz/hello-world.html</id>
     <published>2019-03-16T05:16:01.784Z</published>
-    <updated>2019-03-18T10:15:55.171Z</updated>
+    <updated>2019-03-19T14:28:46.310Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><img src="http://pojzmy3p3.bkt.clouddn.com/static/images/alipay.jpg"><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><img title="图片标题" alt="图片说明" class="class1 class2" src="http://pojzmy3p3.bkt.clouddn.com/static/images/earth.jpg?imageView2/2/w/600"><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
     <summary type="html">
     
-      &lt;img src=&quot;http://pojzmy3p3.bkt.clouddn.com/static/images/%E9%92%A2%E9%93%81%E4%BE%A0.png&quot;&gt;
+      &lt;img title=&quot;图片标题&quot; alt=&quot;图片说明&quot; class=&quot;class1 class2&quot; src=&quot;http://cdn.zzwwqq.xyz/static//images/earth.jpg?imageView2/2/w/600&quot;&gt;
     
     </summary>
     

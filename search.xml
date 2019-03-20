@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[从零开始搭建Hexo基本框架]]></title>
+    <url>%2F%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAhexo%E5%9F%BA%E6%9C%AC%E6%A1%86%E6%9E%B6.html</url>
+    <content type="text"><![CDATA[前言: 之前自己敲代码纯手工打造了一个博客,并成功部署到了阿里云服务器上,虽然界面不忍直视吧,但还是有一丝小小的成就感.最近看到朋友用Hexo框架搭建的一个博客,界面看起来很美观,于是乎爱折腾的我心动了,决定放手干,好了废话不多说,进入正题,先说一下我的思路:个人认为无论学习什么技术,首先要做的就是要了解这个技术是什么?然后就是问一下自己为什么要用它?最后就是我该怎么用?． Hexo是什么? Hexo 是一款基于Node.js的静态博客生成程序，作者是中国台湾tommy351。通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容． 安装步骤:​ 以Windows机为例: 首先要安装的就是Git和Node.js这两个工具：（如果之前安装过,那么跳过这一步） Git下载地址: Git Node.js下载地址: Node.js 安装hexo: 打开git软件,输入node.js的npm命令来安装hexo: $ npm install -g hexo-cli 检测上述工具是否安装成功,如果成功会显示版本号： node -v npm -v git -v hexo -v 创建一个文件夹如Blog,作为你的Hexo博客内容以及核心文件的存放目录 在git软件中通过cd 命令切换到Blog执行以下命令; $ hexo init 会生成以下目录结构: 新建完成后，指定文件夹目录下有： node_modules: 依赖包/插件包 public：存放生成的静态页面(hexo g命令后生成) scaffolds：生成文章的一些模板 source：用来存放你的文章 themes：主题 _config.yml: 博客的核心配置文件(也称站点配置文件) 注意: 主题里面也有一个_config.yml:文件(称主题配置文件),将来自定义博客样式的时候别弄混淆了. 生成静态文件: $ hexo g 启动服务器]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2Fhello-world.html</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick Start Create a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Create a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
       <categories>
         <category>helloworld</category>
       </categories>
