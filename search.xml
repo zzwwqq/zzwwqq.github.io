@@ -3,23 +3,12 @@
   <entry>
     <title><![CDATA[从零开始搭建Hexo基本框架]]></title>
     <url>%2F%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAhexo%E5%9F%BA%E6%9C%AC%E6%A1%86%E6%9E%B6.html</url>
-    <content type="text"><![CDATA[前言: 之前自己敲代码纯手工打造了一个博客,并成功部署到了阿里云服务器上,虽然界面不忍直视吧,但还是有一丝小小的成就感.最近看到朋友用Hexo框架搭建的一个博客,界面看起来很美观,于是乎爱折腾的我心动了,决定放手干,好了废话不多说,进入正题,先说一下我的思路:个人认为无论学习什么技术,首先要做的就是要了解这个技术是什么?然后就是问一下自己为什么要用它?最后就是我该怎么用?． Hexo是什么? Hexo 是一款基于Node.js的静态博客生成程序，作者是中国台湾tommy351。通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容． 安装步骤:​ 以Windows机为例: 首先要安装的就是Git和Node.js这两个工具：（如果之前安装过,那么跳过这一步） Git下载地址: Git Node.js下载地址: Node.js 安装hexo: 打开git软件,输入node.js的npm命令来安装hexo: $ npm install -g hexo-cli 检测上述工具是否安装成功,如果成功会显示版本号： node -v npm -v git -v hexo -v 创建一个文件夹如Blog,作为你的Hexo博客内容以及核心文件的存放目录 在git软件中通过cd 命令切换到Blog执行以下命令; $ hexo init 会生成以下目录结构: 新建完成后，指定文件夹目录下有： node_modules: 依赖包/插件包 public：存放生成的静态页面(hexo g命令后生成) scaffolds：生成文章的一些模板 source：用来存放你的文章 themes：主题 _config.yml: 博客的核心配置文件(也称站点配置文件) 注意: 主题里面也有一个_config.yml:文件(称主题配置文件),将来自定义博客样式的时候别弄混淆了. 生成静态文件: $ hexo g 启动服务器]]></content>
+    <content type="text"><![CDATA[前言: 之前自己敲代码纯手工打造了一个博客,并成功部署到了阿里云服务器上,虽然界面不忍直视吧,但还是有一丝小小的成就感.最近看到朋友用Hexo框架搭建的一个博客,界面看起来很美观,于是乎爱折腾的我心动了,决定放手干,好了废话不多说,进入正题,先说一下我的思路:个人认为无论学习什么技术,首先要做的就是要了解这个技术是什么?然后为什么要用它,它有什么优势,特点?最后就是我该怎么用? 一、Hexo是什么? Hexo 是一款基于Node.js的静态博客生成程序，作者是中国台湾tommy351。通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容． 二、Hexo有什么用,优势在哪? 如果你一直想拥有一个界面美观的,能在上面记录一些学习心得,个人日记,一些内容公开发布,一些内容私密访问,属于自己的博客平台,但是又愁于自己没有一定的编程能力难以实现这个想法,那么Hexo将会给你带来福音, 即使你没有一定的编程基础,你也可以快速使用Hexo打造一个你自己喜欢的博客,因为不需要你敲大量的代码,你要做的仅仅是不断的Ctrl+C,Ctrl+V改一改配置文件. 简单吧! 是不是有点心动了,心动就行动吧! ​ 三、如何安装?以Windows机为例:１．首先要安装的就是Git和Node.js这两个工具：（如果之前安装过,那么跳过这一步） Git下载地址: Git Node.js下载地址: Node.js ２．安装hexo: 打开git软件,通过node.js工具的npm命令来安装hexo: $ npm install -g hexo-cli ３．检测上述工具是否安装成功,如果成功会显示版本号：(如果你嫌麻烦可以忽略) node-v npm -v git --version hexo -v ４．在任意位置创建一个文件夹,例如:blog, 并进入该目录: 我这里是创建在E盘 $ cd /e/blog ５．运行下面的命令,hexo 将会在blog文件夹中生成所需要的文件 $ hexo init 会生成以下目录内容: ​ 注意: 将来自定义博客样式的时候别把站点配置文件和主题配置文件弄混淆了. ５．生成静态文件(hexo会将/blog/source/ 下面的.md后缀的文件编译为.html后缀的文件,存放在/blog/public/路径下): $ hexo g ６．启动服务器: $ hexo s 默认情况下，访问网址为： http://localhost:4000/ 在浏览器地址栏输入上面的地址: 如果看到下面这个界面，那么恭喜你安装成功了，这个就是hexo默认的博客主题,如果你不喜欢还有更酷炫的主题，如何操作，下节我们继续．现在你已经可以在这个主题下写博客了。 四、说明: $ hexo g 是 $ hexo generate 的简写形式,产生的作用是一样的 $ hexo s是 $ hexo server的简写, 表示启动本地服务器,让hexo在本地运行 $ hexo d 是 $ hexo deployed的简写, (这个指令是部署到远程服务器的,后面会讲到) $ hexo clean 没有简写,别写成了$ hexo c $ hexo server -p 5000 #更改端口]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2Fhello-world.html</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Create a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-      <categories>
-        <category>helloworld</category>
-      </categories>
-      <tags>
-        <tag>one</tag>
       </tags>
   </entry>
 </search>
