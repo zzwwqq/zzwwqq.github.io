@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zzwwqq.xyz/"/>
-  <updated>2019-03-21T07:43:12.849Z</updated>
+  <updated>2019-03-21T14:14:18.027Z</updated>
   <id>https://zzwwqq.xyz/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux的安装</title>
+    <link href="https://zzwwqq.xyz/Linux%E7%9A%84%E5%AE%89%E8%A3%85.html"/>
+    <id>https://zzwwqq.xyz/Linux的安装.html</id>
+    <published>2019-03-21T11:06:53.000Z</published>
+    <updated>2019-03-21T14:14:18.027Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h2><p> 上一节我们了解了Linux的一些基本概念,这一节我们将开始安装Linux系统,Linux需要一个环境，我们需要创建一个虚拟机，然后在虚拟机上安装一个Centos系统来学习.</p><h2 id="什么是虚拟机"><a href="#什么是虚拟机" class="headerlink" title="什么是虚拟机?"></a>什么是虚拟机?</h2><p><img src="http://cdn.zzwwqq.xyz/static/images/Linux/linux-2.2.1.png" alt></p><h2 id="安装虚拟机软件VMware"><a href="#安装虚拟机软件VMware" class="headerlink" title="安装虚拟机软件VMware:"></a>安装虚拟机软件VMware:</h2><p>Vmware 下载地址    <a href="http://pan.baidu.com/s/1eQxOVPC" target="_blank" rel="noopener">VMWare10</a></p><h2 id="创建虚拟机空间"><a href="#创建虚拟机空间" class="headerlink" title="创建虚拟机空间:"></a>创建虚拟机空间:</h2><p>安装好 vmware 后，就可以创建虚拟机空间了: 点击新建虚拟机</p><p><img src="http://cdn.zzwwqq.xyz/static/images/Linux/linux-2.3.png" alt></p><p><img src="http://cdn.zzwwqq.xyz/static/images/Linux/linux-2.4.1.png" alt></p><p><img src="http://cdn.zzwwqq.xyz/static/images/Linux/linux-2.5.png" alt></p><p><img src="http://cdn.zzwwqq.xyz/static/images/Linux/linux-2.6.png" alt></p><p><img src="http://cdn.zzwwqq.xyz/static/images/Linux/linux-2.7.png" alt></p><p><img src="http://cdn.zzwwqq.xyz/static/images/Linux/linux-2.8.png" alt></p><p><img src="http://cdn.zzwwqq.xyz/static/images/Linux/linux-2.9.png" alt></p><p><img src="/../../static/images/linux-2.10.png" alt></p><h2 id="安装CentOS系统"><a href="#安装CentOS系统" class="headerlink" title="安装CentOS系统:"></a>安装CentOS系统:</h2><p>安装系统之前，需要先去下载一个镜像文件:</p><p>CentOS下载地址：</p><p>​        网易镜像：<a href="http://mirrors.163.com/centos/6/isos/" target="_blank" rel="noopener">网易镜像</a><br>​        搜狐镜像：<a href="http://mirrors.sohu.com/centos/6/isos" target="_blank" rel="noopener">搜狐镜像</a></p><p>​        <a href="http://mirrors.aliyun.com/centos/7/isos/x86_64" target="_blank" rel="noopener">阿里云CentOS7镜像: </a> 可以选择第一个：CentOS-7-x86_64-DVD-1708.iso 进行下载即可。</p><p><img src="/../../static/images/linux-2.11.png" alt></p><p><img src="/../../static/images/linux-2.12.png" alt></p><p><img src="/../../static/images/linux-2.13.png" alt></p><p><img src="/../../static/images/linux-2.14.png" alt></p><p><img src="/../../static/images/linux-2.15.png" alt></p><p><img src="/../../static/images/linux-2.16.png" alt></p><p><img src="/../../static/images/linux-2.17-1553176149774.png" alt></p><p><img src="/../../static/images/linux-2.18.png" alt></p><p><img src="/../../static/images/linux-2.19.png" alt></p><p><img src="/../../static/images/linux-2.21-1-1553177625064.png" alt></p><p><img src="/../../static/images/linux-2.20.png" alt></p><p><img src="/../../static/images/linux-2.21.png" alt></p><p><img src="/../../static/images/linux-2.22.png" alt></p><p><img src="/../../static/images/linux-2.23.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://cdn.zzwwqq.xyz/static/images/Linux/linux-2.1.jpg&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://zzwwqq.xyz/categories/Linux/"/>
+    
+    
+      <category term="Linux的安装" scheme="https://zzwwqq.xyz/tags/Linux%E7%9A%84%E5%AE%89%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>初识Linux</title>
+    <link href="https://zzwwqq.xyz/%E5%88%9D%E8%AF%86Linux.html"/>
+    <id>https://zzwwqq.xyz/初识Linux.html</id>
+    <published>2019-03-21T08:16:16.000Z</published>
+    <updated>2019-03-21T10:57:43.788Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h2><p>　　根据JoblabXTM整理，使用Linux操作系统占据了整个操作系统的绝大数量，已经接近99%！立志于互联网行业的工程师们掌握Linux这门技术对自身的职业发展，一定会起到事半功倍之效果,所有我们有必要学习Linux操作系统.</p><h2 id="一、Linux是什么-怎么读"><a href="#一、Linux是什么-怎么读" class="headerlink" title="一、Linux是什么,怎么读?"></a>一、Linux是什么,怎么读?</h2><p>　　linux是一个开源、免费的类Unix操作系统，其稳定性、安全性、处理多并发已经得到业界的认可，目前很多企业级的项目都会部署到Linux/unix系统上。</p><p>Linux 读作[里纽克斯, 利尼克斯,里纳克斯]</p><h2 id="二、Linux-的历史背景"><a href="#二、Linux-的历史背景" class="headerlink" title="二、Linux 的历史背景:"></a>二、Linux 的历史背景:</h2><p>　　最初是由芬兰赫尔辛基大学学生Linus Torvalds (林纳斯-托瓦斯)由于自己不满意教学中使用的MINIX操作系统,所有在1990年底由于个人爱好设计出了LINUX系统核心,后来发布于芬兰最大的ftp服务器上,用户可以免费下载,所有它的周边的程序越来越多,Linux本身也逐渐壮大起来,之后Linux在不到三年的时间里成为了一个功能完善,稳定可靠的操作系统.</p><h2 id="三、Linux的版本和分类"><a href="#三、Linux的版本和分类" class="headerlink" title="三、Linux的版本和分类:"></a>三、Linux的版本和分类:</h2><h3 id="3-1-Linux-版本分两种-内核版本-和发行版本"><a href="#3-1-Linux-版本分两种-内核版本-和发行版本" class="headerlink" title="3.1  Linux 版本分两种:  内核版本 和发行版本:"></a>3.1  Linux 版本分两种:  <a href="https://www.kernel.org" target="_blank" rel="noopener">内核版本</a> 和发行版本:</h3><p>　　　　　　内核版本是指在Linus领导下的内核小组开发维护的系统内核的版本号.</p><p>　　　　　　发行版本是一些组织和公司根据自己发行版的不同而自定.</p><h3 id="3-2-一般来说著名的linux系统基本上分两大类："><a href="#3-2-一般来说著名的linux系统基本上分两大类：" class="headerlink" title="3.2  一般来说著名的linux系统基本上分两大类："></a>3.2  一般来说著名的linux系统基本上分两大类：</h3><p>　　　　　　RedHat系列：Redhat、Centos、Fedora等 </p><p>　　　　　　Debian系列：Debian、Ubuntu(乌班图)等 </p><p>　　RedHat(红帽)系列 </p><p>　　　　　　常见的安装包格式 rpm包,安装rpm包的命令是“rpm -参数” </p><p>　　　　　　包管理工具 yum </p><p>　　　　　　支持tar包 </p><p>　　Debian(蝶变)系列 </p><p>　　　　　　常见的安装包格式 deb包,安装deb包的命令是“dpkg -参数” </p><p>　　　　　　包管理工具 apt-get </p><p>　　　　　　支持tar包</p><h2 id="四、Unix简介"><a href="#四、Unix简介" class="headerlink" title="四、Unix简介:"></a>四、Unix简介:</h2><p>　　　Unix是一个强大的多用户、多任务操作系统.于1969年在AT&amp;T(美国电话电报公司)的贝尔实验室开发.</p><p>UNIX的商标权由国际开放标准组织所拥有.</p><p>UNIX操作系统是商业版,需要收费,价格比Windows正版要贵一些.</p><h2 id="五、Linux和Unix的关系"><a href="#五、Linux和Unix的关系" class="headerlink" title="五、Linux和Unix的关系:"></a>五、Linux和Unix的关系:</h2><p><img src="http://cdn.zzwwqq.xyz/static/images/Linux/linux-1.2.png" alt></p><p><img src="http://cdn.zzwwqq.xyz/static/images/Linux/linux-1.3.png" alt></p><p><img src="http://cdn.zzwwqq.xyz/static/images/Linux/linux-1.4.png" alt></p><h2 id="六、Linux和Windows的比较"><a href="#六、Linux和Windows的比较" class="headerlink" title="六、Linux和Windows的比较:"></a>六、Linux和Windows的比较:</h2><table><thead><tr><th>比较</th><th>Window</th><th>Linux</th></tr></thead><tbody><tr><td>免费与收费</td><td>收费且很贵</td><td>Linux 免费或少许费用</td></tr><tr><td>软件与支持</td><td>数量和质量的优势，不过大部分为收费软件；由微软官方提供支持和服务；</td><td>开源自由软件，用户可以修改定制和再发布，由于基本免费没有资金支持，部分软件质量和体验欠缺；有全球所有的Linux开发者和自由软件社区提供支持。</td></tr><tr><td>安全性</td><td>三天两头打补丁安装系统安全更新，还是会中病毒木马；</td><td>要说 Linux 没有安全问题，那当然是不可能的，这一点仁者见仁智者见智，相对来说肯定比Windows 平台要更加安全</td></tr><tr><td>使用习惯</td><td>普通用户基本都是纯图形界面下操作使用，依靠鼠标和键盘完成一切操作，用户上手容易入门简单；</td><td>兼具图形界面操作和完全的命令行操作，可以只用键盘完成一切操作，新手入门较困难，需要一些学习和指导，一旦熟练之后效率极高。</td></tr><tr><td>可定制性</td><td>封闭的，系统可定制性很差；</td><td>开源，可定制化非常强。</td></tr><tr><td>应用场景</td><td>桌面操作系统主要使用的是window。</td><td>支撑百度，谷歌，淘宝等应用软件和服务的，是后台成千上万的Linux服务器主机。世界上大部分软件和服务都是运行在Linux之上的。</td></tr></tbody></table><h2 id="七、Linux-在计算机中的位置"><a href="#七、Linux-在计算机中的位置" class="headerlink" title="七、Linux 在计算机中的位置:"></a>七、Linux 在计算机中的位置:</h2><p><img src="http://cdn.zzwwqq.xyz/static/images/Linux/linux-1.5.png" alt></p><h2 id="八、Linux的目录结构"><a href="#八、Linux的目录结构" class="headerlink" title="八、Linux的目录结构:"></a>八、Linux的目录结构:</h2><p><img src="http://cdn.zzwwqq.xyz/static/images/Linux/linux-1.6.1.png" alt></p><table><thead><tr><th>目录</th><th>说明</th></tr></thead><tbody><tr><td>/</td><td>根目录: 一般根目录下只存放目录,不存放文件</td></tr><tr><td>/bin</td><td>(binaries)      存放二进制可执行文件，常用命令一般都在这里(如: ls,cat,mkdir等)。</td></tr><tr><td>/boot</td><td>存放用于系统启动时使用的各种文件</td></tr><tr><td>/dev</td><td>(devices)     类似Windows的设备管理器, 把所有的硬件用文件的形式存储。</td></tr><tr><td>/etc</td><td>(etcetera)     存放系统管理和配置文件</td></tr><tr><td>/home</td><td>存放所有用户文件的根目录，是用户主目录的基点，比如用户user的主目录就是/home/user，可以用~user表示</td></tr><tr><td>/lib</td><td>存放跟文件系统中的程序运行所需要的共享库及内核模块。共享库又叫动态链接共享库，作用类似windows里的.dll文件，存放了根文件系统程序运行所需的共享文件。</td></tr><tr><td>/proc</td><td>虚拟文件系统目录，是系统内存的映射。可直接访问这个目录来获取系统信息。</td></tr><tr><td>/usr</td><td>用于存放系统应用程序，比较重要的目录                                              /usr/local   [重点]  : 一般通过编译源码方式安装的程序就存放在这里              /usr/sbin 超级用户的一些管理程序                                                            /usr/share/man 帮助文档                                                                                   /usr/bin 众多的应用程序</td></tr><tr><td>/var [重点]</td><td>用于存放运行时需要改变数据的文件，也是某些大文件的溢出区，比方说各种服务的日志文件（系统启动日志等。）等。</td></tr><tr><td>/tmp</td><td>用于存放各种临时文件，是公用的临时文件存储点。</td></tr><tr><td>/mnt</td><td>系统提供这个目录是让用户临时挂载其他的文件系统。</td></tr><tr><td>/opt</td><td>下载的未安装的软件一般放到这里</td></tr><tr><td>/media</td><td>linux会自动识别一些设备,例如U盘,光驱等,当识别后会把识别的设备挂载到这个目录下</td></tr><tr><td>/lost+found</td><td>这个目录平时是空的，系统非正常关机会留下一些文件（windows下叫什么.chk）就存放在这里</td></tr></tbody></table><p>​    </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://cdn.zzwwqq.xyz/static/images/Linux/linux-1.1.jpg&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://zzwwqq.xyz/categories/Linux/"/>
+    
+    
+      <category term="初识Linux" scheme="https://zzwwqq.xyz/tags/%E5%88%9D%E8%AF%86Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>从零开始搭建Hexo基本框架</title>
