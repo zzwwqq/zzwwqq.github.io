@@ -135,7 +135,7 @@ daovoice('update');
 <meta property="og:url" content="https://zzwwqq.xyz/git常用指令.html">
 <meta property="og:site_name" content="zwq">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-23T08:27:22.196Z">
+<meta property="og:updated_time" content="2019-03-31T09:35:34.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用指令">
 
@@ -519,12 +519,24 @@ daovoice('update');
                 
               
 
-              <time title="创建时间：2019-03-23 14:53:25 / 修改时间：16:27:22" itemprop="dateCreated datePublished" datetime="2019-03-23T14:53:25+08:00">2019-03-23</time>
+              <time title="创建时间：2019-03-23 14:53:25" itemprop="dateCreated datePublished" datetime="2019-03-23T14:53:25+08:00">2019-03-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-31 17:35:34" itemprop="dateModified" datetime="2019-03-31T17:35:34+08:00">2019-03-31</time>
               
             
           </span>
@@ -596,7 +608,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.8k</span>
+                <span title="本文字数">4.1k</span>
               
 
               
@@ -610,7 +622,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -654,7 +666,8 @@ daovoice('update');
 <p>4.5将本地仓库指定分支合并到远程仓库指定分支：　<code>$ git push origin  dev_branch : dev_branch</code></p>
 <p>4.6强行让本地分支覆盖远程分支：　<code>$ git push 远程库名 远程库的分支名 -f</code>　　　</p>
 <p>4.7将远程仓库的某个分支合并到当前本地分支：　<code>$ git pull 远程仓库名 远程仓库的分支名</code></p>
-<h3 id="五、文件保存和提交"><a href="#五、文件保存和提交" class="headerlink" title="五、文件保存和提交:"></a>五、文件保存和提交:</h3><p>5.1将文件从工作区添加到暂存区：　<code>$ git add &lt;file&gt;</code></p>
+<h3 id="五、文件保存和提交"><a href="#五、文件保存和提交" class="headerlink" title="五、文件保存和提交:"></a>五、文件保存和提交:</h3><p>5.1将文件从工作区添加到暂存区：　<code>$ git add &lt;file&gt;</code>    </p>
+<p>将所有文件从工作区添加到暂存区：<code>$ git add .</code></p>
 <p>5.2将文件从暂存区提交到版本库：　<code>$ git commit -m “提交说明”</code>  </p>
 <p>5.3随时查看当前仓库的状态：　<code>$ git status</code>                   </p>
 <p>5.4查看修改了具体修改了那些内容：　<code>$ git diff &lt;file&gt;</code>               </p>
@@ -695,6 +708,10 @@ daovoice('update');
 <p>10.3恢复工作现场：两种方式：</p>
 <p>　　　　　方式一：用<code>$ git stash apply</code>恢复,但是恢复后,stash内容并不删除,你需要用<code>$ git stash drop</code>来删除；</p>
 <p>　　　　　方式二：用<code>$ git stash pop</code>,恢复的同时把stash内容也删了</p>
+<p>10.4 <strong>何时需要使用<code>git stash</code>临时保存工作现场?</strong></p>
+<p>在一个分支上操作之后，如果还没有将修改提交到分支上，此时进行切换分支，那么另一个分支上也能看到新的修改。这是因为所有分支都共用一个工作区的缘故。</p>
+<p>可以使用 git stash 将当前分支的修改储藏起来，此时当前工作区的所有修改都会被存到栈上，也就是说当前工作区是干净的，没有任何未提交的修改。此时就可以安全的切换到其它分支上了。</p>
+<p>该功能可以用于 bug 分支的实现。如果当前正在 dev 分支上进行开发，但是此时 master 上有个 bug 需要修复，但是 dev 分支上的开发还未完成，不想立即提交。在新建 bug 分支并切换到 bug 分支之前就需要使用 git stash 将 dev 分支的未提交修改储藏起来。</p>
       
     </div>
 
@@ -725,7 +742,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/git常用指令.html">git常用指令</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年03月23日 - 14:53</p>
-  <p><span>最后更新:</span>2019年03月23日 - 16:27</p>
+  <p><span>最后更新:</span>2019年03月31日 - 17:35</p>
   <p><span>原始链接:</span><a href="/git常用指令.html" title="git常用指令">https://zzwwqq.xyz/git常用指令.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.xyz/git常用指令.html" aria-label="复制成功！"></i></span>
   </p>
@@ -903,7 +920,7 @@ daovoice('update');
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1007,7 +1024,13 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">26</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1187,7 +1210,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">115k</span>
+    <span title="站点总字数">129k</span>
   
 
   
@@ -1198,7 +1221,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:44</span>
+    <span title="站点阅读时长">1:57</span>
   
 </div>
 

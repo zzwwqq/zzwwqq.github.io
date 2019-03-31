@@ -141,7 +141,7 @@ daovoice('update');
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/JVM/jvm-1.5.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/JVM/jvm-1.6.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/JVM/jvm-1.7.png">
-<meta property="og:updated_time" content="2019-03-29T02:23:28.065Z">
+<meta property="og:updated_time" content="2019-03-31T03:22:48.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java虚拟机">
 <meta name="twitter:image" content="http://cdn.zzwwqq.xyz/static/images/JVM/jvm-1.2.png">
@@ -543,7 +543,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-29 10:23:28" itemprop="dateModified" datetime="2019-03-29T10:23:28+08:00">2019-03-29</time>
+                <time title="修改时间：2019-03-31 11:22:48" itemprop="dateModified" datetime="2019-03-31T11:22:48+08:00">2019-03-31</time>
               
             
           </span>
@@ -615,7 +615,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.5k</span>
+                <span title="本文字数">4.6k</span>
               
 
               
@@ -681,7 +681,7 @@ daovoice('update');
 <p><img src="http://cdn.zzwwqq.xyz/static/images/JVM/jvm-1.7.png" alt></p>
 <p>默认的，Edem : from : to = 8 : 1 : 1 ( 可以通过参数 –XX:SurvivorRatio 来设定 )即： Eden = 8/10 的新生代空间大小，from = to = 1/10 的新生代空间大小。 JVM 每次只会使用 Eden 和其中的一块 Survivor 区域来为对象服务，所以无论什么时候，总是有一块 Survivor 区域是空闲着的。因此，新生代实际可用的内存空间为 9/10 ( 即90% )的新生代空间。</p>
 <h4 id="5-1-5方法区-永久代"><a href="#5-1-5方法区-永久代" class="headerlink" title="5.1.5方法区(永久代):"></a>5.1.5方法区(永久代):</h4><p>①: 被所有线程共享,的一块内存空间<br>②: 用来存储Class的相关信息如已经被Java虚拟机<strong>加载的类信息</strong>,<strong>常量</strong>,<strong>静态变量</strong>,即时编译器编译后的代码等数据。<br>③: 和堆一样不需要连续的内存，并且可以动态扩展，动态扩展失败一样会抛出 OutOfMemoryError 异常。<br>④: <strong>对这块区域进行垃圾回收的主要目标是对常量池的回收和对类的卸载</strong>，但是一般比较难实现。<br>⑤: HotSpot 虚拟机把它当成永久代来进行垃圾回收。但很难确定永久代的大小，因为它受到很多因素影响，并且每次 Full GC 之后永久代的大小都会改变，所以经常会抛出 OutOfMemoryError 异常。为了更容易管理方法区，<strong>从 JDK 1.8 开始，移除永久代，并把方法区移至元空间，它位于本地内存中，而不是虚拟机内存中</strong>。</p>
-<h4 id="5-1-5运行时常量池"><a href="#5-1-5运行时常量池" class="headerlink" title="5.1.5运行时常量池"></a>5.1.5运行时常量池</h4><p>①: <strong>运行时常量池是方法区的一部分。</strong><br>②: Class 文件中的常量池（编译器生成的字面量和符号引用）会在类加载后被放入这个区域。<br>③: 除了在编译期生成的常量，还允许动态生成，例如 String 类的 intern()。</p>
+<h4 id="5-1-5运行时常量池"><a href="#5-1-5运行时常量池" class="headerlink" title="5.1.5运行时常量池"></a>5.1.5运行时常量池</h4><p>①: <strong>运行时常量池是方法区的一部分。</strong><br>②: .Class 文件中的常量池（编译器生成的字面量和符号引用）会在类加载后被放入这个区域。<br>③: 除了在编译期生成的常量，还允许动态生成，例如 String 类的 intern()。<br>④: <strong>常量池(constant pool)</strong>指的是在编译期被确定，并被保存在已编译的.class文件中的一些数据。它包括了关于类、方法、接口等中的常量，也包括字符串常量。 </p>
 <p>参考链接:<br><a href="https://baike.baidu.com/item/JVM" target="_blank" rel="noopener">https://baike.baidu.com/item/JVM</a><br><a href="https://blog.csdn.net/zhangjg_blog/article/details/20380971" target="_blank" rel="noopener">https://blog.csdn.net/zhangjg_blog/article/details/20380971</a><br><a href="https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA.md" target="_blank" rel="noopener">https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA.md</a><br><a href="https://blog.csdn.net/gyqjn/article/details/49848473" target="_blank" rel="noopener">https://blog.csdn.net/gyqjn/article/details/49848473</a></p>
       
     </div>
@@ -713,7 +713,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/java虚拟机.html">java虚拟机</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年03月27日 - 17:27</p>
-  <p><span>最后更新:</span>2019年03月29日 - 10:23</p>
+  <p><span>最后更新:</span>2019年03月31日 - 11:22</p>
   <p><span>原始链接:</span><a href="/java虚拟机.html" title="java虚拟机">https://zzwwqq.xyz/java虚拟机.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.xyz/java虚拟机.html" aria-label="复制成功！"></i></span>
   </p>
@@ -891,7 +891,7 @@ daovoice('update');
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -995,7 +995,13 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">26</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1175,7 +1181,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">115k</span>
+    <span title="站点总字数">129k</span>
   
 
   
@@ -1186,7 +1192,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:44</span>
+    <span title="站点阅读时长">1:57</span>
   
 </div>
 

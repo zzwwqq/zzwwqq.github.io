@@ -479,7 +479,7 @@ daovoice('update');
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zzwwqq.xyz/java虚拟机.html">
+    <link itemprop="mainEntityOfPage" href="https://zzwwqq.xyz/java虚拟机之内存分配和回收.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zwq">
@@ -499,7 +499,7 @@ daovoice('update');
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/java虚拟机.html" class="post-title-link" itemprop="url">java虚拟机</a>
+                <a href="/java虚拟机之内存分配和回收.html" class="post-title-link" itemprop="url">java虚拟机之内存分配和回收</a>
               
             
           </h1>
@@ -524,24 +524,12 @@ daovoice('update');
                 
               
 
-              <time title="创建时间：2019-03-27 17:27:04" itemprop="dateCreated datePublished" datetime="2019-03-27T17:27:04+08:00">2019-03-27</time>
+              <time title="创建时间：2019-03-29 10:31:01 / 修改时间：11:18:05" itemprop="dateCreated datePublished" datetime="2019-03-29T10:31:01+08:00">2019-03-29</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-29 10:23:28" itemprop="dateModified" datetime="2019-03-29T10:23:28+08:00">2019-03-29</time>
               
             
           </span>
@@ -577,8 +565,8 @@ daovoice('update');
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/java虚拟机.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/java虚拟机.html" itemprop="commentCount"></span>
+                <a href="/java虚拟机之内存分配和回收.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/java虚拟机之内存分配和回收.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -586,7 +574,7 @@ daovoice('update');
 
           
           
-            <span id="/java虚拟机.html" class="leancloud_visitors" data-flag-title="java虚拟机">
+            <span id="/java虚拟机之内存分配和回收.html" class="leancloud_visitors" data-flag-title="java虚拟机之内存分配和回收">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -613,7 +601,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.5k</span>
+                <span title="本文字数">2.3k</span>
               
 
               
@@ -627,7 +615,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">4 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -648,11 +636,12 @@ daovoice('update');
 
       
         
-          <p><img width="768px" height="367px" src="http://cdn.zzwwqq.xyz/static/images/JVM/jvm-1.1.jpg"></p>
+          <h2 id="一、内存分配策略"><a href="#一、内存分配策略" class="headerlink" title="一、内存分配策略:"></a>一、内存分配策略:</h2><h3 id="1-对象优先在-Eden-分配"><a href="#1-对象优先在-Eden-分配" class="headerlink" title="1. 对象优先在 Eden 分配:"></a>1. 对象优先在 Eden 分配:</h3><p>大多数情况下，对象在新生代 Eden 上分配，当 Eden 空间不够时，发起 Minor GC。</p>
+<h3 id="2-大对象直接进入老年代"><a href="#2-大对象直接进入老年代" class="headerlink" title="2. 大对象直接进入老年代:"></a>2. 大对象直接进入老年代:</h3><p>①: 大对象是指<strong>需要连续内存空间</strong>的对象，最典型的大对象是那种很长的字符串以及数组。<br>②: 经常出现大对象会<strong>提前触发垃圾收集</strong>以获取足够的连续空间分配给大对象。<br>⑤: -XX:PretenureSizeThreshold，大于此值的对象直接在老年代分配，避免在 Eden 和 Survivor 之间的大量内存复制。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/java虚拟机.html#more" rel="contents">
+              <a class="btn" href="/java虚拟机之内存分配和回收.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -726,7 +715,7 @@ daovoice('update');
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zzwwqq.xyz/设计模式之策略模式.html">
+    <link itemprop="mainEntityOfPage" href="https://zzwwqq.xyz/LeetCode-3无重复字符的最长子串.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zwq">
@@ -746,7 +735,7 @@ daovoice('update');
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/设计模式之策略模式.html" class="post-title-link" itemprop="url">设计模式之策略模式</a>
+                <a href="/LeetCode-3无重复字符的最长子串.html" class="post-title-link" itemprop="url">LeetCode-3无重复字符的最长子串</a>
               
             
           </h1>
@@ -771,12 +760,24 @@ daovoice('update');
                 
               
 
-              <time title="创建时间：2019-03-27 10:59:53 / 修改时间：11:43:06" itemprop="dateCreated datePublished" datetime="2019-03-27T10:59:53+08:00">2019-03-27</time>
+              <time title="创建时间：2019-03-28 21:09:04" itemprop="dateCreated datePublished" datetime="2019-03-28T21:09:04+08:00">2019-03-28</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-29 11:17:55" itemprop="dateModified" datetime="2019-03-29T11:17:55+08:00">2019-03-29</time>
               
             
           </span>
@@ -793,7 +794,7 @@ daovoice('update');
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/设计模式/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode刷题/" itemprop="url" rel="index"><span itemprop="name">LeetCode刷题</span></a></span>
 
                 
                 
@@ -812,8 +813,8 @@ daovoice('update');
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/设计模式之策略模式.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/设计模式之策略模式.html" itemprop="commentCount"></span>
+                <a href="/LeetCode-3无重复字符的最长子串.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/LeetCode-3无重复字符的最长子串.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -821,7 +822,7 @@ daovoice('update');
 
           
           
-            <span id="/设计模式之策略模式.html" class="leancloud_visitors" data-flag-title="设计模式之策略模式">
+            <span id="/LeetCode-3无重复字符的最长子串.html" class="leancloud_visitors" data-flag-title="LeetCode-3无重复字符的最长子串">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -848,7 +849,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.6k</span>
+                <span title="本文字数">1.1k</span>
               
 
               
@@ -862,7 +863,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -883,11 +884,11 @@ daovoice('update');
 
       
         
-          <h2 id="一、什么是策略模式"><a href="#一、什么是策略模式" class="headerlink" title="一、什么是策略模式?"></a>一、什么是策略模式?</h2><p>定义一系列算法，将每个算法封装到具有公共接口的一系列策略类中，从而使它们可以相互替换 &amp;<br>让算法可在不影响客户端的情况下发生变化<br>简单来说：准备一组算法 &amp; 将每一个算法封装起来，让外部按需调用 &amp; 使得互换</p>
+          <h3 id="题目"><a href="#题目" class="headerlink" title="题目:"></a>题目:</h3><p>给定一个字符串，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/设计模式之策略模式.html#more" rel="contents">
+              <a class="btn" href="/LeetCode-3无重复字符的最长子串.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -950,7 +951,7 @@ daovoice('update');
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -994,7 +995,7 @@ daovoice('update');
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1098,7 +1099,13 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">26</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1261,7 +1268,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">115k</span>
+    <span title="站点总字数">129k</span>
   
 
   
@@ -1272,7 +1279,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:44</span>
+    <span title="站点阅读时长">1:57</span>
   
 </div>
 
