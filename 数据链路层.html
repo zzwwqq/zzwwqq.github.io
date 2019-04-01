@@ -143,9 +143,10 @@ daovoice('update');
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-3.2.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-3.7.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-3.8.png">
+<meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-3.9.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-3.5.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-3.6.png">
-<meta property="og:updated_time" content="2019-03-31T09:03:58.148Z">
+<meta property="og:updated_time" content="2019-04-01T07:08:31.391Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据链路层">
 <meta name="twitter:description" content="一、数据链路层设备:①: 网桥或桥接器:②: 交换机:　　实质: 是一个多接口的网桥,又称以太网交换机，第二层交换机，交换式集线器　　特点:  全双工: 并行性: 即能同时连通多对接口，使多对主机能同时通信 自学习: 即插即用，其内部的帧交换表（又称地址表）是通过自学习算法自动逐渐建立起来的,交换表中存储着 MAC 地址到接口的映射。">
@@ -531,12 +532,24 @@ daovoice('update');
                 
               
 
-              <time title="创建时间：2019-03-31 15:37:34 / 修改时间：17:03:58" itemprop="dateCreated datePublished" datetime="2019-03-31T15:37:34+08:00">2019-03-31</time>
+              <time title="创建时间：2019-03-31 15:37:34" itemprop="dateCreated datePublished" datetime="2019-03-31T15:37:34+08:00">2019-03-31</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-01 15:08:31" itemprop="dateModified" datetime="2019-04-01T15:08:31+08:00">2019-04-01</time>
               
             
           </span>
@@ -694,22 +707,23 @@ daovoice('update');
 <h2 id="五、数据链路层使用的信道"><a href="#五、数据链路层使用的信道" class="headerlink" title="五、数据链路层使用的信道:"></a>五、数据链路层使用的信道:</h2><h3 id="5-1-点对点信道"><a href="#5-1-点对点信道" class="headerlink" title="5.1 点对点信道:"></a>5.1 点对点信道:</h3><p><strong>一对一通信。</strong><br>因为不会发生碰撞，因此也比较简单，使用 PPP 协议进行控制。</p>
 <h3 id="5-2-广播信道"><a href="#5-2-广播信道" class="headerlink" title="5.2 广播信道:"></a>5.2 广播信道:</h3><p>①: <strong>一对多通信</strong>，一个节点发送的数据能够被广播信道上所有的节点接收到。<br>②: 所有的节点都在同一个广播信道上发送数据，因此需要有专门的控制方法进行协调，避免发生冲突（冲突也叫碰撞）。<br>③: 主要有两种控制方法进行协调，一个是使用<strong>信道复用技术</strong>，一是使用<strong>CSMA/CD 协议。</strong></p>
 <h2 id="六、数据链路层功能："><a href="#六、数据链路层功能：" class="headerlink" title="六、数据链路层功能："></a>六、数据链路层功能：</h2><p>①: 负责 结点-结点（node-to-node）数据传输:具体来说：解决的是物理链路直接相连的两个相邻结点之间的数据传输<br>②: 组帧（Framing）<br>③: 物理寻址（Physical addressing）:在帧头中增加发送端和/或接收端的物理地址标识数据帧的发送端和/或接收端<br>④: 流量控制（Flow control）:避免淹没接收端<br>⑤: 差错控制（Error control）:检测并重传损坏或丢失帧，并避免重复帧<br>⑥: 访问（接入）控制（Access control ）:在任意给定时刻决定哪个设备拥有链路（物理介质）控制使用权</p>
-<h2 id="七、MAC-地址"><a href="#七、MAC-地址" class="headerlink" title="七、MAC 地址:"></a>七、MAC 地址:</h2><p>MAC 地址是<strong>链路层地址</strong>，长度为 6 字节（48 位），用于<strong>唯一标识网络适配器（网卡）</strong>。</p>
+<h2 id="七、数据链路层任务"><a href="#七、数据链路层任务" class="headerlink" title="七、数据链路层任务:"></a>七、数据链路层任务:</h2><p><img src="http://cdn.zzwwqq.xyz/static/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-3.9.png" alt></p>
+<h2 id="八、MAC-地址"><a href="#八、MAC-地址" class="headerlink" title="八、MAC 地址:"></a>八、MAC 地址:</h2><p>MAC 地址是<strong>链路层地址</strong>，长度为 6 字节（48 位），用于<strong>唯一标识网络适配器（网卡）</strong>。</p>
 <p>一台主机拥有多少个网络适配器就有多少个 MAC 地址。例如笔记本电脑普遍存在无线网络适配器和有线网络适配器，因此就有两个 MAC 地址。</p>
-<h2 id="八、以太网"><a href="#八、以太网" class="headerlink" title="八、以太网:"></a>八、以太网:</h2><h3 id="8-1-以太网是一种星型拓扑结构局域网。"><a href="#8-1-以太网是一种星型拓扑结构局域网。" class="headerlink" title="8.1 以太网是一种星型拓扑结构局域网。"></a>8.1 以太网是一种星型拓扑结构局域网。</h3><p>早期使用集线器进行连接，集线器是一种物理层设备， 作用于比特而不是帧，当一个比特到达接口时，集线器重新生成这个比特，并将其能量强度放大，从而扩大网络的传输距离，之后再将这个比特发送到其它所有接口。如果集线器同时收到两个不同接口的帧，那么就发生了碰撞。</p>
+<h2 id="九、以太网"><a href="#九、以太网" class="headerlink" title="九、以太网:"></a>九、以太网:</h2><h3 id="9-1-以太网是一种星型拓扑结构局域网。"><a href="#9-1-以太网是一种星型拓扑结构局域网。" class="headerlink" title="9.1 以太网是一种星型拓扑结构局域网。"></a>9.1 以太网是一种星型拓扑结构局域网。</h3><p>早期使用集线器进行连接，集线器是一种物理层设备， 作用于比特而不是帧，当一个比特到达接口时，集线器重新生成这个比特，并将其能量强度放大，从而扩大网络的传输距离，之后再将这个比特发送到其它所有接口。如果集线器同时收到两个不同接口的帧，那么就发生了碰撞。</p>
 <p>目前以太网使用交换机替代了集线器，交换机是一种链路层设备，它不会发生碰撞，能根据 MAC 地址进行存储转发。</p>
-<h3 id="8-2-特点"><a href="#8-2-特点" class="headerlink" title="8.2 特点:"></a>8.2 特点:</h3><p>采用的协议: CSMA/CD<br>采用无连接,半双工通信<br>对数据帧不进行编号<br>尽最大努力交付(不可靠)<br>不要求对方确认<br>发送的数据都以曼彻斯特编码<br>收到错帧就丢弃</p>
-<h3 id="8-3-以太网帧格式："><a href="#8-3-以太网帧格式：" class="headerlink" title="8.3 以太网帧格式："></a>8.3 以太网帧格式：</h3><ul>
+<h3 id="9-2-特点"><a href="#9-2-特点" class="headerlink" title="9.2 特点:"></a>9.2 特点:</h3><p>采用的协议: CSMA/CD<br>采用无连接,半双工通信<br>对数据帧不进行编号<br>尽最大努力交付(不可靠)<br>不要求对方确认<br>发送的数据都以曼彻斯特编码<br>收到错帧就丢弃</p>
+<h3 id="9-3-以太网帧格式："><a href="#9-3-以太网帧格式：" class="headerlink" title="9.3 以太网帧格式："></a>9.3 以太网帧格式：</h3><ul>
 <li><strong>类型</strong> ：标记上层使用的协议；</li>
 <li><strong>数据</strong> ：长度在 46-1500 之间，如果太小则需要填充；</li>
 <li><strong>FCS</strong> ：帧检验序列，使用的是 CRC 检验方法；</li>
 </ul>
 <p><img src="http://cdn.zzwwqq.xyz/static/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-3.5.png" alt></p>
-<h2 id="九、局域网"><a href="#九、局域网" class="headerlink" title="九、局域网:"></a>九、局域网:</h2><p>局域网是一种典型的广播信道，主要特点是网络为一个单位所拥有，且地理范围和站点数目均有限。</p>
+<h2 id="十、局域网"><a href="#十、局域网" class="headerlink" title="十、局域网:"></a>十、局域网:</h2><p>局域网是一种典型的广播信道，主要特点是网络为一个单位所拥有，且地理范围和站点数目均有限。</p>
 <p>主要有以太网、令牌环网、FDDI 和 ATM 等局域网技术，目前以太网占领着有线局域网市场。</p>
 <p>可以按照网络拓扑结构对局域网进行分类：</p>
 <p><img src="http://cdn.zzwwqq.xyz/static/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-3.6.png" alt></p>
-<h2 id="十、10BASE-T"><a href="#十、10BASE-T" class="headerlink" title="十、10BASE-T:"></a>十、10BASE-T:</h2><p>10 代表 10Mbit/s<br>BASE : 连接线上的信号为基带信号<br>T: 双绞线</p>
+<h2 id="十一、10BASE-T"><a href="#十一、10BASE-T" class="headerlink" title="十一、10BASE-T:"></a>十一、10BASE-T:</h2><p>10 代表 10Mbit/s<br>BASE : 连接线上的信号为基带信号<br>T: 双绞线</p>
 
       
     </div>
@@ -741,7 +755,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/数据链路层.html">数据链路层</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年03月31日 - 15:37</p>
-  <p><span>最后更新:</span>2019年03月31日 - 17:03</p>
+  <p><span>最后更新:</span>2019年04月01日 - 15:08</p>
   <p><span>原始链接:</span><a href="/数据链路层.html" title="数据链路层">https://zzwwqq.xyz/数据链路层.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.xyz/数据链路层.html" aria-label="复制成功！"></i></span>
   </p>
@@ -919,7 +933,7 @@ daovoice('update');
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1029,7 +1043,13 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">29</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1166,7 +1186,7 @@ daovoice('update');
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、数据链路层设备"><span class="nav-text">一、数据链路层设备:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、数据链路层协议"><span class="nav-text">二、数据链路层协议:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-PPP协议-Point-to-Point-Protocal-（点到点）"><span class="nav-text">2.1 PPP协议:  Point-to-Point Protocal; （点到点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-特点"><span class="nav-text">2.1.1 特点:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-PPP-的帧格式："><span class="nav-text">2.1.2 PPP 的帧格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-PPPoE协议"><span class="nav-text">2.2 PPPoE协议:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-CSMA-CD协议"><span class="nav-text">2.3 CSMA/CD协议:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、数据链路层基本单元"><span class="nav-text">三、数据链路层基本单元:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、数据链路层三个基本问题"><span class="nav-text">四、数据链路层三个基本问题:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-封装成帧"><span class="nav-text">4.1 封装成帧:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-透明传输"><span class="nav-text">4.2 透明传输:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-差错检测"><span class="nav-text">4.3 差错检测:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、数据链路层使用的信道"><span class="nav-text">五、数据链路层使用的信道:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-点对点信道"><span class="nav-text">5.1 点对点信道:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-广播信道"><span class="nav-text">5.2 广播信道:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、数据链路层功能："><span class="nav-text">六、数据链路层功能：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、MAC-地址"><span class="nav-text">七、MAC 地址:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、以太网"><span class="nav-text">八、以太网:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-以太网是一种星型拓扑结构局域网。"><span class="nav-text">8.1 以太网是一种星型拓扑结构局域网。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-特点"><span class="nav-text">8.2 特点:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-以太网帧格式："><span class="nav-text">8.3 以太网帧格式：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、局域网"><span class="nav-text">九、局域网:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、10BASE-T"><span class="nav-text">十、10BASE-T:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、数据链路层设备"><span class="nav-text">一、数据链路层设备:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、数据链路层协议"><span class="nav-text">二、数据链路层协议:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-PPP协议-Point-to-Point-Protocal-（点到点）"><span class="nav-text">2.1 PPP协议:  Point-to-Point Protocal; （点到点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-特点"><span class="nav-text">2.1.1 特点:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-PPP-的帧格式："><span class="nav-text">2.1.2 PPP 的帧格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-PPPoE协议"><span class="nav-text">2.2 PPPoE协议:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-CSMA-CD协议"><span class="nav-text">2.3 CSMA/CD协议:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、数据链路层基本单元"><span class="nav-text">三、数据链路层基本单元:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、数据链路层三个基本问题"><span class="nav-text">四、数据链路层三个基本问题:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-封装成帧"><span class="nav-text">4.1 封装成帧:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-透明传输"><span class="nav-text">4.2 透明传输:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-差错检测"><span class="nav-text">4.3 差错检测:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、数据链路层使用的信道"><span class="nav-text">五、数据链路层使用的信道:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-点对点信道"><span class="nav-text">5.1 点对点信道:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-广播信道"><span class="nav-text">5.2 广播信道:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、数据链路层功能："><span class="nav-text">六、数据链路层功能：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、数据链路层任务"><span class="nav-text">七、数据链路层任务:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、MAC-地址"><span class="nav-text">八、MAC 地址:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、以太网"><span class="nav-text">九、以太网:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-以太网是一种星型拓扑结构局域网。"><span class="nav-text">9.1 以太网是一种星型拓扑结构局域网。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-特点"><span class="nav-text">9.2 特点:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-以太网帧格式："><span class="nav-text">9.3 以太网帧格式：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、局域网"><span class="nav-text">十、局域网:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一、10BASE-T"><span class="nav-text">十一、10BASE-T:</span></a></li></ol></div>
             
 
           </div>
@@ -1209,7 +1229,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">129k</span>
+    <span title="站点总字数">146k</span>
   
 
   
@@ -1220,7 +1240,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:57</span>
+    <span title="站点阅读时长">2:13</span>
   
 </div>
 
