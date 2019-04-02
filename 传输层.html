@@ -145,7 +145,7 @@ daovoice('update');
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.8.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.6.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.7.png">
-<meta property="og:updated_time" content="2019-04-01T14:54:38.992Z">
+<meta property="og:updated_time" content="2019-04-02T05:03:50.192Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="传输层">
 <meta name="twitter:description" content="一、传输层协议:TCP协议,UDP协议 10.1 关于TCP协议:特点:①: 面向连接②: 每一条TCP连接只能是点对点的（一对一）也就是每个TCP连接只能有两个端点">
@@ -531,12 +531,24 @@ daovoice('update');
                 
               
 
-              <time title="创建时间：2019-04-01 21:08:40 / 修改时间：22:54:38" itemprop="dateCreated datePublished" datetime="2019-04-01T21:08:40+08:00">2019-04-01</time>
+              <time title="创建时间：2019-04-01 21:08:40" itemprop="dateCreated datePublished" datetime="2019-04-01T21:08:40+08:00">2019-04-01</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-02 13:03:50" itemprop="dateModified" datetime="2019-04-02T13:03:50+08:00">2019-04-02</time>
               
             
           </span>
@@ -608,7 +620,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3k</span>
+                <span title="本文字数">3.7k</span>
               
 
               
@@ -675,7 +687,7 @@ daovoice('update');
 <p><img src="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.5.png" alt></p>
 <h2 id="七、TCP-流量控制"><a href="#七、TCP-流量控制" class="headerlink" title="七、TCP 流量控制:"></a>七、TCP 流量控制:</h2><p>流量控制是为了控制发送方发送速率，保证接收方来得及接收。</p>
 <p>接收方发送的确认报文中的窗口字段可以用来控制发送方窗口大小，从而影响发送方的发送速率。将窗口字段设置为 0，则发送方不能发送数据。</p>
-<h2 id="八、TCP-拥塞控制"><a href="#八、TCP-拥塞控制" class="headerlink" title="八、TCP 拥塞控制:"></a>八、TCP 拥塞控制:</h2><p>如果网络出现拥塞，分组将会丢失，此时发送方会继续重传，从而导致网络拥塞程度更高。因此当出现拥塞时，应当控制发送方的速率。这一点和流量控制很像，但是出发点不同。流量控制是为了让接收方能来得及接收，而拥塞控制是为了降低整个网络的拥塞程度。</p>
+<h2 id="八、TCP-拥塞控制"><a href="#八、TCP-拥塞控制" class="headerlink" title="八、TCP 拥塞控制:"></a>八、TCP 拥塞控制:</h2><p>如果网络出现拥塞，分组将会丢失，此时发送方会继续重传，从而导致网络拥塞程度更高。因此当出现拥塞时，应当控制发送方的速率。这一点和流量控制很像，但是出发点不同。流量控制是为了让接收方能来得及接收，而拥塞控制是为了降低整个网络的拥塞程度。<br>拥塞窗口的大小取决于网络的拥塞程度<br>判断网络拥塞的依据是出现了超时.<br>发送方的发送窗口 =  拥塞窗口.</p>
 <p><img src="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.8.png" alt></p>
 <p><strong>TCP 主要通过四个算法来进行拥塞控制：慢开始、拥塞避免、快重传、快恢复。</strong></p>
 <p>发送方需要维护一个叫做拥塞窗口（cwnd）的状态变量，注意拥塞窗口与发送方窗口的区别：拥塞窗口只是一个状态变量，实际决定发送方能发送多少数据的是发送方窗口。</p>
@@ -693,6 +705,21 @@ daovoice('update');
 <p>在这种情况下，只是丢失个别报文段，而不是网络拥塞。因此执行快恢复，令 ssthresh = cwnd / 2 ，cwnd = ssthresh，注意到此时直接进入拥塞避免。</p>
 <p>慢开始和快恢复的快慢指的是 cwnd 的设定值，而不是 cwnd 的增长速率。慢开始 cwnd 设定为 1，而快恢复 cwnd 设定为 ssthresh。</p>
 <p><img src="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.7.png" alt></p>
+<p><strong>拥塞控制的具体流程: </strong></p>
+<p>①: 初始拥塞窗口 cwnd  =  1</p>
+<p>②: 发送方每收到一个确认就使cwnd = cwnd + 1;如果按照传输轮次考虑就是指数增长: 第一轮: cwnd =  1, 第二轮: cwnd =  2, 第三轮: cwnd =  4, …….第N轮: cwnd =  2^N</p>
+<p>cwnd &lt; ssthresh 时,使用慢开始</p>
+<p>cwnd = ssthresh 时,既可以使用慢开始,也可以使用拥塞避免算法</p>
+<p>cwnd &gt;= ssthresh 时,使用拥塞避免算法</p>
+<p>③: 网络超时时: 使ssthresh = cwnd / 2<br>然后令 cwnd = 1 </p>
+<p>然后进入慢开始阶段,步骤同上<br>④: 直到连续接收到三个重复确认,启动快重传(立即重传) </p>
+<p>⑤: 启动快恢复算法 ssthresh = cwnd / 2</p>
+<p>和cwnd=ssthresh</p>
+<p>拥塞避免: 拥塞窗口控制为按照线性增长(每个传输轮次结束时,cwnd就增加1)</p>
+<p><strong>快重传优点: </strong></p>
+<p>可以使整个网络的吞吐量提高20%<br>尽早让发送方知道发生了个别报文段的丢失</p>
+<p>规定: 发送方只要一连收到3个重复确认,就知道接收方确实未收到某个报文,应当立即重传(即快重传),这样就不会出现超时,发送方也就不会误认为出现了网络拥塞.</p>
+<p><strong>快恢复: </strong><br>调整ssthresh = cwnd / 2<br>同时设置cwnd = ssthresh;<br>然后执行拥塞避免.</p>
 
       
     </div>
@@ -724,7 +751,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/传输层.html">传输层</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年04月01日 - 21:08</p>
-  <p><span>最后更新:</span>2019年04月01日 - 22:54</p>
+  <p><span>最后更新:</span>2019年04月02日 - 13:03</p>
   <p><span>原始链接:</span><a href="/传输层.html" title="传输层">https://zzwwqq.xyz/传输层.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.xyz/传输层.html" aria-label="复制成功！"></i></span>
   </p>
@@ -825,6 +852,10 @@ daovoice('update');
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/应用层.html" rel="prev" title="应用层">
+                应用层 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -898,7 +929,7 @@ daovoice('update');
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1014,7 +1045,9 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">32</span>
+                      
+                    
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1194,7 +1227,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">146k</span>
+    <span title="站点总字数">152k</span>
   
 
   
@@ -1205,7 +1238,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">2:13</span>
+    <span title="站点阅读时长">2:19</span>
   
 </div>
 
