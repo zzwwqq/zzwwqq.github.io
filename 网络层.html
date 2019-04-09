@@ -160,7 +160,7 @@ daovoice('update');
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-5.20.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-5.21.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-5.22.png">
-<meta property="og:updated_time" content="2019-04-01T14:03:19.262Z">
+<meta property="og:updated_time" content="2019-04-08T07:56:38.762Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络层">
 <meta name="twitter:description" content="一、网络层协议:1.1 什么是协议（protocol）?通信协议定义了 网络实体间发送报文和接收报文的格式、顺序以及当传送和接收消息时应采取的行动(规则), 是控制两个对等实体进行通信的规则的集合，协议是“水平的”. 1.2 什么是实体（entity）?表示任何可发送或接收消息的硬件或软件进程">
@@ -546,12 +546,24 @@ daovoice('update');
                 
               
 
-              <time title="创建时间：2019-04-01 13:36:50 / 修改时间：22:03:19" itemprop="dateCreated datePublished" datetime="2019-04-01T13:36:50+08:00">2019-04-01</time>
+              <time title="创建时间：2019-04-01 13:36:50" itemprop="dateCreated datePublished" datetime="2019-04-01T13:36:50+08:00">2019-04-01</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-08 15:56:38" itemprop="dateModified" datetime="2019-04-08T15:56:38+08:00">2019-04-08</time>
               
             
           </span>
@@ -663,9 +675,9 @@ daovoice('update');
 <h3 id="1-4-通信模型"><a href="#1-4-通信模型" class="headerlink" title="1.4 通信模型:"></a>1.4 通信模型:</h3><p><img src="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-5.2.png" alt></p>
 <p><img src="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-5.3.png" alt></p>
 <p>我们在网络中的任何一个系统都是按照上图中的层次结构模型来组织的，该模型具有以下特点：<br>①: 同一网络中，任意两个端系统必须具有相同的层次；<br>②: 每层使用其下层提供的服务，并向其上层提供服务；<br>③: 通信只在对等层间进行，当然这里所指的通信是间接的、逻辑的、虚拟的，非对等层之间不能互相“通信”；<br>④: 实际的物理通信只在最底层完成；<br>⑤: Pn代表第n层的协议，即第n层对等实体间通信时必须遵循的规则或约定。</p>
-<h3 id="1-5-网络层有哪些协议"><a href="#1-5-网络层有哪些协议" class="headerlink" title="1.5 网络层有哪些协议?"></a>1.5 网络层有哪些协议?</h3><p><strong>①: IP协议: </strong>这种不可靠的、无连接的传送机制称为Internet协议(网际协议)<br>与 IP 协议配套使用的还有三个协议：</p>
+<h3 id="1-5-网络层有哪些协议"><a href="#1-5-网络层有哪些协议" class="headerlink" title="1.5 网络层有哪些协议?"></a>1.5 网络层有哪些协议?</h3><p><strong>①: IP协议: </strong>这种<strong>不可靠的、无连接的</strong>传送机制称为Internet协议(网际协议)<br>与 IP 协议配套使用的还有三个协议：</p>
 <ul>
-<li>地址解析协议 ARP（Address Resolution Protocol）</li>
+<li>地址解析协议 ARP（Address Resolution Protcol）</li>
 <li>网际控制报文协议 ICMP（Internet Control Message Protocol）</li>
 <li>网际组管理协议 IGMP（Internet Group Management Protocol）</li>
 </ul>
@@ -720,6 +732,7 @@ daovoice('update');
 <p>从下层往上层是拆封.<br><img src="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-5.4.png" alt></p>
 <p><img src="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-5.5.1.png" alt></p>
 <h2 id="四、网络层功能"><a href="#四、网络层功能" class="headerlink" title="四、网络层功能:"></a>四、网络层功能:</h2><p>①: 负责源主机到目的主机数据分组（Packet）交付(可能穿越多个网络)逻辑寻址（Logical  addressing ）<br>②: 全局唯一的逻辑地址，确保数据分组被送到目的主机，如IP地址<br>③: 路由（Routing）:<br>路由器（或网关）互连网络，并路由分组至最终目的主机<br>路径选择<br>④: 分组转发<br>⑤: 网络层向上只提供简单灵活的、无连接的、尽最大努力交互的数据报服务。</p>
+<p>⑥: 将网络地址(例如IP地址)翻译为对应的物理地址(例如,网卡地址),并决定如何将数据从发送方路由到接收方</p>
 <h3 id="4-1-核心功能"><a href="#4-1-核心功能" class="headerlink" title="4.1 核心功能:"></a>4.1 核心功能:</h3><p>分组转发 与 路由选择（forwarding)</p>
 <h3 id="4-1-什么是转发"><a href="#4-1-什么是转发" class="headerlink" title="4.1 什么是转发?"></a>4.1 什么是转发?</h3><p>将分组从路由器的输入端口转移到合适的输出端口<br>转发表确定在本路由器如何转发分组</p>
 <h3 id="4-2-转发表是怎么得到的呢？"><a href="#4-2-转发表是怎么得到的呢？" class="headerlink" title="4.2 转发表是怎么得到的呢？"></a>4.2 转发表是怎么得到的呢？</h3><p>路由算法（协议）确定通过网络的端到端路径</p>
@@ -903,7 +916,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/网络层.html">网络层</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年04月01日 - 13:36</p>
-  <p><span>最后更新:</span>2019年04月01日 - 22:03</p>
+  <p><span>最后更新:</span>2019年04月08日 - 15:56</p>
   <p><span>原始链接:</span><a href="/网络层.html" title="网络层">https://zzwwqq.xyz/网络层.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.xyz/网络层.html" aria-label="复制成功！"></i></span>
   </p>
@@ -1397,7 +1410,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">188k</span>
+    <span title="站点总字数">220k</span>
   
 
   
@@ -1408,7 +1421,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">2:51</span>
+    <span title="站点阅读时长">3:20</span>
   
 </div>
 

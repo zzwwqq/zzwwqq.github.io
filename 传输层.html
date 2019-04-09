@@ -129,13 +129,13 @@ daovoice('update');
 
 
 
-  <meta name="description" content="一、传输层协议:TCP协议,UDP协议 10.1 关于TCP协议:特点:①: 面向连接②: 每一条TCP连接只能是点对点的（一对一）也就是每个TCP连接只能有两个端点">
+  <meta name="description" content="一、传输层协议:TCP协议,UDP协议,SPX协议 10.1 关于TCP协议:特点:①: 面向连接②: 每一条TCP连接只能是点对点的（一对一）也就是每个TCP连接只能有两个端点 使用场合: 一般用于传输数据量少,且对可靠性要求高的场合.">
 <meta name="keywords" content="传输层">
 <meta property="og:type" content="article">
 <meta property="og:title" content="传输层">
 <meta property="og:url" content="https://zzwwqq.xyz/传输层.html">
 <meta property="og:site_name" content="zwq">
-<meta property="og:description" content="一、传输层协议:TCP协议,UDP协议 10.1 关于TCP协议:特点:①: 面向连接②: 每一条TCP连接只能是点对点的（一对一）也就是每个TCP连接只能有两个端点">
+<meta property="og:description" content="一、传输层协议:TCP协议,UDP协议,SPX协议 10.1 关于TCP协议:特点:①: 面向连接②: 每一条TCP连接只能是点对点的（一对一）也就是每个TCP连接只能有两个端点 使用场合: 一般用于传输数据量少,且对可靠性要求高的场合.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.2.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.1.png">
@@ -145,10 +145,10 @@ daovoice('update');
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.8.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.6.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.7.png">
-<meta property="og:updated_time" content="2019-04-02T05:03:50.192Z">
+<meta property="og:updated_time" content="2019-04-08T08:05:33.575Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="传输层">
-<meta name="twitter:description" content="一、传输层协议:TCP协议,UDP协议 10.1 关于TCP协议:特点:①: 面向连接②: 每一条TCP连接只能是点对点的（一对一）也就是每个TCP连接只能有两个端点">
+<meta name="twitter:description" content="一、传输层协议:TCP协议,UDP协议,SPX协议 10.1 关于TCP协议:特点:①: 面向连接②: 每一条TCP连接只能是点对点的（一对一）也就是每个TCP连接只能有两个端点 使用场合: 一般用于传输数据量少,且对可靠性要求高的场合.">
 <meta name="twitter:image" content="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.2.png">
 
 
@@ -548,7 +548,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-02 13:03:50" itemprop="dateModified" datetime="2019-04-02T13:03:50+08:00">2019-04-02</time>
+                <time title="修改时间：2019-04-08 16:05:33" itemprop="dateModified" datetime="2019-04-08T16:05:33+08:00">2019-04-08</time>
               
             
           </span>
@@ -620,7 +620,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.7k</span>
+                <span title="本文字数">3.8k</span>
               
 
               
@@ -654,8 +654,10 @@ daovoice('update');
       
 
       
-        <h2 id="一、传输层协议"><a href="#一、传输层协议" class="headerlink" title="一、传输层协议:"></a>一、传输层协议:</h2><p>TCP协议,UDP协议</p>
-<h3 id="10-1-关于TCP协议"><a href="#10-1-关于TCP协议" class="headerlink" title="10.1 关于TCP协议:"></a>10.1 关于TCP协议:</h3><p><strong>特点:</strong><br>①: 面向连接<br>②: 每一条TCP连接只能是点对点的（一对一）也就是每个TCP连接只能有两个端点<br><a id="more"></a></p>
+        <h2 id="一、传输层协议"><a href="#一、传输层协议" class="headerlink" title="一、传输层协议:"></a>一、传输层协议:</h2><p>TCP协议,UDP协议,SPX协议</p>
+<h3 id="10-1-关于TCP协议"><a href="#10-1-关于TCP协议" class="headerlink" title="10.1 关于TCP协议:"></a>10.1 关于TCP协议:</h3><p><strong>特点:</strong><br>①: 面向连接<br>②: 每一条TCP连接只能是点对点的（一对一）也就是每个TCP连接只能有两个端点</p>
+<p><strong>使用场合: </strong>一般用于传输数据量少,且对可靠性要求高的场合.</p>
+<a id="more"></a>
 <p><strong>注: 这2个端点并不是主机,也不是主机的IP地址,不是应用进程,也不是运输层协议端口, 而是指 套接字 </strong><br>③: 提供可靠交付服务: 无差错 ,  不丢失  ,   不重复  ,  按序到达<br>④: 全双工<br>⑤: 拥塞控制,流量控制<br>⑥: 检错, 分用复用<br>⑦: 面向字节流: (把应用层传下来的报文看成字节流，把字节流组织成大小不等的数据块)<br>套接字socket = IP地址  ：端口号</p>
 <h3 id="10-2-使用TCP协议的各种应用层协议："><a href="#10-2-使用TCP协议的各种应用层协议：" class="headerlink" title="10.2 使用TCP协议的各种应用层协议："></a>10.2 使用TCP协议的各种应用层协议：</h3><p>SMTP: 简单邮件传送协议<br>TELNET: 远程终端协议<br>HTTP: 超文本传输协议<br>FTP: 文件传送协议</p>
 <h3 id="10-3-TCP首部格式"><a href="#10-3-TCP首部格式" class="headerlink" title="10.3 TCP首部格式:"></a>10.3 TCP首部格式:</h3><p><img src="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.2.png" alt></p>
@@ -672,9 +674,10 @@ daovoice('update');
 <p>①: 无连接: 发数据前不需要建立连接(即不需要使用套接字(即 IP: 端口号)来建立连接)<br>②: 交互通信: 一对多,一对一,多对一,多对多等<br>③: 尽最大努力交付(不可靠)<br>④: 首部开销小,8字节  而TCP是20字节<br>⑤: 无拥塞控制<br>⑥: 检错, 分用复用<br>⑦: 面向报文: UDP一次交付一个完整报文(对于应用程序传下来的报文不合并也不拆分，只是添加 UDP 首部)</p>
 <h3 id="10-5-UDP首部格式"><a href="#10-5-UDP首部格式" class="headerlink" title="10.5 UDP首部格式:"></a>10.5 UDP首部格式:</h3><p><img src="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.1.png" alt></p>
 <p>首部字段只有 8 个字节，包括源端口、目的端口、长度、检验和。12 字节的伪首部是为了计算检验和临时添加的。</p>
+<p><strong>使用场合: </strong>一般用于传输数据量大,且对可靠性要求不是很高,但要求速度快的场合.</p>
 <h2 id="二、传输层数据单元"><a href="#二、传输层数据单元" class="headerlink" title="二、传输层数据单元:"></a>二、传输层数据单元:</h2><p>数据段</p>
 <h2 id="三、关于端口"><a href="#三、关于端口" class="headerlink" title="三、关于端口:"></a>三、关于端口:</h2><p>运输层用16位端口号来标志一个端口。端口号只具有本地意义，它只是为了标记本计算机应用层中各个进程在和运输层交互时的层间接口</p>
-<h2 id="四、传输层功能"><a href="#四、传输层功能" class="headerlink" title="四、传输层功能:"></a>四、传输层功能:</h2><p>①: 负责源-目的（端-端）（进程间）完整报文传输<br>②: 分段与重组<br>③: SAP寻址: 确保将完整报文提交给正确进程，如端口号<br>④: 连接控制<br>⑤: 流量控制<br>⑥: 差错控制</p>
+<h2 id="四、传输层功能"><a href="#四、传输层功能" class="headerlink" title="四、传输层功能:"></a>四、传输层功能:</h2><p>①: 负责源-目的（端-端）（进程间）完整报文传输<br>②: 分段与重组<br>③: SAP寻址: 确保将完整报文提交给正确进程，如端口号<br>④: 连接控制<br>⑤: 流量控制<br>⑥: 差错控制<br>⑦: 确保数据可靠,顺序,无错地从A点传输到B点</p>
 <p>网络层只把分组发送到目的主机，但是真正通信的并不是主机而是主机中的进程。传输层提供了进程间的逻辑通信，传输层向高层用户屏蔽了下面网络层的核心细节，使应用程序看起来像是在两个传输层实体之间有一条端到端的逻辑通信信道。</p>
 <h2 id="五、TCP-可靠传输"><a href="#五、TCP-可靠传输" class="headerlink" title="五、TCP 可靠传输:"></a>五、TCP 可靠传输:</h2><p>TCP 使用超时重传来实现可靠传输：如果一个已经发送的报文段在超时时间内没有收到确认，那么就重传这个报文段。</p>
 <p>一个报文段从发送再到接收到确认所经过的时间称为往返时间 RTT，加权平均往返时间 RTTs 计算如下：<br><img src="http://cdn.zzwwqq.xyz/static/images/计算机网络/计网-6.3.png" alt></p>
@@ -751,7 +754,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/传输层.html">传输层</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年04月01日 - 21:08</p>
-  <p><span>最后更新:</span>2019年04月02日 - 13:03</p>
+  <p><span>最后更新:</span>2019年04月08日 - 16:05</p>
   <p><span>原始链接:</span><a href="/传输层.html" title="传输层">https://zzwwqq.xyz/传输层.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.xyz/传输层.html" aria-label="复制成功！"></i></span>
   </p>
@@ -1245,7 +1248,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">188k</span>
+    <span title="站点总字数">220k</span>
   
 
   
@@ -1256,7 +1259,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">2:51</span>
+    <span title="站点阅读时长">3:20</span>
   
 </div>
 
