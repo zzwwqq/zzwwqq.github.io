@@ -139,8 +139,8 @@ daovoice('update');
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/java/java-4.1.png">
 <meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/java/java-4.4.png">
-<meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/java/java-4.2.png">
-<meta property="og:updated_time" content="2019-04-09T13:33:18.699Z">
+<meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/java/java-7.1.png">
+<meta property="og:updated_time" content="2019-05-31T08:37:11.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java字符串">
 <meta name="twitter:description" content="一、字符串的特性:String 被声明为 final，因此它不可被继承。 二、不同JDK版本中String的区别:①: 在 Java 8 中，String 内部使用 char 数组存储数据。">
@@ -543,7 +543,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-09 21:33:18" itemprop="dateModified" datetime="2019-04-09T21:33:18+08:00">2019-04-09</time>
+                <time title="修改时间：2019-05-31 16:37:11" itemprop="dateModified" datetime="2019-05-31T16:37:11+08:00">2019-05-31</time>
               
             
           </span>
@@ -615,7 +615,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">9k</span>
+                <span title="本文字数">9.4k</span>
               
 
               
@@ -629,7 +629,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">8 分钟</span>
+                <span title="阅读时长">9 分钟</span>
               
             </div>
           
@@ -650,9 +650,9 @@ daovoice('update');
 
       
         <h2 id="一、字符串的特性"><a href="#一、字符串的特性" class="headerlink" title="一、字符串的特性:"></a>一、字符串的特性:</h2><p>String 被声明为 final，因此它不可被继承。</p>
-<h2 id="二、不同JDK版本中String的区别"><a href="#二、不同JDK版本中String的区别" class="headerlink" title="二、不同JDK版本中String的区别:"></a>二、不同JDK版本中String的区别:</h2><p>①: 在 Java 8 中，String 内部使用 char 数组存储数据。</p>
+<h2 id="二、不同JDK版本中String的区别"><a href="#二、不同JDK版本中String的区别" class="headerlink" title="二、不同JDK版本中String的区别:"></a>二、不同JDK版本中String的区别:</h2><p>①: 在 Java 8 中，String 内部使用 <strong>char 数组</strong>存储数据。</p>
 <a id="more"></a>
-<p>②: 在 Java 9 之后，String 类的实现改用 byte 数组存储字符串，同时使用 <code>coder</code> 来标识使用了哪种编码。<br>value 数组被声明为 final，这意味着 value 数组初始化之后就不能再引用其它数组。并且 String 内部没有改变 value 数组的方法，因此可以保证 String 不可变。</p>
+<p>②: 在 Java 9 之后，String 类的实现改用 <strong>byte 数组</strong>存储字符串，同时使用 <code>coder</code> 来标识使用了哪种编码。<br>value 数组被声明为 final，这意味着 value 数组初始化之后就不能再引用其它数组。并且 String 内部没有改变 value 数组的方法，因此可以保证 String 不可变。</p>
 <h2 id="三、String-与StringBuffer-StringBuilder的区别："><a href="#三、String-与StringBuffer-StringBuilder的区别：" class="headerlink" title="三、String 与StringBuffer,StringBuilder的区别："></a>三、String 与StringBuffer,StringBuilder的区别：</h2><h3 id="3-1-可变性"><a href="#3-1-可变性" class="headerlink" title="3.1 可变性:"></a>3.1 可变性:</h3><p>String的长度是<strong>不可变的</strong>，而StringBuffer和StringBuilder长度是<strong>可变的.</strong></p>
 <p>也就是说：对于String而言 例如：有String str = “JavaEE” + “Android”<br><strong>并不是在JavaEE后面直接加上Android, 而是在字符串常量池中重新创建一个JavaEEAndroid，且原来的JavaEE还存在于字符串常量池中.</strong></p>
 <h3 id="3-2-线程安全"><a href="#3-2-线程安全" class="headerlink" title="3.2 线程安全:"></a>3.2 线程安全:</h3><p>String 不可变，因此是线程安全的<br>StringBuilder 不是线程安全的<br>StringBuffer 是线程安全的，内部使用 synchronized 进行同步</p>
@@ -662,11 +662,20 @@ daovoice('update');
 <p><img src="http://cdn.zzwwqq.xyz/static/images/java/java-4.4.png" alt></p>
 <p><strong>StringBuffer和StringBuilder和String的效率比较:</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">long</span> startTime = <span class="number">0L</span>;</span><br><span class="line">	<span class="keyword">long</span> endTime = <span class="number">0L</span>;</span><br><span class="line">	String text = <span class="string">""</span>;</span><br><span class="line">	StringBuffer buffer = <span class="keyword">new</span> StringBuffer(<span class="string">""</span>);</span><br><span class="line">	StringBuilder builder = <span class="keyword">new</span> StringBuilder(<span class="string">""</span>);</span><br><span class="line">	startTime = System.currentTimeMillis();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20000</span>; i++) &#123;</span><br><span class="line">		buffer.append(String.valueOf(i));</span><br><span class="line">	&#125;</span><br><span class="line">	endTime = System.currentTimeMillis();</span><br><span class="line">	System.out.println(<span class="string">"StringBuffer的执行时间："</span> + (endTime - startTime));</span><br><span class="line"></span><br><span class="line">	startTime = System.currentTimeMillis();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20000</span>; i++) &#123;</span><br><span class="line">		builder.append(String.valueOf(i));</span><br><span class="line">	&#125;</span><br><span class="line">	endTime = System.currentTimeMillis();</span><br><span class="line">	System.out.println(<span class="string">"StringBuilder的执行时间："</span> + (endTime - startTime));</span><br><span class="line"></span><br><span class="line">	startTime = System.currentTimeMillis();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20000</span>; i++) &#123;</span><br><span class="line">		text = text + i;</span><br><span class="line">	&#125;</span><br><span class="line">	endTime = System.currentTimeMillis();</span><br><span class="line">	System.out.println(<span class="string">"String的执行时间："</span> + (endTime - startTime));</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="四、字符串与其他数据类型的转换"><a href="#四、字符串与其他数据类型的转换" class="headerlink" title="四、字符串与其他数据类型的转换:"></a>四、字符串与其他数据类型的转换:</h2><p><img src="http://cdn.zzwwqq.xyz/static/images/java/java-4.2.png" alt></p>
+<h2 id="四、字符串与其他数据类型的转换"><a href="#四、字符串与其他数据类型的转换" class="headerlink" title="四、字符串与其他数据类型的转换:"></a>四、字符串与其他数据类型的转换:</h2><p><img src="http://cdn.zzwwqq.xyz/static/images/java/java-7.1.png" alt></p>
 <h3 id="4-1-字符串与基本数据类型-包装类的相互转换-总是调用目标类的方法"><a href="#4-1-字符串与基本数据类型-包装类的相互转换-总是调用目标类的方法" class="headerlink" title="4.1 字符串与基本数据类型/包装类的相互转换:(总是调用目标类的方法)"></a>4.1 字符串与基本数据类型/包装类的相互转换:(总是调用目标类的方法)</h3><p><strong>A ———&gt; B:      调用B的方法:</strong><br>①: 字符串—–&gt;基本数据类型，包装类：调用相应的包装类的parseXXX(String str)<br>②: 基本数据类型，包装类——&gt;字符串：调用字符串的重载的valueOf()方法</p>
 <h3 id="4-2-字符串与数组的相互转换-总是调用字符串的方法-构造器"><a href="#4-2-字符串与数组的相互转换-总是调用字符串的方法-构造器" class="headerlink" title="4.2 字符串与数组的相互转换:(总是调用字符串的方法/构造器)"></a>4.2 字符串与数组的相互转换:(总是调用字符串的方法/构造器)</h3><p>字符串———&gt;数组         调用字符串的方法<br>数组————&gt;字符串     调用字符串的构造器</p>
 <p>③: 字符串——-&gt;字节数组 调用字符串的getBytes()<br>④: 字符串——-&gt;字符数组 调用字符串的toCharArray()</p>
 <p>⑤: 字节数组——&gt;字符串  调用字符串的构造器<br>⑥: 字符数组——&gt;字符串   调用字符串的构造器</p>
+<p><strong>字符串to基本数据类型</strong></p>
+<p>（1）基本数据类型对应的包装类的<strong>parseXXX方法</strong></p>
+<p>（2）用字符串构造基本类型的封装对象，再调用封装对象的<strong>xxxValue方法</strong></p>
+<p>例：将字符串”20.5”转成double类型，Double d1 = new Double(“20.5”);　　double d2 = d1.doubleValue();</p>
+<p><strong>基本数据类型to字符串</strong></p>
+<p>（1）String的<strong>valueOf方法</strong></p>
+<p>（2）”<strong>+</strong>“ 号连接</p>
+<p>（3）将基本数据类型封装成相应的封装类型对象，采用 “基本数据类型对应包装类的对象.<strong>toString()</strong>“方法转换成字符串。</p>
+<p>例：将double类型的425.0转成字符串，Double d = new Double(425.0);     String s =d.toString();</p>
 <h2 id="五、字符串常量池（String-Pool）"><a href="#五、字符串常量池（String-Pool）" class="headerlink" title="五、字符串常量池（String Pool）:"></a>五、字符串常量池（String Pool）:</h2><p>①: 字符串常量池（String Pool）保存着所有字符串字面量（literal strings），这些字面量在<strong>编译时期</strong>就确定。<br>还可以使用 String 的 intern() 方法在<strong>运行过程中</strong>将字符串添加到 String Pool 中。</p>
 <p>②: 当一个字符串调用 intern() 方法时，如果 String Pool 中已经存在一个字符串和该字符串值相等（使用 equals() 方法进行确定），那么就会返回 String Pool 中字符串的引用；否则，就会在 String Pool 中添加一个新的字符串，并返回这个新字符串的引用。</p>
 <p>③: 下面示例中，s1 和 s2 采用 new String() 的方式新建了两个不同字符串，而 s3 和 s4 是通过 s1.intern() 方法取得一个字符串引用。intern() 首先把 s1 引用的字符串放到 String Pool 中，然后返回这个字符串引用。因此 s3 和 s4 引用的是同一个字符串。</p>
@@ -731,7 +740,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/java字符串.html">java字符串</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年04月08日 - 18:51</p>
-  <p><span>最后更新:</span>2019年04月09日 - 21:33</p>
+  <p><span>最后更新:</span>2019年05月31日 - 16:37</p>
   <p><span>原始链接:</span><a href="/java字符串.html" title="java字符串">https://zzwwqq.xyz/java字符串.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.xyz/java字符串.html" aria-label="复制成功！"></i></span>
   </p>
@@ -909,7 +918,7 @@ daovoice('update');
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">47</span>
+                    <span class="site-state-item-count">52</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -950,7 +959,13 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">12</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1053,7 +1068,15 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">43</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">47</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1233,7 +1256,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">354k</span>
+    <span title="站点总字数">494k</span>
   
 
   
@@ -1244,7 +1267,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">5:22</span>
+    <span title="站点阅读时长">7:29</span>
   
 </div>
 
