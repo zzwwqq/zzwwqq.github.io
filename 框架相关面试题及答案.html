@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="google-site-verification" content="eDIkkqgUhVHV4g8TSxIU_BesHpybzZ1nwuDaph8FeFc">
+<meta name="baidu-site-verification" content="Q8VWc7bZ6B">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css?v=1.0.2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'FBHE0THCTM',
+      apiKey: '2a75a572e66ab3792430d09ecb901b80',
+      indexName: 'zwq',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"我们没有找到任何搜索结果: ${query}","hits_stats":"找到约${hits}条结果（用时${time}ms）"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0eeeae6f.js","daovoice")
+ daovoice('init', {
+  app_id: "06289ecd"
+});
+daovoice('update');
+ </script>
+
+
+
+  <meta name="description" content="一、说说什么是框架：框架(framework)是一个框子–》指约束性，也是一个架子–》指支撑性IT语境中的框架，特指为解决一个开放性问题而设计的具有一定约束性的支撑结构，在此结构上可以根据具体问题扩展、按插更多的组成部分，从而更迅速和方便地架构完整的解决问题的方案。 1）框架本身一般不完整到可以解决特定问题，但是可以帮助您快速解决特定问题： 没有框架所有的工作都从零开始做，有了框架，为我们提供了一">
+<meta name="keywords" content="框架相关面试题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="框架相关面试题">
+<meta property="og:url" content="https://zzwwqq.xyz/框架相关面试题及答案.html">
+<meta property="og:site_name" content="zwq">
+<meta property="og:description" content="一、说说什么是框架：框架(framework)是一个框子–》指约束性，也是一个架子–》指支撑性IT语境中的框架，特指为解决一个开放性问题而设计的具有一定约束性的支撑结构，在此结构上可以根据具体问题扩展、按插更多的组成部分，从而更迅速和方便地架构完整的解决问题的方案。 1）框架本身一般不完整到可以解决特定问题，但是可以帮助您快速解决特定问题： 没有框架所有的工作都从零开始做，有了框架，为我们提供了一">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3uumd1lwyj326n13512g.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3uunyry67j314n19wmxo.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3uuokh2vqj31p01mjjs9.jpg">
+<meta property="og:updated_time" content="2019-06-09T16:01:56.276Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="框架相关面试题">
+<meta name="twitter:description" content="一、说说什么是框架：框架(framework)是一个框子–》指约束性，也是一个架子–》指支撑性IT语境中的框架，特指为解决一个开放性问题而设计的具有一定约束性的支撑结构，在此结构上可以根据具体问题扩展、按插更多的组成部分，从而更迅速和方便地架构完整的解决问题的方案。 1）框架本身一般不完整到可以解决特定问题，但是可以帮助您快速解决特定问题： 没有框架所有的工作都从零开始做，有了框架，为我们提供了一">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3uumd1lwyj326n13512g.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="zwq" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://zzwwqq.xyz/框架相关面试题及答案.html">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>框架相关面试题 | zwq</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9c0c194e5f461cee9d645edaafef8a05";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	
+	
+	
+	<!--在这里加:-->
+	<!--黑色github带
+	<a href="https://github.com/zzwwqq"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+-->
+	<a href="https://github.com/zzwwqq" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+	<!--	<a href="https://github.com/zzwwqq" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+蓝色github猫
+-->
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">zwq</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">路漫漫其修远兮,吾将上下而求索!</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>公益 404</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-message">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/message/" rel="section"><i class="menu-item-icon fa fa-fw fa-comment"></i> <br>留言</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zzwwqq.xyz/框架相关面试题及答案.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zwq">
+      <meta itemprop="description" content="不忘初心,方得始终!">
+      <meta itemprop="image" content="http://cdn.zzwwqq.xyz/static/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zwq">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">框架相关面试题
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-08 23:04:08" itemprop="dateCreated datePublished" datetime="2019-06-08T23:04:08+08:00">2019-06-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-10 00:01:56" itemprop="dateModified" datetime="2019-06-10T00:01:56+08:00">2019-06-10</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/面试题/" itemprop="url" rel="index"><span itemprop="name">面试题</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/框架相关面试题及答案.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/框架相关面试题及答案.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/框架相关面试题及答案.html" class="leancloud_visitors" data-flag-title="框架相关面试题">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">热度：</span>
+              
+                <span class="leancloud-visitors-count">
+				</span>
+				<span>℃</span>
+            </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">18k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">16 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一、说说什么是框架："><a href="#一、说说什么是框架：" class="headerlink" title="一、说说什么是框架："></a>一、说说什么是框架：</h2><p>框架(framework)是一个框子–》指约束性，也是一个架子–》指支撑性IT语境中的框架，特指为解决一个开放性问题而设计的具有一定约束性的支撑结构，在此结构上可以根据具体问题扩展、按插更多的组成部分，从而更迅速和方便地架构完整的解决问题的方案。</p>
+<p>1）框架本身一般不完整到可以解决特定问题，但是可以帮助您快速解决特定问题：</p>
+<p>没有框架所有的工作都从零开始做，有了框架，为我们提供了一定的功能。我们就可以在框架的基础上开发，极大的解决了生产力。</p>
+<p>不同的框架，是为了解决不同领域的问题，一定要为了解决问题才去学习框架。</p>
+<a id="more"></a>
+<p>2）框架天生就是为了扩展而设计的</p>
+<p>3）框架里面可以为后续的组件提供很多辅助性、支撑性的方便易用的实用工具(utilities)，也就是框架时常配套一些帮组解决某类问题的库(libraries）或工具（tools）.</p>
+<p>在java中就是一系列的jar包，其本质就是对jdk功能的扩展。</p>
+<h3 id="1-1-简单说一下MVC框架？"><a href="#1-1-简单说一下MVC框架？" class="headerlink" title="1.1 简单说一下MVC框架？"></a>1.1 简单说一下MVC框架？</h3><p>是为了解决传统MVC模式(jsp+servlet+javabean)一些问题而出现的框架</p>
+<h4 id="1-1-1-传统MVC模式模式问题："><a href="#1-1-1-传统MVC模式模式问题：" class="headerlink" title="1.1.1 传统MVC模式模式问题："></a>1.1.1 传统MVC模式模式问题：</h4><p>1） 所有的Servlet和Servlet映射都要配置在<strong>web.xml</strong>中，如果项目太大，web.xml就太庞大并且不能实现模块化管理。</p>
+<p>2）Servlet的主要功能就是接受参数、调用逻辑、跳转页面，比如像其他字符编码、文件上传等功能也要写在Servlet中，不能让Servlet主要功能而需要做处理一些特例。</p>
+<p>3）<strong>接受参数比较麻烦</strong></p>
+<p>(String name = request.getParameter(“name”))，不能通过model接受，只能单个接收，接收完成后转换封装model。</p>
+<p>4）<strong>跳转页面方式比较单一</strong>(forward,redirect)，并且当我们的页面名称发生改变时需要改变Servlet源代码。</p>
+<h4 id="1-1-2-现在比较常用的MVC框架："><a href="#1-1-2-现在比较常用的MVC框架：" class="headerlink" title="1.1.2 现在比较常用的MVC框架："></a>1.1.2 现在比较常用的MVC框架：</h4><p>webwork</p>
+<p>Struts</p>
+<p>Struts2</p>
+<p>SpringMVC</p>
+<h3 id="1-2-简单讲一下SpringMVC的执行流程？"><a href="#1-2-简单讲一下SpringMVC的执行流程？" class="headerlink" title="1.2 简单讲一下SpringMVC的执行流程？"></a>1.2 简单讲一下SpringMVC的执行流程？</h3><p>1）用户向服务器发送请求，请求被Spring 前端控制Servlet 即<strong>DispatcherServlet捕获</strong>；</p>
+<p>2）DispatcherServlet 对请求URL进行<strong>解析</strong>，得到请求资源标识符（URI）。然后根据该URI，<strong>调用HandlerMapping获得该Handler配置的所有相关的对象</strong> （包括Handler对象以及Handler对象对应的拦截器），最后以<strong>HandlerExecutionChain</strong>对象的形式返回；</p>
+<p>3）<strong>DispatcherServlet 根据获得的Handler</strong>，选择一个合适的<strong>HandlerAdapter</strong>。（附注：如果成功获得HandlerAdapter后，此时将开始<strong>执行拦截器的preHandler(…)方法）</strong></p>
+<p>4） 提取Request中的模型数据，填充Handler入参，<strong>开始执行Handler</strong>（Controller)。 在填充Handler的入参过程中，根据你的配置，Spring将帮你做一些额外的工作：</p>
+<p>HttpMessageConveter： 将<strong>请求</strong>消息（如Json、xml等数据）转换成一个<strong>对象</strong>，将<strong>对象</strong>转换为指定的<strong>响应</strong>信息</p>
+<p>数据转换：对请求消息进行数据转换。如String转换成Integer、Double等</p>
+<p>数据格式化：对请求消息进行数据格式化。 如将字符串转换成格式化数字或格式化日期等</p>
+<p>数据验证： 验证数据的有效性（长度、格式等），验证结果存储到BindingResult或Error中</p>
+<p>5）Handler执行完成后，向DispatcherServlet 返回一个<strong>ModelAndView对象</strong>；</p>
+<p>6）根据返回的ModelAndView，选择一个适合的<strong>ViewResolver</strong>（必须是已经注册到Spring容器中的ViewResolver)返回给DispatcherServlet ；</p>
+<p>7）ViewResolver <strong>结合Model和View，来渲染视图*</strong></p>
+<p>8）将渲染<strong>结果返回</strong>给客户端。</p>
+<p><strong>快速记忆：</strong></p>
+<p><strong>核心控制器捕获请求，查找Hander，执行Handler，选择ViewResolver，通过ViewResoler渲染视图并返回</strong></p>
+<h3 id="1-3-什么是ORM"><a href="#1-3-什么是ORM" class="headerlink" title="1.3 什么是ORM"></a>1.3 什么是ORM</h3><p>对象关系映射(Object Relation Mapping，简称ORM)模式是一种为了<strong>解决面向对象与关系数据库存在的互不匹配</strong>的现象的技术，简单的说，ORM是通过使用<strong>描述对象和数据库之间映射</strong>的元数据，将程序中的<strong>对象自动持久化到关系数据库</strong>中，那么到底如何实现持久化呢？</p>
+<p>①: 一种简单的方案时采用<strong>硬编码方式</strong>(jdbc操作sql方式)，为每一种可能的数据库访问操作提供单独的方法。</p>
+<p>这种方案存在以下不足：</p>
+<ul>
+<li>持久化层<strong>缺乏弹性</strong>，一旦出现业务需求变更，就必须修改持久化层的接口</li>
+<li>持久化层同时与域模型与关系数据库模型绑定，不管域模型还是关系数据库模型发生变化，都要修改持久化层的相关程序代码，增加软件的<strong>维护难度。</strong></li>
+</ul>
+<p>②: ORM提供了实现持久化层的另一种模式，它采用<strong>映射元数据来描述对象关系的映射</strong>，使得ORM中间件能在任何一个应用的业务逻辑层和数据库层之间充当桥梁，Java典型的ORM框架有：Hibernate，ibatis(mybtis)，speedframework。</p>
+<p>ORM框架的方法论基于三个核心原则：</p>
+<ul>
+<li>简单：以最基本的形式建模数据</li>
+<li>传达性：数据库结构被任何人都能理解的语言文档化</li>
+<li>精确性：基于数据模型创建正确标准化了结构</li>
+</ul>
+<h3 id="1-4-简单讲一下webservice使用的场景"><a href="#1-4-简单讲一下webservice使用的场景" class="headerlink" title="1.4 简单讲一下webservice使用的场景"></a>1.4 简单讲一下webservice使用的场景</h3><p>webservice是一个SOA(<strong>面向服务的编程</strong>)的架构，它是<strong>不依赖于语言，不依赖于平台</strong>，可以实现不同的语言间的相互调用，通过Internet进行基于http协议的网络应用间的交互。</p>
+<p>1、异构系统(不同的开发语言)的整合</p>
+<p>2、不同客户端的整合 (浏览器、手机端(android\ios)、微信)</p>
+<p>3、实实在在的例子：</p>
+<p>天气预报：可以通过实现webservice客户端调用远程天气服务实现的</p>
+<p>4、单点登录：<strong>一个服务实现所有系统的登录</strong></p>
+<h2 id="二、Spring"><a href="#二、Spring" class="headerlink" title="二、Spring"></a>二、Spring</h2><h3 id="2-1-Spring是什么？"><a href="#2-1-Spring是什么？" class="headerlink" title="2.1 Spring是什么？"></a>2.1 Spring是什么？</h3><p>Spring是<strong>J2EE</strong>应用程序框架，是轻量级的<strong>IOC和AOP</strong>的容器框架，主要针对<strong>JavaBean的生命周期进行管理</strong>的轻量级容器，可以<strong>单独</strong>使用，也可以和struts框架，ibatis框架等<strong>组合</strong>使用。</p>
+<h3 id="2-2-Spring中的两大核心"><a href="#2-2-Spring中的两大核心" class="headerlink" title="2.2 Spring中的两大核心"></a>2.2 Spring中的两大核心</h3><h3 id="2-2-1-IOC-Inversion-of-Control"><a href="#2-2-1-IOC-Inversion-of-Control" class="headerlink" title="2.2.1 IOC(Inversion of Control)"></a>2.2.1 IOC(Inversion of Control)</h3><p>ioc控制反转，又称为“依赖注入”；</p>
+<p>IOC的基本概念是：<strong>不创建对象，但是描述创建它们的方式</strong>。在代码中不直接与对象和服务连接，但在配置文件中描述哪一个组件需要哪一项服务。<strong>容器负责将这些联系在一起</strong>。 　　</p>
+<p>其原理是基于OO设计原则的The Hollywood Principle：Don’t call us, we’ll call you（别找我，我会来找你的）。也就是说，所有的组件都是被动的（Passive），<strong>所有的组件初始化和调用都由容器负责</strong>。组件处在一个容器当中，由容 器负责管理。 　　</p>
+<p>简单的来讲，就是由容器控制程序之间的关系，而非传统实现中，由程序代码直接操控。这也就是所谓“控制反转”的概念所在：<strong>控制权由应用代码中转到了外部容器</strong>，<strong>控制权的转移，是所谓反转</strong>。</p>
+<h4 id="2-2-2-AOP-面向切面编程"><a href="#2-2-2-AOP-面向切面编程" class="headerlink" title="2.2.2 AOP 面向切面编程"></a>2.2.2 AOP 面向切面编程</h4><p>核心原理：使用动态代理的设计模式在执行方法前后或出现异常常做加入相关逻辑</p>
+<p>我们可以使用AOP来做：</p>
+<p>1）事务处理：执行方法前开启事务，执行完成后关闭事务，出现异常后回滚事务</p>
+<p>2）权限判断：在执行方法前，判断是否具有权限</p>
+<p>3）日志：在执行前进行日志处理</p>
+<h3 id="2-3-讲一下Spring的事务的传播特性"><a href="#2-3-讲一下Spring的事务的传播特性" class="headerlink" title="2.3 讲一下Spring的事务的传播特性"></a>2.3 讲一下Spring的事务的传播特性</h3><p>多个事物存在是怎么处理的策略</p>
+<p>1）PROPAGATION_REQUIRED：如果存在一个事务，则支持当前事务，如果当前没有事务，就新建一个事务。这是最常见的选择。</p>
+<p>2）PROPAGATION_SUPPORTS：如果存在一个事务，支持当前事务，如果当前没有事务，就以非事务方式执行。</p>
+<p>3）PROPAGATION_MANDATORY：如果存在一个事务，支持当前事务，如果当前没有事务，就抛出异常。</p>
+<p>4）PROPAGATION_REQUIRES_NEW：<strong>新建事务</strong>，如果当前存在事务，把当前事务挂起。</p>
+<p>5）PROPAGATION_NOT_SUPPORTED：以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。</p>
+<p>6）PROPAGATION_NEVER：以非事务方式执行，如果当前存在事务，则抛出异常。</p>
+<p>7）PROPAGATION_NESTED：支持当前事务，新增Savepoint点，与当前事务同步提交或回滚。</p>
+<h2 id="三、SpringMVC"><a href="#三、SpringMVC" class="headerlink" title="三、SpringMVC"></a>三、SpringMVC</h2><h2 id="四、Mybatis"><a href="#四、Mybatis" class="headerlink" title="四、Mybatis"></a>四、Mybatis</h2><h3 id="4-1-什么是MyBatis？"><a href="#4-1-什么是MyBatis？" class="headerlink" title="4.1 什么是MyBatis？"></a>4.1 什么是MyBatis？</h3><p>答：MyBatis是一个可以自定义SQL、存储过程和高级映射的持久层框架。</p>
+<h3 id="4-2-Mybatis是如何进行分页的？分页插件的原理是什么？"><a href="#4-2-Mybatis是如何进行分页的？分页插件的原理是什么？" class="headerlink" title="4.2 Mybatis是如何进行分页的？分页插件的原理是什么？"></a>4.2 Mybatis是如何进行分页的？分页插件的原理是什么？</h3><p>1）Mybatis使用RowBounds对象进行分页，也可以直接编写sql实现分页，也可以使用Mybatis的分页插件。</p>
+<p>2）分页插件的原理：实现Mybatis提供的接口，实现自定义插件，在插件的拦截方法内<strong>拦截</strong>待执行的sql，然后<strong>重写sql</strong>。</p>
+<p>举例：select <em> from student，拦截sql后重写为：select t.</em> from （select * from student）t limit 0，10</p>
+<h3 id="4-3-MyBatis与Hibernate有哪些不同？"><a href="#4-3-MyBatis与Hibernate有哪些不同？" class="headerlink" title="4.3 MyBatis与Hibernate有哪些不同？"></a>4.3 MyBatis与Hibernate有哪些不同？</h3><p>1）Mybatis和hibernate不同，它不完全是一个ORM框架，因为MyBatis需要程序员自己编写Sql语句，不过mybatis可以通过XML或注解方式灵活配置要运行的sql语句，并将java对象和sql语句映射生成最终执行的sql，最后将sql执行的结果再映射生成java对象。</p>
+<p>2）Mybatis学习门槛低，<strong>简单易学</strong>，程序员直接编写原生态sql，可严格控制sql执行<strong>性能</strong>，<strong>灵活度高</strong>，非常适合对关系数据模型要求不高的软件开发，例如互联网软件、企业运营类软件等，因为这类软件需求变化频繁，一但需求变化要求成果输出迅速。但是灵活的前提是mybatis<strong>无法做到数据库无关性</strong>，如果需要实现支持多种数据库的软件则需要自定义多套sql映射文件，<strong>工作量大</strong>。</p>
+<p>3）Hibernate对象/关系映射能力强，数据库无关性好，对于关系模型要求高的软件（例如需求固定的定制化软件）如果用hibernate开发可以节省很多代码，提高效率。但是Hibernate的缺点是学习门槛高，要精通门槛更高，而且怎么设计O/R映射，在性能和对象模型之间如何权衡，以及怎样用好Hibernate需要具有很强的经验和能力才行。</p>
+<p>总之，按照用户的需求在有限的资源环境下只要能做出维护性、扩展性良好的软件架构都是好架构，所以框架只有适合才是最好。</p>
+<h3 id="4-4-简述Mybatis的Xml映射文件和Mybatis内部数据结构之间的映射关系？"><a href="#4-4-简述Mybatis的Xml映射文件和Mybatis内部数据结构之间的映射关系？" class="headerlink" title="4.4 简述Mybatis的Xml映射文件和Mybatis内部数据结构之间的映射关系？"></a>4.4 简述Mybatis的Xml映射文件和Mybatis内部数据结构之间的映射关系？</h3><p>Mybatis将所有Xml配置信息都封装到All-In-One重量级对象Configuration内部。在Xml映射文件中，&lt; parameterMap&gt;标签会被解析为ParameterMap对象，其每个子元素会被解析为ParameterMapping对象。&lt; resultMap&gt;标签会被解析为ResultMap对象，其每个子元素会被解析为ResultMapping对象。每一个&lt; select&gt;、&lt; insert&gt;、&lt; update&gt;、&lt; delete&gt;标签均会被解析为MappedStatement对象，标签内的sql会被解析为BoundSql对象。</p>
+<h3 id="4-5-什么是MyBatis的接口绑定-有什么好处？"><a href="#4-5-什么是MyBatis的接口绑定-有什么好处？" class="headerlink" title="4.5 什么是MyBatis的接口绑定,有什么好处？"></a>4.5 什么是MyBatis的接口绑定,有什么好处？</h3><p>答：接口映射就是在MyBatis中任意定义接口,然后把<strong>接口里面的方法和SQL语句绑定,</strong>我们直接调用接口方法就可以,这样比起原来了SqlSession提供的方法我们可以有更加灵活的选择和设置.</p>
+<h3 id="4-6-Mybatis能执行一对一、一对多的关联查询吗？都有哪些实现方式，以及它们之间的区别？"><a href="#4-6-Mybatis能执行一对一、一对多的关联查询吗？都有哪些实现方式，以及它们之间的区别？" class="headerlink" title="4.6 Mybatis能执行一对一、一对多的关联查询吗？都有哪些实现方式，以及它们之间的区别？"></a>4.6 Mybatis能执行一对一、一对多的关联查询吗？都有哪些实现方式，以及它们之间的区别？</h3><p>答：能，Mybatis不仅可以执行<strong>一对一、一对多</strong>的关联查询，还可以执行<strong>多对一，多对多</strong>的关联查询，多对一查询，其实就是一对一查询，只需要把selectOne()修改为selectList()即可；多对多查询，其实就是一对多查询，只需要把selectOne()修改为selectList()即可。</p>
+<p>关联对象查询，有两种实现方式:</p>
+<p>一种是<strong>单独发送一个sql</strong>去查询关联对象，赋给主对象，然后返回主对象。另一种是使用<strong>嵌套查询</strong>，嵌套查询的含义为使用join查询，一部分列是A对象的属性值，另外一部分列是关联对象B的属性值，好处是只发一个sql查询，就可以把主对象和其关联对象查出来。</p>
+<h3 id="4-7-MyBatis里面的动态Sql是怎么设定的-用什么语法"><a href="#4-7-MyBatis里面的动态Sql是怎么设定的-用什么语法" class="headerlink" title="4.7 MyBatis里面的动态Sql是怎么设定的?用什么语法?"></a>4.7 MyBatis里面的动态Sql是怎么设定的?用什么语法?</h3><p>答：MyBatis里面的动态Sql一般是<strong>通过if节点来实现</strong>,<strong>通过OGNL语法来实现</strong>,但是如果要写的完整,必须配合where,trim节点,where节点是判断包含节点有内容就插入where,否则不插入,trim节点是用来判断如果动态语句是以and 或or开始,那么会自动把这个and或者or取掉。</p>
+<h3 id="4-8-使用MyBatis的mapper接口调用时有哪些要求？"><a href="#4-8-使用MyBatis的mapper接口调用时有哪些要求？" class="headerlink" title="4.8 使用MyBatis的mapper接口调用时有哪些要求？"></a>4.8 使用MyBatis的mapper接口调用时有哪些要求？</h3><p>1）Mapper接口<strong>方法名</strong>和mapper.xml中定义的每个<strong>sql的id相同</strong></p>
+<p>2）Mapper接口方法的输入<strong>参数类型</strong>和mapper.xml中定义的每个sql 的parameterType的类型<strong>相同</strong></p>
+<p>3）Mapper接口方法的输出参数类型和mapper.xml中定义的每个sql的resultType的类型相同</p>
+<p>4）Mapper.xml文件中的<strong>namespace即是mapper接口的类路径</strong>。</p>
+<h3 id="4-9-Mybatis是如何将sql执行结果封装为目标对象并返回的？都有哪些映射形式？"><a href="#4-9-Mybatis是如何将sql执行结果封装为目标对象并返回的？都有哪些映射形式？" class="headerlink" title="4.9 Mybatis是如何将sql执行结果封装为目标对象并返回的？都有哪些映射形式？"></a>4.9 Mybatis是如何将sql执行结果封装为目标对象并返回的？都有哪些映射形式？</h3><p>答：第一种是使用<code>&lt; resultMap&gt;</code>标签，逐一定义<strong>列名和对象属性名</strong>之间的映射关系。</p>
+<p>第二种是使用<strong>sql列的别名功能</strong>，将列别名书写为对象属性名，比如<code>T_NAME AS NAME</code>，对象属性名一般是<code>name</code>，小写，但是<strong>列名不区分大小写</strong>，Mybatis会忽略列名大小写，智能找到与之对应对象属性名，你甚至可以写成T_NAME AS NaMe，Mybatis一样可以正常工作。</p>
+<p>有了列名与属性名的映射关系后，Mybatis通过<strong>反射创建对象</strong>，同时使用反射给对象的属性逐一赋值并返回，那些找不到映射关系的属性，是无法完成赋值的。</p>
+<h3 id="4-10-MyBatis接口绑定有几种实现方式-分别是怎么实现的"><a href="#4-10-MyBatis接口绑定有几种实现方式-分别是怎么实现的" class="headerlink" title="4.10 MyBatis接口绑定有几种实现方式,分别是怎么实现的?"></a>4.10 MyBatis接口绑定有几种实现方式,分别是怎么实现的?</h3><p>答：接口绑定有两种实现方式:</p>
+<p>一种是通过<strong>注解绑定</strong>,就是在接口的方法上面加上@Select@Update等注解里面包含Sql语句来绑定,</p>
+<p>另外一种就是通过<strong>xml里面写SQL来绑定</strong>,在这种情况下,要指定xml映射文件里面的namespace必须为接口的全路径名.</p>
+<h3 id="4-11-MyBatis实现一对一有几种方式-具体怎么操作的？"><a href="#4-11-MyBatis实现一对一有几种方式-具体怎么操作的？" class="headerlink" title="4.11 .MyBatis实现一对一有几种方式?具体怎么操作的？"></a>4.11 .MyBatis实现一对一有几种方式?具体怎么操作的？</h3><p>答：有联合查询和嵌套查询,联合查询是几个表联合查询,只查询一次,通过在resultMap里面配置<strong>association节点配置一对一的类</strong>就可以完成;嵌套查询是先查一个表,根据这个表里面的结果的外键id,去再另外一个表里面查询数据,也是通过association配置,但另外一个表的查询通过select属性配置。</p>
+<h3 id="4-12-什么情况下用注解绑定-什么情况下用xml绑定？"><a href="#4-12-什么情况下用注解绑定-什么情况下用xml绑定？" class="headerlink" title="4.12 什么情况下用注解绑定,什么情况下用xml绑定？"></a>4.12 什么情况下用注解绑定,什么情况下用xml绑定？</h3><p>答：当<strong>Sql语句</strong>比较<strong>简单时候,用注解</strong>绑定；当SQL语句比较复杂时候,用xml绑定,一般用xml绑定的比较多</p>
+<h3 id="4-13-MyBatis的好处是什么？"><a href="#4-13-MyBatis的好处是什么？" class="headerlink" title="4.13 MyBatis的好处是什么？"></a>4.13 MyBatis的好处是什么？</h3><p>答：1） MyBatis把<strong>sql语句从Java源程序中独立</strong>出来， 放在单独的XML文件中编写，给程序的<strong>维护</strong>带来了很大便利。</p>
+<p>2） MyBatis封装了底层JDBC API的调用细节，并能<strong>自动将结果集转换成Java Bean对象</strong>，大大<strong>简化</strong>了Java数据库编程的重复工作。</p>
+<p>3） 因为MyBatis需要程序员自己去编写sql语句，程序员可以结合数据库自身的特点<strong>灵活</strong>控制sql语句， 因此能够实现比Hibernate等全自动orm框架更高的查询效率，能够完成复杂查询。</p>
+<h2 id="五、Maven"><a href="#五、Maven" class="headerlink" title="五、Maven"></a>五、Maven</h2><h3 id="5-1-什么是Maven？"><a href="#5-1-什么是Maven？" class="headerlink" title="5.1 什么是Maven？"></a>5.1 什么是Maven？</h3><p>Maven使用项目对象模型(POM)的概念，可以通过一小段描述信息来管理项目的构建，报告和文档的软件项目管理工具。</p>
+<p>Maven的出现，解决了开发过程中的jar包升级及依赖的难题。它可以对项目依赖的jar包进行管理，可以让你的项目保持基本的依赖，排除冗余jar包，并且可以让你非常轻松的对依赖的jar包进行版本升级。而这些仅仅是Maven最基本的功能，它可以在这基础上对项目进行清理、编译、测试、打包、发布等等构建项目的工作。 </p>
+<h3 id="5-2-Maven和ANT的区"><a href="#5-2-Maven和ANT的区" class="headerlink" title="5.2  Maven和ANT的区"></a>5.2  Maven和ANT的区</h3><p>①: maven&amp;ant同属apach是流行的构建工具。</p>
+<p>②: maven的中央仓库和pom.xml文件。中央仓库统一存放了开发用到的各种jar包，要用时只需要添加依赖到pom文件中，maven就会<strong>自动下载</strong>，当然为了方便一般会在本地建一个仓库，减少下载时间。pom文件是maven的配置文件，maven就是通过管理pom文件和一些核心插件来管理项目。</p>
+<p>③: ant的build.xml文件。build文件是ant的配置文件，ant依靠它来执行操作，与maven不同的是ant没有固定一条程序链。你想要执行什么操作以及操作之间的顺序和依赖关系，都需要<strong>手动添加</strong>到build文件中，一点一滴都要写清楚，否则ant就不会执行。</p>
+<p>④: maven和ant区别</p>
+<p><strong>Maven 拥有约定，只要遵守约定，它就知道你的源代码在哪里</strong>。Maven 是声明式的。你需要做的只是创建一个 pom.xml 文件然后将源代码放到默认的目录。Maven 会帮你处理其它的事情。Maven 有一个生命周期，当你运行 mvn install 的时候被调用。这条命令告诉 Maven 执行一系列的有序的步骤，直到到达你指定的生命周期。缺点是运行许多默认目标。</p>
+<p><strong>而ant没有约定，项目生命周期，它是命令式的</strong>。<strong>所有操作都要手动</strong>去创建、布置。甚至连build.xml文件都需要手动创建。</p>
+<h3 id="5-3-Maven仓库是什么"><a href="#5-3-Maven仓库是什么" class="headerlink" title="5.3  Maven仓库是什么"></a>5.3  Maven仓库是什么</h3><p>Maven仓库是基于简单文件系统存储的，集中化管理Java API资源（构件）的一个服务。仓库中的任何一个构件都有其唯一的坐标，根据这个坐标可以定义其在仓库中的唯一存储路径。得益于 Maven 的坐标机制，任何 Maven项目使用任何一个构件的方式都是完全相同的，Maven 可以在某个位置统一存储所有的 Maven 项目共享的构件，这个统一的位置就是仓库，项目构建完毕后生成的构件也可以安装或者部署到仓库中，供其它项目使用。</p>
+<p>对于Maven来说，仓库分为两类：<strong>本地仓库和远程仓库</strong></p>
+<h3 id="5-4-Maven的工程类型有哪些？"><a href="#5-4-Maven的工程类型有哪些？" class="headerlink" title="5.4  Maven的工程类型有哪些？"></a>5.4  Maven的工程类型有哪些？</h3><p>POM工程</p>
+<p>POM工程是逻辑工程。用在<strong>父级工程或聚合工程</strong>中。用来做jar包的版本控制。</p>
+<p>JAR工程</p>
+<p>将会打包成jar用作jar包使用。即常见的<strong>本地工程 </strong>- Java Project。</p>
+<p>WAR工程</p>
+<p>将会打包成war，<strong>发布在服务器上的工程</strong>。如网站或服务。即常见的网络工程 - Dynamic Web Project。war工程默认没有WEB-INF目录及web.xml配置文件，IDE通常会显示工程错误，提供完整工程结构可以解决。</p>
+<h3 id="5-5-Maven常用命令有哪些？"><a href="#5-5-Maven常用命令有哪些？" class="headerlink" title="5.5  Maven常用命令有哪些？"></a>5.5  Maven常用命令有哪些？</h3><p><strong>install</strong></p>
+<p>本地安装， 包含编译，打包，安装到本地仓库</p>
+<p>编译 - javac</p>
+<p>打包 - jar， 将java代码打包为jar文件</p>
+<p>安装到本地仓库 - 将打包的jar文件，保存到本地仓库目录中。</p>
+<p><strong>clean</strong></p>
+<p>清除已编译信息。</p>
+<p>删除工程中的target目录。</p>
+<p><strong>compile</strong></p>
+<p>只编译。 javac命令</p>
+<p><strong>deploy</strong></p>
+<p>部署。 常见于结合私服使用的命令。</p>
+<p>相当于是install+上传jar到私服。</p>
+<p>包含编译，打包，安装到本地仓库，上传到私服仓库。</p>
+<p><strong>package</strong></p>
+<p>打包。 包含编译，打包两个功能。</p>
+<h2 id="六、Nginx"><a href="#六、Nginx" class="headerlink" title="六、Nginx"></a>六、Nginx</h2><h3 id="6-1-什么是Nginx？"><a href="#6-1-什么是Nginx？" class="headerlink" title="6.1 什么是Nginx？"></a>6.1 什么是Nginx？</h3><p>Nginx (engine x) 是一个高性能的HTTP和反向代理服务。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。</p>
+<p>Nginx 是一个很强大的高性能Web和反向代理服务，它具有很多非常优越的特性：在连接高并发的情况下，Nginx是Apache服务不错的替代品：Nginx在美国是做虚拟主机生意的老板们经常选择的软件平台之一。</p>
+<h3 id="6-2-Nginx有哪些作用？"><a href="#6-2-Nginx有哪些作用？" class="headerlink" title="6.2 Nginx有哪些作用？"></a>6.2 Nginx有哪些作用？</h3><p>http协议代理</p>
+<p>搭建虚拟主机</p>
+<p>服务的反向代理</p>
+<p>在反向代理中配置集群的负载均衡</p>
+<h3 id="6-3-什么是正向代理？"><a href="#6-3-什么是正向代理？" class="headerlink" title="6.3 什么是正向代理？"></a>6.3 什么是正向代理？</h3><p>正向代理，意思是一个位于客户端和原始服务器(origin server)之间的服务器，为了从原始服务器取得内容，客户端向代理发送一个请求并指定目标(原始服务器)，然后代理向原始服务器转交请求并将获得的内容返回给客户端。客户端才能使用正向代理。</p>
+<h3 id="6-4-什么是反向代理？"><a href="#6-4-什么是反向代理？" class="headerlink" title="6.4 什么是反向代理？"></a>6.4 什么是反向代理？</h3><p>反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个反向代理服务器。</p>
+<h2 id="七、Redis"><a href="#七、Redis" class="headerlink" title="七、Redis"></a>七、Redis</h2><h3 id="7-1-什么是Redis？"><a href="#7-1-什么是Redis？" class="headerlink" title="7.1 什么是Redis？"></a>7.1 什么是Redis？</h3><p>答：Remote Dictionary Server(Redis)是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。</p>
+<p>它通常被称为数据结构服务器，因为值（value）可以是 字符串(String), 哈希(Map), 列表(list), 集合(sets) 和 有序集合(sorted sets)等类型。</p>
+<h3 id="7-2-Redis的特点什么是？"><a href="#7-2-Redis的特点什么是？" class="headerlink" title="7.2 Redis的特点什么是？"></a>7.2 Redis的特点什么是？</h3><p>\1. 支持<strong>多种数据结构</strong>，如 string(字符串)、 list(双向链表)、dict(hash表)、set(集合)、zset(排序set)、hyperloglog(基数估算)</p>
+<p>\2. 支持<strong>持久化</strong>操作，可以进行aof及rdb数据持久化到磁盘，从而进行数据备份或数据恢复等操作，较好的防止数据丢失的手段。</p>
+<p>\3. 支持通过Replication进行<strong>数据复制</strong>，通过master-slave机制，可以实时进行数据的同步复制，支持多级复制和增量复制，master-slave机制是Redis进行HA的重要手段。</p>
+<p><strong>单进程请求，所有命令串行执行，并发情况下不需要考虑数据一致性问题。</strong></p>
+<h3 id="7-3-Redis数据类型有哪些"><a href="#7-3-Redis数据类型有哪些" class="headerlink" title="7.3 Redis数据类型有哪些?"></a>7.3 Redis数据类型有哪些?</h3><p>①: String(字符串)</p>
+<p>②: Hash(hash表)</p>
+<p>③: List(链表)</p>
+<p>④: Set(集合)</p>
+<p>⑤: SortedSet(有序集合zset)</p>
+<h3 id="7-4-Redis中的常用命令哪些？"><a href="#7-4-Redis中的常用命令哪些？" class="headerlink" title="7.4 Redis中的常用命令哪些？"></a>7.4 Redis中的常用命令哪些？</h3><p>incr 让当前键值以1的数量递增，并返回递增后的值</p>
+<p>incrby 可以指定参数一次增加的数值，并返回递增后的值</p>
+<p>decrby 可以指定参数一次递减的数值，并返回递减后的值</p>
+<p>incrbyfloat 可以递增一个双精度浮点数</p>
+<p>append 作用是向键值的末尾追加value。如果键不存在则将该键的值设置为value。返回值是追加后字符串的总长度。</p>
+<p>mget/mset 作用与get/set相似，不过mget/mset可以同时获得/设置多个键的键值</p>
+<p>del 根据key来删除value</p>
+<p>flushdb 清除当前库的所有数据</p>
+<p>hset 存储一个哈希键值对的集合</p>
+<p>hget获取一个哈希键的值</p>
+<p>hmset 存储一个或多个哈希是键值对的集合</p>
+<p>hmget 获取多个指定的键的值</p>
+<p>hexists 判断哈希表中的字段名是否存在 如果存在返回1 否则返回0</p>
+<p>hdel 删除一个或多个字段</p>
+<p>hgetall 获取一个哈希是键值对的集合</p>
+<p>hvals 只返回字段值</p>
+<p>hkeys 只返回字段名</p>
+<p>hlen 返回key的hash的元素个数</p>
+<p>lpush key value向链表左侧添加</p>
+<p>rpush key value向链表右侧添加</p>
+<p>lpop key 从左边移出一个元素</p>
+<p>rpop key 从右边移出一个元素</p>
+<p>llen key 返回链表中元素的个数 相当于关系型数据库中 select count(*)</p>
+<p>lrange key start end lrange命令将返回索引从start到stop之间的所有元素。Redis的列表起始索引为0。</p>
+<p>lrange也支持负索引 lrange nn -2 -1 如 -1表示最右边第一个元素 -2表示最右边第二个元素，依次类推。</p>
+<p>lindex key indexnumber 如果要将列表类型当做数组来用，lindex命令是必不可少的。lindex命令用来返回指定索引的元素，索引从0开始</p>
+<p>如果是负数表示从右边开始计算的索引，最右边元素的索引是-1。</p>
+<p>Lset key indexnumber value 是另一个通过索引操作列表的命令，它会将索引为index的元素赋值为value。</p>
+<p>sadd key value 添加一个string元素到,key对应的set集合中，成功返回1,如果元素已经在集合中返回0</p>
+<p>scard key 返回set的元素个数，如果set是空或者key不存在返回0</p>
+<p>smembers key 返回key对应set的所有元素，结果是无序的</p>
+<p>sismember key value 判断value 是否在set中，存在返回1，0表示不存在或者key不存在</p>
+<p>srem key value 从key对应set中移除给定元素，成功返回1，如果value 在集合中不存在或者key不存在返回0</p>
+<p>zadd key score value 将一个或多个value及其socre加入到set中</p>
+<p>zrange key start end 0和-1表示从索引为0的元素到最后一个元素（同LRANGE命令相似）</p>
+<p>zrange key 0 -1 withscores 也可以连同score一块输出，使用WITHSCORES参数</p>
+<p>zremrangebyscore key start end 可用于范围删除操作</p>
+<p>ping 测试redis是否链接 如果已链接返回 PONG</p>
+<p>echo value测试redis是否链接 如果已链接返回 echo命令后给定的值</p>
+<p>keys <em> 返回所有的key 可以加</em>通配</p>
+<p>exists key判断string类型一个key是否存在 如果存在返回1 否则返回0</p>
+<p>expire key time(s) 设置一个key的过期时间 单位秒。时间到达后会删除key及value</p>
+<p>ttl key 查询已设置过期时间的key的剩余时间 如果返回-2表示该键值对已经被删除</p>
+<p>persist 移除给定key的过期时间</p>
+<p>select dbindex 选择数据库(0-15)</p>
+<p>move key dbIndex 将当前数据库中的key转移到其他数据库中</p>
+<p>dbsize 返回当前数据库中的key的数目</p>
+<p>info 获取服务器的信息和统计</p>
+<p>flushdb 删除当前选择的数据库中的key</p>
+<p>flushall 删除所有数据库中的所有key</p>
+<p>quit 退出连接</p>
+<h3 id="7-5-Redis的配置以及持久化方案有几种"><a href="#7-5-Redis的配置以及持久化方案有几种" class="headerlink" title="7.5 Redis的配置以及持久化方案有几种"></a>7.5 Redis的配置以及持久化方案有几种</h3><p>答：以下两种</p>
+<p>RDB方式</p>
+<p>AOF方式</p>
+<h3 id="7-6-什么是RDB方式？"><a href="#7-6-什么是RDB方式？" class="headerlink" title="7.6 什么是RDB方式？"></a>7.6 什么是RDB方式？</h3><p>答：是RDB是对内存中数据库状态进行快照</p>
+<p>RDB方式：将Redis在内存中的数据库状态保存到磁盘里面，RDB文件是一个经过压缩的二进制文件，通过该文件可以还原生成RDB文件时的数据库状态（默认下，持久化到dump.rdb文件，并且在redis重启后，自动读取其中文件，据悉，通常情况下一千万的字符串类型键，1GB的快照文件，同步到内存中的 时间是20-30秒）</p>
+<p>RDB的生成方式：</p>
+<p>1、执行命令手动生成</p>
+<p>有两个Redis命令可以用于生成RDB文件，一个是<code>SAVE</code>，另一个是<code>BGSAVE</code></p>
+<p>SAVE命令会阻塞Redis服务器进程,直到RDB文件创建完毕为止,在服务器进程阻塞期间.服务器不能处理任何命令请求，</p>
+<p>BGSAVE命令会派生出一个子进程，然后由子进程负责创建RDB文件，服务器进程（父进程）继续处理命令请求，创建RDB文件结束之前，客户端发送的BGSAVE和SAVE命令会被服务器拒绝</p>
+<p>2、通过配置自动生成</p>
+<p>可以设置服务器配置的save选项，让服务器每隔一段时间自动执行一次BGSAVE命令，可以通过save选项设置多个保存条件，但只要其中任意一个条件被满足，服务器就会执行BGSAVE命令</p>
+<p>例如：</p>
+<p>save 900 1</p>
+<p>save 300 10</p>
+<p>save 60 10000</p>
+<p>那么只要满足以下三个条件中的任意一个，BGSAVE命令就会被执行</p>
+<p>服务器在900秒之内，对数据库进行了至少1次修改</p>
+<p>服务器在300秒之内，对数据库进行了至少10次修改</p>
+<p>服务器在60秒之内，对数据库进行了至少10000次修改</p>
+<h3 id="7-7-什么是AOF方式？"><a href="#7-7-什么是AOF方式？" class="headerlink" title="7.7 什么是AOF方式？"></a>7.7 什么是AOF方式？</h3><p>AOF持久化方式在redis中默认是关闭的，需要修改配置文件开启该方式。</p>
+<p>AOF：把每条命令都写入文件，类似mysql的binlog日志</p>
+<p>AOF方式：是通过保存Redis服务器所执行的写命令来记录数据库状态的文件。</p>
+<p>AOF文件刷新的方式，有三种：</p>
+<p>appendfsync always - 每提交一个修改命令都调用fsync刷新到AOF文件，非常非常慢，但也非常安全</p>
+<p>appendfsync everysec - 每秒钟都调用fsync刷新到AOF文件，很快，但可能会丢失一秒以内的数据</p>
+<p>appendfsync no - 依靠OS进行刷新，redis不主动刷新AOF，这样最快，但安全性就差</p>
+<p>默认并推荐每秒刷新，这样在速度和安全上都做到了兼顾</p>
+<p>AOF数据恢复方式</p>
+<p>服务器在启动时，通过载入和执行AOF文件中保存的命令来还原服务器关闭之前的数据库状态，具体过程：</p>
+<p>载入AOF文件</p>
+<p>创建模拟客户端</p>
+<p>从AOF文件中读取一条命令</p>
+<p>使用模拟客户端执行命令</p>
+<p>循环读取并执行命令，直到全部完成</p>
+<p>如果同时启用了RDB和AOF方式，AOF优先，启动时只加载AOF文件恢复数据</p>
+<h2 id="八、Dubbo"><a href="#八、Dubbo" class="headerlink" title="八、Dubbo"></a>八、Dubbo</h2><h2 id="九、其他"><a href="#九、其他" class="headerlink" title="九、其他"></a>九、其他</h2><h3 id="9-1-什么是Solr？"><a href="#9-1-什么是Solr？" class="headerlink" title="9.1 什么是Solr？"></a>9.1 什么是Solr？</h3><p>答：Solr是一个<strong>独立</strong>的企业级<strong>搜索应用服务器</strong>，它对外提供类似于Web-service的API接口。</p>
+<p>Solr是一个高性能，采用Java开发，基于Lucene的全文搜索服务器。同时对其进行了扩展，提供了比Lucene更为丰富的查询语言，同时实现了<strong>可配置、可扩展</strong>并对查询性能进行了<strong>优化</strong>，并且提供了一个<strong>完善的功能管理界面</strong>，是一款非常优秀的<strong>全文检索引擎</strong>。</p>
+<p>文档<strong>通过Http利用XML </strong>加到一个搜索集合中。查询该集合也是通过http收到一个XML/JSON响应来实现。</p>
+<p>它的主要特性包括：高效、灵活的<strong>缓存</strong>功能，<strong>垂直搜索</strong>功能，<strong>高亮显示搜索结果</strong>，通过索引复制来提高可用性，提供一套强大Data Schema来定义字段，类型和设置文本分析，提供基于Web的管理界面等。</p>
+<h3 id="9-2-Solr是由哪两个部分构成？"><a href="#9-2-Solr是由哪两个部分构成？" class="headerlink" title="9.2 Solr是由哪两个部分构成？"></a>9.2 Solr是由哪两个部分构成？</h3><p>答：如下两个部分</p>
+<p>Solr的web服务</p>
+<p>Solr的索引库</p>
+<h3 id="9-3-什么是正排索引？"><a href="#9-3-什么是正排索引？" class="headerlink" title="9.3 什么是正排索引？"></a>9.3 什么是正排索引？</h3><p>正排索引是<strong>以文档的ID为关键字</strong>，索引文档中每个字的位置信息，查找时扫描索引中每个文档中字的信息直到找出所有包含查询关键字的文档。</p>
+<p>但是在查询的时候需对所有的文档进行扫描以确保没有遗漏，这样就使得检索时间大大延长，<strong>检索效率低下</strong>。     </p>
+<p>尽管正排索引的工作原理非常的简单，但是由于其检索效率太低，除非在特定情况下，否则实用性价值不大。</p>
+<h3 id="9-4-什么是倒排索引？"><a href="#9-4-什么是倒排索引？" class="headerlink" title="9.4 什么是倒排索引？"></a>9.4 什么是倒排索引？</h3><p>对数据进行分析，抽取出数据中的词条，<strong>以词条作为key</strong>，对应数据的<strong>存储位置作为value</strong>，实现索引的存储。这种索引称为倒排索引。</p>
+<p>当solr存储文档时，solr会首先对文档数据进行<strong>分词</strong>，<strong>创建索引库和文档数据库</strong>。所谓的分词是指：将一段字符文本按照一定的规则分成若干个单词.</p>
+<h3 id="9-5-什么是ActiveMQ？"><a href="#9-5-什么是ActiveMQ？" class="headerlink" title="9.5 什么是ActiveMQ？"></a>9.5 什么是ActiveMQ？</h3><p>ActiveMQ是一种开源的，实现了JMS1.1规范的，<strong>面向消息(MOM)的中间件</strong>，为应用程序提供高效的、可扩展的、稳定的和安全的企业级消息通信。ActiveMQ使用Apache提供的授权，任何人都可以对其实现代码进行修改。</p>
+<p>ActiveMQ的设计目标是提供标准的，面向消息的，能够<strong>跨越多语言</strong>和<strong>多系统</strong>的应用集成消息通信中间件</p>
+<p>ActiveMQ实现了JMS标准并提供了很多附加的特性。</p>
+<p>这些附加的特性包括，JMX管理（java Management Extensions，即java管理扩展），主从管理（master/salve，这是<strong>集群模式</strong>的一种，主要体现在<strong>可靠性方面，当主中介（代理）出现故障，那么从代理会替代主代理的位置，不至于使消息系统瘫痪</strong>）、消息组通信（同一组的消息，仅会提交给一个客户进行处理）、有序消息管理（确保消息能够按照发送的次序被接受者接收）。消息优先级（优先级高的消息先被投递和处理）、订阅消息的延迟接收（订阅消息在发布时，如果订阅者没有开启连接，那么当订阅者开启连接时，消息中介将会向其提交之前的，其未处理的消息）、接收者处理过慢（可以使用动态负载平衡，将多数消息提交到处理快的接收者，这主要是对PTP消息所说）、虚拟接收者（降低与中介的连接数目）、成熟的消息持久化技术（部分消息需要持久化到数据库或文件系统中，当中介崩溃时，信息不会丢失）、支持游标操作（可以处理大消息）、支持消息的转换、通过使用Apache的Camel可以支持EIP、使用镜像队列的形式轻松的对消息队列进行监控等。</p>
+<h3 id="9-5-消息服务的应用场景有哪些？"><a href="#9-5-消息服务的应用场景有哪些？" class="headerlink" title="9.5 消息服务的应用场景有哪些？"></a>9.5 消息服务的应用场景有哪些？</h3><p>答：如下3个场景都可以使用消息服务</p>
+<p>1、异步处理</p>
+<p>2、应用的解耦</p>
+<p>3、流量的削峰</p>
+<h3 id="9-6-什么是JMS？"><a href="#9-6-什么是JMS？" class="headerlink" title="9.6 什么是JMS？"></a>9.6 什么是JMS？</h3><p>JMS（Java Messaging Service）是Java平台上有关面向消息中间件的<strong>技术规范</strong>，它便于消息系统中的Java应用程序进行消息交换,并且通过提供标准的产生、发送、接收消息的接口，简化企业应用的开发。</p>
+<h3 id="9-7-B-S和C-S的含义及其区别"><a href="#9-7-B-S和C-S的含义及其区别" class="headerlink" title="9.7 B/S和C/S的含义及其区别"></a>9.7 B/S和C/S的含义及其区别</h3><p>C/S结构，即Client/Server(客户机/服务器)结构，通过将任务合理分配到Client端和Server端，降低了系统的通讯开销，可充分利用两端硬件环境优势。早期软件系统多以此作为首选设计标准。</p>
+<p>B/S结构，即Browser/Server(浏览器/服务器)结构，是随着Internet技术的兴起，对C/S结构的一种变化或者改进的结构。在这种结构下，用户界面完全通过WWW浏览器实现，一部分事务逻辑在前端实现，但是主要事务逻辑在服务器端实现，节约了开发成本，便于软件维护。</p>
+<p>区别</p>
+<p>1、C/S是建立在局域网的基础上的。B/S是建立在广域网的基础上的，但并不是说B/S结构不能在局域网上使用。</p>
+<p>2、B/S业务扩展简单方便，通过增加页面即可增加服务器功能。C/S的客户端还需要安装专用的客户端软件，不利于扩展。</p>
+<p>3、B/S维护简单方便。<strong>开发、维护等几乎所有工作也都集中在服务器端</strong>，当企业对网络应用进行升级时，只需更新服务器端的软件就可以，这减轻了异地用户系统维护与升级的成本</p>
+<p>4、B/S响应速度不及C/S；</p>
+<p>5、B/S用户体验效果不是很理想</p>
+<h3 id="9-8-说说你对容器的理解"><a href="#9-8-说说你对容器的理解" class="headerlink" title="9.8 说说你对容器的理解"></a>9.8 说说你对容器的理解</h3><p><strong>容器也是 java 程序</strong>，它的主要作用是为应用程序提供运行环境。</p>
+<p>容器用来接管安全性、并发性、事务处理、交换到辅助存储器和其它服务的责任.</p>
+<p>以tomcat为例：</p>
+<p>Tomcat是一个后台服务进程，其它的servlet（相当于DLL）是在Tomcat容器内运行,Broswer只与Tomcat通迅; Tomcat接受browser的请求，经过一系列动作（如果是静态网页，那么装载，按http协议形成响应流;如果是动态的如JSP，那就要调用JDK 中的servlet.jsp接口，解释形成静态网页，按http协议生成响应流发送回browser）后，形成静态网页，返回响应。</p>
+<h3 id="9-9-为什么要使用连接池？"><a href="#9-9-为什么要使用连接池？" class="headerlink" title="9.9 为什么要使用连接池？"></a>9.9 为什么要使用连接池？</h3><p>传统的数据库连接方式</p>
+<ul>
+<li>一个连接对象对应一个物理连接</li>
+<li>每次操作都打开一个物理连接，</li>
+<li>使用完都关闭连接，造成系统性能低下。</li>
+</ul>
+<p>连接池技术</p>
+<ul>
+<li>客户程序得到的连接对象是连接池中物理连接的一个句柄，调用连接对象的close()方法,物理连接并没有关闭,数据源的实现只是删除了客户程序中的连接对象和池中的连接对象之间的联系.</li>
+<li>数据库连接的建立及关闭是耗费系统资源的操作，在大型应用中对系统的性能影响尤为明显。为了能重复利用数据库连接对象,缩短请求的响应时间和提高服务器的性能,支持更多的客户，应采用连接池技术</li>
+</ul>
+<h4 id="9-10-数据库连接池的原理"><a href="#9-10-数据库连接池的原理" class="headerlink" title="9.10 数据库连接池的原理"></a>9.10 数据库连接池的原理</h4><p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3uumd1lwyj326n13512g.jpg" alt></p>
+<p>数据库连接池的原理: </p>
+<p>传统连接方式:</p>
+<ul>
+<li>首先调用Class.forName()方法加载数据库驱动，</li>
+<li>然后调用DriverManager.getConnection()方法建立连接.</li>
+</ul>
+<p>连接池技术:</p>
+<ul>
+<li>连接池解决方案是在<strong>应用程序启动时就预先建立多个数据库连接对象</strong>,然后将连接对象<strong>保存到连接池</strong>中。</li>
+<li>当客户请求到来时,从池中取出一个连接对象为客户服务。</li>
+<li>当请求完成时,客户程序调用<strong>close()方法,将连接对象放回池中</strong>.</li>
+<li>对于多于连接池中连接数的请求，排队等待。</li>
+<li>应用程序还可根据连接池中连接的使用率，动态增加或减少池中的连接数</li>
+</ul>
+<h3 id="9-11-MVC模式及其优缺点"><a href="#9-11-MVC模式及其优缺点" class="headerlink" title="9.11 MVC模式及其优缺点"></a>9.11 MVC模式及其优缺点</h3><p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3uunyry67j314n19wmxo.jpg" alt></p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3uuokh2vqj31p01mjjs9.jpg" alt></p>
+<h4 id="9-11-1-MVC原理"><a href="#9-11-1-MVC原理" class="headerlink" title="9.11.1 MVC原理"></a>9.11.1 MVC原理</h4><p>MVC是一种程序开发设计模式,它实现了显示模块与功能模块的分离。提高了程序的可维护性、可移植性、可扩展性与可重用性，降低了程序的开发难度。它主要分模型、视图、控制器三层。</p>
+<p>1、模型(model)它是应用程序的主体部分，主要包括业务逻辑模块和数据模块。模型与数据格式无关，这样一个模型能为多个视图提供数据。由于应用于模型的代码只需写一次就可以被多个视图重用，所以减少了代码的重复性</p>
+<p>2、视图(view) 用户与之交互的界面、在web中视图一般由jsp,html组成</p>
+<p>3、控制器(controller)接收来自界面的请求 并交给模型进行处理 在这个过程中控制器不做任何处理只是起到了一个连接的作用</p>
+<h4 id="9-11-2-MVC的优点"><a href="#9-11-2-MVC的优点" class="headerlink" title="9.11.2 MVC的优点"></a>9.11.2 MVC的优点</h4><p>1、<strong>降低代码耦合性</strong>。在MVC模式中，三个层各施其职，所以如果一旦哪一层的需求发生了变化，就只需要更改相应的层中的代码而不会影响到其他层中的代码。</p>
+<p>2、有利于<strong>分工合作</strong>。在MVC模式中，由于按层把系统分开，那么就能更好的实现开发中的分工。网页设计人员可进行开发视图层中的JSP，而对业务熟悉的人员可开发业务层，而其他开发人员可开发控制层。</p>
+<p>3、有利于<strong>组件的重用</strong>。如控制层可独立成一个能用的组件，表示层也可做成通用的操作界面。可以为一个模型在运行时同时建立和使用多个视图。</p>
+<h4 id="9-11-3-MVC的不足之处"><a href="#9-11-3-MVC的不足之处" class="headerlink" title="9.11.3 MVC的不足之处"></a>9.11.3 MVC的不足之处</h4><p>1、增加了系统<strong>结构和实现的复杂性</strong>。对于简单的界面，严格遵循MVC，使模型、视图与控制器分离，会增加结构的复杂性，并可能产生过多的更新操作，降低运行效率。</p>
+<p>2、视图与控制器间的过于紧密的连接。视图与控制器是相互分离，但确实联系紧密的部件，视图没有控制器的存在，其应用是很有限的，反之亦然，这样就妨碍了他们的独立重用。</p>
+<p>3、<strong>视图对模型数据的低效率访问</strong>。依据模型操作接口的不同，视图可能需要多次调用才能获得足够的显示数据。对未变化数据的不必要的频繁访问，也将损害操作性能。</p>
+<p>4、目前，一般高级的界面工具或构造器不支持模式。改造这些工具以适应MVC需要和建立分离的部件的代价是很高的，从而造成MVC使用的困难。</p>
+<h4 id="9-11-4-MVC模式完成分页功能的基本思路是什么？"><a href="#9-11-4-MVC模式完成分页功能的基本思路是什么？" class="headerlink" title="9.11.4 MVC模式完成分页功能的基本思路是什么？"></a>9.11.4 MVC模式完成分页功能的基本思路是什么？</h4><p>1）页面提交页码(第几页)到Servlet中</p>
+<p>2）Servlet接收到页码后，将页码传递给分页工具类(PageBean)</p>
+<p>3）Servlet中调用Service层传入PageBean对象</p>
+<p>4）Service层调用DAO层传入PageBean对象</p>
+<p>5）Servlet中得到查询出来的数据，并setAttrivute保存</p>
+<p>6）在页面中得到(getAttribute)数据，遍历输出</p>
+<h3 id="9-11-5-常用的Web容器"><a href="#9-11-5-常用的Web容器" class="headerlink" title="9.11.5 常用的Web容器"></a>9.11.5 常用的Web容器</h3><p>答： Unix和Linux平台下使用最广泛的免费HTTP服务器是Apache服务器，而Windows平台的服务器通常使用IIS作为Web服务器。选择Web服务器应考虑的因素有：性能、安全性、日志和统计、虚拟主机、代理服务器、缓冲服务和集成应用程序等。下面是对常用服务器的简介：</p>
+<p>IIS：Microsoft的Web服务器产品为Internet Information Services。IIS 是允许在公共Intranet或Internet上发布信息的Web服务器。IIS是目前最流行的Web服务器产品之一，很多著名的网站都是建立在IIS的平台上。IIS提供了一个图形界面的管理工具，称为Internet服务管理器，可用于监视配置和控制Internet服务。IIS是一种Web服务组件，其中包括Web服务器、FTP服务器、NNTP服务器和SMTP服务器，分别用于网页浏览、文件传输、新闻服务和邮件发送等方面，它使得在网络（包括互联网和局域网）上发布信息成了一件很容易的事。它提供ISAPI(Intranet Server API）作为扩展Web服务器功能的编程接口；同时，它还提供一个Internet数据库连接器，可以实现对数据库的查询和更新。</p>
+<p>Kangle：Kangle Web服务器是一款跨平台、功能强大、安全稳定、易操作的高性能Web服务器和反向代理服务器软件。此外，Kangle也是一款专为做虚拟主机研发的Web服务器。实现虚拟主机独立进程、独立身份运行。用户之间安全隔离，一个用户出问题不影响其他用户。支持PHP、ASP、ASP.NET、Java、Ruby等多种动态开发语言。</p>
+<p>WebSphere：WebSphere Application Server是功能完善、开放的Web应用程序服务器，是IBM电子商务计划的核心部分，它是基于Java的应用环境，用于建立、部署和管理Internet和Intranet Web应用程序，适应各种Web应用程序服务器的需要，范围从简单到高级直到企业级。</p>
+<p>WebLogic：BEA WebLogic Server是一种多功能、基于标准的Web应用服务器，为企业构建自己的应用提供了坚实的基础。各种应用开发、部署所有关键性的任务，无论是集成各种系统和数据库，还是提交服务、跨Internet协作，Weblogic都提供了相应的支持。由于它具有全面的功能、对开放标准的遵从性、多层架构、支持基于组件的开发，基于Internet的企业都选择它来开发、部署最佳的应用。BEA WebLogic Server在使应用服务器成为企业应用架构的基础方面一直处于领先地位，为构建集成化的企业级应用提供了稳固的基础，它们以 Internet的容量和速度，在连网的企业之间共享信息、提交服务，实现协作自动化。</p>
+<p>Apache：目前Apache仍然是世界上用得最多的Web服务器，市场占有率约为60%左右。世界上很多著名的网站都是Apache的产物，它的成功之处主要在于它的源代码开放、有一支强大的开发团队、支持跨平台的应用（可以运行在几乎所有的Unix、Windows、Linux系统平台上）以及它的可移植性等方面。</p>
+<p>Tomcat：Tomcat是一个开放源代码、运行Servlet和JSP的容器。TomcatServer实现了Servlet和JSP规范。此外，Tomcat还实现了Apache-Jakarta规范而且比绝大多数商业应用软件服务器要好，因此目前也有不少的Web服务器都选择了Tomcat。</p>
+<p>Nginx：读作”engine x”，是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP代理服务器。 Nginx是由Igor Sysoev为俄罗斯访问量第二的 Rambler.ru站点开发的，第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。</p>
+
+      
+    </div>
+
+    
+	
+	
+	
+	
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/框架相关面试题及答案.html">框架相关面试题</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
+  <p><span>发布时间:</span>2019年06月08日 - 23:04</p>
+  <p><span>最后更新:</span>2019年06月10日 - 00:01</p>
+  <p><span>原始链接:</span><a href="/框架相关面试题及答案.html" title="框架相关面试题">https://zzwwqq.xyz/框架相关面试题及答案.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.xyz/框架相关面试题及答案.html" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>版权声明:</span>本博客所有文章除特别声明外，均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"><i class="fa fa-creative-commons"></i>BY-NC-SA </a>许可协议。转载请注明出处!</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+      
+</div>
+
+    
+    
+    
+
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="http://cdn.zzwwqq.xyz/static/images/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7.jpg" alt="zwq wechat" style="width: 200px; max-width: 100%;">
+  <div>欢迎您扫一扫关注我的微信公众号！</div>
+</div>
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="http://cdn.zzwwqq.xyz/static/images/wechatpay.jpg" alt="zwq 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="http://cdn.zzwwqq.xyz/static/images/alipay.jpg" alt="zwq 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+
+	
+	
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/框架相关面试题/" rel="tag"><i class="fa fa-tag"></i> 框架相关面试题</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/正则表达式.html" rel="next" title="正则表达式">
+                <i class="fa fa-chevron-left"></i> 正则表达式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Linux操作相关面试题及答案.html" rel="prev" title="Linux操作相关面试题及答案">
+                Linux操作相关面试题及答案 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://cdn.zzwwqq.xyz/static/images/avatar.png" alt="zwq">
+            
+              <p class="site-author-name" itemprop="name">zwq</p>
+              <div class="site-description motion-element" itemprop="description">不忘初心,方得始终!</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">58</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/zzwwqq" title="GitHub &rarr; https://github.com/zzwwqq" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:zwq13264860490@gmail.com" title="E-Mail &rarr; mailto:zwq13264860490@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/u/5564810309/home?wvr=5" title="Weibo &rarr; https://weibo.com/u/5564810309/home?wvr=5" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.zhihu.com/people/shen-qiu-wu-hen-66/activities" title="知乎 &rarr; https://www.zhihu.com/people/shen-qiu-wu-hen-66/activities" rel="noopener" target="_blank"><i class="fa fa-fw fa-snapchat"></i>知乎</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://me.csdn.net/weixin_44815733" title="CSDN &rarr; https://me.csdn.net/weixin_44815733" rel="noopener" target="_blank"><i class="fa fa-fw fa-angellist"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.jianshu.com/u/01892c1f80f8" title="简书 &rarr; https://www.jianshu.com/u/01892c1f80f8" rel="noopener" target="_blank"><i class="fa fa-fw fa-leanpub"></i>简书</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+		  
+		  
+		  
+		  
+		  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=38592976&auto=0&height=66"></iframe>
+		  
+		  
+		  
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/" title="https://www.cnblogs.com/" rel="noopener" target="_blank">博客园</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、说说什么是框架："><span class="nav-text">一、说说什么是框架：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-简单说一下MVC框架？"><span class="nav-text">1.1 简单说一下MVC框架？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-传统MVC模式模式问题："><span class="nav-text">1.1.1 传统MVC模式模式问题：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2-现在比较常用的MVC框架："><span class="nav-text">1.1.2 现在比较常用的MVC框架：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-简单讲一下SpringMVC的执行流程？"><span class="nav-text">1.2 简单讲一下SpringMVC的执行流程？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-什么是ORM"><span class="nav-text">1.3 什么是ORM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-简单讲一下webservice使用的场景"><span class="nav-text">1.4 简单讲一下webservice使用的场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Spring"><span class="nav-text">二、Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-Spring是什么？"><span class="nav-text">2.1 Spring是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Spring中的两大核心"><span class="nav-text">2.2 Spring中的两大核心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-IOC-Inversion-of-Control"><span class="nav-text">2.2.1 IOC(Inversion of Control)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-AOP-面向切面编程"><span class="nav-text">2.2.2 AOP 面向切面编程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-讲一下Spring的事务的传播特性"><span class="nav-text">2.3 讲一下Spring的事务的传播特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、SpringMVC"><span class="nav-text">三、SpringMVC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、Mybatis"><span class="nav-text">四、Mybatis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-什么是MyBatis？"><span class="nav-text">4.1 什么是MyBatis？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-Mybatis是如何进行分页的？分页插件的原理是什么？"><span class="nav-text">4.2 Mybatis是如何进行分页的？分页插件的原理是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-MyBatis与Hibernate有哪些不同？"><span class="nav-text">4.3 MyBatis与Hibernate有哪些不同？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-简述Mybatis的Xml映射文件和Mybatis内部数据结构之间的映射关系？"><span class="nav-text">4.4 简述Mybatis的Xml映射文件和Mybatis内部数据结构之间的映射关系？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-什么是MyBatis的接口绑定-有什么好处？"><span class="nav-text">4.5 什么是MyBatis的接口绑定,有什么好处？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-Mybatis能执行一对一、一对多的关联查询吗？都有哪些实现方式，以及它们之间的区别？"><span class="nav-text">4.6 Mybatis能执行一对一、一对多的关联查询吗？都有哪些实现方式，以及它们之间的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-MyBatis里面的动态Sql是怎么设定的-用什么语法"><span class="nav-text">4.7 MyBatis里面的动态Sql是怎么设定的?用什么语法?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-使用MyBatis的mapper接口调用时有哪些要求？"><span class="nav-text">4.8 使用MyBatis的mapper接口调用时有哪些要求？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-9-Mybatis是如何将sql执行结果封装为目标对象并返回的？都有哪些映射形式？"><span class="nav-text">4.9 Mybatis是如何将sql执行结果封装为目标对象并返回的？都有哪些映射形式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-10-MyBatis接口绑定有几种实现方式-分别是怎么实现的"><span class="nav-text">4.10 MyBatis接口绑定有几种实现方式,分别是怎么实现的?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-11-MyBatis实现一对一有几种方式-具体怎么操作的？"><span class="nav-text">4.11 .MyBatis实现一对一有几种方式?具体怎么操作的？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-12-什么情况下用注解绑定-什么情况下用xml绑定？"><span class="nav-text">4.12 什么情况下用注解绑定,什么情况下用xml绑定？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-13-MyBatis的好处是什么？"><span class="nav-text">4.13 MyBatis的好处是什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、Maven"><span class="nav-text">五、Maven</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-什么是Maven？"><span class="nav-text">5.1 什么是Maven？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-Maven和ANT的区"><span class="nav-text">5.2  Maven和ANT的区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-Maven仓库是什么"><span class="nav-text">5.3  Maven仓库是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-Maven的工程类型有哪些？"><span class="nav-text">5.4  Maven的工程类型有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-Maven常用命令有哪些？"><span class="nav-text">5.5  Maven常用命令有哪些？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、Nginx"><span class="nav-text">六、Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-什么是Nginx？"><span class="nav-text">6.1 什么是Nginx？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-Nginx有哪些作用？"><span class="nav-text">6.2 Nginx有哪些作用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-什么是正向代理？"><span class="nav-text">6.3 什么是正向代理？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-什么是反向代理？"><span class="nav-text">6.4 什么是反向代理？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、Redis"><span class="nav-text">七、Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-什么是Redis？"><span class="nav-text">7.1 什么是Redis？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-Redis的特点什么是？"><span class="nav-text">7.2 Redis的特点什么是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-Redis数据类型有哪些"><span class="nav-text">7.3 Redis数据类型有哪些?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-Redis中的常用命令哪些？"><span class="nav-text">7.4 Redis中的常用命令哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-Redis的配置以及持久化方案有几种"><span class="nav-text">7.5 Redis的配置以及持久化方案有几种</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-6-什么是RDB方式？"><span class="nav-text">7.6 什么是RDB方式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-7-什么是AOF方式？"><span class="nav-text">7.7 什么是AOF方式？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、Dubbo"><span class="nav-text">八、Dubbo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、其他"><span class="nav-text">九、其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-什么是Solr？"><span class="nav-text">9.1 什么是Solr？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-Solr是由哪两个部分构成？"><span class="nav-text">9.2 Solr是由哪两个部分构成？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-什么是正排索引？"><span class="nav-text">9.3 什么是正排索引？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-什么是倒排索引？"><span class="nav-text">9.4 什么是倒排索引？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-5-什么是ActiveMQ？"><span class="nav-text">9.5 什么是ActiveMQ？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-5-消息服务的应用场景有哪些？"><span class="nav-text">9.5 消息服务的应用场景有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-6-什么是JMS？"><span class="nav-text">9.6 什么是JMS？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-7-B-S和C-S的含义及其区别"><span class="nav-text">9.7 B/S和C/S的含义及其区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-8-说说你对容器的理解"><span class="nav-text">9.8 说说你对容器的理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-9-为什么要使用连接池？"><span class="nav-text">9.9 为什么要使用连接池？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-10-数据库连接池的原理"><span class="nav-text">9.10 数据库连接池的原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-11-MVC模式及其优缺点"><span class="nav-text">9.11 MVC模式及其优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-11-1-MVC原理"><span class="nav-text">9.11.1 MVC原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-11-2-MVC的优点"><span class="nav-text">9.11.2 MVC的优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-11-3-MVC的不足之处"><span class="nav-text">9.11.3 MVC的不足之处</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-11-4-MVC模式完成分页功能的基本思路是什么？"><span class="nav-text">9.11.4 MVC模式完成分页功能的基本思路是什么？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-11-5-常用的Web容器"><span class="nav-text">9.11.5 常用的Web容器</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zwq</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">618k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">9:22</span>
+  
+</div>
+
+
+<!--
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
+
+-->
+
+
+<div>
+
+
+
+
+
+<div>
+<div class="powered-by">
+<i class="fa fa-user-md"></i>
+<span id="busuanzi_container_site_uv">
+  本站总访客数:<span id="busuanzi_value_site_uv"></span>&nbsp;&nbsp;| 
+</span>
+<span id="busuanzi_container_site_pv">
+    &nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+</div>
+</div>
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("03/12/2019 12:00:00");//此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+<div class="BbeiAn-info" style="color:#4dfc23">
+   	鄂ICP备 -
+    <a target="_blank" href="http://www.miitbeian.gov.cn/" style="color:#4dfc23;" rel="nofollow">18025394</a> <!--a标签中增加nofollow属性，避免爬虫出站。-->| 
+	<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42090202000295" style="text-decoration:none;color:#4dfc23;padding-left:30px;background:url(https://s1.ax1x.com/2018/09/29/ilmwIH.png) no-repeat left center" rel="nofollow">鄂公网安备 42090202000295</a>	  <!--这里将图标作为了背景，以使得能和后面的文字在同一行-->
+</div></div>
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+      <div>
+        <div class="addthis_inline_share_toolbox">
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c8a5801582888d6" async="async"></script>
+</div>
+
+      </div>
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: false,
+    appId: 'BMBxkYUDumKWDR3FTQCAY7R1-gzGzoHsz',
+    appKey: 'yd7o7KS9MjFPCTGAGOpErnWy',
+    placeholder: 'Hello !',
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+  
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/click-love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":70,"height":120},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
