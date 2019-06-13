@@ -143,7 +143,7 @@ daovoice('update');
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3n8xda5m1j30nc02kgli.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3n8xlcchxj30n202fwee.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3n8xv51e3j30n602iwee.jpg">
-<meta property="og:updated_time" content="2019-06-04T06:53:23.334Z">
+<meta property="og:updated_time" content="2019-06-13T14:56:17.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="各种排序算法">
 <meta name="twitter:description" content="一、常见排序算法">
@@ -546,7 +546,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-04 14:53:23" itemprop="dateModified" datetime="2019-06-04T14:53:23+08:00">2019-06-04</time>
+                <time title="修改时间：2019-06-13 22:56:17" itemprop="dateModified" datetime="2019-06-13T22:56:17+08:00">2019-06-13</time>
               
             
           </span>
@@ -564,6 +564,13 @@ daovoice('update');
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
 
                 
                 
@@ -618,7 +625,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1k</span>
+                <span title="本文字数">2.5k</span>
               
 
               
@@ -632,7 +639,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -694,10 +701,8 @@ daovoice('update');
 </ul>
 <p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3n8xv51e3j30n602iwee.jpg" alt></p>
 <ul>
-<li><p>可以看出a[5]前面的数字都小于它，a[5]后面的数字都大于它。因此再对a[0…4]和a[6…9]这二个子区间重复上述步骤就可以了。  </p>
-</li>
-<li><p>对挖坑填数进行总结:</p>
-</li>
+<li>可以看出a[5]前面的数字都小于它，a[5]后面的数字都大于它。因此再对a[0…4]和a[6…9]这二个子区间重复上述步骤就可以了。  </li>
+<li>对挖坑填数进行总结:</li>
 <li><ul>
 <li>1．i =L; j = R; 将基准数挖出形成第一个坑a[i]。</li>
 <li>2．j–由后向前找比它小的数，找到后挖出此数填前一个坑a[i]中。</li>
@@ -705,9 +710,9 @@ daovoice('update');
 <li>4．再重复执行2，3二步，直到i==j，将基准数填入a[i]中。</li>
 </ul>
 </li>
-<li><p>照着这个总结很容易实现挖坑填数的代码：</p>
-</li>
+<li>照着这个总结很容易实现挖坑填数的代码：</li>
 </ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuickSort</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">AdjustArray</span><span class="params">(<span class="keyword">int</span> s[], <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> <span class="comment">//返回调整后基准数的位置</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = l, j = r;</span><br><span class="line">        <span class="keyword">int</span> x = s[l]; <span class="comment">//s[l]即s[i]就是第一个坑</span></span><br><span class="line">        <span class="keyword">while</span> (i &lt; j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 从右向左找小于x的数来填s[i]</span></span><br><span class="line">            <span class="keyword">while</span>(i &lt; j &amp;&amp; s[j] &gt;= x) &#123;</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(i &lt; j)</span><br><span class="line">            &#123;</span><br><span class="line">                s[i] = s[j]; <span class="comment">//将s[j]填到s[i]中，s[j]就形成了一个新的坑</span></span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 从左向右找大于或等于x的数来填s[j]</span></span><br><span class="line">            <span class="keyword">while</span>(i &lt; j &amp;&amp; s[i] &lt; x) &#123;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(i &lt; j)</span><br><span class="line">            &#123;</span><br><span class="line">                s[j] = s[i]; <span class="comment">//将s[i]填到s[j]中，s[i]就形成了一个新的坑</span></span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//退出时，i等于j。将x填到这个坑中。</span></span><br><span class="line">        s[i] = x;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quick_sort1</span><span class="params">(<span class="keyword">int</span> s[], <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (l &lt; r)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> i = AdjustArray(s, l, r);<span class="comment">//先成挖坑填数法调整s[]</span></span><br><span class="line">            quick_sort1(s, l, i - <span class="number">1</span>); <span class="comment">// 递归调用</span></span><br><span class="line">            quick_sort1(s, i + <span class="number">1</span>, r);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> s[] = &#123;<span class="number">72</span>,<span class="number">6</span>,<span class="number">57</span>,<span class="number">88</span>,<span class="number">60</span>,<span class="number">42</span>,<span class="number">83</span>,<span class="number">73</span>,<span class="number">48</span>,<span class="number">85</span>&#125;;</span><br><span class="line"></span><br><span class="line">        quick_sort1(s,<span class="number">0</span>,<span class="number">9</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;s.length;i++)&#123;</span><br><span class="line">            System.out.print(s[i]+<span class="string">","</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -739,7 +744,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/各种排序算法.html">各种排序算法</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年06月02日 - 22:15</p>
-  <p><span>最后更新:</span>2019年06月04日 - 14:53</p>
+  <p><span>最后更新:</span>2019年06月13日 - 22:56</p>
   <p><span>原始链接:</span><a href="/各种排序算法.html" title="各种排序算法">https://zzwwqq.xyz/各种排序算法.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.xyz/各种排序算法.html" aria-label="复制成功！"></i></span>
   </p>
@@ -917,7 +922,7 @@ daovoice('update');
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">58</span>
+                    <span class="site-state-item-count">59</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -968,7 +973,11 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">17</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1091,7 +1100,9 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">53</span>
+                      
+                    
+                    <span class="site-state-item-count">54</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1271,7 +1282,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">618k</span>
+    <span title="站点总字数">639k</span>
   
 
   
@@ -1282,7 +1293,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">9:22</span>
+    <span title="站点阅读时长">9:41</span>
   
 </div>
 

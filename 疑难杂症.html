@@ -142,7 +142,15 @@ daovoice('update');
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3vbv8uk1uj306k01omwx.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3vbvjafghj30fn021t8m.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3vbqqsu5jj304y01f741.jpg">
-<meta property="og:updated_time" content="2019-06-09T16:01:56.272Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3ylgspwf6j30or0g5dkv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3xlut4h2jj30p30d677y.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3xme9stecj309704h77y.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3xmem18uvj308702377y.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3xmfn8d7tj30bk06p77y.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3xmg01y31j30ae00z77y.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZly1g3mwu91hxsj30cf07pmyx.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3yp8p7u93j30nu073413.jpg">
+<meta property="og:updated_time" content="2019-06-13T07:56:18.347Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="专治疑难杂症">
 <meta name="twitter:description" content="一、HTML跳转到的地方 1.1 checked属性值是true还是checked?结论: 都可以,但是不推荐这两种方式,推荐仅设置checked属性不赋值 复选框标签具有checked属性，通过此属性可以设置复选框的选中状态。 非常简单的操作，但是还是有不少朋友存在后面类似的疑问，那就是不确定checked属性值是true还是checked。 因为两个属性值在实际代码中都有出现，并且都是有效的，">
@@ -545,7 +553,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-10 00:01:56" itemprop="dateModified" datetime="2019-06-10T00:01:56+08:00">2019-06-10</time>
+                <time title="修改时间：2019-06-13 15:56:18" itemprop="dateModified" datetime="2019-06-13T15:56:18+08:00">2019-06-13</time>
               
             
           </span>
@@ -617,7 +625,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.8k</span>
+                <span title="本文字数">15k</span>
               
 
               
@@ -631,7 +639,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">13 分钟</span>
               
             </div>
           
@@ -691,6 +699,105 @@ daovoice('update');
 <p>checked属性不需要设置值，只需要添加此属性，复选框就会被选中。</p>
 <p>disabled或者selected等属性也是同样的道理，无需设置属性值，可以节省若干代码量，也符合标准。</p>
 <p>上述几个属性还有一些地方需要注意，具体参阅<a href="#jump2">点击跳转</a></p>
+<h3 id="1-2-路径问题"><a href="#1-2-路径问题" class="headerlink" title="1.2 路径问题"></a>1.2 路径问题</h3><h4 id="1-2-1-绝对路径和相对路径及根路径"><a href="#1-2-1-绝对路径和相对路径及根路径" class="headerlink" title="1.2.1 绝对路径和相对路径及根路径"></a>1.2.1 绝对路径和相对路径及根路径</h4><p>先给出一个网站结构图做实例加深理解:<br>A网站（域名为<code>http://www.a.com</code>）：<code>/include/a-test.html，/img/a-next.jpg；</code><br>B网站（域名为<code>http://www.b.com</code>）：<code>/include/b-test.html，/img/b-next.jpg</code>。</p>
+<p><strong>相对路径</strong>是从引用的网页文件本身开始构建的，如果在A网站中的a-test.html中要插入图片a-next.jpg，可以这样做:<code>&lt; img src=&quot;../img/a-next.jpg&quot; /&gt;</code>，<strong>重点是img前面的../，表示从html处于的include开始起步</strong>，输入一个../表示回到上面一级父文件夹下，然后再接着img/表示又从父级文件夹下的img文件开始了，最后定位img下面的a-next.jpg。</p>
+<p><strong>绝对路径</strong> 如果是Web项目<strong>一般带有网站的域名</strong>，例如: 如果在A网站中的a-test.html中要插入图片a-next.jpg，需要这样这样写:<code>&lt; img src=&quot;http://www.a.com/img/a-next.jpg&quot; &gt;</code>，将图片路径上带有了域名信息，再打个比方：如果在A网站中的a-test.html中要插入B网站的图片b-next.jpg，就需要这样写：<code>&lt; img src=&quot;http://www.b.com/img/b-next.jpg&quot; &gt;</code>，这种方法适用与在不同网站之间插入外部网站的图片。<br><strong>如果是在本地电脑上</strong>绝对路径应该像这样:  <code>F:\pan\Javawebcode\code\goods\WebRoot\jsps\css\user\regist.css</code>,从文件所在的磁盘符开始到该文件名</p>
+<p><strong>根路径</strong>是从网站的最底层开始起，一般的网站的根目录就是<strong>域名下对应的文件夹</strong>，就如D盘是一个网站，双击D盘进入到D盘看到的就是网站的根目录，这种路径的链接样式是这样的：如果在A网站中的a-test.html中要插入图片a-next.jpg，可以这样做:<code>&lt; img src=&quot;/img/a-next.jpg&quot; &gt;</code>，<strong>以/开头表示从网站根目录算起</strong>，找到根目录下面的img文件夹下的next.jpg。</p>
+<p><strong>简言之: </strong></p>
+<ul>
+<li>相对路径: <code>../</code>  或者   <code>../../</code>  或者像这种  <code>temp/test/test.html</code></li>
+<li>绝对路径:  盘符开始 或 http 开始</li>
+<li>根路径: 一般以<code>/</code>开头</li>
+</ul>
+<h4 id="1-2-2-转发和重定向中的"><a href="#1-2-2-转发和重定向中的" class="headerlink" title="1.2.2 转发和重定向中的/"></a>1.2.2 转发和重定向中的<code>/</code></h4><p>①: 转发时”/“代表当前项目的根路径 ；重定向时”/“代表当前服务器的根路径</p>
+<p>比如: </p>
+<p>转发：<code>/</code>代表<code>http://localhost:8080/工程名/</code>      举例:  <code>request.getRequestDispatcher(&quot;/jsp/system/index.jsp&quot;).forward(request,response);</code></p>
+<p>重定向：<code>/</code>代表<code>http://localhost:8080/</code></p>
+<p>另外:</p>
+<p>超链接中href的<code>/</code>代表<code>http://localhost:8080/</code></p>
+<p>标签的Src 属性的值中<code>/</code>代表<code>http://localhost:8080/</code></p>
+<p>c标签<code>/</code>代表<code>http://localhost:8080/工程名/</code></p>
+<p>include指令中file的<code>/</code>代表<code>http://localhost:8080/工程名/</code>        如<code>&lt;%@ include file = &quot;/jsps/header.jsp&quot; %&gt;</code></p>
+<h4 id="1-2-3-Javaweb工程中在写路径时-为什么不包含WebContent-eclipse中默认名"><a href="#1-2-3-Javaweb工程中在写路径时-为什么不包含WebContent-eclipse中默认名" class="headerlink" title="1.2.3 Javaweb工程中在写路径时,为什么不包含WebContent(eclipse中默认名)"></a>1.2.3 Javaweb工程中在写路径时,为什么不包含WebContent(eclipse中默认名)</h4><p>JavaWeb项目中引用的路径其实是编译后的路径: 即下图 右边部分的路径: </p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3ylgspwf6j30or0g5dkv.jpg" alt></p>
+<p>例如:  target.jsp的绝对路径为:  <code>http://localhost:8080/Chicken/good/target.jsp</code></p>
+<h3 id="1-3-中文乱码问题"><a href="#1-3-中文乱码问题" class="headerlink" title="1.3 中文乱码问题"></a>1.3 中文乱码问题</h3><p>1）设置页面编码，</p>
+<p>若是jsp页面:  则<code>&lt;%@page language=&quot;java&quot; pageEncoding=&quot;UTF-8&quot; contentType=&quot;text/html;charset=UTF-8&quot; %&gt;</code></p>
+<p>若是html页面，在网页头部（&lt; head&gt;&lt; /head&gt;）中添加下面这段代码:</p>
+<p><code>&lt; meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;</code></p>
+<p>2）将form表单提交方式变为post方式，即添加method=”post”；）在Servlet类中编写代码<code>request.setCharacterEncoding(&quot;UTF-8&quot;)</code>，<strong>而且必须写在第一行。</strong></p>
+<p>3）如果是get请求，在Servlet类中编写代码</p>
+<p><code>byte [] bytes = str.getBytes(&quot;iso-8859-1&quot;);</code></p>
+<p><code>String cstr = new String(bytes,&quot;utf-8&quot;);</code></p>
+<p>4) 或者直接修改Tomcat服务器配置文件server.xml增加内容：</p>
+<p><code>URIEncoding=&quot;utf-8&quot;</code></p>
+<h2 id="二、Java"><a href="#二、Java" class="headerlink" title="二、Java"></a>二、Java</h2><h3 id="2-1-集合中List-和-Set-区别-以及-定制排序和选择排序"><a href="#2-1-集合中List-和-Set-区别-以及-定制排序和选择排序" class="headerlink" title="2.1 集合中List 和 Set 区别,以及 定制排序和选择排序"></a>2.1 集合中List 和 Set 区别,以及 定制排序和选择排序</h3><h4 id="2-1-1-区别"><a href="#2-1-1-区别" class="headerlink" title="2.1.1 区别:"></a>2.1.1 区别:</h4><p>List接口:  存储有序,可重复</p>
+<p>Set接口：存储无序,不可重复</p>
+<h4 id="2-1-2-值得注意的地方"><a href="#2-1-2-值得注意的地方" class="headerlink" title="2.1.2 值得注意的地方:"></a>2.1.2 值得注意的地方:</h4><p>注: </p>
+<p>①: 存储有序/无序: 指的是元素在底层存放的位置有序/无序.</p>
+<p>而不是根据遍历出来的顺序与存入的顺序是否一致来说明有序/无序.</p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3xlut4h2jj30p30d677y.jpg" alt></p>
+<p>②: 不可重复性：当向Set中添加相同的元素的时候，<strong>后面的这个不能添加进去</strong></p>
+<p>另外Map中与这相似: 判断两个key是否相同，若相同,<strong>则只能添加进后添加的那个元素</strong></p>
+<p>③: 一个TreeSet对象必须存储同一种数据类型,不能既存储Integer  又存储String类型, 而HashSet和LinkedHashSet则可以存储不同类型.</p>
+<p>④: HashSet 遍历出来的顺序与存入时的顺序不同.但LinkedHashSet是相同的</p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3xme9stecj309704h77y.jpg" alt></p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3xmem18uvj308702377y.jpg" alt></p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3xmfn8d7tj30bk06p77y.jpg" alt></p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3xmg01y31j30ae00z77y.jpg" alt></p>
+<p>⑤: 向TreeSet中添加的元素时，首先按照compareTo()进行比较，一旦返回0，虽然仅是两个对象的此属性组相同，但是程序会认为这两个对象相同而不管其他属性是否相同，进而后一个对象不能添加进来</p>
+<p>⑥: 使用TreeSet时, compareTo()与hashCode()以及equals()三者保持一致！</p>
+<p>⑦: 关于HashTable 古老的实现类，线程安全，不建议使用;  Properties：Hashtable的子类，常用来处理属性文件。键和值都为String类型的</p>
+<p>Vector(古老的实现类，线程安全的，但效率低于ArrayList)</p>
+<p>⑧: 如果存入集合中的元素是自定义类的对象。要求：自定义类要重写equals()方法。</p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZly1g3mwu91hxsj30cf07pmyx.jpg" alt></p>
+<h4 id="2-1-3-选择排序和定制排序"><a href="#2-1-3-选择排序和定制排序" class="headerlink" title="2.1.3 选择排序和定制排序"></a>2.1.3 选择排序和定制排序</h4><p>当向TreeSet中添加自定义类的对象时，涉及到两种排序方法：①自然排序②定制排序</p>
+<p>①自然排序：（实现comparable接口，并重写compareTo方法）（从小到大，从大到小排序）</p>
+<p>②定制排序：（实现Comparator接口，重写compare方法）—&gt;也就是按照指定的属性排序(例如: 自定义了一个Person类含有name属性和age属性,我想指定按照age属性的值且从大到小排序)</p>
+<p>两者区别:  </p>
+<p>自然排序要求在自定义类中实现java.lang.Comparable接口并重写其compareTo(Objecto)方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当向TreeSet中添加Person类的对象时，依据此方法，确定按照哪个属性排列</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">Person</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">private</span> Integer age;</span><br><span class="line">    <span class="comment">//private int age;</span></span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (o <span class="keyword">instanceof</span> Person) &#123;</span><br><span class="line">            Person p = (Person) o;</span><br><span class="line">            <span class="comment">//		return this.name.compareTo(p.name);//因为name是String类型，String类重写了compareTo方法，所以按照姓名从小到大排序</span></span><br><span class="line">            <span class="comment">//		return this.age.compareTo(p.age);//因为age是包装类Integer类型，Integer类重写了compareTo方法，所以按照年龄从小到大排序</span></span><br><span class="line">            <span class="comment">//		return this.age - p.age;   //如果age为基本数据类型int型，int不是类，所以没有compareTo方法，所以只能用减号-</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="comment">//如果想按照年龄从大到小排序,只需在前面加一个负号即可</span></span><br><span class="line">            <span class="comment">//		return -(this.age.compareTo(p.age));//按照年龄从大到小排序</span></span><br><span class="line">            <span class="comment">//		return -(this.age - p.age);//按照年龄从大到小排序</span></span><br><span class="line">            </span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> i = <span class="keyword">this</span>.age.compareTo(p.age);</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;<span class="comment">//年龄相同</span></span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">this</span>.name.compareTo(p.name);<span class="comment">//接着比较姓名,按照姓名的首字母根据字典顺序排序</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;<span class="comment">//年龄不相同</span></span><br><span class="line">                <span class="keyword">return</span> i;<span class="comment">//按照年龄排序</span></span><br><span class="line">            &#125;		</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>选择排序可以在方法中创建一个实现了Comparator接口的类对象(<strong>匿名内部类</strong>),并重写compare方法.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testTreeSet2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 1.创建一个实现了Comparator接口的类对象</span></span><br><span class="line">    Comparator com = <span class="keyword">new</span> Comparator() &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//向TreeSet中添加Customer类的对象，在此compare()方法中，指明是按照Customer的哪个属性排序的</span></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Object o1, Object o2)</span> </span>&#123;</span><br><span class="line">            <span class="comment">// TODO 自动生成的方法存根</span></span><br><span class="line">            <span class="keyword">if</span>(o1 <span class="keyword">instanceof</span> Customer &amp;&amp; o2 <span class="keyword">instanceof</span> Customer) &#123;</span><br><span class="line">                Customer c1 = (Customer) o1;</span><br><span class="line">                Customer c2 = (Customer) o2;</span><br><span class="line">                <span class="comment">//	return c1.getId().compareTo(c2.getId());</span></span><br><span class="line">                <span class="keyword">int</span> i = c1.getId().compareTo(c2.getId());</span><br><span class="line"></span><br><span class="line">                <span class="comment">//这种方式，返回结果为[name=CC, id=1001], [name=DD, id=1001], [name=BB, id=1002], [name=AA, id=1003], [name=GG, id=1004]</span></span><br><span class="line">                <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;     <span class="comment">//如果id相同</span></span><br><span class="line">                    <span class="keyword">return</span> c1.getName().compareTo(c2.getName());<span class="comment">//接着比较姓名</span></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//id不同</span></span><br><span class="line">                <span class="keyword">return</span> i; <span class="comment">//即return c1.getId().compareTo(c2.getId())且值为-1或者1</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="comment">/*	</span></span><br><span class="line"><span class="comment">				// 这种方式，返回结果为 [name=DD, id=1001], [name=BB, id=1002], [name=AA, id=1003], [name=GG, id=1004]</span></span><br><span class="line"><span class="comment">				if(c1.getId()!=c2.getId()) &#123;</span></span><br><span class="line"><span class="comment">					return i; //即return c1.getId().compareTo(c2.getId())且值为-1或者1</span></span><br><span class="line"><span class="comment">				&#125; else &#123;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">					return c1.getName().compareTo(c2.getName());</span></span><br><span class="line"><span class="comment">				&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">			&#125;</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">            <span class="comment">//o1或o2不是Customer类的对象</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 将此对象作为形参传递给TreeSet的构造器</span></span><br><span class="line">    TreeSet set = <span class="keyword">new</span> TreeSet(com);</span><br><span class="line">    <span class="comment">//3. 向TreeSet中添加Comparator接口中的compare方法中涉及的类的对象。</span></span><br><span class="line">    set.add(<span class="keyword">new</span> Customer(<span class="string">"AA"</span>,<span class="number">1003</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> Customer(<span class="string">"BB"</span>,<span class="number">1002</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> Customer(<span class="string">"GG"</span>,<span class="number">1004</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> Customer(<span class="string">"DD"</span>,<span class="number">1001</span>));</span><br><span class="line">    set.add(<span class="keyword">new</span> Customer(<span class="string">"CC"</span>,<span class="number">1001</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (Object str:set) &#123;</span><br><span class="line">        System.out.println(str);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>或者: </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test02</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;Student&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;(); <span class="comment">// Java 7的钻石语法(构造器后面的尖括号中不需要写类型)</span></span><br><span class="line">        list.add(<span class="keyword">new</span> Student(<span class="string">"Hao LUO"</span>, <span class="number">33</span>));</span><br><span class="line">        list.add(<span class="keyword">new</span> Student(<span class="string">"XJ WANG"</span>, <span class="number">32</span>));</span><br><span class="line">        list.add(<span class="keyword">new</span> Student(<span class="string">"Bruce LEE"</span>, <span class="number">60</span>));</span><br><span class="line">        list.add(<span class="keyword">new</span> Student(<span class="string">"Bob YANG"</span>, <span class="number">22</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 通过sort方法的第二个参数传入一个Comparator接口对象</span></span><br><span class="line">        <span class="comment">// 相当于是传入一个比较对象大小的算法到sort方法中</span></span><br><span class="line">        <span class="comment">// 由于Java中没有函数指针、仿函数、委托这样的概念</span></span><br><span class="line">        <span class="comment">// 因此要将一个算法传入一个方法中唯一的选择就是通过接口回调</span></span><br><span class="line">        Collections.sort(list, <span class="keyword">new</span> Comparator&lt;Student&gt; () &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Student o1, Student o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o1.getName().compareTo(o2.getName());    <span class="comment">// 比较学生姓名</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(Student stu : list) &#123;</span><br><span class="line">            System.out.println(stu);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//      输出结果:</span></span><br><span class="line">        <span class="comment">//      Student [name=Bob YANG, age=22]</span></span><br><span class="line">        <span class="comment">//      Student [name=Bruce LEE, age=60]</span></span><br><span class="line">        <span class="comment">//      Student [name=Hao LUO, age=33]</span></span><br><span class="line">        <span class="comment">//      Student [name=XJ WANG, age=32]</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-1-4-集合的遍历有四种方式"><a href="#2-1-4-集合的遍历有四种方式" class="headerlink" title="2.1.4   集合的遍历有四种方式  :"></a>2.1.4   集合的遍历有四种方式  :</h4><p>①使用Iterator迭代器</p>
+<p>②增强型for循环</p>
+<p>③普通for循环</p>
+<p>④Iterator迭代器的”古老版本”Enumeration 接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Public <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line">    Enumeration enu=<span class="keyword">new</span> StringTokenizer(<span class="string">"ab-c*-df-g"</span>,<span class="string">"-"</span>);</span><br><span class="line">    <span class="keyword">while</span>(enu.hasMoreElements())&#123;</span><br><span class="line">        System.out.println(enu.nextElement());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//结果: </span></span><br><span class="line">ab</span><br><span class="line">c*</span><br><span class="line">df</span><br><span class="line">g</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-字符串"><a href="#2-2-字符串" class="headerlink" title="2.2 字符串"></a>2.2 字符串</h3><p>总结: </p>
+<p>1.直接定义字符串变量的时候赋值，如果表达式右边只有字符串常量，那么就是把变量存放在<strong>常量池</strong>里面。</p>
+<p>2.new出来的字符串是存放在<strong>堆</strong>里面。</p>
+<p>3.对字符串进行拼接操作，也就是做<strong>“+”运算</strong>的时候，分2中情况：</p>
+<ul>
+<li>表达式右边是<strong>纯字符串常量</strong>，那么存放在<strong>栈里面</strong>。</li>
+<li>表达式右边如果存在<strong>字符串引用</strong>，也就是字符串对象的句柄，那么就存放在<strong>堆里面</strong></li>
+</ul>
+<h4 id="2-2-1-String的intern-方法"><a href="#2-2-1-String的intern-方法" class="headerlink" title="2.2.1 String的intern()方法"></a>2.2.1 String的intern()方法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">String str1 = <span class="string">"aaa"</span>;</span><br><span class="line">String str2 = <span class="string">"bbb"</span>;</span><br><span class="line">String str3 = <span class="string">"aaabbb"</span>;</span><br><span class="line">String str4 = str1 + str2;</span><br><span class="line">String str5 = <span class="string">"aaa"</span> + <span class="string">"bbb"</span>;</span><br><span class="line">System.out.println(str3 == str4); <span class="comment">// false</span></span><br><span class="line">System.out.println(str3 == str4.intern()); <span class="comment">// true</span></span><br><span class="line">System.out.println(str3 == str5);<span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*intern这个方法会首先检查字符串池中是否有str4指向的字符串，如果存在则返回这个字符串的引用，否则就将这个字</span></span><br><span class="line"><span class="comment">符串添加到字符串池中，然会返回这个字符串的引用。*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">结果：str1、str2、str3、str5都是存在于常量池，str4由于表达式右半边有引用类型，所以str4存在于堆内存，而</span></span><br><span class="line"><span class="comment">str5表达式右边没有引用类型，是纯字符串常量，就存放在了常量池里面。其实Integer这种包装类型的-128 ~ +127也</span></span><br><span class="line"><span class="comment">是存放在常量池里面，比如Integer i1 = 10;Integer i2 = 10; i1 == i2结果是true，估计也是为了性能优化。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-2-2-equals-和-区别"><a href="#2-2-2-equals-和-区别" class="headerlink" title="2.2.2  equals 和 == 区别"></a>2.2.2  equals 和 == 区别</h4><p>“==”是关系运算符，equals()是方法，同时他们的结果都<strong>返回布尔值</strong>；</p>
+<p><strong>①: “==”使用情况如下：</strong></p>
+<p>a) 基本类型，比较的是值  <code>int  i = 15;  if( i == 15 ) {  }</code></p>
+<p>b) 引用类型，比较的是地址 <code>String a = “bbbbb”</code>;  if (a == “bbbbb”)</p>
+<p>c) 不能比较没有父子关系的两个对象</p>
+<p><strong>②: equals()方法使用如下：</strong></p>
+<p>a) 系统类一般已经覆盖了equals()，比较的是内容。</p>
+<p>b) 用户自定义类如果没有覆盖equals()，将调用父类的equals （比如是Object），而Object的equals的比较是地址（return (this == obj);）</p>
+<p>c) 用户自定义类需要覆盖父类的equals()</p>
+<p><strong>注意：Object的==和equals比较的都是地址，作用相同</strong></p>
+<h2 id="三、JSP"><a href="#三、JSP" class="headerlink" title="三、JSP"></a>三、JSP</h2><h3 id="3-1-JSP中括号匹配问题"><a href="#3-1-JSP中括号匹配问题" class="headerlink" title="3.1 JSP中括号匹配问题"></a>3.1 JSP中括号匹配问题</h3><p>注意：if语句的最后一个括号必须和else被分在同一个java脚本元素中</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">	<span class="keyword">if</span>(session.getAttribute(<span class="string">"type3"</span>).equals(<span class="string">"manager"</span>)) &#123;</span><br><span class="line">%&gt;</span><br><span class="line">&lt;%</span><br><span class="line">	Date creatTime = <span class="keyword">new</span> Date(session.getCreationTime());</span><br><span class="line">	Date lastAccessedTime = <span class="keyword">new</span> Date(session.getLastAccessedTime());  </span><br><span class="line">	session.removeAttribute(<span class="string">"name3"</span>);</span><br><span class="line">	out.println(<span class="string">"删除名字为name3的属性后,"</span>);</span><br><span class="line">	out.println(<span class="string">"再获取名为name3的属性："</span>);</span><br><span class="line">	out.println(session.getAttribute(<span class="string">"name3"</span>)+<span class="string">"&lt;br&gt;"</span>); </span><br><span class="line">%&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;%</span><br><span class="line">&#125;       <span class="comment">//这里出过错误；注意：if语句的最后一个括号必须和else被分在同一个java脚本元素中</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">   %&gt;</span><br><span class="line">&lt;a href="user.jsp"&gt;进入使用界面&lt;/a&gt;</span><br><span class="line">&lt;%</span><br><span class="line">&#125;</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="3-2-空格问题"><a href="#3-2-空格问题" class="headerlink" title="3.2 空格问题:"></a>3.2 空格问题:</h3><p>报错:  The JSP specification requires that an attribute name is preceded by whitespace</p>
+<p>意思是：JSP规范要求在一个属性的名字之前应该是空格。</p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3yp8p7u93j30nu073413.jpg" alt></p>
+<h3 id="3-3-注释问题"><a href="#3-3-注释问题" class="headerlink" title="3.3 注释问题"></a>3.3 注释问题</h3><p>①: JSP动作标志后面不能有注释</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:forward page=<span class="string">"/False.jsp"</span>&gt;                <span class="comment">//10 行</span></span><br><span class="line">改为:</span><br><span class="line">&lt;jsp:forward page=<span class="string">"/False.jsp"</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>②: 当标签没有配对参数时，配对标签不能换行</p>
+<p>jsp异常:  <code>Expecting &quot;jsp:param&quot; standard action with &quot;name&quot; and &quot;value&quot; attributes错误</code></p>
+<p>解决方法如下: </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;jsp:include page=<span class="string">"include/header.jsp"</span>&gt;</span><br><span class="line">&lt;/jsp:include&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">改为:</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;jsp:include page="include/header.jsp"&gt;&lt;/jsp:include&gt;&lt;!-- 此处必须在同一行，不能换行 --&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="3-4-双引号问题"><a href="#3-4-双引号问题" class="headerlink" title="3.4 双引号问题"></a>3.4 双引号问题</h3><p>.jsp文件在tomcat运行，报错提示<code>Attribute value request.getParameter(&quot;name&quot;) is quoted with &quot;which must be escap</code></p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">例如:</span><br><span class="line">&lt;jsp:include page=<span class="string">"action.jsp"</span> flush=<span class="string">"true"</span>&gt;   </span><br><span class="line">&lt;jsp:param name=<span class="string">"a1"</span> value=<span class="string">"&lt;%=request.getParameter("</span>name<span class="string">") %&gt;"</span> /&gt;    </span><br><span class="line">&lt;jsp:param name=<span class="string">"a2"</span> value=<span class="string">"&lt;%=request.getParameter("</span>password<span class="string">") %&gt;"</span>/&gt;</span><br><span class="line">&lt;/jsp:include&gt;  </span><br><span class="line">会导致报错</span><br><span class="line"></span><br><span class="line">改为：</span><br><span class="line">&lt;jsp:include page=<span class="string">"action.jsp"</span> flush=<span class="string">"true"</span>&gt;   </span><br><span class="line">&lt;jsp:param name=<span class="string">"a1"</span> value=<span class="string">"&lt;%=request.getParameter(\"name\") %&gt;"</span> /&gt;    </span><br><span class="line">&lt;jsp:param name=<span class="string">"a2"</span> value=<span class="string">"&lt;%=request.getParameter(\"password\") %&gt;"</span>/&gt;</span><br><span class="line">&lt;/jsp:include&gt;  </span><br><span class="line">即可解决</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -722,7 +829,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/疑难杂症.html">专治疑难杂症</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年06月09日 - 23:26</p>
-  <p><span>最后更新:</span>2019年06月10日 - 00:01</p>
+  <p><span>最后更新:</span>2019年06月13日 - 15:56</p>
   <p><span>原始链接:</span><a href="/疑难杂症.html" title="专治疑难杂症">https://zzwwqq.xyz/疑难杂症.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.xyz/疑难杂症.html" aria-label="复制成功！"></i></span>
   </p>
@@ -900,7 +1007,7 @@ daovoice('update');
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">58</span>
+                    <span class="site-state-item-count">59</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -951,7 +1058,11 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">17</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1074,7 +1185,9 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">53</span>
+                      
+                    
+                    <span class="site-state-item-count">54</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1211,7 +1324,7 @@ daovoice('update');
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、HTML"><span class="nav-text">一、HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-checked属性值是true还是checked"><span class="nav-text">1.1 checked属性值是true还是checked?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-HTML-布尔属性值"><span class="nav-text">1.1.1 HTML 布尔属性值</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、HTML"><span class="nav-text">一、HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-checked属性值是true还是checked"><span class="nav-text">1.1 checked属性值是true还是checked?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-HTML-布尔属性值"><span class="nav-text">1.1.1 HTML 布尔属性值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-路径问题"><span class="nav-text">1.2 路径问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-绝对路径和相对路径及根路径"><span class="nav-text">1.2.1 绝对路径和相对路径及根路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-转发和重定向中的"><span class="nav-text">1.2.2 转发和重定向中的/</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3-Javaweb工程中在写路径时-为什么不包含WebContent-eclipse中默认名"><span class="nav-text">1.2.3 Javaweb工程中在写路径时,为什么不包含WebContent(eclipse中默认名)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-中文乱码问题"><span class="nav-text">1.3 中文乱码问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Java"><span class="nav-text">二、Java</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-集合中List-和-Set-区别-以及-定制排序和选择排序"><span class="nav-text">2.1 集合中List 和 Set 区别,以及 定制排序和选择排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-区别"><span class="nav-text">2.1.1 区别:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-值得注意的地方"><span class="nav-text">2.1.2 值得注意的地方:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-选择排序和定制排序"><span class="nav-text">2.1.3 选择排序和定制排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-集合的遍历有四种方式"><span class="nav-text">2.1.4   集合的遍历有四种方式  :</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-字符串"><span class="nav-text">2.2 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-String的intern-方法"><span class="nav-text">2.2.1 String的intern()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-equals-和-区别"><span class="nav-text">2.2.2  equals 和 == 区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、JSP"><span class="nav-text">三、JSP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-JSP中括号匹配问题"><span class="nav-text">3.1 JSP中括号匹配问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-空格问题"><span class="nav-text">3.2 空格问题:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-注释问题"><span class="nav-text">3.3 注释问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-双引号问题"><span class="nav-text">3.4 双引号问题</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1254,7 +1367,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">618k</span>
+    <span title="站点总字数">639k</span>
   
 
   
@@ -1265,7 +1378,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">9:22</span>
+    <span title="站点阅读时长">9:41</span>
   
 </div>
 

@@ -479,6 +479,310 @@ daovoice('update');
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zzwwqq.xyz/算法.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zwq">
+      <meta itemprop="description" content="不忘初心,方得始终!">
+      <meta itemprop="image" content="http://cdn.zzwwqq.xyz/static/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zwq">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/算法.html" class="post-title-link" itemprop="url">算法</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-13 16:24:59 / 修改时间：21:09:13" itemprop="dateCreated datePublished" datetime="2019-06-13T16:24:59+08:00">2019-06-13</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/算法.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/算法.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/算法.html" class="leancloud_visitors" data-flag-title="算法">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">热度：</span>
+              
+                <span class="leancloud-visitors-count">
+				</span>
+				<span>℃</span>
+            </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">7.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">7 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="一、递归算法"><a href="#一、递归算法" class="headerlink" title="一、递归算法:"></a>一、递归算法:</h2><h3 id="1-1-算法说明"><a href="#1-1-算法说明" class="headerlink" title="1.1 算法说明"></a>1.1 算法说明</h3><p>递归来源于数学中的归纳法，归纳法是数学里的一种证明方法，它通常有以下两个步骤：</p>
+<blockquote>
+<ol>
+<li>证明当 n 等于某一个值（通常是限定范围内的第一个值）时命题成立；</li>
+<li>假设当 n = m 时命题成立，证明当 n = m + 1 时命题也成立。</li>
+</ol>
+</blockquote>
+<p>数学中的归纳法由已知推向未知由前推向后，而在编程中通常是给定 n 的值（如 n = m）求结果，这与数学中的归纳法在过程上有些不同，多了一个回推的过程，通常是先由后向前，再由前向后（并不都是这样）。假定 n &gt;= 1，并且 n = 1 时的结果已知，步骤如下：</p>
+<blockquote>
+<ol>
+<li><p>要想求得 n = m 时的结果，必须知道 n = m - 1 时的结果，要想知道 n = m - 1 时的结果，必须知道 n = m - 2 时的结果，如此反复直到 n = 1（此时结果已知），此过程即由后向前；</p>
+</li>
+<li><p>已知 n = 1 的结果就可得到 n = 2 时的结果，得到 n = 2 时的结果就可得到 n = 3 时的结果，如此反复直到得出 n = m 的结果，此过程即由前向后。</p>
+</li>
+</ol>
+</blockquote>
+<h3 id="1-2-如何去理解递归，想到递归，运用递归"><a href="#1-2-如何去理解递归，想到递归，运用递归" class="headerlink" title="1.2 如何去理解递归，想到递归，运用递归?"></a>1.2 如何去理解递归，想到递归，运用递归?</h3><h4 id="1-2-1-递归的优缺点"><a href="#1-2-1-递归的优缺点" class="headerlink" title="1.2.1 递归的优缺点:"></a>1.2.1 递归的优缺点:</h4><p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3zm0qb02aj30bl07rgpx.jpg" alt></p>
+<h4 id="1-2-2-递归需要的两个条件："><a href="#1-2-2-递归需要的两个条件：" class="headerlink" title="1.2.2 递归需要的两个条件："></a>1.2.2 递归需要的两个条件：</h4><p>①: 要有边界，也就是出口</p>
+<p>②: 有递推关系</p>
+<p>最后记住用到递归的要领：  利用A函数实现功能时， A函数体需要用到同样的功能，这时候就要用到递归</p>
+<h4 id="1-2-3-递归的运用"><a href="#1-2-3-递归的运用" class="headerlink" title="1.2.3 递归的运用"></a>1.2.3 递归的运用</h4><h4 id="①-求1-2-…-n"><a href="#①-求1-2-…-n" class="headerlink" title="①: 求1+2+…+n"></a>①: 求1+2+…+n</h4><p>要求不能使用乘除法、for、while、if、else、switch、case等关键字以及条件判断语句（A?B:C）。<br>这道题递归一般的求解是：<br>先找递推关系：<br>如果想求1+2+…..+n：<br>步骤1：1+2+….+n-1<br>步骤2：n+步骤1的值<br>————这就是<strong>递推关系</strong>，求值1+2++……+n，需要逆求1+2+…..+n-1 !!!<br>那<strong>边界条件</strong>呢？<br>当n小于等于0时，和为0;这就是边界条件.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">long</span> <span class="title">getSumofN</span> <span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;=<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        <span class="keyword">return</span> ( n+getSumofN(n-<span class="number">1</span>) );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里出现if else，不满足题意的，因此需要解决两个问题，如何判断边界条件，以及如何存储每次计算所得值<br>解决方法：执行—逻辑判断–语句</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getSumofN</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> *result)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n&amp;&amp;getSumofN(n-<span class="number">1</span>,result);    <span class="comment">//前者用来判断边界，后者存储，执行步骤1</span></span><br><span class="line">    <span class="keyword">return</span> (*resulet +=n);   <span class="comment">//执行步骤2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>进一步：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getSumofN</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> *result)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> n&amp;&amp;getSumofN(n-<span class="number">1</span>,result)&amp;&amp;(*resulet +=n);   <span class="comment">//一步到位！</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="②-递归的运用"><a href="#②-递归的运用" class="headerlink" title="②: 递归的运用:"></a>②: 递归的运用:</h4><p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3zm1wnnulj30br079ack.jpg" alt></p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3zm23w2h1j30d504n0tm.jpg" alt></p>
+<h4 id="③-通用树遍历显示"><a href="#③-通用树遍历显示" class="headerlink" title="③: 通用树遍历显示"></a>③: 通用树遍历显示</h4><p>文本的方式显示一颗树</p>
+<p>A<br>———B<br>———————-E<br>———————-F<br>———C<br>———D<br>———————-H<br>———————-I<br>———————-J</p>
+<p>A有子树节点B C D<br>B有子树节点E F<br>D有子树节点H I J </p>
+<p>整个输出打印过程：<br>打印A结点<br>|<br>打印A结点的—孩子结点（具体：打印第一个孩子结点B，再打印B–的–孩子结点，接着同样的工作-打印孩子结点 C D…….）</p>
+<p>单独拿出来，打印B孩子的结点分为：<br>打印B结点<br>|<br>打印B结点的孩子结点<br>对A，对B，打印执行的功能，是一样的</p>
+<p>这就是一个递归！</p>
+<p>先找递推关系:  </p>
+<ul>
+<li>步骤1：找到根节点，输出</li>
+<li>步骤2：找到孩子结点，输出</li>
+</ul>
+<p>————这就是递推关系，函数的功能是，先打印父结点，再打印孩子结点。而我们打印孩子结点时，需要同样的功能。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">recurse_display</span><span class="params">(GTreeNode * node,<span class="keyword">int</span> format)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i;</span><br><span class="line">        <span class="keyword">if</span>(NULL!=node)</span><br><span class="line">        &#123;</span><br><span class="line">           <span class="comment">//1.打印根结点</span></span><br><span class="line">               </span><br><span class="line">            <span class="comment">//1.1先打印占格符</span></span><br><span class="line">           <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;format;i++)</span><br><span class="line">           &#123;</span><br><span class="line">               printf(<span class="string">"%c"</span>,<span class="string">'-'</span>);</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="comment">//1.2.打印父节点</span></span><br><span class="line">           printf(<span class="string">"%c"</span>,(<span class="keyword">int</span>)(node-&gt;data));</span><br><span class="line">           </span><br><span class="line">           <span class="comment">//1.3.换行</span></span><br><span class="line">          printf(<span class="string">"\n"</span>);</span><br><span class="line">  </span><br><span class="line">          <span class="comment">//2.打印子节点     </span></span><br><span class="line"> </span><br><span class="line">           <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;LinkList_Length(node-&gt;child);i++)</span><br><span class="line">           &#123;</span><br><span class="line">                   <span class="comment">//2.1获取子结点</span></span><br><span class="line">                   TLNode* trnode=(TLNode*)LinkList_Get(node-&gt;child,i+<span class="number">1</span>);</span><br><span class="line">                     <span class="comment">//2.2打印子节点的孩子结点</span></span><br><span class="line">                   recurse_display(trnode-&gt;node,format+<span class="number">4</span>);</span><br><span class="line"> </span><br><span class="line">           &#125;</span><br><span class="line"> </span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>④: 汉诺塔问题:</strong></p>
+<p>先找递推关系:</p>
+<p> 如果想将初始时放在A的n个盘子，利用B，原样的放在C：</p>
+<ul>
+<li>步骤1：将A的最上方n-1个盘子，通过C，放在B中</li>
+<li>步骤2：将A上面剩下的那个盘子，通过B，放在C中</li>
+<li>步骤3：将B中那n-1个盘子，通过A，放在C中​          </li>
+</ul>
+<p>————这就是递推关系，函数的功能是，将A中的盘子，通过B，放在C中，而我们移动的每一个步骤，都是需要同样的功能。进一步得知，函数的参数，应该有A、B、C</p>
+<p>那边界条件呢：</p>
+<p>边界条件就是，只有一个盘子时，移动一次就够了。代码里表示，也就是输出，从哪移动到哪</p>
+<p>分析好了，代码自然就出来了：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将 n 个盘从 A 塔移到 C 塔</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hanoi</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">char</span> A,<span class="keyword">char</span> B, <span class="keyword">char</span> C)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//边界条件</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="number">1</span>==n)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(<span class="string">"%c-------%c\n"</span>,A,C);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        hanoi(n-<span class="number">1</span>,A,C,B);<span class="comment">//步骤1</span></span><br><span class="line">        hanoi(<span class="number">1</span>,A,B,C); <span class="comment">//步骤2</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>,B,A,C);<span class="comment">//步骤3</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">==================================================================================================</span><br><span class="line"><span class="comment">//Java代码: </span></span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hanoi</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">char</span> A = <span class="string">'A'</span>;<span class="keyword">char</span> B = <span class="string">'B'</span>; <span class="keyword">char</span> C=<span class="string">'C'</span>;</span><br><span class="line">            hanoi(<span class="number">2</span>,A,B,C);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span>   <span class="keyword">void</span> <span class="title">hanoi</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">char</span> A,<span class="keyword">char</span> B, <span class="keyword">char</span> C)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="comment">//边界条件</span></span><br><span class="line">            <span class="keyword">if</span>(<span class="number">1</span>==n)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(A+<span class="string">"----移动到-----&gt;"</span>+C);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                hanoi(n-<span class="number">1</span>,A,C,B); <span class="comment">//步骤1</span></span><br><span class="line">                hanoi(<span class="number">1</span>,A,B,C);   <span class="comment">//步骤2</span></span><br><span class="line">                hanoi(n-<span class="number">1</span>,B,A,C); <span class="comment">//步骤3</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>⑤: 利用递归求斐波那契(Fibonacci)数列</p>
+<p>斐波那契数列指的是1、1、2、3、5、8……这样的数列，用公式表示就是：</p>
+<p><code>F(n) = F(n-1) + F(n-2)</code></p>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 以下仅作演示用，采用整型且未对数值范围进行限定与校验，特此提醒</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = <span class="number">11</span>;</span><br><span class="line">        System.out.printf(<span class="string">"斐波那契数列第%d个数：%d%n"</span>, m, fibonacci(m));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 求斐波那契数列第 n 个数的值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n &lt; <span class="number">3</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>; <span class="comment">// 递归终止条件</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fibonacci(n - <span class="number">1</span>) + fibonacci(n - <span class="number">2</span>); <span class="comment">// 第n项为第(n-1)项与第(n-2)项之和</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上两例仅作递归演示，实际上并不适合使用递归，因为其需要回推使得效率大大降低，对于这种明显可以使用循环解决而递归又需要回推导致效率低下的情况更适合使用循环：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. 使用循环求阶乘</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 以下仅作演示用，采用整型且未对数值范围进行限定与校验，特此提醒</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = <span class="number">10</span>;</span><br><span class="line">        System.out.printf(<span class="string">"%d! = %d%n"</span>, m, factorial(m));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 求 m 的阶乘</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">factorial</span><span class="params">(<span class="keyword">int</span> m)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> product = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= m; i++) &#123;</span><br><span class="line">            product *= i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> product;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>.使用循环求斐波那契数列</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 以下仅作演示用，采用整型且未对数值范围进行限定与校验，特此提醒</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = <span class="number">10</span>;</span><br><span class="line">        System.out.printf(<span class="string">"斐波那契数列第%d个数：%d%n"</span>, m, fibonacci(m));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 求斐波那契数列第 n 个数的值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">1</span>; <span class="comment">// 第1个斐波那契数</span></span><br><span class="line">        <span class="keyword">int</span> b = <span class="number">1</span>; <span class="comment">// 第2个斐波那契数</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            b += a; <span class="comment">// 第i个斐波那契数</span></span><br><span class="line">            a = b - a; <span class="comment">// 第(i-1)个斐波那契类</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>⑥: 快速排序</strong></p>
+<p>快速排序法采用的是“分而治之”的思想，比较适合使用递归而且效率也相当不错。相对前面的两个例子，它不需要回推，节省了大量时间：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (left &lt; right) &#123;</span><br><span class="line">        <span class="keyword">int</span> mark = arr[left];</span><br><span class="line">        <span class="keyword">int</span> i = left;</span><br><span class="line">        <span class="keyword">int</span> j = right;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">            <span class="comment">// 从后向前查找</span></span><br><span class="line">            <span class="keyword">while</span> (j &gt; i &amp;&amp; arr[j] &gt;= mark) &#123;</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (j &gt; i) &#123;</span><br><span class="line">                arr[i++] = arr[j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 从前向后查找</span></span><br><span class="line">            <span class="keyword">while</span> (i &lt; j &amp;&amp; arr[i] &lt; mark) &#123;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i &lt; j) &#123;</span><br><span class="line">                arr[j--] = arr[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[i] = mark;</span><br><span class="line">        quickSort(arr, left, i - <span class="number">1</span>);</span><br><span class="line">        quickSort(arr, i + <span class="number">1</span>, right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>⑦: 递归实现字符串逆序</p>
+<p>比如：s=“abcdef”，逆序后变为“fedcba”</p>
+<p>先找递推关系：<br>如果想逆序abcdef：<br>步骤1：将a和f进行交换<br>步骤2：对bcde进行逆序——-（需要同样的功能，所以必须用递归）<br>————这就是递推关系，逆序“abcdef”，需要逆序“bcde”!!! 进一步可知，此递归函数得输入参数上标和下标</p>
+<p>那边界条件呢？<br>当s里边无字符，也即为NULL情况下，不用排序<br>当s里边只有一个元素时，也不用排序，这就是边界条件</p>
+<p>分析好了，代码自然就出来了：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> * Reverse_Str(<span class="keyword">char</span> *s, <span class="keyword">int</span> first ,<span class="keyword">int</span> last)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//边界条件：利用上标下标判定</span></span><br><span class="line">    <span class="keyword">if</span>(last&lt;=first)</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//交换首尾字符</span></span><br><span class="line">        <span class="keyword">char</span> temp=s[first];</span><br><span class="line">        s[first]=s[last];</span><br><span class="line">        s[last]=temp;</span><br><span class="line">        <span class="comment">//逆序中间部分</span></span><br><span class="line">        Reverse_Str(s,first+<span class="number">1</span>,last+<span class="number">1</span>);  <span class="comment">//注意这里千万，不要first++，和last--，为什么，自己琢磨吧！</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>⑧: strlen递归解法</p>
+<p>先找递推关系：<br>如果想char <em>s=”abcdefg”,求strlen(s)：<br>步骤1：求strlen(“bcdefg”),也就是strlen(s+1)<br>步骤2：将步骤1的结果加1返回即可<br>————这就是递推关系，求s长度，需要求s+1长度 !!!<br>那边界条件呢：<br>当char </em>s=NULL或者char *s=‘\0’时，直接得到结果，而不用继续递归下去，这就是边界条件</p>
+<p>分析好了，代码自然就出来了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">strlen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> * s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//处理边界条件</span></span><br><span class="line">    <span class="keyword">if</span>(NULL==s)          </span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;          </span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">'\0'</span>==*s)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//递推关系 </span></span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        <span class="keyword">return</span> (strlen(s+<span class="number">1</span>)+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>总结:<br>对于阶乘和斐波那契数列这样的问题实际上并不适合使用递归，首先它需要回推会导致计算量大大增加，其次这种问题使用循环本身很容易解决，而且代码也并不复杂。而对于快速排序这种“分而治之”的情况，并不存在回推的过程使用递归可以简化代码增强代码的可读性，对于汉诺塔使用递规不仅大大简化了代码也更易理解。</p>
+<p>总而言之，不管使用什么方法，其目的无非就是提高程序运行效率，减化代码增强代码的可读性。</p>
+
+          
+        
+      
+    </div>
+
+    
+	
+	
+	
+	
+
+<div>
+  
+</div>
+<div>
+      
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+
+	
+	
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://zzwwqq.xyz/数据库相关面试题及答案.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -703,263 +1007,11 @@ daovoice('update');
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zzwwqq.xyz/疑难杂症.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zwq">
-      <meta itemprop="description" content="不忘初心,方得始终!">
-      <meta itemprop="image" content="http://cdn.zzwwqq.xyz/static/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zwq">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/疑难杂症.html" class="post-title-link" itemprop="url">专治疑难杂症</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-09 23:26:13" itemprop="dateCreated datePublished" datetime="2019-06-09T23:26:13+08:00">2019-06-09</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-06-10 00:01:56" itemprop="dateModified" datetime="2019-06-10T00:01:56+08:00">2019-06-10</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/疑难杂症/" itemprop="url" rel="index"><span itemprop="name">疑难杂症</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/疑难杂症.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/疑难杂症.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-            <span id="/疑难杂症.html" class="leancloud_visitors" data-flag-title="专治疑难杂症">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">热度：</span>
-              
-                <span class="leancloud-visitors-count">
-				</span>
-				<span>℃</span>
-            </span>
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">3.8k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">3 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="一、HTML"><a href="#一、HTML" class="headerlink" title="一、HTML"></a>一、HTML</h2><p><span id="jump2">跳转到的地方</span></p>
-<h3 id="1-1-checked属性值是true还是checked"><a href="#1-1-checked属性值是true还是checked" class="headerlink" title="1.1 checked属性值是true还是checked?"></a>1.1 checked属性值是true还是checked?</h3><p><strong>结论:</strong> <strong>都可以,但是不推荐这两种方式</strong>,<strong>推荐仅设置checked属性不赋值</strong></p>
-<p>复选框标签具有checked属性，通过此属性可以设置复选框的选中状态。</p>
-<p>非常简单的操作，但是还是有不少朋友存在后面类似的疑问，那就是不确定checked属性值是true还是checked。</p>
-<p>因为两个属性值在实际代码中都有出现，并且都是有效的，也是导致出现疑问的主要原因。</p>
-<p>下面通过代码实例详细进行一下分析，首先看一段代码实例：</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/疑难杂症.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-	
-	
-	
-	
-
-<div>
-  
-</div>
-<div>
-      
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-
-	
-	
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1003,7 +1055,7 @@ daovoice('update');
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">58</span>
+                    <span class="site-state-item-count">59</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1054,7 +1106,11 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">17</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1177,7 +1233,9 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">53</span>
+                      
+                    
+                    <span class="site-state-item-count">54</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1340,7 +1398,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">618k</span>
+    <span title="站点总字数">639k</span>
   
 
   
@@ -1351,7 +1409,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">9:22</span>
+    <span title="站点阅读时长">9:41</span>
   
 </div>
 
