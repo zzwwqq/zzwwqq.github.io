@@ -150,7 +150,11 @@ daovoice('update');
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3xmg01y31j30ae00z77y.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZly1g3mwu91hxsj30cf07pmyx.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g3yp8p7u93j30nu073413.jpg">
-<meta property="og:updated_time" content="2019-06-13T07:56:18.347Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g42v6s29q6j30p801jwff.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g42ta8hpv2j30ir0apag5.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g42vrdrwpvj30mx0exwol.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g42vmepn5wj30nm096462.jpg">
+<meta property="og:updated_time" content="2019-06-19T04:55:33.954Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="专治疑难杂症">
 <meta name="twitter:description" content="一、HTML跳转到的地方 1.1 checked属性值是true还是checked?结论: 都可以,但是不推荐这两种方式,推荐仅设置checked属性不赋值 复选框标签具有checked属性，通过此属性可以设置复选框的选中状态。 非常简单的操作，但是还是有不少朋友存在后面类似的疑问，那就是不确定checked属性值是true还是checked。 因为两个属性值在实际代码中都有出现，并且都是有效的，">
@@ -553,7 +557,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-13 15:56:18" itemprop="dateModified" datetime="2019-06-13T15:56:18+08:00">2019-06-13</time>
+                <time title="修改时间：2019-06-19 12:55:33" itemprop="dateModified" datetime="2019-06-19T12:55:33+08:00">2019-06-19</time>
               
             
           </span>
@@ -625,7 +629,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">15k</span>
+                <span title="本文字数">23k</span>
               
 
               
@@ -639,7 +643,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">13 分钟</span>
+                <span title="阅读时长">21 分钟</span>
               
             </div>
           
@@ -714,8 +718,8 @@ daovoice('update');
 <p>转发：<code>/</code>代表<code>http://localhost:8080/工程名/</code>      举例:  <code>request.getRequestDispatcher(&quot;/jsp/system/index.jsp&quot;).forward(request,response);</code></p>
 <p>重定向：<code>/</code>代表<code>http://localhost:8080/</code></p>
 <p>另外:</p>
-<p>超链接中href的<code>/</code>代表<code>http://localhost:8080/</code></p>
-<p>标签的Src 属性的值中<code>/</code>代表<code>http://localhost:8080/</code></p>
+<p><strong>超链接(相当于重定向)中href的<code>/</code>代表<code>http://localhost:8080/</code></strong></p>
+<p><strong>标签的Src 属性的值中<code>/</code>代表<code>http://localhost:8080/</code></strong></p>
 <p>c标签<code>/</code>代表<code>http://localhost:8080/工程名/</code></p>
 <p>include指令中file的<code>/</code>代表<code>http://localhost:8080/工程名/</code>        如<code>&lt;%@ include file = &quot;/jsps/header.jsp&quot; %&gt;</code></p>
 <h4 id="1-2-3-Javaweb工程中在写路径时-为什么不包含WebContent-eclipse中默认名"><a href="#1-2-3-Javaweb工程中在写路径时-为什么不包含WebContent-eclipse中默认名" class="headerlink" title="1.2.3 Javaweb工程中在写路径时,为什么不包含WebContent(eclipse中默认名)"></a>1.2.3 Javaweb工程中在写路径时,为什么不包含WebContent(eclipse中默认名)</h4><p>JavaWeb项目中引用的路径其实是编译后的路径: 即下图 右边部分的路径: </p>
@@ -791,13 +795,135 @@ daovoice('update');
 <p>意思是：JSP规范要求在一个属性的名字之前应该是空格。</p>
 <p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g3yp8p7u93j30nu073413.jpg" alt></p>
 <h3 id="3-3-注释问题"><a href="#3-3-注释问题" class="headerlink" title="3.3 注释问题"></a>3.3 注释问题</h3><p>①: JSP动作标志后面不能有注释</p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:forward page=<span class="string">"/False.jsp"</span>&gt;                <span class="comment">//10 行</span></span><br><span class="line">改为:</span><br><span class="line">&lt;jsp:forward page=<span class="string">"/False.jsp"</span>&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:forward page=<span class="string">"/False.jsp"</span>&gt;                <span class="comment">//10 行</span></span><br><span class="line">改为:</span><br><span class="line">&lt;jsp:forward page=<span class="string">"/False.jsp"</span>&gt;</span><br></pre></td></tr></table></figure>
 <p>②: 当标签没有配对参数时，配对标签不能换行</p>
 <p>jsp异常:  <code>Expecting &quot;jsp:param&quot; standard action with &quot;name&quot; and &quot;value&quot; attributes错误</code></p>
 <p>解决方法如下: </p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;jsp:include page=<span class="string">"include/header.jsp"</span>&gt;</span><br><span class="line">&lt;/jsp:include&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">改为:</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;jsp:include page="include/header.jsp"&gt;&lt;/jsp:include&gt;&lt;!-- 此处必须在同一行，不能换行 --&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="3-4-双引号问题"><a href="#3-4-双引号问题" class="headerlink" title="3.4 双引号问题"></a>3.4 双引号问题</h3><p>.jsp文件在tomcat运行，报错提示<code>Attribute value request.getParameter(&quot;name&quot;) is quoted with &quot;which must be escap</code></p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">例如:</span><br><span class="line">&lt;jsp:include page=<span class="string">"action.jsp"</span> flush=<span class="string">"true"</span>&gt;   </span><br><span class="line">&lt;jsp:param name=<span class="string">"a1"</span> value=<span class="string">"&lt;%=request.getParameter("</span>name<span class="string">") %&gt;"</span> /&gt;    </span><br><span class="line">&lt;jsp:param name=<span class="string">"a2"</span> value=<span class="string">"&lt;%=request.getParameter("</span>password<span class="string">") %&gt;"</span>/&gt;</span><br><span class="line">&lt;/jsp:include&gt;  </span><br><span class="line">会导致报错</span><br><span class="line"></span><br><span class="line">改为：</span><br><span class="line">&lt;jsp:include page=<span class="string">"action.jsp"</span> flush=<span class="string">"true"</span>&gt;   </span><br><span class="line">&lt;jsp:param name=<span class="string">"a1"</span> value=<span class="string">"&lt;%=request.getParameter(\"name\") %&gt;"</span> /&gt;    </span><br><span class="line">&lt;jsp:param name=<span class="string">"a2"</span> value=<span class="string">"&lt;%=request.getParameter(\"password\") %&gt;"</span>/&gt;</span><br><span class="line">&lt;/jsp:include&gt;  </span><br><span class="line">即可解决</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">例如:</span><br><span class="line">&lt;jsp:include page=<span class="string">"action.jsp"</span> flush=<span class="string">"true"</span>&gt;   </span><br><span class="line">&lt;jsp:param name=<span class="string">"a1"</span> value=<span class="string">"&lt;%=request.getParameter("</span>name<span class="string">") %&gt;"</span> /&gt;    </span><br><span class="line">&lt;jsp:param name=<span class="string">"a2"</span> value=<span class="string">"&lt;%=request.getParameter("</span>password<span class="string">") %&gt;"</span>/&gt;</span><br><span class="line">&lt;/jsp:include&gt;  </span><br><span class="line">会导致报错</span><br><span class="line"></span><br><span class="line">改为：</span><br><span class="line">&lt;jsp:include page=<span class="string">"action.jsp"</span> flush=<span class="string">"true"</span>&gt;   </span><br><span class="line">&lt;jsp:param name=<span class="string">"a1"</span> value=<span class="string">"&lt;%=request.getParameter(\"name\") %&gt;"</span> /&gt;    </span><br><span class="line">&lt;jsp:param name=<span class="string">"a2"</span> value=<span class="string">"&lt;%=request.getParameter(\"password\") %&gt;"</span>/&gt;</span><br><span class="line">&lt;/jsp:include&gt;  </span><br><span class="line">即可解决</span><br></pre></td></tr></table></figure>
+<h2 id="四、SpringMVC"><a href="#四、SpringMVC" class="headerlink" title="四、SpringMVC"></a>四、SpringMVC</h2><h3 id="4-1-什么时候使用-PathVariable-什么时候用-RequestParam，有什么联系和区别"><a href="#4-1-什么时候使用-PathVariable-什么时候用-RequestParam，有什么联系和区别" class="headerlink" title="4.1 什么时候使用@PathVariable  什么时候用@RequestParam，有什么联系和区别?"></a>4.1 什么时候使用@PathVariable  什么时候用@RequestParam，有什么联系和区别?</h3><h4 id="4-1-1-使用-PathVariable-的情形"><a href="#4-1-1-使用-PathVariable-的情形" class="headerlink" title="4.1.1 使用@PathVariable 的情形:"></a>4.1.1 使用@PathVariable 的情形:</h4><p><strong>传参在URL路径部分</strong>: 例如请求：<code>/blogs/1</code>          此时URI路径中必須要使用占位符<code>{}</code> ，    <code>@RequestMapping（/blogs/{id}）</code>   取值：<code>@PathVariable int id</code>   或者<code>@PathVariable （“id”）int id</code>名称要一致    </p>
+<h4 id="4-1-2-使用-RequestParam的情形"><a href="#4-1-2-使用-RequestParam的情形" class="headerlink" title="4.1.2 使用@RequestParam的情形:"></a>4.1.2 使用@RequestParam的情形:</h4><p><strong>传参在参数部分</strong>:    例如请求：<code>blogs?blogId=1</code>    此时URI路径为<code>@RequestMapping（/blogs/）</code><br>取值：<code>@RequestParam  int id</code>或者<code>@RequestParam（“blogId”）  int  id</code></p>
+<h4 id="4-1-3-联系-和-区别"><a href="#4-1-3-联系-和-区别" class="headerlink" title="4.1.3 联系 和 区别:"></a>4.1.3 联系 和 区别:</h4><p>@RequestParam和@PathVariable都能够完成类似的功能——因为本质上，它们都是用户的输入，只不过输入的部分不同，一个在URL路径部分，另一个在参数部分。</p>
+<p>要访问一篇博客文章，这两种URL设计都是可以的：</p>
+<ul>
+<li>通过<code>@PathVariable</code>，例如<code>/blogs/1</code></li>
+<li>通过<code>@RequestParam</code>，例如<code>/blogs?blogId=1</code></li>
+</ul>
+<p>那么究竟应该选择哪一种呢？建议：</p>
+<p><strong>①: 当URL指向的是某一具体业务资源（或资源列表），例如博客，用户时，使用<code>@PathVariable</code></strong></p>
+<p><strong>②: 当URL需要对资源或者资源列表进行过滤，筛选时，用<code>@RequestParam</code></strong></p>
+<p>例如我们会这样设计URL：</p>
+<ul>
+<li><code>/blogs/{blogId}</code></li>
+<li><code></code>/blogs?state=publish<code>而不是</code>/blogs/state/publish`来表示处于发布状态的博客文章</li>
+</ul>
+<h4 id="4-1-4-一个需要注意的问题"><a href="#4-1-4-一个需要注意的问题" class="headerlink" title="4.1.4 一个需要注意的问题:"></a>4.1.4 一个需要注意的问题:</h4><p>一旦我们在方法中定义了<code>@RequestParam</code>变量，如果访问的URL中不带有相应的参数，就会抛出异常——这是显然的，Spring尝试帮我们进行绑定，然而没有成功。但有的时候，参数确实不一定永远都存在，这时我们可以通过定义<code>required</code>属性：</p>
+<p><code>@RequestParam(value = &quot;id&quot;, required = false)</code></p>
+<p>当然，在参数不存在的情况下，可能希望变量有一个默认值：</p>
+<p><code>@RequestParam(value = &quot;id&quot;, required = false, defaultValue = &quot;0&quot;)</code></p>
+<h3 id="4-2-lt-mvc-annotation-driven-gt-lt-context-annotation-config-gt-和-lt-context-component-scan-gt-lt-mvc-view-controller-gt-lt-mvc-default-servlet-handler-gt"><a href="#4-2-lt-mvc-annotation-driven-gt-lt-context-annotation-config-gt-和-lt-context-component-scan-gt-lt-mvc-view-controller-gt-lt-mvc-default-servlet-handler-gt" class="headerlink" title="4.2 &lt;mvc:annotation-driven/&gt; /&lt;context:annotation-config/&gt;和&lt;context:component-scan&gt;/&lt;mvc:view-controller/&gt;&lt;mvc:default-servlet-handler/&gt;"></a>4.2 <code>&lt;mvc:annotation-driven/&gt; /&lt;context:annotation-config/&gt;和&lt;context:component-scan&gt;/&lt;mvc:view-controller/&gt;&lt;mvc:default-servlet-handler/&gt;</code></h3><h4 id="4-2-1-lt-mvc-annotation-driven-gt-详解"><a href="#4-2-1-lt-mvc-annotation-driven-gt-详解" class="headerlink" title="4.2.1 &lt;mvc:annotation-driven/&gt; 详解:"></a>4.2.1 <code>&lt;mvc:annotation-driven/&gt;</code> 详解:</h4><p>关于这个标签，网上很多资料的信息都过时了，还是基于Spring3.1以前的版本（现在最新的是5.1.2）</p>
+<p>Spring3.1以前的版本:     </p>
+<p><code>&lt;mvc:annotation-driven/&gt;</code>会自动注册<strong>DefaultAnnotationHandlerMapping</strong>与<strong>AnnotationMethodHandlerAdapter</strong>,两个bean,分别为<strong>HandlerMapping</strong>的实现类和<strong>HandlerAdapter</strong>的实现类,<strong>是spring MVC为@Controllers分发请求所必须的,</strong></p>
+<p>Spring3.1以后的版本:</p>
+<p>从3.1.x版本开始对应实现类改为了<strong>RequestMappingHandlerMapping</strong>和<strong>RequestMappingHandlerAdapter</strong>.</p>
+<p>其对应的实现类：org.springframework.web.servlet.config.<strong>AnnotationDrivenBeanDefinitionParser</strong></p>
+<p>它会向Spring容器中注册14个Bean，而其中主要的是下面几个：</p>
+<p>1 <strong>RequestMappingHandlerMapping</strong><br>2 BeanNameUrlHandlerMapping</p>
+<p>3 <strong>RequestMappingHandlerAdapter</strong><br>4 HttpRequestHandlerAdapter<br>5 SimpleControllerHandlerAdapter </p>
+<p>6 ExceptionHandlerExceptionResolver<br>7 ResponseStatusExceptionResolver<br>8 DefaultHandlerExceptionResolver</p>
+<p>前两个是HandlerMapping接口的实现类，用来<strong>处理请求映射</strong>的</p>
+<ul>
+<li>其中第一个是<strong>处理@RequestMapping注解的,并将其注册到请求映射表中</strong></li>
+<li>第二个会将controller类的名字映射为请求url</li>
+</ul>
+<p>中间三个是用来<strong>处理请求</strong>的适配器.具体点说就是<strong>确定调用哪个controller的哪个方法来处理当前请求</strong></p>
+<ul>
+<li>第一个是<strong>处理@Controller注解的</strong>处理器，支持自定义方法参数和返回值</li>
+<li>第二个是处理继承HttpRequestHandler的处理器</li>
+<li>第三个是处理继承自Controller接口的处理器</li>
+</ul>
+<p>另外还将提供以下支持：</p>
+<p>① 支持使用ConversionService实例对表单参数进行类型转换； </p>
+<p>② 支持使用@NumberFormatannotation,@DateTimeFormat注解完成数据类型的格式化； </p>
+<p>③ 支持使用@Valid注解对Java bean实例进行JSR 303验证； </p>
+<p>④ 支持使用@RequestBody和@ResponseBody注解</p>
+<p>综上，<code>&lt;mvc:annotation-driven/&gt;</code>标签主要是用来帮助我们处理请求映射，决定是哪个controller的哪个方法来处理当前请求，以及异常处理。</p>
+<p>而在最新的spring项目中，如果不配置<code>&lt;mvc:annotation-driven/&gt;</code>，应用也可以正常处理请求。原因是什么呢？</p>
+<p>经过debug DispatcherServlet的源码，发现如果不配置，spring将从DispatcherServlet.properties这个配置文件中加载默认配置，也是可以将上述的所有类注册到容器中的。</p>
+<p>因此<code>&lt;mvc:annotation-driven/&gt;</code>这个标签其实是可以省略不写的。</p>
+<p>&lt;mvc:annotation-driven      /&gt;的可选配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mvc:</span> <span class="attr">annotation-driven</span>  <span class="attr">message-codes-resolver</span>=<span class="string">"bean name"</span> <span class="attr">validator</span>=<span class="string">"bean name"</span> <span class="attr">conversion-service</span>=<span class="string">"bean name"</span> <span class="attr">ignoreDefaultModelOnRedirect</span>=<span class="string">"true or false"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mvc:message-converters</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">bean</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mvc:message-converters</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">mvc:argument-resolvers</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">bean</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mvc:argument-resolvers</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">mvc:return-value-handlers</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">bean</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mvc:return-value-handlers</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">mvc:annotation-driven</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-2-2-什么时候需要写-lt-mvc-annotation-driven-gt"><a href="#4-2-2-什么时候需要写-lt-mvc-annotation-driven-gt" class="headerlink" title="4.2.2 什么时候需要写&lt;mvc:annotation-driven/&gt;"></a>4.2.2 什么时候需要写<code>&lt;mvc:annotation-driven/&gt;</code></h4><p>第一种情形:  </p>
+<p>进行<strong>数据格式化/校验 时</strong>用到:  @DataTimeFormat, @NumberFormatAnnotation,@valid必须加上<code>&lt;mvc:annotation-driven/&gt;</code>因为@DataTimeFormat, @NumberFormatAnnotation,@Valid,@RequestBody,@ResponseBody等注解,是由它实现的</p>
+<p>第二种情形:  </p>
+<p>对表单参数进行<strong>自定义数据类型转换时</strong>需要装配自定义conversion-service: 需要在它里面加上conversion-service属性</p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g42v6s29q6j30p801jwff.jpg" alt></p>
+<p>第三种情形:</p>
+<p>为了<strong>直接响应转发的路径</strong>而无需再经过Handler而加入<code>&lt;mvc:view-controller/&gt;</code>导致RequestMapping不起作用</p>
+<p>第四种情形:</p>
+<p><strong>处理静态资源时</strong>加入了<code>&lt;mvc:default-servlet-handler/&gt;</code>,导致RequestMapping不起作用</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//注解方式：</span><br><span class="line">@Configuration</span><br><span class="line">@EnableWebMvc</span><br><span class="line">public class WebConfig &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">//XML方式：</span><br><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:mvc</span>=<span class="string">"http://www.springframework.org/schema/mvc"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></span></span><br><span class="line"><span class="tag"><span class="string">                  http://www.springframework.org/schema/beans</span></span></span><br><span class="line"><span class="tag"><span class="string">				http://www.springframework.org/schema/beans/spring-beans.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">				http://www.springframework.org/schema/mvc</span></span></span><br><span class="line"><span class="tag"><span class="string">				http://www.springframework.org/schema/mvc/spring-mvc.xsd"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">mvc:annotation-driven</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-2-3-lt-context-annotation-config-gt-简介-可以被-lt-context-component-scan-gt-取代"><a href="#4-2-3-lt-context-annotation-config-gt-简介-可以被-lt-context-component-scan-gt-取代" class="headerlink" title="4.2.3 &lt;context:annotation-config/&gt;简介:(可以被&lt;context:component-scan&gt;取代)"></a>4.2.3 <code>&lt;context:annotation-config/&gt;</code>简介:(可以被<code>&lt;context:component-scan&gt;</code>取代)</h4><p>这是一条向Spring容器中注册如下</p>
+<p>AutowiredAnnotationBeanPostProcessor</p>
+<p>CommonAnnotationBeanPostProcessor</p>
+<p>PersistenceAnnotationBeanPostProcessor</p>
+<p>RequiredAnnotationBeanPostProcessor</p>
+<p>这4个BeanPostProcessor.注册这4个BeanPostProcessor的作用，就是为了你的系统能够识别相应的注解。</p>
+<p>那么哪些注释依赖这些Bean呢。</p>
+<p>如果想使用 <strong>@Resource、@PostConstruct、@PreDestroy</strong>等注解就必须声CommonAnnotationBeanPostProcessor。 </p>
+<p>如果想使用 <strong>@PersistenceContext</strong>注解，就必须声明PersistenceAnnotationBeanPostProcessor的Bean。 </p>
+<p>如果想使用 <strong>@Autowired</strong>注解，那么就必须事先在 Spring 容器中声明 AutowiredAnnotationBeanPostProcessor Bean。 </p>
+<p>如果想使用 <strong>@Required</strong>的注解，就必须声明RequiredAnnotationBeanPostProcessor的Bean。</p>
+<p>同样，传统的声明方式如下： </p>
+<p><code>&lt;bean class=&quot;org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor &quot;/&gt;</code></p>
+<p>但是，就一般而言，这些注解我们是经常使用，比如Antowired,Resuource等注解，如果总是按照传统的方式一条一条的配置，感觉比较繁琐和机械。于是Spring给我们提供了<code>&lt;context:annotation-config/&gt;</code>的简化的配置方式。</p>
+<p>注意：使用了<code>&lt;context:annotation-config/&gt;</code>注解，仍然还要在xml中手动声明用@Controller,@Service,@Repository等注解修饰的类</p>
+<p>以@Autowired为例:</p>
+<p>也就是说<code>&lt;context:annotation-config/&gt;</code>只保证你能在程序中写@Autowired等注解,但@Autowired是否发挥作用,它不管; </p>
+<p>@Authwired要想发挥作用,必须保证spring容器中有一个bean和你使用@Authwired注解的属性类型一致;</p>
+<p>而要想将一个java类作为一个被spring容器管理的bean:</p>
+<p>①: 要么在xml文件中配置,</p>
+<p>②: 要么在类上使用注解(@Component,@Controller,@Service,@Repository等注解)然后通过&lt;context:component-scan base-package=”com.zwq.controller”&gt;的包扫描方式将指定包下使用这些注解的类添加到spring容器;</p>
+<h4 id="4-2-4-lt-context-component-scan-gt-简介"><a href="#4-2-4-lt-context-component-scan-gt-简介" class="headerlink" title="4.2.4 &lt;context:component-scan&gt;简介:"></a>4.2.4 <code>&lt;context:component-scan&gt;</code>简介:</h4><p><code>&lt;context:component-scan&gt;</code>首先有和<code>&lt;context:annotation-config/&gt;</code>一样的作用，此外，它还可以<strong>扫描指定包下的类，将拥有(@Component,@Controller,@Service,@Repository)注解的它们注册到Spring容器中</strong>,而不用我们手动在xml文件中去注册bean。</p>
+<p><strong>综上,也就是说,如果用<code>&lt;context:annotation-config/&gt;</code>我们还需要配置Xml注册Bean,而使用<code>&lt;context:component-scan
+/&gt;</code>的话，注册的步骤都免了，当然前提是我们对需要扫描的类使用的注解（比如@Componet,@Service），而如果同时使用两个配置的话，<code>&lt;context:annotation-config/&gt;</code>会被忽略掉（==如果配置了<code>&lt;context:component-scan&gt;</code>，就可以不配置<code>&lt;context:annotation-config/&gt;</code>了==）</strong></p>
+<p>等价于注解方式:</p>
+<p>@Configuration<br> @ComponentScan(“org.example.web”)<br> public class WebConfig {</p>
+<p>// …<br> }</p>
+<h4 id="4-2-5-lt-mvc-view-controller-gt"><a href="#4-2-5-lt-mvc-view-controller-gt" class="headerlink" title="4.2.5 &lt;mvc:view-controller/&gt;"></a>4.2.5 <code>&lt;mvc:view-controller/&gt;</code></h4><p><strong>直接响应转发的路径而无需再经过Handler的方法:</strong></p>
+<p>Springmvc.xml:中配置直接转发的页面</p>
+<p>可以直接响应转发的路径而无需再经过Handler的方法,但是配置了这个后Handler就失效了(即RequestMapping就失效了)，如果要想让两种方式都起作用，需要配置mvc:annotation-driven.即<code>&lt;mvc:view-controller path=&quot;/success&quot;view-name=&quot;success&quot;/&gt;</code></p>
+<h3 id="4-3-导致RequestMapping失效的情况："><a href="#4-3-导致RequestMapping失效的情况：" class="headerlink" title="4.3 导致RequestMapping失效的情况："></a>4.3 导致RequestMapping失效的情况：</h3><h4 id="4-3-1-三种情形"><a href="#4-3-1-三种情形" class="headerlink" title="4.3.1 三种情形:"></a>4.3.1 三种情形:</h4><p>情形一：</p>
+<p><code>&lt;mvc:default-servlet-handler&gt;&lt;/mvc:default-servlet-handler&gt;</code></p>
+<p>情形二：</p>
+<p>配置直接转发的页面:</p>
+<p>可以直接响应转发的路径而无需再经过Handler的方法,但是配置了这个后Handler就失效了(即RequestMapping就失效了)，如果要想让两种方式都起作用，需要配置mvc:annotation-driven</p>
+<p><code>&lt;mvc:view-controller path=&quot;/success&quot;view-name=&quot;success&quot;/&gt;</code></p>
+<p>情形三:</p>
+<p><code>&lt;mvc:resources location=&quot;WEB-INF/static/&quot;mapping=&quot;/resources/**&quot;/&gt;</code></p>
+<h4 id="4-3-2-解决方法-加上下面这句"><a href="#4-3-2-解决方法-加上下面这句" class="headerlink" title="4.3.2 解决方法:  加上下面这句"></a>4.3.2 解决方法:  加上下面这句</h4><p><code>&lt;mvc:annotation-driven&gt;&lt;/mvc:annotation-driven&gt;</code></p>
+<h4 id="4-3-3-分析"><a href="#4-3-3-分析" class="headerlink" title="4.3.3 分析:"></a>4.3.3 分析:</h4><p>由于只配置<code>&lt;mvc:default-servlet-handler/&gt;</code>,导致AnnotationMethodHandlerAdapter和RequestMappingHandlerAdapter都没有,所以无法处理@RequestMapping.</p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g42ta8hpv2j30ir0apag5.jpg" alt></p>
+<p>适配器</p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g42vrdrwpvj30mx0exwol.jpg" alt></p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g42vmepn5wj30nm096462.jpg" alt></p>
+<p>补充:</p>
+<p>处理静态资源的问题：</p>
+<p>default-servlet-handler将在SpringMVC上下文中定义一个DefaultServletHttpRequestHandler,它会对进DispatcherServlet的请求进行筛查</p>
+<p>如果发现是没有经过映射的请求,就将该请求交由WEB应用服务器默认的Servlet处理.(而不会报没有映射的警告)</p>
+<p>如果不是静态资源的请求，才由DispatcherServlet继续处理一般WEB应用服务器默认的Servlet的名称都是default.</p>
+<p>若所使用的WEB服务器的默认Servlet名称不是default，则需要通过default-servlet-name属性显式指定</p>
+<p>​    </p>
+<h2 id="五、Spring"><a href="#五、Spring" class="headerlink" title="五、Spring"></a>五、Spring</h2><h3 id="5-1-关于-和-和-的区别"><a href="#5-1-关于-和-和-的区别" class="headerlink" title="5.1 关于 /* 和 /** 和 /的区别"></a>5.1 关于 <code>/* 和 /** 和 /的区别</code></h3><h4 id="5-1-1-会拦截所有请求-包括-jsp-拦截所有的文件夹，不包含子文件夹"><a href="#5-1-1-会拦截所有请求-包括-jsp-拦截所有的文件夹，不包含子文件夹" class="headerlink" title="5.1.1/*会拦截所有请求(包括.jsp),  拦截所有的文件夹，不包含子文件夹"></a>5.1.1<code>/*</code>会拦截所有请求(包括.jsp),  拦截所有的文件夹，不包含子文件夹</h4><p><strong>即带后缀的请求(扩展映射,如</strong>  <strong>/test.html,/a/b/c.jsp等 ), 和不带后缀的请求(对根目录的请求/,</strong> <strong>对根目录之后的请求/a,/a/b/c等)</strong></p>
+<p>Example:   <code>http://www/zeyizong.com/funding/test/index.html</code></p>
+<p>如果配置<code>/funding/*</code>是不走拦截器的，配置<code>/funding/**</code>则会走拦截器</p>
+<h4 id="5-1-2-会拦截所有请求-拦截所有的文件夹及里面的子文件夹"><a href="#5-1-2-会拦截所有请求-拦截所有的文件夹及里面的子文件夹" class="headerlink" title="5.1.2/** 会拦截所有请求 , 拦截所有的文件夹及里面的子文件夹"></a>5.1.2<code>/**</code> 会拦截所有请求 , 拦截所有的文件夹及里面的子文件夹</h4><p><code>http://www/zeyizong.com/funding/index.html</code></p>
+<p>配置<code>/funding/*</code>和配置<code>/funding/**</code>都会走拦截器</p>
+<h4 id="5-1-3-会拦截除-jsp的所有请求"><a href="#5-1-3-会拦截除-jsp的所有请求" class="headerlink" title="5.1.3/会拦截除 .jsp的所有请求"></a>5.1.3<code>/</code>会拦截除 .jsp的所有请求</h4><p><code>/</code>会拦截所有路径映射和扩展映射中的.html .txt等请求,但不会拦截扩展映射中的.jsp的请求(如果没有请求的该.jsp文件,那么404错误)</p>
+<p>对根目录<code>/</code>的请求,默认会在后面加上如下的后缀的文件名</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">welcome-file-list</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>index.html<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>index.htm<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>index.jsp<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>default.html<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>default.htm<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>default.jsp<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">welcome-file-list</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="5-1-4-在SpringMVC中-我们如果把前端控制器的url-pattern配置为-lt-url-pattern-gt-lt-url-pattern-gt-那么就会发生404错误，为什么呢？？"><a href="#5-1-4-在SpringMVC中-我们如果把前端控制器的url-pattern配置为-lt-url-pattern-gt-lt-url-pattern-gt-那么就会发生404错误，为什么呢？？" class="headerlink" title="5.1.4 在SpringMVC中:我们如果把前端控制器的url-pattern配置为&lt;url-pattern&gt;/*&lt;/url-pattern&gt;那么就会发生404错误，为什么呢？？"></a>5.1.4 在SpringMVC中:我们如果把前端控制器的url-pattern配置为<code>&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</code>那么就会发生404错误，为什么呢？？</h4><p>当我们发送请求到Tomcat服务器的时候，<code>/*</code>匹配时，虽然Tomcat会把我们的请求正确交给我们的Servlet执行，但是当SprinMVC的视图解析器转发jsp视图的时候(看源码知道的)，因为url-pattern是<code>/*</code>，所以Tomcat又会拦截我们的请求，把该请求发送给我们配置好的Servlet，导致我们SpringMVC的处理器映射器找不到Handler，最终发生404错误。</p>
 
       
     </div>
@@ -829,7 +955,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/疑难杂症.html">专治疑难杂症</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年06月09日 - 23:26</p>
-  <p><span>最后更新:</span>2019年06月13日 - 15:56</p>
+  <p><span>最后更新:</span>2019年06月19日 - 12:55</p>
   <p><span>原始链接:</span><a href="/疑难杂症.html" title="专治疑难杂症">https://zzwwqq.xyz/疑难杂症.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.xyz/疑难杂症.html" aria-label="复制成功！"></i></span>
   </p>
@@ -1007,7 +1133,7 @@ daovoice('update');
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">59</span>
+                    <span class="site-state-item-count">60</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1324,7 +1450,7 @@ daovoice('update');
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、HTML"><span class="nav-text">一、HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-checked属性值是true还是checked"><span class="nav-text">1.1 checked属性值是true还是checked?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-HTML-布尔属性值"><span class="nav-text">1.1.1 HTML 布尔属性值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-路径问题"><span class="nav-text">1.2 路径问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-绝对路径和相对路径及根路径"><span class="nav-text">1.2.1 绝对路径和相对路径及根路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-转发和重定向中的"><span class="nav-text">1.2.2 转发和重定向中的/</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3-Javaweb工程中在写路径时-为什么不包含WebContent-eclipse中默认名"><span class="nav-text">1.2.3 Javaweb工程中在写路径时,为什么不包含WebContent(eclipse中默认名)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-中文乱码问题"><span class="nav-text">1.3 中文乱码问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Java"><span class="nav-text">二、Java</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-集合中List-和-Set-区别-以及-定制排序和选择排序"><span class="nav-text">2.1 集合中List 和 Set 区别,以及 定制排序和选择排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-区别"><span class="nav-text">2.1.1 区别:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-值得注意的地方"><span class="nav-text">2.1.2 值得注意的地方:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-选择排序和定制排序"><span class="nav-text">2.1.3 选择排序和定制排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-集合的遍历有四种方式"><span class="nav-text">2.1.4   集合的遍历有四种方式  :</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-字符串"><span class="nav-text">2.2 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-String的intern-方法"><span class="nav-text">2.2.1 String的intern()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-equals-和-区别"><span class="nav-text">2.2.2  equals 和 == 区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、JSP"><span class="nav-text">三、JSP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-JSP中括号匹配问题"><span class="nav-text">3.1 JSP中括号匹配问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-空格问题"><span class="nav-text">3.2 空格问题:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-注释问题"><span class="nav-text">3.3 注释问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-双引号问题"><span class="nav-text">3.4 双引号问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、HTML"><span class="nav-text">一、HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-checked属性值是true还是checked"><span class="nav-text">1.1 checked属性值是true还是checked?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-HTML-布尔属性值"><span class="nav-text">1.1.1 HTML 布尔属性值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-路径问题"><span class="nav-text">1.2 路径问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-绝对路径和相对路径及根路径"><span class="nav-text">1.2.1 绝对路径和相对路径及根路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-转发和重定向中的"><span class="nav-text">1.2.2 转发和重定向中的/</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3-Javaweb工程中在写路径时-为什么不包含WebContent-eclipse中默认名"><span class="nav-text">1.2.3 Javaweb工程中在写路径时,为什么不包含WebContent(eclipse中默认名)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-中文乱码问题"><span class="nav-text">1.3 中文乱码问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Java"><span class="nav-text">二、Java</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-集合中List-和-Set-区别-以及-定制排序和选择排序"><span class="nav-text">2.1 集合中List 和 Set 区别,以及 定制排序和选择排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-区别"><span class="nav-text">2.1.1 区别:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-值得注意的地方"><span class="nav-text">2.1.2 值得注意的地方:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-选择排序和定制排序"><span class="nav-text">2.1.3 选择排序和定制排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-集合的遍历有四种方式"><span class="nav-text">2.1.4   集合的遍历有四种方式  :</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-字符串"><span class="nav-text">2.2 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-String的intern-方法"><span class="nav-text">2.2.1 String的intern()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-equals-和-区别"><span class="nav-text">2.2.2  equals 和 == 区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、JSP"><span class="nav-text">三、JSP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-JSP中括号匹配问题"><span class="nav-text">3.1 JSP中括号匹配问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-空格问题"><span class="nav-text">3.2 空格问题:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-注释问题"><span class="nav-text">3.3 注释问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-双引号问题"><span class="nav-text">3.4 双引号问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、SpringMVC"><span class="nav-text">四、SpringMVC</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-什么时候使用-PathVariable-什么时候用-RequestParam，有什么联系和区别"><span class="nav-text">4.1 什么时候使用@PathVariable  什么时候用@RequestParam，有什么联系和区别?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-1-使用-PathVariable-的情形"><span class="nav-text">4.1.1 使用@PathVariable 的情形:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-2-使用-RequestParam的情形"><span class="nav-text">4.1.2 使用@RequestParam的情形:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-3-联系-和-区别"><span class="nav-text">4.1.3 联系 和 区别:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-4-一个需要注意的问题"><span class="nav-text">4.1.4 一个需要注意的问题:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-lt-mvc-annotation-driven-gt-lt-context-annotation-config-gt-和-lt-context-component-scan-gt-lt-mvc-view-controller-gt-lt-mvc-default-servlet-handler-gt"><span class="nav-text">4.2 &lt;mvc:annotation-driven/&gt; /&lt;context:annotation-config/&gt;和&lt;context:component-scan&gt;/&lt;mvc:view-controller/&gt;&lt;mvc:default-servlet-handler/&gt;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1-lt-mvc-annotation-driven-gt-详解"><span class="nav-text">4.2.1 &lt;mvc:annotation-driven/&gt; 详解:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-2-什么时候需要写-lt-mvc-annotation-driven-gt"><span class="nav-text">4.2.2 什么时候需要写&lt;mvc:annotation-driven/&gt;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-3-lt-context-annotation-config-gt-简介-可以被-lt-context-component-scan-gt-取代"><span class="nav-text">4.2.3 &lt;context:annotation-config/&gt;简介:(可以被&lt;context:component-scan&gt;取代)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-4-lt-context-component-scan-gt-简介"><span class="nav-text">4.2.4 &lt;context:component-scan&gt;简介:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-5-lt-mvc-view-controller-gt"><span class="nav-text">4.2.5 &lt;mvc:view-controller/&gt;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-导致RequestMapping失效的情况："><span class="nav-text">4.3 导致RequestMapping失效的情况：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-1-三种情形"><span class="nav-text">4.3.1 三种情形:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-2-解决方法-加上下面这句"><span class="nav-text">4.3.2 解决方法:  加上下面这句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-3-分析"><span class="nav-text">4.3.3 分析:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、Spring"><span class="nav-text">五、Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-关于-和-和-的区别"><span class="nav-text">5.1 关于 /* 和 /** 和 /的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1-会拦截所有请求-包括-jsp-拦截所有的文件夹，不包含子文件夹"><span class="nav-text">5.1.1/*会拦截所有请求(包括.jsp),  拦截所有的文件夹，不包含子文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-会拦截所有请求-拦截所有的文件夹及里面的子文件夹"><span class="nav-text">5.1.2/** 会拦截所有请求 , 拦截所有的文件夹及里面的子文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-3-会拦截除-jsp的所有请求"><span class="nav-text">5.1.3/会拦截除 .jsp的所有请求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-4-在SpringMVC中-我们如果把前端控制器的url-pattern配置为-lt-url-pattern-gt-lt-url-pattern-gt-那么就会发生404错误，为什么呢？？"><span class="nav-text">5.1.4 在SpringMVC中:我们如果把前端控制器的url-pattern配置为&lt;url-pattern&gt;/*&lt;/url-pattern&gt;那么就会发生404错误，为什么呢？？</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1367,7 +1493,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">639k</span>
+    <span title="站点总字数">696k</span>
   
 
   
@@ -1378,7 +1504,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">9:41</span>
+    <span title="站点阅读时长">10:33</span>
   
 </div>
 

@@ -137,10 +137,13 @@ daovoice('update');
 <meta property="og:site_name" content="zwq">
 <meta property="og:description" content="1. 简述Java内存管理机制，以及垃圾回收的原理和使用过Java调优工具内存管理的职责为分配内存，回收内存。 没有自动内存管理的语言/平台容易发生错误。 典型的问题包括悬挂指针问题，一个指针引用了一个已经被回收的内存地址，导致程序的运行完全不可知。 另一个典型问题为内存泄露，内存已经分配，但是已经没有了指向该内存的指针，导致内存泄露。 程序员要花费大量时间在调试该类问题上。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-09T16:01:56.256Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g4kkb1mvoqj30el0cf76h.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g4kpoybldrj30io06iq35.jpg">
+<meta property="og:updated_time" content="2019-07-03T05:47:33.429Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM相关面试题及答案">
 <meta name="twitter:description" content="1. 简述Java内存管理机制，以及垃圾回收的原理和使用过Java调优工具内存管理的职责为分配内存，回收内存。 没有自动内存管理的语言/平台容易发生错误。 典型的问题包括悬挂指针问题，一个指针引用了一个已经被回收的内存地址，导致程序的运行完全不可知。 另一个典型问题为内存泄露，内存已经分配，但是已经没有了指向该内存的指针，导致内存泄露。 程序员要花费大量时间在调试该类问题上。">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/0064BnmZgy1g4kkb1mvoqj30el0cf76h.jpg">
 
 
 
@@ -539,7 +542,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-10 00:01:56" itemprop="dateModified" datetime="2019-06-10T00:01:56+08:00">2019-06-10</time>
+                <time title="修改时间：2019-07-03 13:47:33" itemprop="dateModified" datetime="2019-07-03T13:47:33+08:00">2019-07-03</time>
               
             
           </span>
@@ -611,7 +614,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.5k</span>
+                <span title="本文字数">4.7k</span>
               
 
               
@@ -625,7 +628,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -657,7 +660,47 @@ daovoice('update');
 <p>Extension：从java.ext.dirs系统属性所指定的目录中加载类库，<strong>它的父加载器是Bootstrap</strong>；</p>
 <p>System：又叫<strong>应用类加载器</strong>，其<strong>父类是Extension</strong>。它是应用最广泛的类加载器。它从环境变量classpath或者系统属性java.class.path所指定的目录中记载类，是用户自定义加载器的默认父加载器。</p>
 <h3 id="3-说说JVM原理？内存泄漏与溢出的区别？何时产生内存泄漏？"><a href="#3-说说JVM原理？内存泄漏与溢出的区别？何时产生内存泄漏？" class="headerlink" title="3. 说说JVM原理？内存泄漏与溢出的区别？何时产生内存泄漏？"></a>3. 说说JVM原理？内存泄漏与溢出的区别？何时产生内存泄漏？</h3><p>答:JVM原理：</p>
-<p>JVM是Java Virtual Machine（Java虚拟机）的缩写，它是整个java实现跨平台的最核心的部分，所有的Java程序会首先被编译为.class的类文件，这种类文件可以在虚拟机上执行，也就是说class并不直接与机器的操作系统相对应，而是经过虚拟机间接与操作系统交互，由虚拟机将程序解释给本地系统执行。JVM是Java平台的基础，和实际的机器一样，它也有自己的指令集，并且在运行时操作不同的内存区域。JVM通过抽象操作系统和CPU结构，提供了一种与平台无关的代码执行方法，即与特殊的实现方法、主机硬件、主机操作系统无关。JVM的主要工作是<strong>解释自己的指令集（即字节码）到CPU的指令集</strong>或对应的系统调用，保护用户免被恶意程序骚扰。JVM对上层的Java源文件是不关心的，<strong>它关注的只是由源文件生成的类文件（.class文件）</strong>。</p>
+<p>JVM是Java Virtual Machine（Java虚拟机）的缩写，它是整个java实现跨平台的最核心的部分，所有的Java程序会首先被编译为.class的类文件，这种类文件可以在虚拟机上执行，也就是说class并不直接与机器的操作系统相对应，而是经过虚拟机间接与操作系统交互，由虚拟机将程序解释给本地系统执行。JVM是Java平台的基础，和实际的机器一样，它也有自己的指令集，并且在运行时操作不同的内存区域。JVM通过抽象操作系统和CPU结构，提供了一种与平台无关的代码执行方法，即与特殊的实现方法、主机硬件、主机操作系统无关。JVM的主要工作是<strong>解释自己的指令集（即字节码）到CPU的指令集</strong>或对应的系统调用，保护用户免被恶意程序骚扰。JVM对上层的Java源文件是不关心的，<strong>它关注的只是由源文件生成的类文件（.class文件）</strong></p>
+<h3 id="4-Java内存区域与内存溢出异常"><a href="#4-Java内存区域与内存溢出异常" class="headerlink" title="4. Java内存区域与内存溢出异常:"></a>4. Java内存区域与内存溢出异常:</h3><p>Java虚拟机 运行时数据区:</p>
+<p>Java虚拟机在运行Java程序时会将它管理的内存划分为若干个不同的数据区域,他们创建和销毁的时间以及用途是不同的</p>
+<p>口诀: 方程堆，虚本栈</p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g4kkb1mvoqj30el0cf76h.jpg" alt></p>
+<h3 id="5-程序计数器"><a href="#5-程序计数器" class="headerlink" title="5. 程序计数器"></a>5. 程序计数器</h3><h4 id="5-1-什么是程序计数器？"><a href="#5-1-什么是程序计数器？" class="headerlink" title="5.1 什么是程序计数器？"></a>5.1 什么是程序计数器？</h4><blockquote>
+<p>程序计数器是一块 较小 的内存空间，它可以看做是==当前线程==所执行的字节码的 ==行号指示器== ；在虚拟机的概念模型里（仅仅是概念模型，各种虚拟机可能会通过一些更高效的方式去实现），字节码解释器工作时，就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳准、异常处理、线程恢复等基础功能都需要依赖这个计数器来完成 ———–摘抄自  周志明版  《深入理解java虚拟机》 P39</p>
+</blockquote>
+<p>简单的理解为，是程序计数器保证了程序的正常执行 ；</p>
+<h4 id="5-2-有什么特点"><a href="#5-2-有什么特点" class="headerlink" title="5.2 有什么特点?"></a>5.2 有什么特点?</h4><ul>
+<li>线程私有的</li>
+<li>是java虚拟机规范里面， <strong>唯一 一个</strong> 没有规定任何 OutOfMemoryError 情况的区域</li>
+<li>生命周期随着线程，线程启动而产生，线程结束而消亡</li>
+<li>如果线程正在执行的是Java 方法，则这个计数器记录的是正在执行的虚拟机字节码指令地址</li>
+<li>如果正在执行的是Native 方法，则这个计数器值为空（Undefined）</li>
+</ul>
+<h4 id="5-3-为什么具有这些特点"><a href="#5-3-为什么具有这些特点" class="headerlink" title="5.3 为什么具有这些特点?"></a>5.3 为什么具有这些特点?</h4><p>要想理解什么是程序计数器，以及它的特点，需要理解上文中的一句话</p>
+<p>这里重点理解 ：程序计数器，可以看做是当前线程执行的字节码的 <strong>行号指示器</strong> ，这句话；要理解这句话，需要先知道字节码文件长什么样子，看下面的代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// java 文件被翻译为字节码的时候，字节码大概类似于下面的样子</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">haha</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="comment">// 原来的 haha 方法内部的 java 代码，被翻译为下面的类似于汇编语言的指令</span></span><br><span class="line">    <span class="number">0</span> xxxx ....</span><br><span class="line">    <span class="number">2</span> xxxx ....</span><br><span class="line">    <span class="number">4</span> xx  ...</span><br><span class="line">    <span class="number">5</span> xxx ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面左边的 0、2、4、5 ，就是类似于字节码的行号（实际是指令的偏移地址），程序计数器中保存中的值，就是它们；字节码解释器，就是根据它们，来执行程序的 ；</p>
+<p>理解了程序计数器，就好理解它的这些特点了；</p>
+<p>我们都知道，java是支持多线程的，当CPU执行权从 A 线程，转移到 B 线程的时候，JVM就要暂时挂起线程 A ，去执行线程 B ；当线程 A 再次得到CPU执行权的时候，又会挂起B线程，继续执行 A 线程 ；</p>
+<p><strong>我们想象下，CPU是怎么知道记住之前A线程，执行到哪一处的？</strong></p>
+<p>答案是，CPU根本就不会记住之前执行到哪里了，它只是埋头苦干；那是什么保证了切换线程的程序可以正常执行的；答案是 ： 程序计数器 ；程序计数器里面保存的是 当前线程执行的字节码的行号（看着像行号，其实是指令地址）；</p>
+<p>那么，我们需要几个程序计数器呢？如果，我们只有一个的话，切换B线程以后，程序计数器里面保存的就是B线程所执行的字节码的行号了，再切换回A线程，就蒙圈了，不知道执行到哪里了，因为，程序计数器里面保存的是B线程当前执行的字节码地址 ；因此，我们可以想象出，要为每个线程都分配一个程序计数器，==因此，程序计数器的内存空间是线程私有的 ；==这样即使线程 A 被挂起，但是线程 A 里面的程序计数器，记住了A线程当前执行到的字节码的指令地址了 ，等再次切回到A线程的时候，看一下程序计数器，就知道之前执行到哪里了！</p>
+<p>那么程序计数器，什么时候分配内存呢？我们试想下，一个线程在执行的任何期间，都会失去CPU执行权，因此，我们要从一个线程被创建开始执行，就要无时无刻的记录着该线程当前执行到哪里了！==因此，线程计数器，必须是线程被创建开始执行的时候，就要一同被创建==</p>
+<p>程序计数器，保存的是当前执行的字节码的偏移地址（也就是<strong>之前说的行号</strong>，<strong>其实那不是行号，是指令的偏移地址，只是为了好理解，才说是行号的</strong>，），当执行到下一条指令的时候，改变的只是程序计数器中保存的地址，并不需要申请新的内存来保存新的指令地址；==因此，永远都不可能内存溢出的；因此，jvm虚拟机规范，也就没有规定，也是唯一一个没有规定 OutOfMemoryError 异常 的区域；== </p>
+<p><strong>为什么执行的是native 方法时，为undefined</strong></p>
+<p>==当线程执行的是本地方法的时候，程序计数器中保存的值是空==（undefined）；原因很简单：本地方法是C++/C 写的，由系统调用，==根本不会产生字节码文件==，因此，程序计数器也就不会做任何记录 ；</p>
+<p><strong>那native 方法的多线程是如何实现的呢？</strong></p>
+<p><strong>答：</strong> native 方法是通过调用系统指令来实现的，那系统是如何实现多线程的则 native 就是如何实现的</p>
+<p>举例理解程序计数器</p>
+<p>说线程恢复等基础功能都需要依赖这个程序计数器来完成，首先我们得知道：</p>
+<p>线程是CPU 最小的调度单元<br>Java 虚拟机的多线程是通过切换线程并分配处理器执行时间的方式来实现的，在任何一个确定的时间，一个处理器（对于多核处理器来说是一个内核）都只会执行一条线程中的指令</p>
+<p>如有如下图过程，当A 线程先向处理器发出指令，但当执行到中途一半时，B线程过来执行，且优先级高，此时处理器将A 挂起，B 执行，当B 执行结束需要唤醒A 同时得知道A 的执行位置，就可以查看线程A 中的计数器指令</p>
+<p><img src="https://ws1.sinaimg.cn/large/0064BnmZgy1g4kpoybldrj30io06iq35.jpg" alt></p>
+<h3 id="6-什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"><a href="#6-什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？" class="headerlink" title="6. 什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"></a>6. 什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？</h3><p>Java虚拟机<strong>是一个</strong>可以执行Java字节码的虚拟机<strong>进程</strong>。Java源文件被编译成能被Java虚拟机执行的字节码文件。<br>Java被设计成允许应用程序可以运行在任意的平台，而不需要程序员为每一个平台单独重写或者是重新编译。Java虚拟机让这个变为可能，因为它知道底层硬件平台的指令长度和其他特性。</p>
+<p><strong>补充:</strong></p>
+<p><strong>java的跨平台不是java源程序的跨平台</strong> ，如果是这样，那么所有语言都是跨平台的， java源程序先经过javac编译器编译成二进制的.class字节码文件（<strong>java的跨平台指的就是.class字节码文件的跨平台</strong>，.class字节码文件是与平台无关的），.class文件再运行在jvm上，java解释器（jvm的一部分）会将其解释成对应平台的机器码执行，所以<strong>java所谓的跨平台就是在不同平台上安装了不同的jvm</strong>，而<strong>在不同平台上生成的.class文件都是一样的</strong>，而.class文件再由对应平台的jvm解释成对应平台的机器码执行。<br>最后解释下机器码和字节码的区别:<br>一，机器码，完全依附硬件而存在～并且不同硬件由于内嵌指令集不同，即使相同的0 1代码 意思也可能是不同的～换句话说，根本不存在跨平台性～比如～不同型号的CPU,你给他个指令10001101，他们可能会解析为不同的结果～<br>二，我们知道JAVA是跨平台的，为什么呢？因为他有一个jvm,不论哪种硬件，只要你装有jvm,那么他就认识这个JAVA字节码至于底层的机器码，咱不用管，有jvm搞定，他会把字节码再翻译成所在机器认识的机器码.</p>
+<p>虚拟机是一种抽象化的计算机，通过在实际的计算机上仿真模拟各种计算机功能来实现的。Java虚拟机有自己完善的硬体架构，如 <a href="http://baike.baidu.com/view/50152.htm" target="_blank" rel="noopener">处理器</a> 、 <a href="http://baike.baidu.com/view/93201.htm" target="_blank" rel="noopener">堆栈</a> 、 <a href="http://baike.baidu.com/view/6159.htm" target="_blank" rel="noopener">寄存器</a> 等，还具有相应的 <a href="http://baike.baidu.com/view/178461.htm" target="_blank" rel="noopener">指令</a> 系统。JVM屏蔽了与具体操作系统平台相关的信息，使得Java程序只需生成在Java虚拟机上运行的目标代码（ <a href="http://baike.baidu.com/view/560330.htm" target="_blank" rel="noopener">字节码</a> ），就可以在多种平台上不加修改地运行。  </p>
+<p>Java虚拟机其实就是一个进程。Java之所以可以跨平台，也是因为，java源程序被编译成了.class的字节码文件，不管在哪个平台，只要有jvm，都可以认识这个.class文件。这也就是我们，常说的，一次编译，永久运行！  </p>
 
       
     </div>
@@ -689,7 +732,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/JVM相关面试题及答案.html">JVM相关面试题及答案</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年06月09日 - 19:00</p>
-  <p><span>最后更新:</span>2019年06月10日 - 00:01</p>
+  <p><span>最后更新:</span>2019年07月03日 - 13:47</p>
   <p><span>原始链接:</span><a href="/JVM相关面试题及答案.html" title="JVM相关面试题及答案">https://zzwwqq.xyz/JVM相关面试题及答案.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.xyz/JVM相关面试题及答案.html" aria-label="复制成功！"></i></span>
   </p>
@@ -867,7 +910,7 @@ daovoice('update');
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">59</span>
+                    <span class="site-state-item-count">60</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1184,7 +1227,7 @@ daovoice('update');
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-简述Java内存管理机制，以及垃圾回收的原理和使用过Java调优工具"><span class="nav-text">1. 简述Java内存管理机制，以及垃圾回收的原理和使用过Java调优工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-描述JVM加载class文件的原理机制"><span class="nav-text">2. 描述JVM加载class文件的原理机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-说说JVM原理？内存泄漏与溢出的区别？何时产生内存泄漏？"><span class="nav-text">3. 说说JVM原理？内存泄漏与溢出的区别？何时产生内存泄漏？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-简述Java内存管理机制，以及垃圾回收的原理和使用过Java调优工具"><span class="nav-text">1. 简述Java内存管理机制，以及垃圾回收的原理和使用过Java调优工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-描述JVM加载class文件的原理机制"><span class="nav-text">2. 描述JVM加载class文件的原理机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-说说JVM原理？内存泄漏与溢出的区别？何时产生内存泄漏？"><span class="nav-text">3. 说说JVM原理？内存泄漏与溢出的区别？何时产生内存泄漏？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Java内存区域与内存溢出异常"><span class="nav-text">4. Java内存区域与内存溢出异常:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-程序计数器"><span class="nav-text">5. 程序计数器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-什么是程序计数器？"><span class="nav-text">5.1 什么是程序计数器？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-有什么特点"><span class="nav-text">5.2 有什么特点?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-为什么具有这些特点"><span class="nav-text">5.3 为什么具有这些特点?</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"><span class="nav-text">6. 什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？</span></a></li></ol></div>
             
 
           </div>
@@ -1227,7 +1270,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">639k</span>
+    <span title="站点总字数">696k</span>
   
 
   
@@ -1238,7 +1281,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">9:41</span>
+    <span title="站点阅读时长">10:33</span>
   
 </div>
 
