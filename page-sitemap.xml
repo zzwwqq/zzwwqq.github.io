@@ -2,49 +2,49 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://zzwwqq.xyz</loc>
+        <loc>https://zzwwqq.github.io</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     
     <url>
-        <loc>https://zzwwqq.xyz/about/</loc>
-        <lastmod>2019-03-19T11:24:29.409Z</lastmod>
+        <loc>https://zzwwqq.github.io/about/</loc>
+        <lastmod>2019-03-19T11:24:29.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://zzwwqq.xyz/tags/</loc>
-        <lastmod>2019-03-19T08:25:43.624Z</lastmod>
+        <loc>https://zzwwqq.github.io/tags/</loc>
+        <lastmod>2019-03-19T08:25:43.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://zzwwqq.xyz/categories/</loc>
-        <lastmod>2019-03-19T08:25:28.296Z</lastmod>
+        <loc>https://zzwwqq.github.io/categories/</loc>
+        <lastmod>2019-03-19T08:25:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://zzwwqq.xyz/message/</loc>
-        <lastmod>2019-03-19T08:24:56.254Z</lastmod>
+        <loc>https://zzwwqq.github.io/message/</loc>
+        <lastmod>2019-03-19T08:24:56.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://zzwwqq.xyz/404/</loc>
-        <lastmod>2019-03-19T04:40:52.684Z</lastmod>
+        <loc>https://zzwwqq.github.io/404/</loc>
+        <lastmod>2019-03-19T04:40:52.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://zzwwqq.xyz/lib/bookmark/README.html</loc>
-        <lastmod>2019-03-16T11:29:09.311Z</lastmod>
+        <loc>https://zzwwqq.github.io/lib/bookmark/README.html</loc>
+        <lastmod>2019-03-16T11:29:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
