@@ -132,14 +132,14 @@ daovoice('update');
   <meta name="keywords" content="设计模式之单例模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式之单例模式">
-<meta property="og:url" content="https://zzwwqq.xyz/设计模式之单例模式.html">
+<meta property="og:url" content="https://zzwwqq.github.io/设计模式之单例模式.html">
 <meta property="og:site_name" content="zwq">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/DesignPatterns-2.2.png">
-<meta property="og:updated_time" content="2019-03-25T05:50:44.361Z">
+<meta property="og:image" content="https://wx2.sinaimg.cn/mw690/0064BnmZgy1g9n4bw3hgij30tp0c9ab1.jpg">
+<meta property="og:updated_time" content="2019-12-06T09:25:27.044Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之单例模式">
-<meta name="twitter:image" content="http://cdn.zzwwqq.xyz/static/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/DesignPatterns-2.2.png">
+<meta name="twitter:image" content="https://wx2.sinaimg.cn/mw690/0064BnmZgy1g9n4bw3hgij30tp0c9ab1.jpg">
 
 
 
@@ -148,7 +148,7 @@ daovoice('update');
 
 
 
-  <link rel="canonical" href="https://zzwwqq.xyz/设计模式之单例模式.html">
+  <link rel="canonical" href="https://zzwwqq.github.io/设计模式之单例模式.html">
 
 
 
@@ -478,12 +478,12 @@ daovoice('update');
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zzwwqq.xyz/设计模式之单例模式.html">
+    <link itemprop="mainEntityOfPage" href="https://zzwwqq.github.io/设计模式之单例模式.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zwq">
       <meta itemprop="description" content="不忘初心,方得始终!">
-      <meta itemprop="image" content="http://cdn.zzwwqq.xyz/static/images/avatar.png">
+      <meta itemprop="image" content="https://tva4.sinaimg.cn/large/0064BnmZgy1g9n64jijk8j30dc0dc0tq.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -521,12 +521,24 @@ daovoice('update');
                 
               
 
-              <time title="创建时间：2019-03-25 12:41:46 / 修改时间：13:50:44" itemprop="dateCreated datePublished" datetime="2019-03-25T12:41:46+08:00">2019-03-25</time>
+              <time title="创建时间：2019-03-25 12:41:46" itemprop="dateCreated datePublished" datetime="2019-03-25T12:41:46+08:00">2019-03-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-06 17:25:27" itemprop="dateModified" datetime="2019-12-06T17:25:27+08:00">2019-12-06</time>
               
             
           </span>
@@ -645,11 +657,11 @@ daovoice('update');
 <h2 id="七、单例模式的实现方式"><a href="#七、单例模式的实现方式" class="headerlink" title="七、单例模式的实现方式:"></a>七、单例模式的实现方式:</h2><p>可分为2大类、6种实现方式:<br>　　第一大类: 初始化单例类时 即 创建单例<br>　　　　　实现方式1: 饿汉式<br>　　　　　实现方式2: 枚举类型</p>
 <p>　　第二大类: 按需,延迟创建单例<br>　　　　　实现方式3: 懒汉式的基础实现<br>　　　　　实现方式4: 懒汉式的改进—&gt;同步锁<br>　　　　　实现方式5: 懒汉式的改进—&gt;双重检验锁<br>　　　　　实现方式6: 静态内部类</p>
 <h2 id="八、饿汉式和懒汉式的区别"><a href="#八、饿汉式和懒汉式的区别" class="headerlink" title="八、饿汉式和懒汉式的区别:"></a>八、饿汉式和懒汉式的区别:</h2><p>　　饿汉式: 随类的加载而创建对象<br>　　懒汉式: 上来不创建对象,当调用的时候,再创建对象,以后使用的就是同一个对象了<br>　　懒汉式: 懒加载,延迟加载</p>
-<p><img src="http://cdn.zzwwqq.xyz/static/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/DesignPatterns-2.2.png" alt></p>
+<p><img src="https://wx2.sinaimg.cn/mw690/0064BnmZgy1g9n4bw3hgij30tp0c9ab1.jpg" alt="2.2"></p>
 <h2 id="九、实现方式详解"><a href="#九、实现方式详解" class="headerlink" title="九、实现方式详解:"></a>九、实现方式详解:</h2><h3 id="9-1-实现方式1-饿汉式"><a href="#9-1-实现方式1-饿汉式" class="headerlink" title="9.1 实现方式1: 饿汉式"></a>9.1 实现方式1: 饿汉式</h3><p>　　①: 这是 最简单的单例实现方式<br>　　②: 原理: 依赖 JVM类加载机制，保证单例只会被创建1次，即 线程安全<br>　　　　　　JVM在类的初始化阶段(即 在Class被加载后、被线程使用前)，会执行类的初始化<br>　　　　　　在执行类的初始化期间，JVM会去获取一个锁。这个锁可以同步多个线程对同一个类的初始化<br>　　③: 应用场景: 除了初始化单例类时 即 创建单例外，继续延伸出来的是：单例对象 要求初始化速度快 &amp; 占用内存小<br>　　④: 具体实现:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">　　　　　　　<span class="comment">// 1. 加载该类时，单例就会自动被创建</span></span><br><span class="line">              <span class="keyword">private</span> <span class="keyword">static</span>  Singleton ourInstance  = <span class="keyword">new</span>  Singleton();</span><br><span class="line"></span><br><span class="line">              <span class="comment">// 2. 构造函数 设置为 私有权限</span></span><br><span class="line">              <span class="comment">// 原因：禁止他人创建实例</span></span><br><span class="line">              <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">              &#125;</span><br><span class="line"></span><br><span class="line">              <span class="comment">// 3. 通过调用静态方法获得创建的单例</span></span><br><span class="line">              <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  Singleton <span class="title">newInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                  <span class="keyword">return</span> ourInstance;</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="9-2-实现方式2-枚举类型"><a href="#9-2-实现方式2-枚举类型" class="headerlink" title="9.2 实现方式2: 枚举类型"></a>9.2 实现方式2: 枚举类型</h3><p>　　①: 原理: 根据枚举类型的下述特点，满足单例模式所需的 创建单例、线程安全、实现简洁的需求<br>　　②: 具体实现:      </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Singleton&#123;</span><br><span class="line">   <span class="comment">//定义1个枚举的元素，即为单例类的1个实例</span></span><br><span class="line">   INSTANCE;                  </span><br><span class="line">    <span class="comment">// 隐藏了1个空的、私有的 构造方法</span></span><br><span class="line">    <span class="comment">// private Singleton () &#123;&#125;</span></span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">// 获取单例的方式：</span></span><br><span class="line">       Singleton singleton = Singleton.INSTANCE;</span><br><span class="line">注：这是 最简洁、易用 的单例实现方式，借用《Effective Java》的话：</span><br><span class="line">单元素的枚举类型已经成为实现 Singleton的最佳方法</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Singleton&#123;</span><br><span class="line">   <span class="comment">//定义1个枚举的元素，即为单例类的1个实例</span></span><br><span class="line">   INSTANCE;                  </span><br><span class="line">    <span class="comment">// 隐藏了1个空的、私有的 构造方法</span></span><br><span class="line">     <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">     &#125;</span><br><span class="line">       <span class="comment">// 获取单例的方式：</span></span><br><span class="line">       Singleton singleton = Singleton.INSTANCE;</span><br><span class="line">注：这是 最简洁、易用 的单例实现方式，借用《Effective Java》的话：</span><br><span class="line">单元素的枚举类型已经成为实现 Singleton的最佳方法</span><br></pre></td></tr></table></figure>
 <h3 id="9-3实现方式3-懒汉式（基础实现）"><a href="#9-3实现方式3-懒汉式（基础实现）" class="headerlink" title="9.3实现方式3: 懒汉式（基础实现）"></a>9.3实现方式3: 懒汉式（基础实现）</h3><p>　　①: 原理: 与饿汉式 最大的区别是：单例创建的时机<br>　　　　　　饿汉式：单例创建时机不可控，即类加载时 自动创建 单例<br>　　　　　　懒汉式：单例创建时机可控，即有需要时，才 手动创建 单例<br>　　②: 具体实现:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">                  <span class="comment">// 1. 类加载时，先不自动创建单例</span></span><br><span class="line">                  <span class="comment">//  即，将单例的引用先赋值为 Null</span></span><br><span class="line">                      <span class="keyword">private</span> <span class="keyword">static</span>  Singleton ourInstance  = <span class="keyword">null</span>；  </span><br><span class="line">                  <span class="comment">// 2. 构造函数 设置为 私有权限</span></span><br><span class="line">                  <span class="comment">// 原因：禁止他人创建实例</span></span><br><span class="line">                  <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                  &#125;</span><br><span class="line"></span><br><span class="line">                  <span class="comment">// 3. 需要时才手动调用 newInstance（） 创建 单例</span></span><br><span class="line">                  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  Singleton <span class="title">newInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                  <span class="comment">// 先判断单例是否为空，以避免重复创建</span></span><br><span class="line">                  <span class="keyword">if</span>( ourInstance == <span class="keyword">null</span>)&#123;</span><br><span class="line">                      ourInstance = <span class="keyword">new</span> Singleton();</span><br><span class="line">                      &#125;</span><br><span class="line">                      <span class="keyword">return</span> ourInstance;</span><br><span class="line">                  &#125;</span><br><span class="line">              &#125;</span><br></pre></td></tr></table></figure>
 <p>　　③: 缺点: 基础实现的懒汉式是线程不安全的，具体原因如下:<br>　　　　　　可能存在多个线程并发 调用 newInstance ( ),从而重复创建单例对象</p>
@@ -692,9 +704,9 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/设计模式之单例模式.html">设计模式之单例模式</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年03月25日 - 12:41</p>
-  <p><span>最后更新:</span>2019年03月25日 - 13:50</p>
-  <p><span>原始链接:</span><a href="/设计模式之单例模式.html" title="设计模式之单例模式">https://zzwwqq.xyz/设计模式之单例模式.html</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.xyz/设计模式之单例模式.html" aria-label="复制成功！"></i></span>
+  <p><span>最后更新:</span>2019年12月06日 - 17:25</p>
+  <p><span>原始链接:</span><a href="/设计模式之单例模式.html" title="设计模式之单例模式">https://zzwwqq.github.io/设计模式之单例模式.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.github.io/设计模式之单例模式.html" aria-label="复制成功！"></i></span>
   </p>
   <p><span>版权声明:</span>本博客所有文章除特别声明外，均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"><i class="fa fa-creative-commons"></i>BY-NC-SA </a>许可协议。转载请注明出处!</p>  
 </div>
@@ -721,7 +733,7 @@ daovoice('update');
 
     
       <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
-  <img id="wechat_subscriber_qcode" src="http://cdn.zzwwqq.xyz/static/images/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7.jpg" alt="zwq wechat" style="width: 200px; max-width: 100%;">
+  <img id="wechat_subscriber_qcode" src="https://tvax2.sinaimg.cn/large/0064BnmZgy1g9n7zzvn32j3076076q3f.jpg" alt="zwq wechat" style="width: 200px; max-width: 100%;">
   <div>欢迎您扫一扫关注我的微信公众号！</div>
 </div>
 
@@ -741,14 +753,14 @@ daovoice('update');
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="http://cdn.zzwwqq.xyz/static/images/wechatpay.jpg" alt="zwq 微信支付">
+        <img id="wechat_qr" src="https://tva1.sinaimg.cn/large/0064BnmZgy1g9n7yt716ij30w00w0aes.jpg" alt="zwq 微信支付">
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="http://cdn.zzwwqq.xyz/static/images/alipay.jpg" alt="zwq 支付宝">
+        <img id="alipay_qr" src="https://tvax2.sinaimg.cn/large/0064BnmZgy1g9n7yvw9g7j30u01ao7bc.jpg" alt="zwq 支付宝">
         <p>支付宝</p>
       </div>
     
@@ -857,7 +869,7 @@ daovoice('update');
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="http://cdn.zzwwqq.xyz/static/images/avatar.png" alt="zwq">
+              <img class="site-author-image" itemprop="image" src="https://tva4.sinaimg.cn/large/0064BnmZgy1g9n64jijk8j30dc0dc0tq.jpg" alt="zwq">
             
               <p class="site-author-name" itemprop="name">zwq</p>
               <div class="site-description motion-element" itemprop="description">不忘初心,方得始终!</div>
