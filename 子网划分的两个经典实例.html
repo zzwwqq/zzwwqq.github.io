@@ -129,17 +129,20 @@ daovoice('update');
 
 
 
-  <meta name="keywords" content="子网划分实例">
+  <meta name="description" content="&amp;lt;img title = “2.1.jpg” width=”768px” height=”367px” src=”https://wx1.sinaimg.cn/mw690/0064BnmZgy1g9o0xzrrz0j307m054q2v.jpg&amp;quot; /&amp;gt;">
+<meta name="keywords" content="子网划分实例">
 <meta property="og:type" content="article">
 <meta property="og:title" content="子网划分的经典实例">
 <meta property="og:url" content="https://zzwwqq.github.io/子网划分的两个经典实例.html">
 <meta property="og:site_name" content="zwq">
+<meta property="og:description" content="&amp;lt;img title = “2.1.jpg” width=”768px” height=”367px” src=”https://wx1.sinaimg.cn/mw690/0064BnmZgy1g9o0xzrrz0j307m054q2v.jpg&amp;quot; /&amp;gt;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://cdn.zzwwqq.xyz/static/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-2.2.jpg">
-<meta property="og:updated_time" content="2019-03-24T02:46:05.000Z">
+<meta property="og:image" content="https://wx4.sinaimg.cn/mw690/0064BnmZgy1g9o0xym5qij306r06s74i.jpg">
+<meta property="og:updated_time" content="2019-12-07T05:00:19.272Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="子网划分的经典实例">
-<meta name="twitter:image" content="http://cdn.zzwwqq.xyz/static/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-2.2.jpg">
+<meta name="twitter:description" content="&amp;lt;img title = “2.1.jpg” width=”768px” height=”367px” src=”https://wx1.sinaimg.cn/mw690/0064BnmZgy1g9o0xzrrz0j307m054q2v.jpg&amp;quot; /&amp;gt;">
+<meta name="twitter:image" content="https://wx4.sinaimg.cn/mw690/0064BnmZgy1g9o0xym5qij306r06s74i.jpg">
 
 
 
@@ -521,12 +524,24 @@ daovoice('update');
                 
               
 
-              <time title="创建时间：2019-03-24 10:07:24 / 修改时间：10:46:05" itemprop="dateCreated datePublished" datetime="2019-03-24T10:07:24+08:00">2019-03-24</time>
+              <time title="创建时间：2019-03-24 10:07:24" itemprop="dateCreated datePublished" datetime="2019-03-24T10:07:24+08:00">2019-03-24</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-07 13:00:19" itemprop="dateModified" datetime="2019-12-07T13:00:19+08:00">2019-12-07</time>
               
             
           </span>
@@ -675,7 +690,7 @@ daovoice('update');
 <p>将这4个网段分给甲公司的4个部门即可。每个部门最多容纳主机数目为2的10次方-2=1024</p>
 <h3 id="例2思路"><a href="#例2思路" class="headerlink" title="例2思路:"></a>例2思路:</h3><p>我们在划分子网时优先考虑最大主机数来划分。<br>在本例中，我们就先使用最大主机数来划分子网。101个可用IP地址，那就要保证至少7位的主机位可用（2的m次方-2≥101，m的最小值=7）。如果保留7位主机位，那就只能划出两个网段，剩下的一个网段就划不出来了。但是我们剩下的一个网段只需要2个IP地址并且2楼的网段只需要54个可用IP，因此，我们可以从第一次划出的两个网段中选择一个网段来继续划分2楼的网段和路由器互联使用的网段。</p>
 <h3 id="例2-步骤："><a href="#例2-步骤：" class="headerlink" title="例2 步骤："></a>例2 步骤：</h3><p>根据需求，画出下面这个简单的拓扑。将192.168.5.0/24划成3个网段，1楼一个网段，至少拥有101个可用IP地址；2楼一个网段，至少拥有54个可用IP地址；1楼和2楼的路由器互联用一个网段，需要2个IP地址。</p>
-<p><img src="http://cdn.zzwwqq.xyz/static/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-2.2.jpg" alt></p>
+<p><img src="https://wx4.sinaimg.cn/mw690/0064BnmZgy1g9o0xym5qij306r06s74i.jpg" alt="2.2.jpg"></p>
 <h3 id="A-先根据大的主机数需求，划分子网"><a href="#A-先根据大的主机数需求，划分子网" class="headerlink" title="A. 先根据大的主机数需求，划分子网"></a>A. 先根据大的主机数需求，划分子网</h3><p>因为要保证1楼网段至少有101个可用IP地址，所以，主机位要保留至少7位。</p>
 <p>先将192.168.5.0/24用二进制表示：</p>
 <p>11000000.10101000.00000101.00000000/24</p>
@@ -779,7 +794,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/子网划分的两个经典实例.html">子网划分的经典实例</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年03月24日 - 10:07</p>
-  <p><span>最后更新:</span>2019年03月24日 - 10:46</p>
+  <p><span>最后更新:</span>2019年12月07日 - 13:00</p>
   <p><span>原始链接:</span><a href="/子网划分的两个经典实例.html" title="子网划分的经典实例">https://zzwwqq.github.io/子网划分的两个经典实例.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.github.io/子网划分的两个经典实例.html" aria-label="复制成功！"></i></span>
   </p>
@@ -1317,7 +1332,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">696k</span>
+    <span title="站点总字数">697k</span>
   
 
   
