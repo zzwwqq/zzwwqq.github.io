@@ -137,7 +137,7 @@ daovoice('update');
 <meta property="og:site_name" content="zwq">
 <meta property="og:description" content="一、什么是适配器模式?适配器模式（Adapter Pattern）是作为两个不兼容的接口之间的桥梁。这种类型的设计模式属于结构型模式，它结合了两个独立接口的功能。这种模式涉及到一个单一的类，该类负责加入独立的或不兼容的接口功能。举个真实的例子: 读卡器是作为内存卡和笔记本之间的适配器。您将内存卡插入读卡器，再将读卡器插入笔记本，这样就可以通过笔记本来读取内存卡。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-02T09:10:19.000Z">
+<meta property="og:updated_time" content="2020-01-12T09:03:54.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之适配器模式">
 <meta name="twitter:description" content="一、什么是适配器模式?适配器模式（Adapter Pattern）是作为两个不兼容的接口之间的桥梁。这种类型的设计模式属于结构型模式，它结合了两个独立接口的功能。这种模式涉及到一个单一的类，该类负责加入独立的或不兼容的接口功能。举个真实的例子: 读卡器是作为内存卡和笔记本之间的适配器。您将内存卡插入读卡器，再将读卡器插入笔记本，这样就可以通过笔记本来读取内存卡。">
@@ -522,12 +522,24 @@ daovoice('update');
                 
               
 
-              <time title="创建时间：2019-04-02 16:44:27 / 修改时间：17:10:19" itemprop="dateCreated datePublished" datetime="2019-04-02T16:44:27+08:00">2019-04-02</time>
+              <time title="创建时间：2019-04-02 16:44:27" itemprop="dateCreated datePublished" datetime="2019-04-02T16:44:27+08:00">2019-04-02</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-01-12 17:03:54" itemprop="dateModified" datetime="2020-01-12T17:03:54+08:00">2020-01-12</time>
               
             
           </span>
@@ -647,7 +659,7 @@ daovoice('update');
 <h2 id="五、实例"><a href="#五、实例" class="headerlink" title="五、实例:"></a>五、实例:</h2><p>背景：小成买了一个进口的电视机<br>冲突：进口电视机要求电压（110V）与国内插头标准输出电压（220V）不兼容<br>解决方案：设置一个适配器将插头输出的220V转变成110V</p>
 <p><strong>使用类的适配器模式解题:</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//步骤1： 创建Target接口；</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Target</span> </span>&#123;</span><br><span class="line">    <span class="comment">//将220V转换输出110V（原有插头（Adaptee）没有的）</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Convert_110V</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//步骤2： 创建源类（Adaptee）</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PowerPort220V</span> </span>&#123;</span><br><span class="line">    <span class="comment">//原有的插口只能输出220V</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">OutPut_220V</span><span class="params">()</span></span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//步骤2： 创建源类（Adaptee）</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PowerPort220V</span> </span>&#123;</span><br><span class="line">    <span class="comment">//原有的插口只能输出220V</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">OutPut_220V</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//步骤3： 创建适配器类（com.zwq.类的设计模式.Adapter）</span></span><br><span class="line"><span class="comment">//适配器Adapter继承自Adaptee，同时又实现了目标(Target)接口。</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Adapter220V</span> <span class="keyword">extends</span> <span class="title">PowerPort220V</span> <span class="keyword">implements</span> <span class="title">Target</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//期待的插头要求调用Convert_110v()，但原有插头没有</span></span><br><span class="line">    <span class="comment">//因此适配器补充上这个方法名</span></span><br><span class="line">    <span class="comment">//但实际上Convert_110v()只是调用原有插头的Output_220v()方法的内容</span></span><br><span class="line">    <span class="comment">//所以适配器只是将Output_220v()作了一层封装，封装成Target可以调用的Convert_110v()而已</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Convert_110V</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.OutPut_220V();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//4.定义具体使用目标类，并通过Adapter类调用所需要的方法从而实现目标</span></span><br><span class="line"><span class="comment">//通过Adapter类从而调用所需要的方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AdapterPattern</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//用户拿着进口机器插上适配器（调用Convert_110v()方法）</span></span><br><span class="line">        <span class="comment">//再将适配器插上原有插头（Convert_110v()方法内部调用Output_220v()方法输出220V）</span></span><br><span class="line">        <span class="comment">//适配器只是个外壳，对外提供110V，但本质还是220V进行供电</span></span><br><span class="line">        Target target = <span class="keyword">new</span> Adapter220V();</span><br><span class="line">        target.Convert_110V();</span><br><span class="line">        ImportMachine importMachine =  <span class="keyword">new</span> ImportMachine();</span><br><span class="line">        importMachine.work();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//进口机器类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImportMachine</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"进口机器正常工作!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>类的适配器模式:</strong></p>
@@ -691,7 +703,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/设计模式之适配器模式.html">设计模式之适配器模式</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年04月02日 - 16:44</p>
-  <p><span>最后更新:</span>2019年04月02日 - 17:10</p>
+  <p><span>最后更新:</span>2020年01月12日 - 17:03</p>
   <p><span>原始链接:</span><a href="/设计模式之适配器模式.html" title="设计模式之适配器模式">https://zzwwqq.github.io/设计模式之适配器模式.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.github.io/设计模式之适配器模式.html" aria-label="复制成功！"></i></span>
   </p>
@@ -869,7 +881,7 @@ daovoice('update');
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">60</span>
+                    <span class="site-state-item-count">63</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -924,7 +936,11 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">19</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1049,7 +1065,11 @@ daovoice('update');
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">56</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1215,7 +1235,7 @@ daovoice('update');
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -1229,7 +1249,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">697k</span>
+    <span title="站点总字数">707k</span>
   
 
   
@@ -1240,7 +1260,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">10:33</span>
+    <span title="站点阅读时长">10:42</span>
   
 </div>
 

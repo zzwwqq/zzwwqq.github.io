@@ -57,13 +57,6 @@
     </url>
 
     <url>
-        <loc>https://zzwwqq.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-        <lastmod>2019-12-06T09:25:42.339Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://zzwwqq.github.io/categories/Markdown/</loc>
         <lastmod>2019-12-07T02:38:20.103Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -136,6 +129,27 @@
     <url>
         <loc>https://zzwwqq.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
         <lastmod>2019-12-07T05:59:36.897Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://zzwwqq.github.io/categories/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/</loc>
+        <lastmod>2020-01-12T10:28:37.709Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://zzwwqq.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+        <lastmod>2020-01-12T11:31:35.168Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://zzwwqq.github.io/categories/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/</loc>
+        <lastmod>2020-01-12T11:37:49.839Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
