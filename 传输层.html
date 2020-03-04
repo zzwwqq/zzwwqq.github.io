@@ -145,7 +145,7 @@ daovoice('update');
 <meta property="og:image" content="https://tva2.sinaimg.cn/large/0064BnmZgy1g9o0y39w59j30ft06x0u3.jpg">
 <meta property="og:image" content="https://tva3.sinaimg.cn/large/0064BnmZgy1g9o0xywq0rj30kj07mdhy.jpg">
 <meta property="og:image" content="https://tvax4.sinaimg.cn/large/0064BnmZgy1g9o0xy5sfxj30gx08g40f.jpg">
-<meta property="og:updated_time" content="2019-12-07T04:18:03.718Z">
+<meta property="og:updated_time" content="2020-02-28T04:09:10.315Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="传输层">
 <meta name="twitter:description" content="一、传输层协议:TCP协议,UDP协议,SPX协议 10.1 关于TCP协议:特点:①: 面向连接②: 每一条TCP连接只能是点对点的（一对一）也就是每个TCP连接只能有两个端点 使用场合: 一般用于传输数据量少,且对可靠性要求高的场合.">
@@ -548,7 +548,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-12-07 12:18:03" itemprop="dateModified" datetime="2019-12-07T12:18:03+08:00">2019-12-07</time>
+                <time title="修改时间：2020-02-28 12:09:10" itemprop="dateModified" datetime="2020-02-28T12:09:10+08:00">2020-02-28</time>
               
             
           </span>
@@ -671,7 +671,7 @@ daovoice('update');
 <li><strong>窗口</strong> ：窗口值作为接收方让发送方设置其发送窗口的依据。之所以要有这个限制，是因为接收方的数据缓存空间是有限的。</li>
 </ul>
 <h3 id="10-4-关于UDP协议"><a href="#10-4-关于UDP协议" class="headerlink" title="10.4 关于UDP协议:"></a>10.4 关于UDP协议:</h3><p><strong>特点:</strong></p>
-<p>①: 无连接: 发数据前不需要建立连接(即不需要使用套接字(即 IP: 端口号)来建立连接)<br>②: 交互通信: 一对多,一对一,多对一,多对多等<br>③: 尽最大努力交付(不可靠)<br>④: 首部开销小,8字节  而TCP是20字节<br>⑤: 无拥塞控制<br>⑥: 检错, 分用复用<br>⑦: 面向报文: UDP一次交付一个完整报文(对于应用程序传下来的报文不合并也不拆分，只是添加 UDP 首部)</p>
+<p>①: 无连接: 发数据前不需要建立连接(即不需要使用套接字(即 IP: 端口号)来建立连接)<br>②: 交互通信: 一对多,一对一,多对一,多对多等<br>③: 尽最大努力交付(不可靠)<br>④: 首部开销小,8字节  而TCP是20字节<br>⑤: 无拥塞控制<br>⑥: 检错, 分用复用———&gt;相同点<br>⑦: 面向报文: UDP一次交付一个完整报文(对于应用程序传下来的报文不合并也不拆分，只是添加 UDP 首部)</p>
 <h3 id="10-5-UDP首部格式"><a href="#10-5-UDP首部格式" class="headerlink" title="10.5 UDP首部格式:"></a>10.5 UDP首部格式:</h3><p><img src="https://wx3.sinaimg.cn/mw690/0064BnmZgy1g9o0y0qlpaj30h9094ad5.jpg" alt="6.1"></p>
 <p>首部字段只有 8 个字节，包括源端口、目的端口、长度、检验和。12 字节的伪首部是为了计算检验和临时添加的。</p>
 <p><strong>使用场合: </strong>一般用于传输数据量大,且对可靠性要求不是很高,但要求速度快的场合.</p>
@@ -754,7 +754,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/传输层.html">传输层</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年04月01日 - 21:08</p>
-  <p><span>最后更新:</span>2019年12月07日 - 12:18</p>
+  <p><span>最后更新:</span>2020年02月28日 - 12:09</p>
   <p><span>原始链接:</span><a href="/传输层.html" title="传输层">https://zzwwqq.github.io/传输层.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.github.io/传输层.html" aria-label="复制成功！"></i></span>
   </p>
@@ -792,35 +792,6 @@ daovoice('update');
     
       
     
-    
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="https://tva1.sinaimg.cn/large/0064BnmZgy1g9n7yt716ij30w00w0aes.jpg" alt="zwq 微信支付">
-        <p>微信支付</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="https://tvax2.sinaimg.cn/large/0064BnmZgy1g9n7yvw9g7j30u01ao7bc.jpg" alt="zwq 支付宝">
-        <p>支付宝</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
     
 
     
@@ -987,13 +958,7 @@ daovoice('update');
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1374,7 +1339,7 @@ setInterval("createtime()",250);
 </script>
 <div class="BbeiAn-info" style="color:#4dfc23">
    	鄂ICP备 -
-    <a target="_blank" href="http://www.miitbeian.gov.cn/" style="color:#4dfc23;" rel="nofollow">18025394</a> <!--a标签中增加nofollow属性，避免爬虫出站。-->| 
+    <a target="_blank" href="http://www.beian.miit.gov.cn/" style="color:#4dfc23;" rel="nofollow">18025394</a> <!--a标签中增加nofollow属性，避免爬虫出站。-->| 
 	<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42090202000295" style="text-decoration:none;color:#4dfc23;padding-left:30px;background:url(https://s1.ax1x.com/2018/09/29/ilmwIH.png) no-repeat left center" rel="nofollow">鄂公网安备 42090202000295</a>	  <!--这里将图标作为了背景，以使得能和后面的文字在同一行-->
 </div>
         

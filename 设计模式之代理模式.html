@@ -138,7 +138,7 @@ daovoice('update');
 <meta property="og:description" content="一、什么是代理模式?给目标对象提供一个代理对象，并由代理对象控制对目标对象的引用   代理对象：起到中介作用，连接客户端和目标对象 例子：电脑桌面的快捷方式。电脑对某个程序提供一个快捷方式（代理对象），快捷方式连接客户端和程序，客户端通过操作快捷方式就可以操作那个程序">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://tva4.sinaimg.cn/large/0064BnmZgy1gatxxshjncj30kk0bodii.jpg">
-<meta property="og:updated_time" content="2020-01-12T12:29:26.884Z">
+<meta property="og:updated_time" content="2020-03-03T02:35:46.414Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之代理模式">
 <meta name="twitter:description" content="一、什么是代理模式?给目标对象提供一个代理对象，并由代理对象控制对目标对象的引用   代理对象：起到中介作用，连接客户端和目标对象 例子：电脑桌面的快捷方式。电脑对某个程序提供一个快捷方式（代理对象），快捷方式连接客户端和程序，客户端通过操作快捷方式就可以操作那个程序">
@@ -524,12 +524,24 @@ daovoice('update');
                 
               
 
-              <time title="创建时间：2020-01-12 17:33:18 / 修改时间：20:29:26" itemprop="dateCreated datePublished" datetime="2020-01-12T17:33:18+08:00">2020-01-12</time>
+              <time title="创建时间：2020-01-12 17:33:18" itemprop="dateCreated datePublished" datetime="2020-01-12T17:33:18+08:00">2020-01-12</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-03-03 10:35:46" itemprop="dateModified" datetime="2020-03-03T10:35:46+08:00">2020-03-03</time>
               
             
           </span>
@@ -546,7 +558,7 @@ daovoice('update');
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/代理模式/" itemprop="url" rel="index"><span itemprop="name">代理模式</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/设计模式/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a></span>
 
                 
                 
@@ -669,7 +681,6 @@ daovoice('update');
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">结果输出</span><br><span class="line"></span><br><span class="line">买一台Mac</span><br><span class="line">用盒子包装好Mac</span><br></pre></td></tr></table></figure>
 <h2 id="七、静态代理实例-2"><a href="#七、静态代理实例-2" class="headerlink" title="七、静态代理实例 2"></a>七、静态代理实例 2</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//静态代理模式</span></span><br><span class="line"><span class="comment">//接口</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">ClothFactory</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">productCloth</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//被代理类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NikeClothFactory</span> <span class="keyword">implements</span> <span class="title">ClothFactory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">productCloth</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Nike工厂生产一批衣服！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ProxyFactory</span> <span class="keyword">implements</span> <span class="title">ClothFactory</span> </span>&#123;</span><br><span class="line">	ClothFactory cf;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//创建代理类的对象时，实际传入一个被代理类的对象</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">ProxyFactory</span><span class="params">(ClothFactory cf)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>();</span><br><span class="line">		<span class="keyword">this</span>.cf = cf;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">productCloth</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"代理类开始执行，收代理费$1000"</span>);</span><br><span class="line">	    cf.productCloth();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestClothProduct</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//创建被代理类的对象</span></span><br><span class="line">		NikeClothFactory nike = <span class="keyword">new</span> NikeClothFactory();</span><br><span class="line">		<span class="comment">//创建代理类的对象</span></span><br><span class="line">		ProxyFactory proxy = <span class="keyword">new</span> ProxyFactory(nike);</span><br><span class="line">		proxy.productCloth();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="八、动态代理"><a href="#八、动态代理" class="headerlink" title="八、动态代理"></a>八、动态代理</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//动态代理</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Human</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">info</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//被代理类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SuperMan</span> <span class="keyword">implements</span> <span class="title">Human</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">info</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO 自动生成的方法存根</span></span><br><span class="line">		System.out.println(<span class="string">"我是超人，我怕谁！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"I believe I can fly!"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HumanUtil</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"=====方法一====="</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"=====方法二====="</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyInvocationHandler</span> <span class="keyword">implements</span> <span class="title">InvocationHandler</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	Object obj;<span class="comment">//被代理类对象的声明</span></span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setObject</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.obj = obj;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">		HumanUtil h = <span class="keyword">new</span> HumanUtil();</span><br><span class="line">		h.method1();</span><br><span class="line">		</span><br><span class="line">	    Object returnVal  =	method.invoke(obj, args);</span><br><span class="line">		</span><br><span class="line">	    h.method2();</span><br><span class="line">	    <span class="keyword">return</span> returnVal;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyProxy</span> </span>&#123;</span><br><span class="line">	<span class="comment">//动态的创建一个代理类的对象</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title">getProxyInstance</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">		MyInvocationHandler handler = <span class="keyword">new</span> MyInvocationHandler();</span><br><span class="line">		handler.setObject(obj);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> Proxy.newProxyInstance(obj.getClass().getClassLoader(), obj.getClass().getInterfaces(),handler);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestAOP</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		SuperMan man = <span class="keyword">new</span> SuperMan();</span><br><span class="line">		Object obj = MyProxy.getProxyInstance(man);<span class="comment">//返回代理类的对象</span></span><br><span class="line">		Human hu = (Human)obj;</span><br><span class="line">	    hu.info();<span class="comment">//通过代理类的对象调用重写的抽象方法</span></span><br><span class="line">	    System.out.println();</span><br><span class="line">	    hu.fly();</span><br><span class="line">        </span><br><span class="line">	    System.out.println(<span class="string">"==================================="</span>);</span><br><span class="line">	    NikeClothFactory nike = <span class="keyword">new</span> NikeClothFactory();</span><br><span class="line">	    Object obj1 = MyProxy.getProxyInstance(nike);</span><br><span class="line">	    ClothFactory cloth = (ClothFactory)obj1;</span><br><span class="line">	    cloth.productCloth();  </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.jianshu.com/p/a8aa6851e09e" target="_blank" rel="noopener"></a></p>
 
       
     </div>
@@ -701,7 +712,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/设计模式之代理模式.html">设计模式之代理模式</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2020年01月12日 - 17:33</p>
-  <p><span>最后更新:</span>2020年01月12日 - 20:29</p>
+  <p><span>最后更新:</span>2020年03月03日 - 10:35</p>
   <p><span>原始链接:</span><a href="/设计模式之代理模式.html" title="设计模式之代理模式">https://zzwwqq.github.io/设计模式之代理模式.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.github.io/设计模式之代理模式.html" aria-label="复制成功！"></i></span>
   </p>
@@ -739,35 +750,6 @@ daovoice('update');
     
       
     
-    
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="https://tva1.sinaimg.cn/large/0064BnmZgy1g9n7yt716ij30w00w0aes.jpg" alt="zwq 微信支付">
-        <p>微信支付</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="https://tvax2.sinaimg.cn/large/0064BnmZgy1g9n7yvw9g7j30u01ao7bc.jpg" alt="zwq 支付宝">
-        <p>支付宝</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
     
 
     
@@ -934,13 +916,7 @@ daovoice('update');
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1321,7 +1297,7 @@ setInterval("createtime()",250);
 </script>
 <div class="BbeiAn-info" style="color:#4dfc23">
    	鄂ICP备 -
-    <a target="_blank" href="http://www.miitbeian.gov.cn/" style="color:#4dfc23;" rel="nofollow">18025394</a> <!--a标签中增加nofollow属性，避免爬虫出站。-->| 
+    <a target="_blank" href="http://www.beian.miit.gov.cn/" style="color:#4dfc23;" rel="nofollow">18025394</a> <!--a标签中增加nofollow属性，避免爬虫出站。-->| 
 	<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42090202000295" style="text-decoration:none;color:#4dfc23;padding-left:30px;background:url(https://s1.ax1x.com/2018/09/29/ilmwIH.png) no-repeat left center" rel="nofollow">鄂公网安备 42090202000295</a>	  <!--这里将图标作为了背景，以使得能和后面的文字在同一行-->
 </div>
         

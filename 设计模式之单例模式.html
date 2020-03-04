@@ -136,7 +136,7 @@ daovoice('update');
 <meta property="og:site_name" content="zwq">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wx2.sinaimg.cn/mw690/0064BnmZgy1g9n4bw3hgij30tp0c9ab1.jpg">
-<meta property="og:updated_time" content="2019-12-18T08:27:54.280Z">
+<meta property="og:updated_time" content="2020-03-03T02:31:38.302Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之单例模式">
 <meta name="twitter:image" content="https://wx2.sinaimg.cn/mw690/0064BnmZgy1g9n4bw3hgij30tp0c9ab1.jpg">
@@ -538,7 +538,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-12-18 16:27:54" itemprop="dateModified" datetime="2019-12-18T16:27:54+08:00">2019-12-18</time>
+                <time title="修改时间：2020-03-03 10:31:38" itemprop="dateModified" datetime="2020-03-03T10:31:38+08:00">2020-03-03</time>
               
             
           </span>
@@ -610,7 +610,7 @@ daovoice('update');
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">7k</span>
+                <span title="本文字数">6.9k</span>
               
 
               
@@ -673,7 +673,6 @@ daovoice('update');
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">            <span class="keyword">private</span> <span class="keyword">static</span>  Singleton ourInstance  = <span class="keyword">null</span>；</span><br><span class="line">               <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                  &#125;</span><br><span class="line"></span><br><span class="line">                  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  Singleton <span class="title">newInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                   <span class="comment">// 加入双重校验锁</span></span><br><span class="line">                  <span class="comment">// 校验锁1：第1个if</span></span><br><span class="line">                  <span class="keyword">if</span>( ourInstance == <span class="keyword">null</span>) &#123;  <span class="comment">// ①</span></span><br><span class="line">                   <span class="keyword">synchronized</span> (Singleton.class)&#123; <span class="comment">// ②</span></span><br><span class="line">                    <span class="comment">// 校验锁2：第2个 if</span></span><br><span class="line">                    <span class="keyword">if</span>( ourInstance == <span class="keyword">null</span>)&#123;</span><br><span class="line">                        ourInstance = <span class="keyword">new</span> Singleton();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                      <span class="keyword">return</span> ourInstance;</span><br><span class="line">                 &#125;</span><br><span class="line">              &#125;</span><br><span class="line">           <span class="comment">// 说明</span></span><br><span class="line">           <span class="comment">// 校验锁1：第1个if</span></span><br><span class="line">           <span class="comment">// 作用：若单例已创建，则直接返回已创建的单例，无需再执行加锁操作</span></span><br><span class="line">           <span class="comment">// 即直接跳到执行 return ourInstance</span></span><br><span class="line"></span><br><span class="line">           <span class="comment">// 校验锁2：第2个 if</span></span><br><span class="line">           <span class="comment">// 作用：防止多次创建单例问题</span></span><br><span class="line">           <span class="comment">// 原理</span></span><br><span class="line">             <span class="comment">// 1. 线程A调用newInstance()方法，当运行到②位置时，此时线程B也调用了newInstance()方法,</span></span><br><span class="line">             <span class="comment">// 2. 因线程A并没有执行instance = new Singleton();，此时instance仍为空，因此线程B能突破第1层 if 判断，运行到①位置等待synchronized中的A线程执行完毕</span></span><br><span class="line">             <span class="comment">// 3. 当线程A释放同步锁时，单例已创建，即instance已非空</span></span><br><span class="line">             <span class="comment">// 4. 此时线程B 从①开始执行到位置②。此时第2层 if 判断 为非空（单例已创建），因此也不会创建多余的实例</span></span><br><span class="line">     ③: 缺点: 实现复杂 = 多种判断，易出错</span><br></pre></td></tr></table></figure>
 <h3 id="9-6-实现方式6-静态内部类"><a href="#9-6-实现方式6-静态内部类" class="headerlink" title="9.6 实现方式6: 静态内部类"></a>9.6 实现方式6: 静态内部类</h3><p>　　①: 原理: 根据 静态内部类 的特性，同时解决了按需加载、线程安全的问题，同时实现简洁<br>　　　　　　在静态内部类里创建单例，在装载该内部类时才会去创建单例<br>　　　　　　线程安全：类是由 JVM加载，而JVM只会加载1遍，保证只有1个单例<br>　　②: 具体实现:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">           <span class="comment">// 1. 创建静态内部类</span></span><br><span class="line">            <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton2</span> </span>&#123;</span><br><span class="line">               <span class="comment">// 在静态内部类里创建单例</span></span><br><span class="line">              <span class="keyword">private</span> <span class="keyword">static</span>  Singleton ourInstance  = <span class="keyword">new</span> Singleton()；</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 私有构造函数</span></span><br><span class="line">            <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 延迟加载、按需创建</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  Singleton <span class="title">newInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> Singleton2.ourInstance;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 调用过程说明：</span></span><br><span class="line">              <span class="comment">// 1. 外部调用类的newInstance()</span></span><br><span class="line">              <span class="comment">// 2. 自动调用Singleton2.ourInstance</span></span><br><span class="line">               <span class="comment">// 2.1 此时单例类Singleton2得到初始化</span></span><br><span class="line">               <span class="comment">// 2.2 而该类在装载 &amp; 被初始化时，会初始化它的静态域，从而创建单例；</span></span><br><span class="line">               <span class="comment">// 2.3 由于是静态域，因此只会JVM只会加载1遍，Java虚拟机保证了线程安全性</span></span><br><span class="line">              <span class="comment">// 3. 最终只创建1个单例</span></span><br></pre></td></tr></table></figure>
-<p>参考文章:<br><a href="https://www.jianshu.com/p/b8c578b07fbc" target="_blank" rel="noopener">https://www.jianshu.com/p/b8c578b07fbc</a></p>
       
     </div>
 
@@ -704,7 +703,7 @@ daovoice('update');
   <p><span>本文标题:</span><a href="/设计模式之单例模式.html">设计模式之单例模式</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
   <p><span>发布时间:</span>2019年03月25日 - 12:41</p>
-  <p><span>最后更新:</span>2019年12月18日 - 16:27</p>
+  <p><span>最后更新:</span>2020年03月03日 - 10:31</p>
   <p><span>原始链接:</span><a href="/设计模式之单例模式.html" title="设计模式之单例模式">https://zzwwqq.github.io/设计模式之单例模式.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.github.io/设计模式之单例模式.html" aria-label="复制成功！"></i></span>
   </p>
@@ -742,35 +741,6 @@ daovoice('update');
     
       
     
-    
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="https://tva1.sinaimg.cn/large/0064BnmZgy1g9n7yt716ij30w00w0aes.jpg" alt="zwq 微信支付">
-        <p>微信支付</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="https://tvax2.sinaimg.cn/large/0064BnmZgy1g9n7yvw9g7j30u01ao7bc.jpg" alt="zwq 支付宝">
-        <p>支付宝</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
     
 
     
@@ -937,13 +907,7 @@ daovoice('update');
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1324,7 +1288,7 @@ setInterval("createtime()",250);
 </script>
 <div class="BbeiAn-info" style="color:#4dfc23">
    	鄂ICP备 -
-    <a target="_blank" href="http://www.miitbeian.gov.cn/" style="color:#4dfc23;" rel="nofollow">18025394</a> <!--a标签中增加nofollow属性，避免爬虫出站。-->| 
+    <a target="_blank" href="http://www.beian.miit.gov.cn/" style="color:#4dfc23;" rel="nofollow">18025394</a> <!--a标签中增加nofollow属性，避免爬虫出站。-->| 
 	<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42090202000295" style="text-decoration:none;color:#4dfc23;padding-left:30px;background:url(https://s1.ax1x.com/2018/09/29/ilmwIH.png) no-repeat left center" rel="nofollow">鄂公网安备 42090202000295</a>	  <!--这里将图标作为了背景，以使得能和后面的文字在同一行-->
 </div>
         
