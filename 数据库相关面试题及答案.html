@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="google-site-verification" content="eDIkkqgUhVHV4g8TSxIU_BesHpybzZ1nwuDaph8FeFc">
+<meta name="baidu-site-verification" content="Q8VWc7bZ6B">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css?v=1.0.2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'FBHE0THCTM',
+      apiKey: '2a75a572e66ab3792430d09ecb901b80',
+      indexName: 'zwq',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"我们没有找到任何搜索结果: ${query}","hits_stats":"找到约${hits}条结果（用时${time}ms）"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0eeeae6f.js","daovoice")
+ daovoice('init', {
+  app_id: "06289ecd"
+});
+daovoice('update');
+ </script>
+
+
+
+  <meta name="description" content="1. 请列出Java常见的开源数据连接池，并对参数做出简单的说明答：在Java中开源的常用的数据库连接池有以下几种 ： （1）DBCP DBCP是一个依赖Jakarta commons-pool对象池机制的数据库连接池.DBCP可以直接的在应用程序中使用，Tomcat的数据源使用的就是DBCP。 （2）c3p0 c3p0是一个开放源代码的JDBC连接池，它在lib目录中与Hibernate一起发布">
+<meta name="keywords" content="数据库相关面试题及答案">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库相关面试题及答案">
+<meta property="og:url" content="https://zzwwqq.github.io/数据库相关面试题及答案.html">
+<meta property="og:site_name" content="zwq">
+<meta property="og:description" content="1. 请列出Java常见的开源数据连接池，并对参数做出简单的说明答：在Java中开源的常用的数据库连接池有以下几种 ： （1）DBCP DBCP是一个依赖Jakarta commons-pool对象池机制的数据库连接池.DBCP可以直接的在应用程序中使用，Tomcat的数据源使用的就是DBCP。 （2）c3p0 c3p0是一个开放源代码的JDBC连接池，它在lib目录中与Hibernate一起发布">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-03-03T02:31:11.228Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据库相关面试题及答案">
+<meta name="twitter:description" content="1. 请列出Java常见的开源数据连接池，并对参数做出简单的说明答：在Java中开源的常用的数据库连接池有以下几种 ： （1）DBCP DBCP是一个依赖Jakarta commons-pool对象池机制的数据库连接池.DBCP可以直接的在应用程序中使用，Tomcat的数据源使用的就是DBCP。 （2）c3p0 c3p0是一个开放源代码的JDBC连接池，它在lib目录中与Hibernate一起发布">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="zwq" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://zzwwqq.github.io/数据库相关面试题及答案.html">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>数据库相关面试题及答案 | zwq</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9c0c194e5f461cee9d645edaafef8a05";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	
+	
+	
+	<!--在这里加:-->
+	<!--黑色github带
+	<a href="https://github.com/zzwwqq"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+-->
+	<a href="https://github.com/zzwwqq" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+	<!--	<a href="https://github.com/zzwwqq" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+蓝色github猫
+-->
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">zwq</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">路漫漫其修远兮,吾将上下而求索!</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>公益 404</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-message">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/message/" rel="section"><i class="menu-item-icon fa fa-fw fa-comment"></i> <br>留言</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zzwwqq.github.io/数据库相关面试题及答案.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zwq">
+      <meta itemprop="description" content="不忘初心,方得始终!">
+      <meta itemprop="image" content="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9n64jijk8j30dc0dc0tq.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zwq">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数据库相关面试题及答案
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-10 09:00:31" itemprop="dateCreated datePublished" datetime="2019-06-10T09:00:31+08:00">2019-06-10</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-03-03 10:31:11" itemprop="dateModified" datetime="2020-03-03T10:31:11+08:00">2020-03-03</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/面试题/" itemprop="url" rel="index"><span itemprop="name">面试题</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/数据库相关面试题及答案.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/数据库相关面试题及答案.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/数据库相关面试题及答案.html" class="leancloud_visitors" data-flag-title="数据库相关面试题及答案">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">热度：</span>
+              
+                <span class="leancloud-visitors-count">
+				</span>
+				<span>℃</span>
+            </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">10k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">9 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1-请列出Java常见的开源数据连接池，并对参数做出简单的说明"><a href="#1-请列出Java常见的开源数据连接池，并对参数做出简单的说明" class="headerlink" title="1. 请列出Java常见的开源数据连接池，并对参数做出简单的说明"></a>1. 请列出Java常见的开源数据连接池，并对参数做出简单的说明</h3><p>答：在Java中开源的常用的数据库连接池有以下几种 ：</p>
+<p>（1）DBCP</p>
+<p>DBCP是一个依赖Jakarta commons-pool对象池机制的数据库连接池.DBCP可以直接的在应用程序中使用，Tomcat的数据源使用的就是DBCP。</p>
+<p>（2）c3p0</p>
+<p>c3p0是一个开放源代码的JDBC连接池，它在lib目录中与Hibernate一起发布,包括了实现jdbc3和jdbc2扩展规范说明的Connection 和Statement 池的DataSources 对象。</p>
+<a id="more"></a>
+<p>（3）Druid</p>
+<p>阿里出品，淘宝和支付宝专用数据库连接池，但它不仅仅是一个数据库连接池，它还包含一个ProxyDriver，一系列内置的JDBC组件库，一个SQL Parser。支持所有JDBC兼容的数据库，包括Oracle、MySql、Derby、Postgresql、SQL Server、H2等等。</p>
+<h3 id="2-下列属于关系型数据库的是（）（选择两项）"><a href="#2-下列属于关系型数据库的是（）（选择两项）" class="headerlink" title="2. 下列属于关系型数据库的是（）（选择两项）"></a>2. 下列属于关系型数据库的是（）（选择两项）</h3><table>
+<thead>
+<tr>
+<th>A.</th>
+<th>Oracle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B.</td>
+<td>MySql</td>
+</tr>
+<tr>
+<td>C.</td>
+<td>IMS</td>
+</tr>
+<tr>
+<td>D.</td>
+<td>MongoDB</td>
+</tr>
+<tr>
+<td>答案：AB分析： IMS 是IP Mulitimedia Subsystem的缩写，是IP多媒体系统 MongoDB分布式文档存储数据库</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-视图是一个“虚表”，视图的构造基于（）"><a href="#3-视图是一个“虚表”，视图的构造基于（）" class="headerlink" title="3. 视图是一个“虚表”，视图的构造基于（）"></a>3. 视图是一个“虚表”，视图的构造基于（）</h3><table>
+<thead>
+<tr>
+<th>A.</th>
+<th>基本表或视图</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B.</td>
+<td>视图</td>
+</tr>
+<tr>
+<td>C.</td>
+<td>数据字典</td>
+</tr>
+<tr>
+<td>D.</td>
+<td>基本表</td>
+</tr>
+<tr>
+<td>答案：A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-什么是存储过程？它有什么优点？"><a href="#4-什么是存储过程？它有什么优点？" class="headerlink" title="4. 什么是存储过程？它有什么优点？"></a>4. 什么是存储过程？它有什么优点？</h3><p>答：存储过程是一组预编译的SQL语句，</p>
+<p>它的优点有：</p>
+<p>允许<strong>模块化程序设计</strong>，就是说<strong>只需要创建一次过程</strong>，以后在程序中<strong>就可以调用该过程任意次</strong>。</p>
+<p>允许<strong>更快</strong>执行，如果某操作需要执行大量SQL语句或重复执行，存储过程比SQL语句执行的要快。</p>
+<p><strong>减少网络流量</strong>，例如一个需要数百行的SQL代码的操作有一条执行语句完成，不需要在网络中发送数百行代码。</p>
+<p>更好的<strong>安全</strong>机制，对于没有权限执行存储过程的用户，也可授权他们执行存储过程。</p>
+<h3 id="5-存储过程和函数有什么区别？"><a href="#5-存储过程和函数有什么区别？" class="headerlink" title="5.  存储过程和函数有什么区别？"></a>5.  存储过程和函数有什么区别？</h3><h4 id="5-1-Oracle中的函数与存储过程的区别"><a href="#5-1-Oracle中的函数与存储过程的区别" class="headerlink" title="5.1 Oracle中的函数与存储过程的区别:"></a>5.1 Oracle中的函数与存储过程的区别:</h4><p>A:<strong>函数必须有返回值,而过程没有. </strong></p>
+<p>B:<strong>函数可以单独执行.而过程必须通过execute执行</strong>. </p>
+<p>C:<strong>函数可以嵌入到SQL语句中执行.而过程不行. </strong></p>
+<p>其实我们可以将比较复杂的查询写成函数.然后到存储过程中去调用这些函数. </p>
+<h4 id="5-2-Oracle中的函数与存储过程的特点"><a href="#5-2-Oracle中的函数与存储过程的特点" class="headerlink" title="5.2 Oracle中的函数与存储过程的特点:"></a>5.2 Oracle中的函数与存储过程的特点:</h4><p>A. 一般来说，存储过程实现的功能要复杂一点，而函数的实现的功能针对性比较强。 </p>
+<p>B.<strong>对于存储过程来说可以返回参数，而函数只能返回值或者表对象。 </strong></p>
+<p>C.存储过程一般是作为一个独立的部分来执行，而函数可以作为查询语句的一个部分来调用，由于函数可以返回一个表对象，因此它可以在查询语句中位于FROM关键字的后面。</p>
+<h3 id="6-什么是索引？它有什么优点？"><a href="#6-什么是索引？它有什么优点？" class="headerlink" title="6. 什么是索引？它有什么优点？"></a>6. 什么是索引？它有什么优点？</h3><p>答：<strong>索引与书的目录类似</strong>，索引使数据库程序<strong>无需扫描整个表，就可以在其中找到所需要的数据</strong>，索引包含了一个表中包含值的列表，其中包含了<strong>各个值的行所存储的位置</strong>，<strong>索引可以是单个或一组列</strong>，<strong>索引提供的表中数据的逻辑位置</strong>，合理划分索引能够大大提高数据库性能。</p>
+<h3 id="7-什么是触发器，它有哪些优点？"><a href="#7-什么是触发器，它有哪些优点？" class="headerlink" title="7.  什么是触发器，它有哪些优点？"></a>7.  什么是触发器，它有哪些优点？</h3><p>答：触发器是一种<strong>特殊类型的存储过程</strong>，触发器主要<strong>通过事件触发而被执行</strong>的，</p>
+<p>触发器的优点：</p>
+<p>1.强化约束，触发器能够提供比CHECK约束。</p>
+<p>2.跟踪变化，触发器可以跟踪数据库内的操作，从而不允许未经允许许可的更新和变化。</p>
+<p>3.联级运算，比如某个表上的触发器中包含对另一个表的数据操作，而该操作又导致该表上的触发器被触发。</p>
+<h3 id="8-触发器分为事前触发和事后触发的区别。语句级触发和行级触发有何区别？"><a href="#8-触发器分为事前触发和事后触发的区别。语句级触发和行级触发有何区别？" class="headerlink" title="8. 触发器分为事前触发和事后触发的区别。语句级触发和行级触发有何区别？"></a>8. 触发器分为事前触发和事后触发的区别。语句级触发和行级触发有何区别？</h3><p>事前触发器运行于触发事件发生之前，通常可以获取事件之前和新的字段值</p>
+<p>事后触发器运行于触发事件发生之后。</p>
+<p>语句级触发器可以在语句执行前或后执行，</p>
+<p>行级触发在触发器所影响的每一行触发一次</p>
+<h3 id="9-视图是什么？游标是什么？"><a href="#9-视图是什么？游标是什么？" class="headerlink" title="9. 视图是什么？游标是什么？"></a>9. 视图是什么？游标是什么？</h3><p>答：视图是一种<strong>虚拟表</strong>，虚拟表具有和物理表相同的功能，可以对虚拟表进行增该查操作，<strong>视图通常是一个或多个表的行或列的子集</strong>，视图的结果更容易理解（<strong>修改视图对基表不影响</strong>），获取数据更容易（相比多表查询更方便），限制数据检索（比如需要隐藏某些行或列），维护更方便。</p>
+<p>游标对<strong>查询出来的结果集作为一个单元</strong>来有效的处理，<strong>游标可以定位在结果集的特定行</strong>、从结果集的当前位置检索一行或多行、可以<strong>对结果集中当前位置进行修改</strong>。</p>
+<h3 id="10-什么是事务？"><a href="#10-什么是事务？" class="headerlink" title="10. 什么是事务？"></a>10. 什么是事务？</h3><p>答：事务是指<strong>一个工作单元</strong>，它<strong>包含了一组数据操作命令</strong>，并且所有的命令作为一个整体一起向系统提交或撤消请求操作，即这组命令要么都执行，要么都不执行。</p>
+<p>原子性:事务必须是原子工作单元；对于其数据修改，要么全都执行，要么全都不执行。</p>
+<p>一致性:事务在完成时，必须使所有的数据都保持一致状态。在相关数据库中，所有规则都必须应用于事务的修改，以保持所有数据的完整性。事务结束时，所有的内部数据结构（如 B 树索引或双向链表）都必须是正确的。</p>
+<p>隔离性:由<strong>并发</strong>事务所作的修改必须与任何其它并发事务所作的<strong>修改隔离</strong>。事务查看数据时数据所处的状态，要么是另一并发事务修改它之前的状态，要么是另一事务修改它之后的状态，<strong>事务不会查看中间状态的数据</strong>。这称为<strong>可串行性</strong>，因为它能够重新装载起始数据，并且重播一系列事务，以使数据结束时的状态与原始事务执行的状态相同。</p>
+<p>持久性:事务完成之后，它对于系统的影响是永久性的。该修改即使出现系统故障也将一直保持。</p>
+<h3 id="11-怎么优化数据库（在数据百万条记录的数据库中-Oracle）？"><a href="#11-怎么优化数据库（在数据百万条记录的数据库中-Oracle）？" class="headerlink" title="11. 怎么优化数据库（在数据百万条记录的数据库中 Oracle）？"></a>11. 怎么优化数据库（在数据百万条记录的数据库中 Oracle）？</h3><p>使用索引</p>
+<p>建立分区，分区索引</p>
+<p>使用存储过程</p>
+<h3 id="12-如何优化SQL语句"><a href="#12-如何优化SQL语句" class="headerlink" title="12. 如何优化SQL语句"></a>12. 如何优化SQL语句</h3><p>\1. 对<strong>操作符的优化 </strong>尽量不采用不利用索引的操作符</p>
+<p>如：in ，not in ， is null， is not null，&lt;&gt;等</p>
+<p>\2. 对<strong>条件字段的一些优化</strong></p>
+<ul>
+<li>采用函数处理的字段不能利用索引，</li>
+<li>进行了显式或隐式的运算的字段不能进行索引</li>
+<li>条件内包括了多个本表的字段运算时不能进行索引</li>
+</ul>
+<p>\3. 在业务密集的SQL当中<strong>WHERE后面的条件顺序</strong>影响</p>
+<p>\4. 应用ORACLE的HINT（提示）处理</p>
+<p>\5.<strong>查询表顺序</strong>的影响 </p>
+<h3 id="13-说说你知道的一些关于查询优化的方案？"><a href="#13-说说你知道的一些关于查询优化的方案？" class="headerlink" title="13. 说说你知道的一些关于查询优化的方案？"></a>13. 说说你知道的一些关于查询优化的方案？</h3><p>①: 对查询进行优化，应尽量避免全表扫描，首先应考虑在 where 及 order by 涉及的列上建立索引。</p>
+<p>②: 应尽量<strong>避免在 where 子句中对字段进行 null 值判断</strong>，否则将导致引擎放弃使用索引而进行全表扫描，如：</p>
+<p>select id from t where num is null?</p>
+<p>可以在num上设置默认值0，确保表中num列没有null值，然后这样查询：</p>
+<p>select id from t where num=0</p>
+<p>③: 应尽量<strong>避免在 where 子句中使用!=或&lt;&gt;</strong>操作符，否则将引擎放弃使用索引而进行全表扫描。</p>
+<p>④: 应尽量<strong>避免在 where 子句中使用 or </strong>来连接条件，否则将导致引擎放弃使用索引而进行全表扫描，如：</p>
+<p>select id from t where num=10 or num=20</p>
+<p>可以这样查询：</p>
+<p>select id from t where num=10</p>
+<p>union all</p>
+<p>select id from t where num=20</p>
+<p>⑤: <strong>in 和 not in 也要慎用</strong>，否则会导致全表扫描，如：</p>
+<p>select id from t where num in(1,2,3)</p>
+<p>对于连续的数值，能用 between 就不要用 in 了：</p>
+<p>select id from t where num between 1 and 3</p>
+<p>⑥: 下面的查询也将导致全表扫描：</p>
+<p>select id from t where name like ‘%abc%’</p>
+<p>若要提高效率，可以考虑全文检索。</p>
+<p>⑦: <strong>如果在 where 子句中使用参数，也会导致全表扫描</strong>。因为SQL只有在运行时才会解析局部变量，但优化程序不能将访问计划的选择推迟到运行时；它必须在编译时进行选择。然而，如果在编译时建立访问计划，变量的值还是未知的，因而无法作为索引选择的输入项。如下面语句将进行全表扫描：</p>
+<p>select id from t where num=@num</p>
+<p>可以改为强制查询使用索引：</p>
+<p>select id from t with(index(索引名)) where num=@num</p>
+<p>⑧: 应尽量<strong>避免在 where 子句中对字段进行表达式操作</strong>，这将导致引擎放弃使用索引而进行全表扫描。如：</p>
+<p> select id from t where num/2=100</p>
+<p>应改为:</p>
+<p>select id from t where num=100*2</p>
+<p>⑨: 应尽量避免在where子句中对字段进行函数操作，这将导致引擎放弃使用索引而进行全表扫描。如：</p>
+<p>select id from t where substring(name,1,3)=’abc’    –name以abc开头的id</p>
+<p>select id from t where datediff(day,createdate,’2005-11-30’)=0     –‘2005-11-30’生成的id</p>
+<p>应改为:</p>
+<p>select id from t where name like ‘abc%’</p>
+<p>select id from t where createdate&gt;=’2005-11-30’ and createdate&lt;’2005-12-1’</p>
+<p>⑩:在所有的存储过程和触发器的开始处设置 SET NOCOUNT ON ，在结束时设置 SET NOCOUNT OFF 。无需在执行存储过程和触发器的每个语句后向客户端发送 DONE_IN_PROC 消息。</p>
+<p>11) <strong>尽量避免使用游标</strong>，因为游标的效率较差，如果游标操作的数据超过1万行，那么就应该考虑改写。</p>
+<p>12) 使用基于游标的方法或临时表方法之前，应先寻找基于集的解决方案来解决问题，基于集的方法通常更有效。</p>
+<p>13) 与临时表一样，游标并不是不可使用。对小型数据集使用 FAST_FORWARD 游标通常要优于其他逐行处理方法，尤其是在必须引用几个表才能获得所需的数据时。在结果集中包括“合计”的例程通常要比使用游标执行的速度快。如果开发时间允许，基于游标的方法和基于集的方法都可以尝试一下，看哪一种方法的效果更好。</p>
+<p>14) 在新建临时表时，如果一次性插入数据量很大，那么可以使用 select into 代替 create table，避免造成大量 log ，以提高速度；如果数据量不大，为了缓和系统表的资源，应先create table，然后insert。</p>
+<p>15) <strong>任何地方都不要使用 select <em> from t </em></strong>，用具体的字段列表代替“*”，不要返回用不到的任何字段。</p>
+<p>16) 如果使用到了临时表，在存储过程的最后务必将所有的临时表显式删除，先 truncate table ，然后 drop table ，这样可以避免系统表的较长时间锁定。</p>
+<p>17) <strong>尽量使用表变量来代替临时表</strong>。如果表变量包含大量数据，请注意索引非常有限（只有主键索引）。</p>
+<p>18) <strong>避免频繁创建和删除临时表</strong>，以减少系统表资源的消耗。</p>
+<p>19) <strong>临时表并不是不可使用</strong>，适当地使用它们可以使某些例程更有效，例如，当需要重复引用大型表或常用表中的某个数据集时。但是，对于一次性事件，最好使用导出表。</p>
+<p>20) <strong>并不是所有索引对查询都有效</strong>，SQL是根据表中数据来进行查询优化的，当索引列有大量数据重复时，SQL查询可能不会去利用索引，如一表中有字段sex，male、female几乎各一半，那么即使在sex上建了索引也对查询效率起不了作用。</p>
+<p>21) <strong>索引并不是越多越好</strong>，索引固然可以提高相应的 select 的效率，但同时也降低了 insert 及 update 的效率，因为 insert 或 update 时有可能会重建索引，所以怎样建索引需要慎重考虑，视具体情况而定。一个表的索引数最好不要超过6个，若太多则应考虑一些不常使用到的列上建的索引是否有必要。</p>
+<p>22) 应尽可能的<strong>避免更新 clustered 索引数据列</strong>，因为 clustered 索引数据列的顺序就是表记录的物理存储顺序，一旦该列值改变将导致整个表记录的顺序的调整，会耗费相当大的资源。若应用系统需要频繁更新 clustered 索引数据列，那么需要考虑是否应将该索引建为 clustered 索引。</p>
+<p>23) <strong>尽量使用数字型字段</strong>，若只含数值信息的字段尽量不要设计为字符型，这会降低查询和连接的性能，并会增加存储开销。这是因为引擎在处理查询和连接时会逐个比较字符串中每一个字符，而对于数字型而言只需要比较一次就够了。</p>
+<p>24)<strong>尽可能的使用 varchar/nvarchar 代替 char/nchar</strong> ，因为首先变长字段存储空间小，可以节省存储空间，其次对于查询来说，在一个相对较小的字段内搜索效率显然要高些。</p>
+<p>25) <strong>不要在 where 子句中的“=”左边进行函数、算术运算或其他表达式运算</strong>，否则系统将可能无法正确使用索引。</p>
+<p>26) 在使用索引字段作为条件时，如果该索引是复合索引，那么必须使用到该索引中的第一个字段作为条件时才能保证系统使用该索引，否则该索引将不会被使用，并且应尽可能的让<strong>字段顺序与索引顺序相一致</strong>。</p>
+<p>27) 不要写一些没有意义的查询，如需要生成一个空表结构：</p>
+<p>select col1,col2 into #t from t where 1=0</p>
+<p>这类代码不会返回任何结果集，但是会消耗系统资源的，应改成这样：</p>
+<p>create table #t(…)</p>
+<p>28) 很多时候<strong>用 exists 代替 in</strong> 是一个好的选择：</p>
+<p>select num from a where num in(select num from b)</p>
+<p>用下面的语句替换：</p>
+<p>select num from a where exists(select 1 from b where num=a.num)</p>
+<h3 id="14-谈谈你对SQL海量数据查询优化性能的一些看法？"><a href="#14-谈谈你对SQL海量数据查询优化性能的一些看法？" class="headerlink" title="14.  谈谈你对SQL海量数据查询优化性能的一些看法？"></a>14.  谈谈你对SQL海量数据查询优化性能的一些看法？</h3><p>数据库系统是管理信息系统的核心，基于数据库的联机事务处理（OLTP）以及联机分析处理(OLAP)是银行、企业、政府等部门最为重要的计算机应用之一。从大多数系统的应用实例来看，查询操作在各种数据库操作中所占据的比重最大，而查询操作所基于的SELECT语句在SQL语句中又是代价最大的语句。举例来说，如果数据的量积累到一定的程度，比如一个银行的账户数据库表信息积累到上百万甚至上千万条记录，全表扫描一次往往需要数十分钟，甚至数小时。如果采用比全表扫描更好的查询策略，往往可以使查询时间降为几分钟，由此可见查询优化技术的重要性。</p>
+<h3 id="15-数据库内联与外联的区别？"><a href="#15-数据库内联与外联的区别？" class="headerlink" title="15.  数据库内联与外联的区别？"></a>15.  数据库内联与外联的区别？</h3><p>内部联接（inner join）一个联接，返回两表的公共列都匹配的行</p>
+<p>外部联接（outer join） 一个联接，该联接还包括那些和联接表中记录不相关的记录。您可以创建一个外部联接的三种变形来指定所包括的不匹配行：</p>
+<p>左外部联接、右外部联接和完全外部联接。</p>
+<p>♥ 左外部联接（left outer join）    左边的表是主表，列所有；右表无取null</p>
+<p>♥右外部联接（right outer join）    右边的表是主表，列所有；左边表只列匹配的行，没有值置null</p>
+<p>♥完全外部联接 列所有，没有值置null</p>
+<h3 id="16-什么是DAO模式？"><a href="#16-什么是DAO模式？" class="headerlink" title="16. 什么是DAO模式？"></a>16. 什么是DAO模式？</h3><p>答：DAO（DataAccess Object）顾名思义是一个为数据库或其他持久化机制提供了抽象接口的对象，在不暴露数据库实现细节的前提下提供了各种数据操作。为了建立一个健壮的Java EE应用，应该将所有对数据源的访问操作进行抽象化后封装在一个公共API中。用程序设计语言来说，就是<strong>建立一个接口</strong>，接口中定义了此应用程序中将会用到的所有事务方法。在这个应用程序中，当需要和数据源进行交互的时候则使用这个接口，并且<strong>编写一个单独的类来实现这个接口</strong>，在逻辑上该类对应一个特定的数据存储。DAO模式实际上包含了两个模式，<strong>一是Data Accessor（数据访问器）</strong>，<strong>二是Data Object（数据对象）</strong>，前者要解决<strong>如何访问数据的问题</strong>，而后者要解决的是<strong>如何用对象封装数据</strong>。</p>
+<h3 id="17-数据库MySQL，Oracle，SqlServer分页时用的语句"><a href="#17-数据库MySQL，Oracle，SqlServer分页时用的语句" class="headerlink" title="17. 数据库MySQL，Oracle，SqlServer分页时用的语句"></a>17. 数据库MySQL，Oracle，SqlServer分页时用的语句</h3><p>Mysql:使用limit关键字</p>
+<p>Select * from 表名 where 条件 limit 开始位置，结束位置。通过动态的改变开始和结束位置的值来实现分页。</p>
+<p>Oracle：通过rownum来实现</p>
+<p>select <em> from ( select rownum rn,t.</em> from addressbook where rownum&lt;= 20 ) where rownum &gt; 10</p>
+<p>Sqlserver:</p>
+<p>select top 20 * from addressbook where id not in (select top 10 id from addressbook)</p>
+<h3 id="18-Oracle完成分页功能的三层子查询语句及其含义？"><a href="#18-Oracle完成分页功能的三层子查询语句及其含义？" class="headerlink" title="18. Oracle完成分页功能的三层子查询语句及其含义？"></a>18. Oracle完成分页功能的三层子查询语句及其含义？</h3><p>如：select <em> from (select t.</em>,rownum r from (select * from A) t where rownum &lt; 10) where r &gt;5</p>
+<p>select * from A:要查询的数据</p>
+<p>select t.<em>,rownum r from (select </em> from A) t where rownum &lt; 10：取前10行</p>
+<p>select <em> from (select t.</em>,rownum r from (select * from A) t where rownum &lt; 10) where r &gt;5：取5-10行</p>
+<h3 id="19-问SQL怎么优化执行效率更高"><a href="#19-问SQL怎么优化执行效率更高" class="headerlink" title="19. 问SQL怎么优化执行效率更高"></a>19. 问SQL怎么优化执行效率更高</h3><p>答： 1. SQL优化的原则是：将一次操作需要读取的BLOCK数减到最低,即在最短的时间达到最大的数据吞吐量。</p>
+<p>调整不良SQL通常可以从以下几点切入：</p>
+<p>1) 检查不良的SQL，考虑其写法是否还有可优化内容</p>
+<p>2) 检查子查询 考虑SQL子查询是否可以用简单连接的方式进行重新书写</p>
+<p>3) 检查优化索引的使用</p>
+<p>4) 考虑数据库的优化器</p>
+<p>\2. 避免出现SELECT * FROM table 语句，要明确查出的字段。</p>
+<p>\3. 在一个SQL语句中，如果一个where条件过滤的数据库记录越多，定位越准确，则该where条件越应该前移。</p>
+<p>\4. 查询时尽可能使用索引覆盖。即对SELECT的字段建立复合索引，这样查询时只进行索引扫描，不读取数据块。</p>
+<p>\5. 在判断有无符合条件的记录时建议不要用SELECT COUNT （*）和select top 1 语句。</p>
+<p>\6. 使用内层限定原则，在拼写SQL语句时，将查询条件分解、分类，并尽量在SQL语句的最里层进行限定，以减少数据的处理量。</p>
+<p>\7. 应绝对避免在order by子句中使用表达式。</p>
+<p>\9. 小心使用 IN 和 OR，需要注意In集合中的数据量。建议集合中的数据不超过200个。</p>
+<p>\10. &lt; &gt; 用 &lt; 、 &gt; 代替，&gt;用&gt;=代替， &lt; 用&lt; =代替，这样可以有效的利用索引。</p>
+<p>\11. 在查询时尽量减少对多余数据的读取包括多余的列与多余的行。</p>
+<p>\12. 对于复合索引要注意，例如在建立复合索引时列的顺序是F1，F2，F3，则在where或order by子句中这些字段出现的顺序要与建立索引时的字段顺序一致，且必须包含第一列。只能是F1或F1，F2或F1，F2，F3。否则不会用到该索引。</p>
+<h3 id="20-谈谈数据库去空格的情况"><a href="#20-谈谈数据库去空格的情况" class="headerlink" title="20. 谈谈数据库去空格的情况"></a>20. 谈谈数据库去空格的情况</h3><p>一、表中字符串带空格的原因</p>
+<p>1、空格就是空格。</p>
+<p>2、控制符 显示为 空格。</p>
+<p>二、解决方法</p>
+<p>第一种情况，去空格的处理的比较简单，Replace(column,’ ‘,’’) 就可以解决。<br>第二种情况，解决方法就比较麻烦点：需要先查出相应的ASCII码，再用Replace(column,char(ascii码),’’)解决，以下举个栗子：<br>CREATE TABLE #temp<br>(NAME NVARCHAR(50))<br>INSERT INTO #temp SELECT ‘明天就是国庆了’+CHAR(10) –换行符<br>SELECT * FROM #temp –末尾显示为空格<br>SELECT REPLACE(NAME,’ ‘,’’) FROM #temp –去不掉这个空格<br>SELECT REPLACE(NAME,CHAR(10),’’) FROM #temp –去掉空格<br>SELECT REPLACE(NAME,CHAR(ASCII(RIGHT(NAME,1))),’’) FROM #temp –在不知道是最后一位是什么字符导致空格的情况下，先转ASCII码，在替换<br>DROP TABLE #temp<br>—-下面是查询结果:<br>–’明天就是国庆了 ‘<br>–’明天就是国庆了 ‘<br>–’明天就是国庆了’<br>–’明天就是国庆了’</p>
+<h3 id="21-根据你以往的经验简单叙述一下MYSQL的优化"><a href="#21-根据你以往的经验简单叙述一下MYSQL的优化" class="headerlink" title="21. 根据你以往的经验简单叙述一下MYSQL的优化"></a>21. 根据你以往的经验简单叙述一下MYSQL的优化</h3><p>答：<br>1.数据库的设计<br>尽量把数据库设计的更小的占磁盘空间.<br>1).尽可能使用更小的整数类型.(mediumint就比int更合适).<br>2).尽可能的定义字段为not null,除非这个字段需要null.<br>3).如果没有用到变长字段的话比如varchar,那就采用固定大小的纪录格式比如char.<br>4).表的主索引应该尽可能的短.这样的话每条纪录都有名字标志且更高效.<br>5).只创建确实需要的索引。索引有利于检索记录，但是不利于快速保存记录。如果总是要在表的组合字段上做搜索，那么就在这些字段上创建索引。索引的第一部分必须是最常使用的字段.如果总是需要用到很多字段，首先就应该多复制这些字段，使索引更好的压缩。<br>6).所有数据都得在保存到数据库前进行处理。<br>7).所有字段都得有默认值。<br>8).在某些情况下,把一个频繁扫描的表分成两个速度会快好多。在对动态格式表扫描以取得相关记录时，它可能使用更小的静态格式表的情况下更是如此。<br>2.系统的用途<br>1).尽量使用长连接.<br>2).explain 复杂的SQL语句。<br>3).如果两个关联表要做比较话，做比较的字段必须类型和长度都一致.<br>4).LIMIT语句尽量要跟order by或者 distinct.这样可以避免做一次full table scan.<br>5).如果想要清空表的所有记录,建议用truncate table tablename而不是delete from tablename.<br>6).能使用STORE PROCEDURE 或者 USER FUNCTION的时候.<br>7).在一条insert语句中采用多重纪录插入格式.而且使用load data infile来导入大量数据，这比单纯的indert快好多.<br>8).经常OPTIMIZE TABLE 来整理碎片.<br>9).还有就是date 类型的数据如果频繁要做比较的话尽量保存在unsigned int 类型比较快。<br>3.系统的瓶颈<br>1).磁盘搜索.<br>并行搜索,把数据分开存放到多个磁盘中，这样能加快搜索时间.<br>2).磁盘读写(IO)<br>可以从多个媒介中并行的读取数据。<br>3).CPU周期<br>数据存放在主内存中.这样就得增加CPU的个数来处理这些数据。<br>4).内存带宽<br>当CPU要将更多的数据存放到CPU的缓存中来的话,内存的带宽就成了瓶颈.</p>
+<h3 id="21-说一下数据库的存储过程？"><a href="#21-说一下数据库的存储过程？" class="headerlink" title="21. 说一下数据库的存储过程？"></a>21. 说一下数据库的存储过程？</h3><p>一、存储过程与函数的区别：</p>
+<p>1.一般来说，存储过程实现的功能要复杂一点，而函数的实现的功能针对性比较强。</p>
+<p>2.对于存储过程来说可以返回参数(output)，而函数只能返回值或者表对象。</p>
+<p>3.存储过程一般是作为一个独立的部分来执行，而函数可以作为查询语句的一个部分来调用，由于函数可以返回一个表对象，因此它可以在查询语句中位于FROM关键字的后面。</p>
+<p>二、存储过程的优点：</p>
+<p>1.执行速度更快 – 在数据库中保存的存储过程语句都是编译过的</p>
+<p>2.允许模块化程序设计 – 类似方法的复用</p>
+<p>3.提高系统安全性 – 防止SQL注入</p>
+<p>4.减少网络流通量 – 只要传输存储过程的名称</p>
+<p>系统存储过程一般以sp开头，用户自定义的存储过程一般以usp开头</p>
+<h3 id="22-数据库创建索引的缺点？"><a href="#22-数据库创建索引的缺点？" class="headerlink" title="22. 数据库创建索引的缺点？"></a>22. 数据库创建索引的缺点？</h3><p>缺点：</p>
+<p>第一，创建索引和维护索引要耗费时间，这种时间随着数据量的增加而增加。</p>
+<p>第二，索引需要占物理空间，除了数据表占数据空间之外，每一个索引还要占一定的物理空间，如果要建立聚簇索引，那么需要的空间就会更大。</p>
+<p>第三，当对表中的数据进行增加、删除和修改的时候，索引也要动态的维护，这样就降低了数据的维护速度。</p>
+
+      
+    </div>
+
+    
+	
+	
+	
+	
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/数据库相关面试题及答案.html">数据库相关面试题及答案</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
+  <p><span>发布时间:</span>2019年06月10日 - 09:00</p>
+  <p><span>最后更新:</span>2020年03月03日 - 10:31</p>
+  <p><span>原始链接:</span><a href="/数据库相关面试题及答案.html" title="数据库相关面试题及答案">https://zzwwqq.github.io/数据库相关面试题及答案.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.github.io/数据库相关面试题及答案.html" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>版权声明:</span>本博客所有文章除特别声明外，均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"><i class="fa fa-creative-commons"></i>BY-NC-SA </a>许可协议。转载请注明出处!</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+      
+</div>
+
+    
+    
+    
+
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9n7zzvn32j3076076q3f.jpg" alt="zwq wechat" style="width: 200px; max-width: 100%;">
+  <div>欢迎您扫一扫关注我的微信公众号！</div>
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+
+	
+	
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据库相关面试题及答案/" rel="tag"><i class="fa fa-tag"></i> 数据库相关面试题及答案</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/疑难杂症.html" rel="next" title="专治疑难杂症">
+                <i class="fa fa-chevron-left"></i> 专治疑难杂症
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/算法.html" rel="prev" title="算法">
+                算法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9n64jijk8j30dc0dc0tq.jpg" alt="zwq">
+            
+              <p class="site-author-name" itemprop="name">zwq</p>
+              <div class="site-description motion-element" itemprop="description">不忘初心,方得始终!</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">64</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">58</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/zzwwqq" title="GitHub &rarr; https://github.com/zzwwqq" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:zwq13264860490@gmail.com" title="E-Mail &rarr; mailto:zwq13264860490@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/u/5564810309/home?wvr=5" title="Weibo &rarr; https://weibo.com/u/5564810309/home?wvr=5" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.zhihu.com/people/shen-qiu-wu-hen-66/activities" title="知乎 &rarr; https://www.zhihu.com/people/shen-qiu-wu-hen-66/activities" rel="noopener" target="_blank"><i class="fa fa-fw fa-snapchat"></i>知乎</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://me.csdn.net/weixin_44815733" title="CSDN &rarr; https://me.csdn.net/weixin_44815733" rel="noopener" target="_blank"><i class="fa fa-fw fa-angellist"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.jianshu.com/u/01892c1f80f8" title="简书 &rarr; https://www.jianshu.com/u/01892c1f80f8" rel="noopener" target="_blank"><i class="fa fa-fw fa-leanpub"></i>简书</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+		  
+		  
+		  
+		  
+		  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=38592976&auto=0&height=66"></iframe>
+		  
+		  
+		  
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/" title="https://www.cnblogs.com/" rel="noopener" target="_blank">博客园</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-请列出Java常见的开源数据连接池，并对参数做出简单的说明"><span class="nav-text">1. 请列出Java常见的开源数据连接池，并对参数做出简单的说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-下列属于关系型数据库的是（）（选择两项）"><span class="nav-text">2. 下列属于关系型数据库的是（）（选择两项）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-视图是一个“虚表”，视图的构造基于（）"><span class="nav-text">3. 视图是一个“虚表”，视图的构造基于（）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-什么是存储过程？它有什么优点？"><span class="nav-text">4. 什么是存储过程？它有什么优点？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-存储过程和函数有什么区别？"><span class="nav-text">5.  存储过程和函数有什么区别？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-Oracle中的函数与存储过程的区别"><span class="nav-text">5.1 Oracle中的函数与存储过程的区别:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-Oracle中的函数与存储过程的特点"><span class="nav-text">5.2 Oracle中的函数与存储过程的特点:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-什么是索引？它有什么优点？"><span class="nav-text">6. 什么是索引？它有什么优点？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-什么是触发器，它有哪些优点？"><span class="nav-text">7.  什么是触发器，它有哪些优点？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-触发器分为事前触发和事后触发的区别。语句级触发和行级触发有何区别？"><span class="nav-text">8. 触发器分为事前触发和事后触发的区别。语句级触发和行级触发有何区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-视图是什么？游标是什么？"><span class="nav-text">9. 视图是什么？游标是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-什么是事务？"><span class="nav-text">10. 什么是事务？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-怎么优化数据库（在数据百万条记录的数据库中-Oracle）？"><span class="nav-text">11. 怎么优化数据库（在数据百万条记录的数据库中 Oracle）？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-如何优化SQL语句"><span class="nav-text">12. 如何优化SQL语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-说说你知道的一些关于查询优化的方案？"><span class="nav-text">13. 说说你知道的一些关于查询优化的方案？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-谈谈你对SQL海量数据查询优化性能的一些看法？"><span class="nav-text">14.  谈谈你对SQL海量数据查询优化性能的一些看法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-数据库内联与外联的区别？"><span class="nav-text">15.  数据库内联与外联的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-什么是DAO模式？"><span class="nav-text">16. 什么是DAO模式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-数据库MySQL，Oracle，SqlServer分页时用的语句"><span class="nav-text">17. 数据库MySQL，Oracle，SqlServer分页时用的语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-Oracle完成分页功能的三层子查询语句及其含义？"><span class="nav-text">18. Oracle完成分页功能的三层子查询语句及其含义？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-问SQL怎么优化执行效率更高"><span class="nav-text">19. 问SQL怎么优化执行效率更高</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-谈谈数据库去空格的情况"><span class="nav-text">20. 谈谈数据库去空格的情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-根据你以往的经验简单叙述一下MYSQL的优化"><span class="nav-text">21. 根据你以往的经验简单叙述一下MYSQL的优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-说一下数据库的存储过程？"><span class="nav-text">21. 说一下数据库的存储过程？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-数据库创建索引的缺点？"><span class="nav-text">22. 数据库创建索引的缺点？</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zwq</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">714k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">10:49</span>
+  
+</div>
+
+
+<!--
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
+
+-->
+
+
+<div>
+
+
+
+
+
+<div>
+<div class="powered-by">
+<i class="fa fa-user-md"></i>
+<span id="busuanzi_container_site_uv">
+  本站总访客数:<span id="busuanzi_value_site_uv"></span>&nbsp;&nbsp;| 
+</span>
+<span id="busuanzi_container_site_pv">
+    &nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+</div>
+</div>
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("03/12/2019 12:00:00");//此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+<div class="BbeiAn-info" style="color:#4dfc23">
+   	鄂ICP备 -
+    <a target="_blank" href="http://www.beian.miit.gov.cn/" style="color:#4dfc23;" rel="nofollow">18025394</a> <!--a标签中增加nofollow属性，避免爬虫出站。-->| 
+	<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42090202000295" style="text-decoration:none;color:#4dfc23;padding-left:30px;background:url(https://s1.ax1x.com/2018/09/29/ilmwIH.png) no-repeat left center" rel="nofollow">鄂公网安备 42090202000295</a>	  <!--这里将图标作为了背景，以使得能和后面的文字在同一行-->
+</div>
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </div></footer>
+
+    
+
+    
+
+    
+
+    
+      <div>
+        <div class="addthis_inline_share_toolbox">
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c8a5801582888d6" async="async"></script>
+</div>
+
+      </div>
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: false,
+    appId: 'BMBxkYUDumKWDR3FTQCAY7R1-gzGzoHsz',
+    appKey: 'yd7o7KS9MjFPCTGAGOpErnWy',
+    placeholder: 'Hello !',
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+  
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/click-love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":70,"height":120},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="google-site-verification" content="eDIkkqgUhVHV4g8TSxIU_BesHpybzZ1nwuDaph8FeFc">
+<meta name="baidu-site-verification" content="Q8VWc7bZ6B">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css?v=1.0.2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'FBHE0THCTM',
+      apiKey: '2a75a572e66ab3792430d09ecb901b80',
+      indexName: 'zwq',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"我们没有找到任何搜索结果: ${query}","hits_stats":"找到约${hits}条结果（用时${time}ms）"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0eeeae6f.js","daovoice")
+ daovoice('init', {
+  app_id: "06289ecd"
+});
+daovoice('update');
+ </script>
+
+
+
+  <meta name="description" content="一、数据链路层设备:①: 网桥或桥接器:②: 交换机:　　实质: 是一个多接口的网桥,又称以太网交换机，第二层交换机，交换式集线器　　特点:  全双工: 并行性: 即能同时连通多对接口，使多对主机能同时通信 自学习: 即插即用，其内部的帧交换表（又称地址表）是通过自学习算法自动逐渐建立起来的,交换表中存储着 MAC 地址到接口的映射。">
+<meta name="keywords" content="数据链路层">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据链路层">
+<meta property="og:url" content="https://zzwwqq.github.io/数据链路层.html">
+<meta property="og:site_name" content="zwq">
+<meta property="og:description" content="一、数据链路层设备:①: 网桥或桥接器:②: 交换机:　　实质: 是一个多接口的网桥,又称以太网交换机，第二层交换机，交换式集线器　　特点:  全双工: 并行性: 即能同时连通多对接口，使多对主机能同时通信 自学习: 即插即用，其内部的帧交换表（又称地址表）是通过自学习算法自动逐渐建立起来的,交换表中存储着 MAC 地址到接口的映射。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax4.sinaimg.cn/large/0064BnmZgy1g9o0xxvqr3j30l3075dgm.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva3.sinaimg.cn/large/0064BnmZgy1g9o0xn3iuaj30kn029dfp.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9o0xmwu3kj30gl01sdfo.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva2.sinaimg.cn/large/0064BnmZgy1g9o0xra4blj30j005v74a.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9o0xv6bb1j30io04m42d.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax3.sinaimg.cn/large/0064BnmZgy1g9o0y5drefj30dw0a5jyd.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9o0y47bo7j30dg09rjtq.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9o0xvey59j30i9033aa1.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/wx2.sinaimg.cn/mw690/0064BnmZgy1g9o0xrqftxj30lt077q43.jpg">
+<meta property="og:updated_time" content="2023-05-12T12:48:06.720Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据链路层">
+<meta name="twitter:description" content="一、数据链路层设备:①: 网桥或桥接器:②: 交换机:　　实质: 是一个多接口的网桥,又称以太网交换机，第二层交换机，交换式集线器　　特点:  全双工: 并行性: 即能同时连通多对接口，使多对主机能同时通信 自学习: 即插即用，其内部的帧交换表（又称地址表）是通过自学习算法自动逐渐建立起来的,交换表中存储着 MAC 地址到接口的映射。">
+<meta name="twitter:image" content="http://cdn.cdnjson.com/tvax4.sinaimg.cn/large/0064BnmZgy1g9o0xxvqr3j30l3075dgm.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="zwq" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://zzwwqq.github.io/数据链路层.html">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>数据链路层 | zwq</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9c0c194e5f461cee9d645edaafef8a05";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	
+	
+	
+	<!--在这里加:-->
+	<!--黑色github带
+	<a href="https://github.com/zzwwqq"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+-->
+	<a href="https://github.com/zzwwqq" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+	<!--	<a href="https://github.com/zzwwqq" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+蓝色github猫
+-->
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">zwq</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">路漫漫其修远兮,吾将上下而求索!</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>公益 404</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-message">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/message/" rel="section"><i class="menu-item-icon fa fa-fw fa-comment"></i> <br>留言</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zzwwqq.github.io/数据链路层.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zwq">
+      <meta itemprop="description" content="不忘初心,方得始终!">
+      <meta itemprop="image" content="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9n64jijk8j30dc0dc0tq.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zwq">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数据链路层
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-07 15:37:34" itemprop="dateCreated datePublished" datetime="2019-04-07T15:37:34+08:00">2019-04-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2023-05-12 20:48:06" itemprop="dateModified" datetime="2023-05-12T20:48:06+08:00">2023-05-12</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/计算机网络/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/数据链路层.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/数据链路层.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/数据链路层.html" class="leancloud_visitors" data-flag-title="数据链路层">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">热度：</span>
+              
+                <span class="leancloud-visitors-count">
+				</span>
+				<span>℃</span>
+            </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一、数据链路层设备"><a href="#一、数据链路层设备" class="headerlink" title="一、数据链路层设备:"></a>一、数据链路层设备:</h2><p>①: 网桥或桥接器:<br>②: 交换机:<br>　　<strong>实质: </strong>是一个多接口的网桥,又称以太网交换机，第二层交换机，交换式集线器<br>　　<strong>特点:</strong></p>
+<ul>
+<li><strong>全双工:</strong></li>
+<li><strong>并行性: </strong>即能同时连通多对接口，使多对主机能同时通信</li>
+<li><strong>自学习: </strong>即插即用，其内部的帧交换表（又称地址表）是通过自学习算法自动逐渐建立起来的,交换表中存储着 MAC 地址到接口的映射。</li>
+</ul>
+<a id="more"></a>
+<p>下图中，交换机有 4 个接口，主机 A 向主机 B 发送数据帧时，交换机把主机 A 到接口 1 的映射写入交换表中。为了发送数据帧到 B，先查交换表，此时没有主机 B 的表项，那么主机 A 就发送广播帧，主机 C 和主机 D 会丢弃该帧，主机 B 回应该帧向主机 A 发送数据包时，交换机查找交换表得到主机 A 映射的接口为 1，就发送数据帧到接口 1，同时交换机添加主机 B 到接口 2 的映射。</p>
+<p><img src="http://cdn.cdnjson.com/tvax4.sinaimg.cn/large/0064BnmZgy1g9o0xxvqr3j30l3075dgm.jpg" alt="3.4"></p>
+<p><strong>优点:</strong></p>
+<p>对于传统的10Mbit/s的共享式以太网，若共有10个用户，则每个用户占有的平均带宽只有1Mbit/s，若使用交换机来连接这些主机，虽然在每个接口到主机的带宽还是10Mbit/s，但是由于一个用户在通性时是独占而不是和其他网络用户共享传输媒体带宽，因此，对于拥有10个接口的交换机的总容量则为100Mbit/s.</p>
+<p>③:  网络适配器又称网络接口卡，网卡</p>
+<p><strong>网络适配器是什么?</strong></p>
+<p>网络适配器又称网卡或网络接口卡(NIC)，英文名NetworkInterfaceCard。它是使计算机联网的设备。平常所说的网卡就是将PC机和LAN连接的网络适配器。网卡(NIC) 插在计算机主板插槽中，负责将用户要传递的数据转换为网络上其它设备能够识别的格式，通过网络介质传输。它的主要技术参数为带宽、总线方式、电气接口方式等。</p>
+<p><strong>网络适配器的主要作用：</strong></p>
+<ul>
+<li>它是主机与介质的桥梁设备</li>
+<li>实现主机与介质之间的电信号匹配</li>
+<li>提供数据缓冲能力</li>
+<li>控制数据传送的功能(网卡一方面负责接收网络上传过来的数据包，解包后，将数据通过上的总线传输给本地计算机;另一方面它将本地计算机上的数据打包后送入网络。)</li>
+</ul>
+<p>网络适配器必须具备两大技术： 网卡驱动程序和I/O技术。驱动程序使网卡和网络操作系统兼容，实现PC机与网络的通信。I/O技术可以通过数据总线实现PC和网卡之间的通信。网卡是计算机网络中最基本的元素。在计算机局域网络中，如果有一台计算机没有网卡，那么这台计算机将不能和其他计算机通信，也就是说，这台计算机和网络是孤立的。</p>
+<h2 id="二、数据链路层协议"><a href="#二、数据链路层协议" class="headerlink" title="二、数据链路层协议:"></a>二、数据链路层协议:</h2><h3 id="2-1-PPP协议-Point-to-Point-Protocal-（点到点）"><a href="#2-1-PPP协议-Point-to-Point-Protocal-（点到点）" class="headerlink" title="2.1 PPP协议:  Point-to-Point Protocal; （点到点）"></a>2.1 PPP协议:  Point-to-Point Protocal; （点到点）</h3><p>互联网用户通常需要连接到某个 ISP 之后才能接入到互联网，PPP 协议是用户计算机和 ISP 进行通信时所使用的数据链路层协议。</p>
+<h3 id="2-1-1-特点"><a href="#2-1-1-特点" class="headerlink" title="2.1.1 特点:"></a>2.1.1 特点:</h3><p>①: 简单<br>②: 只检错,不纠错<br>③: 不使用序号,不进行流量控制</p>
+<h3 id="2-1-2-PPP-的帧格式："><a href="#2-1-2-PPP-的帧格式：" class="headerlink" title="2.1.2 PPP 的帧格式："></a>2.1.2 PPP 的帧格式：</h3><ul>
+<li>F 字段为帧的定界符</li>
+<li>A 和 C 字段暂时没有意义</li>
+<li>FCS 字段是使用 CRC 的检验序列</li>
+<li>信息部分的长度不超过 1500</li>
+</ul>
+<p><img src="http://cdn.cdnjson.com/tva3.sinaimg.cn/large/0064BnmZgy1g9o0xn3iuaj30kn029dfp.jpg" alt="3.3"></p>
+<h3 id="2-2-PPPoE协议"><a href="#2-2-PPPoE协议" class="headerlink" title="2.2 PPPoE协议:"></a>2.2 PPPoE协议:</h3><p>是为宽带上网的主机使用的链路层协议</p>
+<h3 id="2-3-CSMA-CD协议"><a href="#2-3-CSMA-CD协议" class="headerlink" title="2.3 CSMA/CD协议:"></a>2.3 CSMA/CD协议:</h3><p>CSMA/CD 表示载波监听多点接入 / 碰撞检测。</p>
+<ul>
+<li>载波监听 ：每个主机都必须不停地监听信道。在发送前，如果监听到信道正在使用，就必须等待。</li>
+<li>多点接入 ：说明这是总线型网络，许多主机以多点的方式连接到总线上。</li>
+<li>碰撞检测 ：在发送中，如果监听到信道已有其它主机正在发送数据，就表示发生了碰撞。虽然每个主机在发送数据之前都已经监听到信道为空闲，但是由于电磁波的传播时延的存在，还是有可能会发生碰撞。</li>
+</ul>
+<p>记端到端的传播时延为 τ，最先发送的站点最多经过 2τ 就可以知道是否发生了碰撞，称 2τ 为 <strong>争用期</strong> 。只有经过争用期之后还没有检测到碰撞，才能肯定这次发送不会发生碰撞。</p>
+<p>当发生碰撞时，站点要停止发送，等待一段时间再发送。这个时间采用 <strong>截断二进制指数退避算法</strong> 来确定。从离散的整数集合 {0, 1, .., (2k-1)} 中随机取出一个数，记作 r，然后取 r 倍的争用期作为重传等待时间。</p>
+<h3 id="2-4-IEEE-802-3-2协议"><a href="#2-4-IEEE-802-3-2协议" class="headerlink" title="2.4 IEEE 802.3/.2协议"></a>2.4 IEEE 802.3/.2协议</h3><h3 id="2-5-ATM协议"><a href="#2-5-ATM协议" class="headerlink" title="2.5 ATM协议"></a>2.5 ATM协议</h3><h3 id="2-6-HDLC协议"><a href="#2-6-HDLC协议" class="headerlink" title="2.6 HDLC协议"></a>2.6 HDLC协议</h3><h2 id="三、数据链路层基本单元"><a href="#三、数据链路层基本单元" class="headerlink" title="三、数据链路层基本单元:"></a>三、数据链路层基本单元:</h2><p>帧</p>
+<h2 id="四、数据链路层三个基本问题"><a href="#四、数据链路层三个基本问题" class="headerlink" title="四、数据链路层三个基本问题:"></a>四、数据链路层三个基本问题:</h2><h3 id="4-1-封装成帧"><a href="#4-1-封装成帧" class="headerlink" title="4.1 封装成帧:"></a>4.1 封装成帧:</h3><p>将网络层传下来的分组添加首部和尾部，用于标记帧的开始和结束。</p>
+<p><img src="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9o0xmwu3kj30gl01sdfo.jpg" alt="3.1"></p>
+<h3 id="4-2-透明传输"><a href="#4-2-透明传输" class="headerlink" title="4.2 透明传输:"></a>4.2 透明传输:</h3><p>透明表示一个实际存在的事物看起来好像不存在一样。</p>
+<p>帧使用首部和尾部进行定界，如果帧的数据部分含有和首部尾部相同的内容，那么帧的开始和结束位置就会被错误的判定。需要在数据部分出现首部尾部相同的内容前面插入转义字符。如果数据部分出现转义字符，那么就在转义字符前面再加个转义字符。在接收端进行处理之后可以还原出原始数据。这个过程透明传输的内容是转义字符，用户察觉不到转义字符的存在。</p>
+<p><img src="http://cdn.cdnjson.com/tva2.sinaimg.cn/large/0064BnmZgy1g9o0xra4blj30j005v74a.jpg" alt="3.2"></p>
+<h3 id="4-3-差错检测"><a href="#4-3-差错检测" class="headerlink" title="4.3 差错检测:"></a>4.3 差错检测:</h3><p>循环冗余检验CRC(检错方法) : 即用模2运算，进行加法时不进位例如 ：1111+1010=0101，减法与加法一样，即按加法规则计算</p>
+<p><img src="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9o0xv6bb1j30io04m42d.jpg" alt="3.7"></p>
+<p><img src="http://cdn.cdnjson.com/tvax3.sinaimg.cn/large/0064BnmZgy1g9o0y5drefj30dw0a5jyd.jpg" alt="3.8"></p>
+<h2 id="五、数据链路层使用的信道"><a href="#五、数据链路层使用的信道" class="headerlink" title="五、数据链路层使用的信道:"></a>五、数据链路层使用的信道:</h2><h3 id="5-1-点对点信道"><a href="#5-1-点对点信道" class="headerlink" title="5.1 点对点信道:"></a>5.1 点对点信道:</h3><p><strong>一对一通信。</strong><br>因为不会发生碰撞，因此也比较简单，使用 PPP 协议进行控制。</p>
+<h3 id="5-2-广播信道"><a href="#5-2-广播信道" class="headerlink" title="5.2 广播信道:"></a>5.2 广播信道:</h3><p>①: <strong>一对多通信</strong>，一个节点发送的数据能够被广播信道上所有的节点接收到。<br>②: 所有的节点都在同一个广播信道上发送数据，因此需要有专门的控制方法进行协调，避免发生冲突（冲突也叫碰撞）。<br>③: 主要有两种控制方法进行协调，一个是使用<strong>信道复用技术</strong>，一是使用<strong>CSMA/CD 协议。</strong></p>
+<h2 id="六、数据链路层功能："><a href="#六、数据链路层功能：" class="headerlink" title="六、数据链路层功能："></a>六、数据链路层功能：</h2><p>①: 负责 结点-结点（node-to-node）数据传输:具体来说：解决的是物理链路直接相连的两个相邻结点之间的数据传输<br>②: 组帧（Framing）<br>③: 物理寻址（Physical addressing）:在帧头中增加发送端和/或接收端的物理地址标识数据帧的发送端和/或接收端<br>④: 流量控制（Flow control）:避免淹没接收端<br>⑤: 差错控制（Error control）:检测并重传损坏或丢失帧，并避免重复帧<br>⑥: 访问（接入）控制（Access control ）:在任意给定时刻决定哪个设备拥有链路（物理介质）控制使用权</p>
+<h2 id="七、数据链路层任务"><a href="#七、数据链路层任务" class="headerlink" title="七、数据链路层任务:"></a>七、数据链路层任务:</h2><p><img src="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9o0y47bo7j30dg09rjtq.jpg" alt="3.9"></p>
+<h2 id="八、MAC-地址"><a href="#八、MAC-地址" class="headerlink" title="八、MAC 地址:"></a>八、MAC 地址:</h2><p>MAC 地址是<strong>链路层地址</strong>，长度为 6 字节（48 位），用于<strong>唯一标识网络适配器（网卡）</strong>。</p>
+<p>一台主机拥有多少个网络适配器就有多少个 MAC 地址。例如笔记本电脑普遍存在无线网络适配器和有线网络适配器，因此就有两个 MAC 地址。</p>
+<h2 id="九、以太网"><a href="#九、以太网" class="headerlink" title="九、以太网:"></a>九、以太网:</h2><h3 id="9-1-以太网是一种星型拓扑结构局域网。"><a href="#9-1-以太网是一种星型拓扑结构局域网。" class="headerlink" title="9.1 以太网是一种星型拓扑结构局域网。"></a>9.1 以太网是一种星型拓扑结构局域网。</h3><p>早期使用集线器进行连接，集线器是一种物理层设备， 作用于比特而不是帧，当一个比特到达接口时，集线器重新生成这个比特，并将其能量强度放大，从而扩大网络的传输距离，之后再将这个比特发送到其它所有接口。如果集线器同时收到两个不同接口的帧，那么就发生了碰撞。</p>
+<p>目前以太网使用交换机替代了集线器，交换机是一种链路层设备，它不会发生碰撞，能根据 MAC 地址进行存储转发。</p>
+<h3 id="9-2-特点"><a href="#9-2-特点" class="headerlink" title="9.2 特点:"></a>9.2 特点:</h3><p>采用的协议: CSMA/CD<br>采用无连接,半双工通信<br>对数据帧不进行编号<br>尽最大努力交付(不可靠)<br>不要求对方确认<br>发送的数据都以曼彻斯特编码<br>收到错帧就丢弃</p>
+<h3 id="9-3-以太网帧格式："><a href="#9-3-以太网帧格式：" class="headerlink" title="9.3 以太网帧格式："></a>9.3 以太网帧格式：</h3><ul>
+<li><strong>类型</strong> ：标记上层使用的协议；</li>
+<li><strong>数据</strong> ：长度在 46-1500 之间，如果太小则需要填充；</li>
+<li><strong>FCS</strong> ：帧检验序列，使用的是 CRC 检验方法；</li>
+</ul>
+<p><img src="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9o0xvey59j30i9033aa1.jpg" alt="3.5"></p>
+<h2 id="十、局域网"><a href="#十、局域网" class="headerlink" title="十、局域网:"></a>十、局域网:</h2><p>局域网是一种典型的广播信道，主要特点是网络为一个单位所拥有，且地理范围和站点数目均有限。</p>
+<p>主要有以太网、令牌环网、FDDI 和 ATM 等局域网技术，目前以太网占领着有线局域网市场。</p>
+<p>可以按照网络拓扑结构对局域网进行分类：</p>
+<p><img src="http://cdn.cdnjson.com/wx2.sinaimg.cn/mw690/0064BnmZgy1g9o0xrqftxj30lt077q43.jpg" alt="3.6"></p>
+<h2 id="十一、10BASE-T"><a href="#十一、10BASE-T" class="headerlink" title="十一、10BASE-T:"></a>十一、10BASE-T:</h2><p>10 代表 10Mbit/s<br>BASE : 连接线上的信号为基带信号<br>T: 双绞线</p>
+<h2 id="十二、数据链路层功能"><a href="#十二、数据链路层功能" class="headerlink" title="十二、数据链路层功能:"></a>十二、数据链路层功能:</h2><p>将网络层接收到的数据分割成特定的可被物理层传输的帧</p>
+
+      
+    </div>
+
+    
+	
+	
+	
+	
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/数据链路层.html">数据链路层</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
+  <p><span>发布时间:</span>2019年04月07日 - 15:37</p>
+  <p><span>最后更新:</span>2023年05月12日 - 20:48</p>
+  <p><span>原始链接:</span><a href="/数据链路层.html" title="数据链路层">https://zzwwqq.github.io/数据链路层.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.github.io/数据链路层.html" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>版权声明:</span>本博客所有文章除特别声明外，均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"><i class="fa fa-creative-commons"></i>BY-NC-SA </a>许可协议。转载请注明出处!</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+      
+</div>
+
+    
+    
+    
+
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9n7zzvn32j3076076q3f.jpg" alt="zwq wechat" style="width: 200px; max-width: 100%;">
+  <div>欢迎您扫一扫关注我的微信公众号！</div>
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+
+	
+	
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据链路层/" rel="tag"><i class="fa fa-tag"></i> 数据链路层</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Markdown用法.html" rel="next" title="Markdown用法">
+                <i class="fa fa-chevron-left"></i> Markdown用法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/java字符串.html" rel="prev" title="java字符串">
+                java字符串 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9n64jijk8j30dc0dc0tq.jpg" alt="zwq">
+            
+              <p class="site-author-name" itemprop="name">zwq</p>
+              <div class="site-description motion-element" itemprop="description">不忘初心,方得始终!</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">64</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">58</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/zzwwqq" title="GitHub &rarr; https://github.com/zzwwqq" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:zwq13264860490@gmail.com" title="E-Mail &rarr; mailto:zwq13264860490@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/u/5564810309/home?wvr=5" title="Weibo &rarr; https://weibo.com/u/5564810309/home?wvr=5" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.zhihu.com/people/shen-qiu-wu-hen-66/activities" title="知乎 &rarr; https://www.zhihu.com/people/shen-qiu-wu-hen-66/activities" rel="noopener" target="_blank"><i class="fa fa-fw fa-snapchat"></i>知乎</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://me.csdn.net/weixin_44815733" title="CSDN &rarr; https://me.csdn.net/weixin_44815733" rel="noopener" target="_blank"><i class="fa fa-fw fa-angellist"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.jianshu.com/u/01892c1f80f8" title="简书 &rarr; https://www.jianshu.com/u/01892c1f80f8" rel="noopener" target="_blank"><i class="fa fa-fw fa-leanpub"></i>简书</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+		  
+		  
+		  
+		  
+		  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=38592976&auto=0&height=66"></iframe>
+		  
+		  
+		  
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/" title="https://www.cnblogs.com/" rel="noopener" target="_blank">博客园</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、数据链路层设备"><span class="nav-text">一、数据链路层设备:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、数据链路层协议"><span class="nav-text">二、数据链路层协议:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-PPP协议-Point-to-Point-Protocal-（点到点）"><span class="nav-text">2.1 PPP协议:  Point-to-Point Protocal; （点到点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-特点"><span class="nav-text">2.1.1 特点:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-PPP-的帧格式："><span class="nav-text">2.1.2 PPP 的帧格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-PPPoE协议"><span class="nav-text">2.2 PPPoE协议:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-CSMA-CD协议"><span class="nav-text">2.3 CSMA/CD协议:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-IEEE-802-3-2协议"><span class="nav-text">2.4 IEEE 802.3/.2协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-ATM协议"><span class="nav-text">2.5 ATM协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-HDLC协议"><span class="nav-text">2.6 HDLC协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、数据链路层基本单元"><span class="nav-text">三、数据链路层基本单元:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、数据链路层三个基本问题"><span class="nav-text">四、数据链路层三个基本问题:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-封装成帧"><span class="nav-text">4.1 封装成帧:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-透明传输"><span class="nav-text">4.2 透明传输:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-差错检测"><span class="nav-text">4.3 差错检测:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、数据链路层使用的信道"><span class="nav-text">五、数据链路层使用的信道:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-点对点信道"><span class="nav-text">5.1 点对点信道:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-广播信道"><span class="nav-text">5.2 广播信道:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、数据链路层功能："><span class="nav-text">六、数据链路层功能：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、数据链路层任务"><span class="nav-text">七、数据链路层任务:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、MAC-地址"><span class="nav-text">八、MAC 地址:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、以太网"><span class="nav-text">九、以太网:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-以太网是一种星型拓扑结构局域网。"><span class="nav-text">9.1 以太网是一种星型拓扑结构局域网。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-特点"><span class="nav-text">9.2 特点:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-以太网帧格式："><span class="nav-text">9.3 以太网帧格式：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、局域网"><span class="nav-text">十、局域网:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一、10BASE-T"><span class="nav-text">十一、10BASE-T:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十二、数据链路层功能"><span class="nav-text">十二、数据链路层功能:</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zwq</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">714k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">10:49</span>
+  
+</div>
+
+
+<!--
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
+
+-->
+
+
+<div>
+
+
+
+
+
+<div>
+<div class="powered-by">
+<i class="fa fa-user-md"></i>
+<span id="busuanzi_container_site_uv">
+  本站总访客数:<span id="busuanzi_value_site_uv"></span>&nbsp;&nbsp;| 
+</span>
+<span id="busuanzi_container_site_pv">
+    &nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+</div>
+</div>
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("03/12/2019 12:00:00");//此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+<div class="BbeiAn-info" style="color:#4dfc23">
+   	鄂ICP备 -
+    <a target="_blank" href="http://www.beian.miit.gov.cn/" style="color:#4dfc23;" rel="nofollow">18025394</a> <!--a标签中增加nofollow属性，避免爬虫出站。-->| 
+	<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42090202000295" style="text-decoration:none;color:#4dfc23;padding-left:30px;background:url(https://s1.ax1x.com/2018/09/29/ilmwIH.png) no-repeat left center" rel="nofollow">鄂公网安备 42090202000295</a>	  <!--这里将图标作为了背景，以使得能和后面的文字在同一行-->
+</div>
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </div></footer>
+
+    
+
+    
+
+    
+
+    
+      <div>
+        <div class="addthis_inline_share_toolbox">
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c8a5801582888d6" async="async"></script>
+</div>
+
+      </div>
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: false,
+    appId: 'BMBxkYUDumKWDR3FTQCAY7R1-gzGzoHsz',
+    appKey: 'yd7o7KS9MjFPCTGAGOpErnWy',
+    placeholder: 'Hello !',
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+  
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/click-love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":70,"height":120},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

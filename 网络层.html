@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="google-site-verification" content="eDIkkqgUhVHV4g8TSxIU_BesHpybzZ1nwuDaph8FeFc">
+<meta name="baidu-site-verification" content="Q8VWc7bZ6B">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css?v=1.0.2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'FBHE0THCTM',
+      apiKey: '2a75a572e66ab3792430d09ecb901b80',
+      indexName: 'zwq',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"我们没有找到任何搜索结果: ${query}","hits_stats":"找到约${hits}条结果（用时${time}ms）"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0eeeae6f.js","daovoice")
+ daovoice('init', {
+  app_id: "06289ecd"
+});
+daovoice('update');
+ </script>
+
+
+
+  <meta name="description" content="一、网络层协议:1.1 什么是协议（protocol）?通信协议定义了 网络实体间发送报文和接收报文的格式、顺序以及当传送和接收消息时应采取的行动(规则), 是控制两个对等实体进行通信的规则的集合，协议是“水平的”. 1.2 什么是实体（entity）?表示任何可发送或接收消息的硬件或软件进程">
+<meta name="keywords" content="网络层">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络层">
+<meta property="og:url" content="https://zzwwqq.github.io/网络层.html">
+<meta property="og:site_name" content="zwq">
+<meta property="og:description" content="一、网络层协议:1.1 什么是协议（protocol）?通信协议定义了 网络实体间发送报文和接收报文的格式、顺序以及当传送和接收消息时应采取的行动(规则), 是控制两个对等实体进行通信的规则的集合，协议是“水平的”. 1.2 什么是实体（entity）?表示任何可发送或接收消息的硬件或软件进程">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax4.sinaimg.cn/large/0064BnmZgy1g9o0xstb6nj30lu0cp75d.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva3.sinaimg.cn/large/0064BnmZgy1g9o0xx0k4qj30el0hfwf4.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/wx1.sinaimg.cn/mw690/0064BnmZgy1g9o0xwodhhj30mr07x40g.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva2.sinaimg.cn/large/0064BnmZgy1g9o0y8vm3aj30hz07f76i.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva1.sinaimg.cn/large/0064BnmZgy1g9o0xpoj8nj30nb0bn3z0.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9o0y8l4fjj30nc0dv0tr.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9o0y47bo7j30dg09rjtq.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax1.sinaimg.cn/large/0064BnmZgy1g9o0y7uboij30dg092q56.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva1.sinaimg.cn/large/0064BnmZgy1g9o0xktvkhj30jl0avmzq.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9o0y7it7ij30i50a0tbt.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9o0xr0spoj30js06fwgv.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva2.sinaimg.cn/large/0064BnmZgy1g9o0xonh1mj30fv061abp.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax4.sinaimg.cn/large/0064BnmZgy1g9o0xjcz45j30ht0eh426.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax4.sinaimg.cn/large/0064BnmZgy1g9o0xmf6z3j30ec07ndin.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9o0xs9i1pj30h106m0u1.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva3.sinaimg.cn/large/0064BnmZgy1g9o0xugbncj30is0aago2.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva3.sinaimg.cn/large/0064BnmZgy1g9o0y6x0pgj30jz04w78m.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva1.sinaimg.cn/large/0064BnmZgy1g9o0xxcyfqj30ay06cdi5.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax3.sinaimg.cn/large/0064BnmZgy1g9o0xvsw2qj30b504tq3i.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax3.sinaimg.cn/large/0064BnmZgy1g9o0y6hi78j30mn0fk123.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9o0y837e7j30lt04r763.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/wx4.sinaimg.cn/mw690/0064BnmZgy1g9o0y78n2sj30f108edj2.jpg">
+<meta property="og:image" content="http://cdn.cdnjson.com/tva1.sinaimg.cn/large/0064BnmZgy1g9o0y8cbjfj30jc05vgnn.jpg">
+<meta property="og:updated_time" content="2023-05-12T12:49:21.498Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网络层">
+<meta name="twitter:description" content="一、网络层协议:1.1 什么是协议（protocol）?通信协议定义了 网络实体间发送报文和接收报文的格式、顺序以及当传送和接收消息时应采取的行动(规则), 是控制两个对等实体进行通信的规则的集合，协议是“水平的”. 1.2 什么是实体（entity）?表示任何可发送或接收消息的硬件或软件进程">
+<meta name="twitter:image" content="http://cdn.cdnjson.com/tvax4.sinaimg.cn/large/0064BnmZgy1g9o0xstb6nj30lu0cp75d.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="zwq" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://zzwwqq.github.io/网络层.html">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>网络层 | zwq</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9c0c194e5f461cee9d645edaafef8a05";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	
+	
+	
+	<!--在这里加:-->
+	<!--黑色github带
+	<a href="https://github.com/zzwwqq"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+-->
+	<a href="https://github.com/zzwwqq" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+	<!--	<a href="https://github.com/zzwwqq" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+蓝色github猫
+-->
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">zwq</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">路漫漫其修远兮,吾将上下而求索!</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>公益 404</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-message">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/message/" rel="section"><i class="menu-item-icon fa fa-fw fa-comment"></i> <br>留言</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zzwwqq.github.io/网络层.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zwq">
+      <meta itemprop="description" content="不忘初心,方得始终!">
+      <meta itemprop="image" content="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9n64jijk8j30dc0dc0tq.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zwq">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">网络层
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-01 13:36:50" itemprop="dateCreated datePublished" datetime="2019-04-01T13:36:50+08:00">2019-04-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2023-05-12 20:49:21" itemprop="dateModified" datetime="2023-05-12T20:49:21+08:00">2023-05-12</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/计算机网络/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/网络层.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/网络层.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/网络层.html" class="leancloud_visitors" data-flag-title="网络层">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">热度：</span>
+              
+                <span class="leancloud-visitors-count">
+				</span>
+				<span>℃</span>
+            </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">12k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">11 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一、网络层协议"><a href="#一、网络层协议" class="headerlink" title="一、网络层协议:"></a>一、网络层协议:</h2><h3 id="1-1-什么是协议（protocol）"><a href="#1-1-什么是协议（protocol）" class="headerlink" title="1.1 什么是协议（protocol）?"></a>1.1 什么是协议（protocol）?</h3><p>通信协议定义了 网络实体间发送报文和接收报文的格式、顺序以及当传送和接收消息时应采取的行动(规则), 是控制两个对等实体进行通信的规则的集合，协议是“水平的”.</p>
+<h3 id="1-2-什么是实体（entity）"><a href="#1-2-什么是实体（entity）" class="headerlink" title="1.2 什么是实体（entity）?"></a>1.2 什么是实体（entity）?</h3><p>表示任何可发送或接收消息的硬件或软件进程<br><a id="more"></a></p>
+<h3 id="1-3-通信协议的三要素："><a href="#1-3-通信协议的三要素：" class="headerlink" title="1.3 通信协议的三要素："></a>1.3 通信协议的三要素：</h3><p>语法,语义,时序<br><strong>语义 :</strong><br>语义是指对协议中各协议元素的含义的解释，例如：在HDLC协议中，标志Flag(7EH)表示报文的开始和结束；在BSC协议中，SOH(01H)表示报文的开始，STX(02H)表示报文正文的开始，ETX(03H)表示报文正文的结束。<br><strong>语法 :</strong><br>语法是指协议元素与数据的组合格式，也就是 报文格式，如下图所示：<br><strong>时序 :</strong><br>时序是指在通信过程中，通信双方操作的执行顺序与规则，如本节开头的图示。<br><strong>总的来说，语法是语义的载体，而时序又是对语义的有序组织。正是基于这种关系，计算机在通信时才得以保持高度默契。</strong><br><img src="http://cdn.cdnjson.com/tvax4.sinaimg.cn/large/0064BnmZgy1g9o0xstb6nj30lu0cp75d.jpg" alt="5.1"></p>
+<h3 id="1-4-通信模型"><a href="#1-4-通信模型" class="headerlink" title="1.4 通信模型:"></a>1.4 通信模型:</h3><p><img src="http://cdn.cdnjson.com/tva3.sinaimg.cn/large/0064BnmZgy1g9o0xx0k4qj30el0hfwf4.jpg" alt="5.2"></p>
+<p><img src="http://cdn.cdnjson.com/wx1.sinaimg.cn/mw690/0064BnmZgy1g9o0xwodhhj30mr07x40g.jpg" alt="5.3"></p>
+<p>我们在网络中的任何一个系统都是按照上图中的层次结构模型来组织的，该模型具有以下特点：<br>①: 同一网络中，任意两个端系统必须具有相同的层次；<br>②: 每层使用其下层提供的服务，并向其上层提供服务；<br>③: 通信只在对等层间进行，当然这里所指的通信是间接的、逻辑的、虚拟的，非对等层之间不能互相“通信”；<br>④: 实际的物理通信只在最底层完成；<br>⑤: Pn代表第n层的协议，即第n层对等实体间通信时必须遵循的规则或约定。</p>
+<h3 id="1-5-网络层有哪些协议"><a href="#1-5-网络层有哪些协议" class="headerlink" title="1.5 网络层有哪些协议?"></a>1.5 网络层有哪些协议?</h3><p><strong>①: IP协议: </strong>这种<strong>不可靠的、无连接的</strong>传送机制称为Internet协议(网际协议)<br>与 IP 协议配套使用的还有三个协议：</p>
+<ul>
+<li>地址解析协议 ARP（Address Resolution Protcol）</li>
+<li>网际控制报文协议 ICMP（Internet Control Message Protocol）</li>
+<li>网际组管理协议 IGMP（Internet Group Management Protocol）</li>
+</ul>
+<p><strong>IP协议三个定义：</strong></p>
+<p>IP定义了在TCP/IP互联网上数据传送的基本单元和数据格式。<br>IP软件完成路由选择功能，选择数据传送的路径。<br>IP包含了一组不可靠分组传送的规则，指明了分组处理、差错信息发生以及分组的规则。</p>
+<p><strong>②: ICMP协议: </strong><br>网际控制报文协议<br>作用：用于在IP主机、路由器之间传递控制消息,更有效的转发IP数据报和提高交付成功的机会,<br>应用: ICMP的一个重要应用就是分组网间探测PING（Package Internet Grouper）用来测试两台主机的连通性,,Ping是应用层直接使用网络层ICMP的一个例子，没有通过运输层的TCP或UDP<br>详解见下文</p>
+<p><strong>③: IGMP:</strong><br>网际组管理协议</p>
+<p><strong>④: ARP协议:</strong><br>地址解析协议<br>自动把IP地址解析为数据链路层所需要的硬件地址(MAC地址)<br><strong>IP —–&gt;MAC 地址</strong><br><strong>工作原理:</strong></p>
+<ol>
+<li>首先，每个主机都会在自己的ARP缓冲区中建立一个ARP列表，以表示IP地址和MAC地址之间的对应关系。</li>
+<li>当源主机要发送数据时，首先检查ARP列表中是否有对应IP地址的目的主机的MAC地址，如果有，则直接发送数据,如果没有，就向本网段的所有主机发送ARP数据包，该数据包包括的内容有：源主机 IP地址，源主机MAC地址，目的主机的IP 地址。</li>
+<li><p>当本网络的所有主机收到该ARP数据包时，首先检查数据包中的IP地址是否是自己的IP地址，如果不是，则忽略该数据包，如果是，则首先从数据包中取出源主机的IP和MAC地址写入到ARP列表中，如果已经存在，则覆盖，然后将自己的MAC地址写入ARP响应包中，告诉源主机自己是它想要找的MAC地址。</p>
+</li>
+<li><p>源主机收到ARP响应包后。将目的主机的IP和MAC地址写入ARP列表，并利用此信息发送数据。如果源主机一直没有收到ARP响应数据包，表示ARP查询失败。</p>
+</li>
+</ol>
+<p><strong>广播发送ARP请求，单播发送ARP响应。</strong></p>
+<p><strong>⑤: RARP协议:</strong><br>逆地址解析协议, 与ARP相反:<br><strong>MAC地址——&gt;IP地址</strong><br><strong>作用: </strong> 是完成硬件地址到IP地址的映射，主要用于无盘工作站，因为给无盘工作站配置的IP地址不能保存。<br><strong>工作流程：</strong>在网络中配置一台RARP服务器，里面保存着IP地址和MAC地址的映射关系，当无盘工作站启动后，就封装一个RARP数据包，里面有其MAC地址，然后广播到网络上去，当服务器收到请求包后，就查找对应的MAC地址的IP 地址装入响应报文中发回给请求者。<br>因为需要广播请求报文，因此<strong>RARP只能用于具有广播能力的网络。</strong></p>
+<p><strong>⑥: RIP协议:</strong><br>内部网关协议<br>基于距离向量的路由选择协议, 距离是指跳数，直接相连的路由器跳数为 1,跳数最多为 15(即允许一条路径最多包含15个路由器)，超过 15 表示不可达。<br>可见<strong>RIP只适用于小型互联网</strong></p>
+<p>RIP 按固定的时间间隔仅和相邻路由器交换自己的路由表，经过若干次交换之后，所有路由器最终会知道到达本自治系统中任何一个网络的最短距离和下一跳路由器地址。</p>
+<p><strong>距离向量算法：</strong></p>
+<ul>
+<li>对地址为 X 的相邻路由器发来的 RIP 报文，先修改报文中的所有项目，把下一跳字段中的地址改为 X，并把所有的距离字段加 1；</li>
+<li>对修改后的 RIP 报文中的每一个项目，进行以下步骤：</li>
+<li>若原来的路由表中没有目的网络 N，则把该项目添加到路由表中；</li>
+<li>否则：若下一跳路由器地址是 X，则把收到的项目替换原来路由表中的项目；否则：若收到的项目中的距离 d 小于路由表中的距离，则进行更新（例如原始路由表项为 Net2, 5, P，新表项为 Net2, 4, X，则更新）；否则什么也不做。</li>
+<li>若 3 分钟还没有收到相邻路由器的更新路由表，则把该相邻路由器标为不可达，即把距离置为 16。</li>
+</ul>
+<p><strong>优点:</strong><br>实现简单，开销小。<br><strong>缺点:</strong><br>①: RIP 能使用的最大距离为 15，限制了网络的规模。<br>②: 并且当网络出现故障时，要经过比较长的时间才能将此消息传送到所有路由器。<br>③: 路由器间交换的信息是完整的路由表,随着网络规模的增大,开销也增大.</p>
+<p><strong>⑦: OSPF协议: </strong></p>
+<p>开放最短路径优先 OSPF，是为了<strong>克服 RIP 的缺点</strong>而开发出来的。<br>开放表示 OSPF 不受某一家厂商控制，而是公开发表的；最短路径优先表示使用了 Dijkstra 提出的最短路径算法 SPF。<br>OSPF 具有以下特点：</p>
+<ul>
+<li>向本自治系统中的所有路由器发送信息，这种方法是洪泛法。</li>
+<li>发送的信息就是与相邻路由器的链路状态，链路状态包括与哪些路由器相连以及链路的度量，度量用费用、距离、时延、带宽等来表示,  而RIP只包含距离,和下一跳路由器地址.</li>
+<li>只有当链路状态发生变化时，路由器才会发送信息, 而 RIP不管有无变化,总是定期更新.</li>
+</ul>
+<p>所有路由器都具有全网的拓扑结构图，并且是一致的。相比于 RIP，<strong>OSPF 的更新过程收敛的很快</strong>。</p>
+<p><strong>⑧: BGP：外部网关协议</strong>:</p>
+<p>BGP（Border Gateway Protocol，边界网关协议）</p>
+<p><img src="http://cdn.cdnjson.com/tva2.sinaimg.cn/large/0064BnmZgy1g9o0y8vm3aj30hz07f76i.jpg" alt="5.23"></p>
+<p>AS 之间的路由选择很困难，主要是由于：</p>
+<ul>
+<li>互联网规模很大；</li>
+<li>各个 AS 内部使用不同的路由选择协议，无法准确定义路径的度量；</li>
+<li>AS 之间的路由选择必须考虑有关的策略，比如有些 AS 不愿意让其它 AS 经过。</li>
+</ul>
+<p>BGP 只能寻找一条比较好的路由，而不是最佳路由。<br>每个 AS 都必须配置 BGP 发言人，通过在两个相邻 BGP 发言人之间建立 TCP 连接来交换路由信息</p>
+<h3 id="1-6-网络层特点"><a href="#1-6-网络层特点" class="headerlink" title="1.6 网络层特点:"></a>1.6 网络层特点:</h3><p>向上只提供 :<br>①:  无连接的<br>②: 尽最大努力交付<br>③: 不提供服务质量的保证(不保证分组交付的时限,所传送的分组有可能出错丢失,重复失序)<br>⑤: 进程间通信可靠性由传输层负责</p>
+<h2 id="二、网络层设备"><a href="#二、网络层设备" class="headerlink" title="二、网络层设备:"></a>二、网络层设备:</h2><p>①: 路由器</p>
+<h2 id="三、网络层基本单元"><a href="#三、网络层基本单元" class="headerlink" title="三、网络层基本单元:"></a>三、网络层基本单元:</h2><h3 id="3-1-什么是协议数据单元"><a href="#3-1-什么是协议数据单元" class="headerlink" title="3.1 什么是协议数据单元?"></a>3.1 什么是协议数据单元?</h3><p>协议数据单元PDU（Protocol Data Unit）是指对等层次之间传递的数据单位。 </p>
+<h3 id="3-2-每一层协议数据单元分别是什么"><a href="#3-2-每一层协议数据单元分别是什么" class="headerlink" title="3.2 每一层协议数据单元分别是什么?"></a>3.2 每一层协议数据单元分别是什么?</h3><p>从下层到上层:<br>物理层的 PDU是数据位,又称<strong>比特</strong>（bit），<br>数据链路层的 PDU是数据帧,又称<strong>帧</strong>（frame），<br>网络层的PDU是数据包又称<strong>IP数据报</strong>（packet/datagram），<br>传输层的 PDU是<strong>数据段</strong>（segment），在报文中加一个运输层的头<br>其他更高层次(即会话层,表现层,应用层)的PDU是<strong>报文</strong>（message）。</p>
+<p>从下层往上层是拆封.<br><img src="http://cdn.cdnjson.com/tva1.sinaimg.cn/large/0064BnmZgy1g9o0xpoj8nj30nb0bn3z0.jpg" alt="5.4"></p>
+<p><img src="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9o0y8l4fjj30nc0dv0tr.jpg" alt="5.5.1"></p>
+<h2 id="四、网络层功能"><a href="#四、网络层功能" class="headerlink" title="四、网络层功能:"></a>四、网络层功能:</h2><p>①: 负责源主机到目的主机数据分组（Packet）交付(可能穿越多个网络)逻辑寻址（Logical  addressing ）<br>②: 全局唯一的逻辑地址，确保数据分组被送到目的主机，如IP地址<br>③: 路由（Routing）:<br>路由器（或网关）互连网络，并路由分组至最终目的主机<br>路径选择<br>④: 分组转发<br>⑤: 网络层向上只提供简单灵活的、无连接的、尽最大努力交互的数据报服务。</p>
+<p>⑥: 将网络地址(例如IP地址)翻译为对应的物理地址(例如,网卡地址),并决定如何将数据从发送方路由到接收方</p>
+<h3 id="4-1-核心功能"><a href="#4-1-核心功能" class="headerlink" title="4.1 核心功能:"></a>4.1 核心功能:</h3><p>分组转发 与 路由选择（forwarding)</p>
+<h3 id="4-1-什么是转发"><a href="#4-1-什么是转发" class="headerlink" title="4.1 什么是转发?"></a>4.1 什么是转发?</h3><p>将分组从路由器的输入端口转移到合适的输出端口<br>转发表确定在本路由器如何转发分组</p>
+<h3 id="4-2-转发表是怎么得到的呢？"><a href="#4-2-转发表是怎么得到的呢？" class="headerlink" title="4.2 转发表是怎么得到的呢？"></a>4.2 转发表是怎么得到的呢？</h3><p>路由算法（协议）确定通过网络的端到端路径</p>
+<h3 id="4-3-什么叫路由呢？"><a href="#4-3-什么叫路由呢？" class="headerlink" title="4.3 什么叫路由呢？"></a>4.3 什么叫路由呢？</h3><p>路由（routing）：确定分组从源到目的经过的路径</p>
+<h2 id="五、网络层任务"><a href="#五、网络层任务" class="headerlink" title="五、网络层任务:"></a>五、网络层任务:</h2><p><img src="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9o0y47bo7j30dg09rjtq.jpg" alt="5.6"></p>
+<p><img src="http://cdn.cdnjson.com/tvax1.sinaimg.cn/large/0064BnmZgy1g9o0y7uboij30dg092q56.jpg" alt="5.8"></p>
+<h2 id="六、为什么需要数据封装"><a href="#六、为什么需要数据封装" class="headerlink" title="六、为什么需要数据封装?"></a>六、为什么需要数据封装?</h2><p>增加控制信息—构造协议数据单元（PDU—protocol  Data  Unit）<br>控制信息主要包括：<br>地址：标志发送端/接收端<br>差错检测编码（error-detecting code）：用于差错检测或纠正<br>协议控制（Protocol  control）：实现协议功能的附加信息，如优先级（priority），服务质量（QoS）和安全控制等<br><img src="http://cdn.cdnjson.com/tva1.sinaimg.cn/large/0064BnmZgy1g9o0xktvkhj30jl0avmzq.jpg" alt="5.7"></p>
+<h2 id="七、IP-数据报格式"><a href="#七、IP-数据报格式" class="headerlink" title="七、IP 数据报格式:"></a>七、IP 数据报格式:</h2><p><img src="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9o0y7it7ij30i50a0tbt.jpg" alt="5.9"></p>
+<p><strong>版本</strong> : 有 4（IPv4）和 6（IPv6）两个值；</p>
+<p><strong>首部长度</strong> : 占 4 位，因此最大值为 15。值为 1 表示的是 1 个 32 位字的长度，也就是 4 字节。因为首部固定长度为 20 字节，因此该值最小为 5。如果可选字段的长度不是 4 字节的整数倍，就用尾部的填充部分来填充。</p>
+<p><strong>区分服务</strong> : 用来获得更好的服务，一般情况下不使用。</p>
+<p><strong>总长度</strong> : 包括首部长度和数据部分长度</p>
+<p><strong>标识</strong> : 在数据报长度过长从而发生分片的情况下，相同数据报的不同分片具有相同的标识符。</p>
+<p><strong>片偏移</strong> : 和标识符一起，用于发生分片的情况。片偏移的单位为 8 字节。</p>
+<p><strong>生存时间</strong> ：TTL，它的存在是为了防止无法交付的数据报在互联网中不断兜圈子。以路由器跳数为单位，当 TTL 为 0 时就丢弃数据报。</p>
+<p><strong>协议</strong> ：指出携带的数据应该上交给哪个协议进行处理，例如 ICMP、TCP、UDP 等。</p>
+<p><img src="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9o0xr0spoj30js06fwgv.jpg" alt="5.10"></p>
+<h2 id="八、地址解析协议-ARP"><a href="#八、地址解析协议-ARP" class="headerlink" title="八、地址解析协议 ARP:"></a>八、地址解析协议 ARP:</h2><p>ARP 实现由 IP 地址得到 MAC 地址。</p>
+<p><img src="http://cdn.cdnjson.com/tva2.sinaimg.cn/large/0064BnmZgy1g9o0xonh1mj30fv061abp.jpg" alt="5.11"></p>
+<p>每个主机都有一个 ARP 高速缓存，里面有本局域网上的各主机和路由器的 IP 地址到 MAC 地址的映射表。</p>
+<p>如果主机 A 知道主机 B 的 IP 地址，但是 ARP 高速缓存中没有该 IP 地址到 MAC 地址的映射，此时主机 A 通过广播的方式发送 ARP 请求分组，主机 B 收到该请求后会发送 ARP 响应分组给主机 A 告知其 MAC 地址，随后主机 A 向其高速缓存中写入主机 B 的 IP 地址到 MAC 地址的映射。</p>
+<p><img src="http://cdn.cdnjson.com/tvax4.sinaimg.cn/large/0064BnmZgy1g9o0xjcz45j30ht0eh426.jpg" alt="5.12"></p>
+<h2 id="九、网际控制报文协议-ICMP"><a href="#九、网际控制报文协议-ICMP" class="headerlink" title="九、网际控制报文协议 ICMP:"></a>九、网际控制报文协议 ICMP:</h2><p>ICMP 是为了更有效地转发 IP 数据报和提高交付成功的机会。它封装在 IP 数据报中，但是不属于高层协议。</p>
+<p><img src="http://cdn.cdnjson.com/tvax4.sinaimg.cn/large/0064BnmZgy1g9o0xmf6z3j30ec07ndin.jpg" alt="5.13"></p>
+<p>ICMP 报文分为差错报告报文和询问报文。</p>
+<p><img src="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9o0xs9i1pj30h106m0u1.jpg" alt="5.14"></p>
+<h3 id="9-1-ICMP协议的应用"><a href="#9-1-ICMP协议的应用" class="headerlink" title="9.1 ICMP协议的应用:"></a>9.1 ICMP协议的应用:</h3><h4 id="Ping"><a href="#Ping" class="headerlink" title="Ping"></a>Ping</h4><p>Ping 是 ICMP 的一个重要应用，主要用来<strong>测试两台主机之间的连通性</strong>。<br><strong>Ping 的原理: </strong></p>
+<p>是通过向目的主机发送 ICMP Echo 请求报文，目的主机收到之后会发送 Echo 回答报文。Ping 会根据时间和成功响应的次数估算出数据包往返时间以及丢包率。</p>
+<h4 id="Traceroute"><a href="#Traceroute" class="headerlink" title="Traceroute:"></a>Traceroute:</h4><p>用来跟踪一个分组从源点到终点的路径。</p>
+<p>Traceroute 发送的 IP 数据报封装的是无法交付的 UDP 用户数据报，并由目的主机发送终点不可达差错报告报文。<br><strong>Traceroute的工作原理: </strong></p>
+<ul>
+<li>源主机向目的主机发送一连串的 IP 数据报。第一个数据报 P1 的生存时间 TTL 设置为 1，当 P1 到达路径上的第一个路由器 R1 时，R1 收下它并把 TTL 减 1，此时 TTL 等于 0，R1 就把 P1 丢弃，并向源主机发送一个 ICMP 时间超过差错报告报文；</li>
+<li>源主机接着发送第二个数据报 P2，并把 TTL 设置为 2。P2 先到达 R1，R1 收下后把 TTL 减 1 再转发给 R2，R2 收下后也把 TTL 减 1，由于此时 TTL 等于 0，R2 就丢弃 P2，并向源主机发送一个 ICMP 时间超过差错报文。</li>
+<li>不断执行这样的步骤，直到最后一个数据报刚刚到达目的主机，主机不转发数据报，也不把 TTL 值减 1。但是因为数据报封装的是无法交付的 UDP，因此目的主机要向源主机发送 ICMP 终点不可达差错报告报文。</li>
+<li>之后源主机知道了到达目的主机所经过的路由器 IP 地址以及到达每个路由器的往返时间。</li>
+</ul>
+<h2 id="十、IP-地址编址方式"><a href="#十、IP-地址编址方式" class="headerlink" title="十、IP 地址编址方式:"></a>十、IP 地址编址方式:</h2><h3 id="10-1-IP-地址的编址方式经历了三个历史阶段："><a href="#10-1-IP-地址的编址方式经历了三个历史阶段：" class="headerlink" title="10.1 IP 地址的编址方式经历了三个历史阶段："></a>10.1 IP 地址的编址方式经历了三个历史阶段：</h3><p>①: 分类<br>②: 子网划分<br>③: 无分类</p>
+<p><strong>分类: </strong><br>由两部分组成，网络号和主机号，其中不同分类具有不同的网络号长度，并且是固定的。</p>
+<p>网络号:用于识别主机所在的网络；<br>主机号: 用于识别该网络中的主机<br>IP 地址 ::= {&lt; 网络号 &gt;, &lt; 主机号 &gt;}<br><img src="http://cdn.cdnjson.com/tva3.sinaimg.cn/large/0064BnmZgy1g9o0xugbncj30is0aago2.jpg" alt="5.15"></p>
+<p><strong>IP地址分为五类，</strong>A类保留给政府机构，B类分配给中等规模的公司，C类分配给任何需要的人，D类用于组播，E类用于实验，各类可容纳的地址数目不同。</p>
+<table>
+<thead>
+<tr>
+<th>IP地址类别:</th>
+<th>高八位</th>
+<th>占总IP地址数的比例:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A类：前一位固定为0</td>
+<td>第一个八位的范围是0-127<br>目的: 保证了最小为0,最大为127  即255(全一)-128(最高位为1,其他为0)=127</td>
+<td>(127-0+1）/ 256=50%</td>
+</tr>
+<tr>
+<td>B类：前两位固定为10</td>
+<td>第一个八位的范围是：128-191<br>前两位固定为10的目的是：为了让前八位表示的数最小为128</td>
+<td>(191-128+1) / 256=25%</td>
+</tr>
+<tr>
+<td>C类：前三位固定为110</td>
+<td>第一个八位的范围是：192-223<br>前两位固定为110的目的是：保证最小192</td>
+<td>(223-192+1) / 256=12.5%</td>
+</tr>
+<tr>
+<td>D类：前四位固定为1110     不分网络地址和主机地址</td>
+<td>第一个八位的范围是：224-239</td>
+<td>(239-224+1) / 256=6.25%</td>
+</tr>
+<tr>
+<td>E类：前四位固定为1111   不区分网络地址和主机地址</td>
+<td>第一个八位的范围是：240-255</td>
+<td>(255-240+1) / 256=6.25%</td>
+</tr>
+</tbody>
+</table>
+<p>　<img src="http://cdn.cdnjson.com/tva3.sinaimg.cn/large/0064BnmZgy1g9o0y6x0pgj30jz04w78m.jpg" alt="5.19">　</p>
+<p><strong>A类地址:</strong><br>1）A类地址第1字节为网络地址，其它3个字节为主机地址。它的第1个字节的第一位固定为0，因此只有7位可供使用.<br>可指派的网络号为126个（即2^7-2=126），<br><strong>减2 的原因：</strong><br>第一：   IP地址中的<strong>全0表示“这个（或者本）</strong>”，<strong>全1表示所有的</strong>。      网络号字段全0   的IP地址是个保留地址， 意思是本网络<br>第二：   网络号为127（即01111111）保留作为本地软件环回测试（loop back test）本主机的进程之间的通信之用。<br>2）A类地址可指派网络号范围：1—126<br>3）<strong>A类地址中的私有地址和保留地址：</strong><br>① 10.X.X.X是私有地址（所谓的私有地址就是在互联网上不使用，而被用在局域网络中的地址),且<br>范围是（10.0.0.0—10.255.255.255）<br>② 127.X.X.X是保留地址，用做循环测试用的。<br>A类地址主机号占三个字节，因此每个A类网络中最大主机数： 2^24-2=16777214<br><strong>这里减2 的原因：</strong>   全0的主机号字段，  表示该IP地址 是”本主机“所连结到的单个网络地址，（例如： 一主机的IP地址为5.6.7.8 ，则该主机所在的网络地址就是5.0.0.0）， 而全1表示”所有的“  ，因此主机号全1表示该网络上的所有主机，<br>4）IP地址空间共2^32 个地址，整个A类地址2^31,占整个IP地址空间的50%. </p>
+<p>关于全0全1 还可以再举两个例子：<br>例如：  B类地址： 128.7.255.255 表示在网络128.7.0.0 上的所有主机，  而A类地址0.0.0.35 则表示  在这个网络上主机号为35 的主机；</p>
+<p><strong>B类地址:</strong></p>
+<p>B类地址第1字节和第2字节为网络地址，其它2个字节为主机地址。它的第1个字节的前两位固定为10，只剩下16-2=14位可以分配， </p>
+<p>因为网络号字段后面的14位无论取什么值， 也不可能出现使整个2字节的网络号字段成为全0或全1， 所以这里就不存在网络总数减2的问题。</p>
+<p>但是实际上B类网络地址的128.0.0.0 是不指派的，而可以指派的B类最小网络地址是128.1.0.0   ，   因此B类地址可指派的网络数为  2^14-1=16383.</p>
+<p>B 类地址的每个网络上的最大主机数2^16-2=65534<br>这里减2 的原因：   要扣除主机号全0全1的。  （全0表示该IP地址 是”本主机“所连结到的单个网络地址，全1 作为广播地址）<br>整个B类地址空间2^30, 占整个IP地址空间的25%.</p>
+<p>2） B类地址可指派网络号范围：128.1—191.255。  </p>
+<p>3） B类地址的私有地址和保留地址</p>
+<p>① 172.16.0.0—172.31.255.255是私有地址</p>
+<p>② 169.254.X.X是保留地址。如果你的IP地址是自动获取IP地址，而你在网络上又没有找到可用的DHCP服务器。就会得到其中一个IP。</p>
+<p>191.255.255.255是广播地址，不能分配。</p>
+<p><strong>C类地址</strong></p>
+<p>1）C类地址第1字节、第2字节和第3个字节为网络地址，第4个字节为主机地址。另外第1个字节的前三位固定为110,   还有21位可以分配，C类网络地址192.0.0.0也是不分配的， 可以指派的C类最小网络地址192.0.1.0，因此C类  地址可指派的网络总数 ， 2^21-1=2097151 ,   每一个C类网络地址的最大主机数2^8-2=254, 整个C类地址空间2^29 个地址，占整个IP地址空间的12.5%。</p>
+<p>2）C类地址网络号范围：192.0.1—223.255.255。</p>
+<p>3） C类地址中的私有地址：</p>
+<p>192.168.X.X是私有地址。（192.168.0.0—192.168.255.255)</p>
+<h3 id="10-2-特殊IP地址："><a href="#10-2-特殊IP地址：" class="headerlink" title="10.2 特殊IP地址："></a>10.2 特殊IP地址：</h3><p>　<img src="http://cdn.cdnjson.com/tva1.sinaimg.cn/large/0064BnmZgy1g9o0xxcyfqj30ay06cdi5.jpg" alt="5.16">　</p>
+<h3 id="10-3-私有（Private）IP地址"><a href="#10-3-私有（Private）IP地址" class="headerlink" title="10.3 私有（Private）IP地址:"></a>10.3 私有（Private）IP地址:</h3><p><strong>实体IP:</strong><br>在网络的世界里，为了要辨识每一部计算机的位置，因此有了计算机 IP 位址的定义。一个 IP 就好似一个门牌！例如，你要去微软的网站的话，就要去『 64.4.11.42 』这个 IP 位置！这些可以直接在网际网络上沟通的 IP 就被称为『实体 IP 』了。</p>
+<p><strong>虚拟IP:</strong><br>不过，众所皆知的，IP 位址仅为 xxx.xxx.xxx.xxx 的资料型态，其中， xxx 为 1-255 间的整数，由于计算机的成长速度太快，实体的 IP 已经有点不足了，好在早在规划 IP 时就已经预留了三个网段的 IP 做为内部网域的虚拟 IP 之用。这三个预留的 IP 分别为：<br>除去主机段全零/全一:</p>
+<p>　<img src="http://cdn.cdnjson.com/tvax3.sinaimg.cn/large/0064BnmZgy1g9o0xvsw2qj30b504tq3i.jpg" alt="5.17"></p>
+<p>由于是虚拟 IP ，所以当您使用这些地址的时候﹐当然是有所限制的，限制如下：<br>私有位址的路由信息不能对外散播<br>使用私有位址作为来源或目的地址的封包﹐不能透过Internet来转送<br>关于私有位址的参考纪录（如DNS）﹐只能限于内部网络使用</p>
+<p>由于虚拟 IP 的计算机并不能直接连上 Internet ，因此需要特别的功能才能上网。不过，这给我们架设IP网络提供了很大的方便﹐比如﹕您的公司还没有连上Internet﹐但这不保证将来不会。使用公共IP的话﹐如果没经过注册﹐在以后真正连上网络的时候﹐就很可能和别人冲突了。也正如前面所分析的﹐到时候再重新规划IP的话﹐将是件非常头痛的问题。这时候﹐我们可以先利用私有位址来架设网络﹐等到真要连上internet的时候﹐我们可以使用IP转换协定﹐如 NAT (Network Addresss Translation)等技术﹐配合新注册的IP就可以了。</p>
+<h3 id="10-4-组播地址"><a href="#10-4-组播地址" class="headerlink" title="10.4 组播地址"></a>10.4 组播地址</h3><p>注意它和广播的区别。从224.0.0.0到239.255.255.255都是这样的地址。224.0.0.1特指所有主机， 224.0.0.2特指所有路由器。这样的地址多用于一些特定的程序以及多媒体程序。如果你的主机开启了IRDP（Internet路由发现协议，使用组播功能）功能，那么你的主机路由表中应该有这样一条路由: 169.254.x.x</p>
+<p>如果你的主机使用了DHCP功能自动获得一个IP地址，那么当你的DHCP服务器发生故障，或响应时间太长而超出了一个系统规定的时间，Windows系统会为你分配这样一个地址。如果你发现你的主机IP地址是一个诸如此类的地址，很不幸，十有八九是你的网络不能正常运行了。</p>
+<h3 id="10-5-受限广播地址"><a href="#10-5-受限广播地址" class="headerlink" title="10.5 受限广播地址"></a>10.5 受限广播地址</h3><p>广播通信是<strong>一个主机对所有主机</strong>的通信方式。若一个IP地址的2进制数全为1，也就是255.255.255.255，则这个地址用于定义整个互联网。如果设备想使IP数据报被整个Internet所接收，就发送这个目的地址全为1的广播包，但这样会给整个互联网带来灾难性的负担。因此网络上的所有路由器都阻止具有这种类型的分组被转发出去，使这样的广播仅限于本地网段。</p>
+<h3 id="10-6-直接广播地址"><a href="#10-6-直接广播地址" class="headerlink" title="10.6 直接广播地址"></a>10.6 直接广播地址</h3><p>一个网络中的最后一个地址为直接广播地址，也就是HostID全为1的地址。主机使用这种地址把一个IP数据报发送到本地网段的所有设备上，路由器会转发这种数据报到特定网络上的所有主机。<br><strong>注意：这个地址在IP数据报中只能作为目的地址。另外，直接广播地址使一个网段中可分配给设备的地址数减少了1个。</strong></p>
+<h3 id="10-7-源IP地址"><a href="#10-7-源IP地址" class="headerlink" title="10.7 源IP地址:"></a>10.7 源IP地址:</h3><p>若IP地址全为0，也就是0.0.0.0，则这个IP地址在IP数据报中只能用作源IP地址，这发生在当设备启动时但又不知道自己的IP地址情况下。在使用DHCP分配IP地址的网络环境中，这样的地址是很常见的。用户主机为了获得一个可用的IP地址，就给DHCP服务器发送IP分组，并用这样的地址作为源地址，目的地址为255.255.255.255（因为主机这时还不知道DHCP服务器的IP地址）。</p>
+<h3 id="10-8-环回地址"><a href="#10-8-环回地址" class="headerlink" title="10.8 环回地址:"></a>10.8 环回地址:</h3><p>127网段的所有地址都称为环回地址，主要用来测试网络协议是否工作正常的作用。比如使用ping.<br>127.0.0.1就可以测试本地TCP/IP协议是否已正确安装。另外一个用途是当客户进程用环回地址发送报文给位于同一台机器上的服务器进程，比如在浏览器里输入127.1.2.3，这样可以在排除网络路由的情况下用来测试IIS是否正常启动。</p>
+<h3 id="10-9-NetID为0的地址"><a href="#10-9-NetID为0的地址" class="headerlink" title="10.9 NetID为0的地址:"></a>10.9 NetID为0的地址:</h3><p>当某个主机向同一网段上的其他主机发送报文时就可以使用这样的地址，分组也不会被路由器转发。比如12.12.12.0/24这个网络中的一台主机12.12.12.2/24在与同一网络中的另一台主机12.12.12.8/24通信时，目的地址可以是0.0.0.8。</p>
+<h3 id="10-10-关于子网掩码"><a href="#10-10-关于子网掩码" class="headerlink" title="10.10: 关于子网掩码:"></a>10.10: 关于子网掩码:</h3><p>为了标识IP地址的网络部分和主机部分，要和地址掩码（Address Mask）结合，掩码跟IP地址一样也是32 bits，用点分十进制表示。IP地址网络部分对应的掩码部分全为“1”，主机部分对应的掩码全为“0”。</p>
+<p>缺省状态下，如果没有进行子网划分，A类网络的子网掩码为255.0.0.0，B类网络的子网掩码为255.255.0.0，C类网络的子网掩码为255.255.255.0。利用子网，网络地址的使用会更加有效。</p>
+<p>有了子网掩码后，IP地址的标识方法如下：<br>例：192.168.1.1 255.255.255.0或者标识成192.168.1.1/24（掩码中“1”的个数）</p>
+<p><strong>子网划分</strong></p>
+<p>通过在主机号字段中拿一部分作为子网号，把两级 IP 地址划分为三级 IP 地址。</p>
+<p>IP 地址 ::= {&lt; 网络号 &gt;, &lt; 子网号 &gt;, &lt; 主机号 &gt;}</p>
+<p>要使用子网，必须配置子网掩码。一个 B 类地址的默认子网掩码为 255.255.0.0，如果 B 类地址的子网占两个比特，那么子网掩码为 11111111 11111111 11000000 00000000，也就是 255.255.192.0。</p>
+<p>注意，外部网络看不到子网的存在。</p>
+<p><strong>无分类</strong></p>
+<p>无分类编址 CIDR 消除了传统 A 类、B 类和 C 类地址以及划分子网的概念，使用网络前缀和主机号来对 IP 地址进行编码，网络前缀的长度可以根据需要变化。</p>
+<p>IP 地址 ::= {&lt; 网络前缀号 &gt;, &lt; 主机号 &gt;}</p>
+<p>CIDR 的记法上采用在 IP 地址后面加上网络前缀长度的方法，例如 128.14.35.7/20 表示前 20 位为网络前缀。</p>
+<p>CIDR 的地址掩码可以继续称为子网掩码，子网掩码首 1 长度为网络前缀的长度。</p>
+<p>一个 CIDR 地址块中有很多地址，一个 CIDR 表示的网络就可以表示原来的很多个网络，并且在路由表中只需要一个路由就可以代替原来的多个路由，减少了路由表项的数量。把这种通过使用网络前缀来减少路由表项的方式称为路由聚合，也称为 <strong>构成超网</strong> 。</p>
+<p>在路由表中的项目由“网络前缀”和“下一跳地址”组成，在查找时可能会得到不止一个匹配结果，应当采用最长前缀匹配来确定应该匹配哪一个。</p>
+<h2 id="十一、虚拟专用网-VPN"><a href="#十一、虚拟专用网-VPN" class="headerlink" title="十一、虚拟专用网 VPN"></a>十一、虚拟专用网 VPN</h2><p>由于 IP 地址的紧缺，一个机构能申请到的 IP 地址数往往远小于本机构所拥有的主机数。并且一个机构并不需要把所有的主机接入到外部的互联网中，机构内的计算机可以使用仅在本机构有效的 IP 地址（专用地址）。有三个专用地址块：</p>
+<ul>
+<li>10.0.0.0 ~ 10.255.255.255  共有2的24次方个地址</li>
+<li>172.16.0.0 ~ 172.31.255.255  共有2的20次方个地址</li>
+<li>192.168.0.0 ~ 192.168.255.255  共有2的16次方个地址</li>
+</ul>
+<p>VPN 使用公用的互联网作为本机构各专用网之间的通信载体。专用指机构内的主机只与本机构内的其它主机通信；虚拟指好像是，而实际上并不是，它有经过公用的互联网。</p>
+<p>下图中，场所 A 和 B 的通信经过互联网，如果场所 A 的主机 X 要和另一个场所 B 的主机 Y 通信，IP 数据报的源地址是 10.1.0.1，目的地址是 10.2.0.3。数据报先发送到与互联网相连的路由器 R1，R1 对内部数据进行加密，然后重新加上数据报的首部，源地址是路由器 R1 的全球地址 125.1.2.3，目的地址是路由器 R2 的全球地址 194.4.5.6。路由器 R2 收到数据报后将数据部分进行解密，恢复原来的数据报，此时目的地址为 10.2.0.3，就交付给 Y。</p>
+<p>　<img src="http://cdn.cdnjson.com/tvax3.sinaimg.cn/large/0064BnmZgy1g9o0y6hi78j30mn0fk123.jpg" alt="5.18"></p>
+<h2 id="十二、网络地址转换-NAT"><a href="#十二、网络地址转换-NAT" class="headerlink" title="十二、网络地址转换 NAT:"></a>十二、网络地址转换 NAT:</h2><p>专用网内部的主机使用本地 IP 地址又想和互联网上的主机通信时，可以使用 NAT 来将本地 IP 转换为全球 IP。</p>
+<p>在以前，NAT 将本地 IP 和全球 IP 一一对应，这种方式下拥有 n 个全球 IP 地址的专用网内最多只可以同时有 n 台主机接入互联网。为了更有效地利用全球 IP 地址，现在常用的 NAT 转换表把传输层的端口号也用上了，使得多个专用网内部的主机共用一个全球 IP 地址。使用端口号的 NAT 也叫做网络地址与端口转换 NAPT。</p>
+<p>　<img src="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9o0y837e7j30lt04r763.jpg" alt="5.20"></p>
+<h2 id="十三、路由器的结构"><a href="#十三、路由器的结构" class="headerlink" title="十三、路由器的结构:"></a>十三、路由器的结构:</h2><h3 id="13-1-路由器的功能："><a href="#13-1-路由器的功能：" class="headerlink" title="13.1 路由器的功能："></a>13.1 路由器的功能：</h3><p>路由选择和分组转发。</p>
+<p>分组转发结构由三个部分组成：交换结构、一组输入端口和一组输出端口。</p>
+<p>　　　<img src="http://cdn.cdnjson.com/wx4.sinaimg.cn/mw690/0064BnmZgy1g9o0y78n2sj30f108edj2.jpg" alt="5.21"></p>
+<h3 id="13-2-路由器分组转发流程"><a href="#13-2-路由器分组转发流程" class="headerlink" title="13.2 路由器分组转发流程:"></a>13.2 路由器分组转发流程:</h3><ul>
+<li>从数据报的首部提取目的主机的 IP 地址 D，得到目的网络地址 N。</li>
+<li>若 N 就是与此路由器直接相连的某个网络地址，则进行直接交付；</li>
+<li>若路由表中有目的地址为 D 的特定主机路由，则把数据报传送给表中所指明的下一跳路由器；</li>
+<li>若路由表中有到达网络 N 的路由，则把数据报传送给路由表中所指明的下一跳路由器；</li>
+<li>若路由表中有一个默认路由，则把数据报传送给路由表中所指明的默认路由器；</li>
+<li>报告转发分组出错。</li>
+</ul>
+<p>　　<img src="http://cdn.cdnjson.com/tva1.sinaimg.cn/large/0064BnmZgy1g9o0y8cbjfj30jc05vgnn.jpg" alt="5.22"></p>
+<h3 id="13-3-路由选择协议"><a href="#13-3-路由选择协议" class="headerlink" title="13.3 路由选择协议:"></a>13.3 路由选择协议:</h3><p>路由选择协议都是自适应的，能随着网络通信量和拓扑结构的变化而自适应地进行调整。<br>互联网可以划分为许多较小的自治系统 AS，一个 AS 可以使用一种和别的 AS 不同的路由选择协议。<br>可以把路由选择协议划分为两大类：</p>
+<ul>
+<li>自治系统内部的路由选择：RIP 和 OSPF</li>
+<li>自治系统间的路由选择：BGP</li>
+</ul>
+<p>参考链接:<br><a href="https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%20-%20%E7%BD%91%E7%BB%9C%E5%B1%82.md" target="_blank" rel="noopener">https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%20-%20%E7%BD%91%E7%BB%9C%E5%B1%82.md</a></p>
+
+      
+    </div>
+
+    
+	
+	
+	
+	
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/网络层.html">网络层</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 zwq 的个人博客">zwq</a></p>
+  <p><span>发布时间:</span>2019年04月01日 - 13:36</p>
+  <p><span>最后更新:</span>2023年05月12日 - 20:49</p>
+  <p><span>原始链接:</span><a href="/网络层.html" title="网络层">https://zzwwqq.github.io/网络层.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zzwwqq.github.io/网络层.html" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>版权声明:</span>本博客所有文章除特别声明外，均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"><i class="fa fa-creative-commons"></i>BY-NC-SA </a>许可协议。转载请注明出处!</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+      
+</div>
+
+    
+    
+    
+
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="http://cdn.cdnjson.com/tvax2.sinaimg.cn/large/0064BnmZgy1g9n7zzvn32j3076076q3f.jpg" alt="zwq wechat" style="width: 200px; max-width: 100%;">
+  <div>欢迎您扫一扫关注我的微信公众号！</div>
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+
+	
+	
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/网络层/" rel="tag"><i class="fa fa-tag"></i> 网络层</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/进程与线程.html" rel="next" title="进程与线程">
+                <i class="fa fa-chevron-left"></i> 进程与线程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/交换机的基本配置.html" rel="prev" title="交换机的基本配置">
+                交换机的基本配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://cdn.cdnjson.com/tva4.sinaimg.cn/large/0064BnmZgy1g9n64jijk8j30dc0dc0tq.jpg" alt="zwq">
+            
+              <p class="site-author-name" itemprop="name">zwq</p>
+              <div class="site-description motion-element" itemprop="description">不忘初心,方得始终!</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">64</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">58</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/zzwwqq" title="GitHub &rarr; https://github.com/zzwwqq" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:zwq13264860490@gmail.com" title="E-Mail &rarr; mailto:zwq13264860490@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/u/5564810309/home?wvr=5" title="Weibo &rarr; https://weibo.com/u/5564810309/home?wvr=5" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.zhihu.com/people/shen-qiu-wu-hen-66/activities" title="知乎 &rarr; https://www.zhihu.com/people/shen-qiu-wu-hen-66/activities" rel="noopener" target="_blank"><i class="fa fa-fw fa-snapchat"></i>知乎</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://me.csdn.net/weixin_44815733" title="CSDN &rarr; https://me.csdn.net/weixin_44815733" rel="noopener" target="_blank"><i class="fa fa-fw fa-angellist"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.jianshu.com/u/01892c1f80f8" title="简书 &rarr; https://www.jianshu.com/u/01892c1f80f8" rel="noopener" target="_blank"><i class="fa fa-fw fa-leanpub"></i>简书</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+		  
+		  
+		  
+		  
+		  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=38592976&auto=0&height=66"></iframe>
+		  
+		  
+		  
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/" title="https://www.cnblogs.com/" rel="noopener" target="_blank">博客园</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、网络层协议"><span class="nav-text">一、网络层协议:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-什么是协议（protocol）"><span class="nav-text">1.1 什么是协议（protocol）?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-什么是实体（entity）"><span class="nav-text">1.2 什么是实体（entity）?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-通信协议的三要素："><span class="nav-text">1.3 通信协议的三要素：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-通信模型"><span class="nav-text">1.4 通信模型:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-网络层有哪些协议"><span class="nav-text">1.5 网络层有哪些协议?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-网络层特点"><span class="nav-text">1.6 网络层特点:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、网络层设备"><span class="nav-text">二、网络层设备:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、网络层基本单元"><span class="nav-text">三、网络层基本单元:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-什么是协议数据单元"><span class="nav-text">3.1 什么是协议数据单元?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-每一层协议数据单元分别是什么"><span class="nav-text">3.2 每一层协议数据单元分别是什么?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、网络层功能"><span class="nav-text">四、网络层功能:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-核心功能"><span class="nav-text">4.1 核心功能:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-什么是转发"><span class="nav-text">4.1 什么是转发?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-转发表是怎么得到的呢？"><span class="nav-text">4.2 转发表是怎么得到的呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-什么叫路由呢？"><span class="nav-text">4.3 什么叫路由呢？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、网络层任务"><span class="nav-text">五、网络层任务:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、为什么需要数据封装"><span class="nav-text">六、为什么需要数据封装?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、IP-数据报格式"><span class="nav-text">七、IP 数据报格式:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、地址解析协议-ARP"><span class="nav-text">八、地址解析协议 ARP:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、网际控制报文协议-ICMP"><span class="nav-text">九、网际控制报文协议 ICMP:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-ICMP协议的应用"><span class="nav-text">9.1 ICMP协议的应用:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ping"><span class="nav-text">Ping</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Traceroute"><span class="nav-text">Traceroute:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、IP-地址编址方式"><span class="nav-text">十、IP 地址编址方式:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-IP-地址的编址方式经历了三个历史阶段："><span class="nav-text">10.1 IP 地址的编址方式经历了三个历史阶段：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-特殊IP地址："><span class="nav-text">10.2 特殊IP地址：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-私有（Private）IP地址"><span class="nav-text">10.3 私有（Private）IP地址:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-4-组播地址"><span class="nav-text">10.4 组播地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-5-受限广播地址"><span class="nav-text">10.5 受限广播地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-6-直接广播地址"><span class="nav-text">10.6 直接广播地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-7-源IP地址"><span class="nav-text">10.7 源IP地址:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-8-环回地址"><span class="nav-text">10.8 环回地址:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-9-NetID为0的地址"><span class="nav-text">10.9 NetID为0的地址:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-10-关于子网掩码"><span class="nav-text">10.10: 关于子网掩码:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一、虚拟专用网-VPN"><span class="nav-text">十一、虚拟专用网 VPN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十二、网络地址转换-NAT"><span class="nav-text">十二、网络地址转换 NAT:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十三、路由器的结构"><span class="nav-text">十三、路由器的结构:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#13-1-路由器的功能："><span class="nav-text">13.1 路由器的功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-2-路由器分组转发流程"><span class="nav-text">13.2 路由器分组转发流程:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-3-路由选择协议"><span class="nav-text">13.3 路由选择协议:</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zwq</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">714k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">10:49</span>
+  
+</div>
+
+
+<!--
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
+
+-->
+
+
+<div>
+
+
+
+
+
+<div>
+<div class="powered-by">
+<i class="fa fa-user-md"></i>
+<span id="busuanzi_container_site_uv">
+  本站总访客数:<span id="busuanzi_value_site_uv"></span>&nbsp;&nbsp;| 
+</span>
+<span id="busuanzi_container_site_pv">
+    &nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+</div>
+</div>
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("03/12/2019 12:00:00");//此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+<div class="BbeiAn-info" style="color:#4dfc23">
+   	鄂ICP备 -
+    <a target="_blank" href="http://www.beian.miit.gov.cn/" style="color:#4dfc23;" rel="nofollow">18025394</a> <!--a标签中增加nofollow属性，避免爬虫出站。-->| 
+	<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42090202000295" style="text-decoration:none;color:#4dfc23;padding-left:30px;background:url(https://s1.ax1x.com/2018/09/29/ilmwIH.png) no-repeat left center" rel="nofollow">鄂公网安备 42090202000295</a>	  <!--这里将图标作为了背景，以使得能和后面的文字在同一行-->
+</div>
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </div></footer>
+
+    
+
+    
+
+    
+
+    
+      <div>
+        <div class="addthis_inline_share_toolbox">
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c8a5801582888d6" async="async"></script>
+</div>
+
+      </div>
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: false,
+    appId: 'BMBxkYUDumKWDR3FTQCAY7R1-gzGzoHsz',
+    appKey: 'yd7o7KS9MjFPCTGAGOpErnWy',
+    placeholder: 'Hello !',
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+  
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/click-love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":70,"height":120},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
