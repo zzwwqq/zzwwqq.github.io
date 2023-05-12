@@ -1966,7 +1966,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d0ff04;
+  background: #ff5d82;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3190,10 +3190,10 @@ ul.breadcrumb li+li:last-child {
   }
 }
 body {
-  background-image: url("https://tva1.sinaimg.cn/large/0064BnmZgy1g9n9oy7cvzj31hc0xcwr9.jpg");
+  background-image: url("http://cdn.cdnjson.com/tva1.sinaimg.cn/large/0064BnmZgy1g9n9oy7cvzj31hc0xcwr9.jpg");
 }
 .site-meta {
-  background-image: url("https://wx4.sinaimg.cn/mw690/0064BnmZgy1gchtomjpaaj306o034jr5.jpg");
+  background-image: url("http://cdn.cdnjson.com/wx4.sinaimg.cn/mw690/0064BnmZgy1gchtomjpaaj306o034jr5.jpg");
 }
 .brand {
   color: #4dfc23;
